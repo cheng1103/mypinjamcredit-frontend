@@ -1,0 +1,193 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { ReactNode, Suspense } from 'react';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
+import { Geist, Geist_Mono } from 'next/font/google';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import FloatingContact from '@/components/FloatingContact';
+import BackToTop from '@/components/BackToTop';
+import { Logo } from '@/components/Logo';
+import type { Locale } from '@/types/locale';
+import '../globals.css';
+
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin']
+});
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin']
+});
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+
+type LayoutParams = { locale: string };
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<LayoutParams>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const tSeo = await getTranslations({ locale, namespace: 'seo.home' });
+
+  return {
+    title: tSeo('title'),
+    description: tSeo('description')
+  };
+}
+
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'ms' }] satisfies LayoutParams[];
+}
+
+export default async function LocaleLayout({
+  children,
+  params
+}: {
+  children: ReactNode;
+  params: Promise<LayoutParams>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale as Locale);
+
+  const messages = await getMessages();
+  const tCommon = await getTranslations({ locale, namespace: 'common' });
+
+  const organizationMessage = (messages as Record<string, unknown>)?.seo as
+    | Record<string, unknown>
+    | undefined;
+  const organization = (organizationMessage?.organization ?? null) as
+    | {
+        name?: string;
+        legalName?: string;
+        url?: string;
+        logo?: string;
+        email?: string;
+        telephone?: string;
+        address?: string;
+        sameAs?: string[];
+      }
+    | null;
+
+  const organizationJsonLd = organization
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FinancialService',
+        name: organization.name ?? 'MyPinjam Credit',
+        legalName: organization.legalName ?? 'Howard Loan Advisor',
+        url: organization.url ?? siteUrl,
+        logo: organization.logo ? new URL(organization.logo, siteUrl).toString() : `${siteUrl}/logo.png`,
+        email: organization.email ?? 'hello@mypinjamcredit.com',
+        telephone: organization.telephone ?? '+60-16-7479368',
+        address: organization.address ?? 'Level M, M-01a, Wisma YNH, Kiara 163, 8, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur',
+        sameAs: organization.sameAs ?? []
+      }
+    : null;
+
+  const navItems: Array<{ href: string; label: string }> = [
+    { href: `/${locale}`, label: tCommon('nav.home') },
+    { href: `/${locale}/about`, label: 'About' },
+    { href: `/${locale}/products`, label: tCommon('nav.products') },
+    { href: `/${locale}/calculator`, label: tCommon('nav.calculator') },
+    { href: `/${locale}/faq`, label: 'FAQ' },
+    { href: `/${locale}/blog`, label: 'Blog' },
+    { href: `/${locale}/apply`, label: tCommon('nav.apply') },
+    { href: `/${locale}/contact`, label: tCommon('nav.contact') }
+  ];
+
+  return (
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <div
+        className={`${geistSans.variable} ${geistMono.variable} bg-gradient-to-br from-white via-sky-100 to-blue-300 text-slate-900 antialiased`}
+      >
+        {organizationJsonLd ? (
+          <script
+            type="application/ld+json"
+            suppressHydrationWarning
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          />
+        ) : null}
+        <header className="sticky top-0 z-20 border-b border-sky-200/60 bg-white/70 backdrop-blur">
+          <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
+            <Link href={`/${locale}` as any} className="flex items-center gap-3">
+              <Logo size={56} />
+              <div className="flex flex-col">
+                <span className="text-lg font-bold tracking-wide text-blue-600">
+                  {tCommon('brand')}
+                </span>
+                <span className="text-xs font-semibold text-slate-700">
+                  {tCommon('brandFull')}
+                </span>
+              </div>
+            </Link>
+            <nav className="flex items-center gap-6 text-sm text-slate-700">
+              {navItems.map((item) => (
+                <Link key={item.href} href={item.href as any} className="transition hover:text-blue-500">
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+            <Suspense fallback={<div className="h-8 w-16" />}>
+              <LanguageSwitcher />
+            </Suspense>
+          </div>
+        </header>
+        <main className="mx-auto min-h-screen max-w-6xl px-6 py-12 text-slate-800">{children}</main>
+        <footer className="border-t border-sky-200/60 bg-white/70 py-8">
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="mb-6 grid gap-8 md:grid-cols-3">
+              <div>
+                <div className="mb-3 flex items-center gap-2">
+                  <Logo size={40} />
+                  <div>
+                    <p className="font-bold text-blue-600">{tCommon('brand')}</p>
+                    <p className="text-xs font-semibold text-slate-700">{tCommon('brandFull')}</p>
+                  </div>
+                </div>
+                <p className="text-sm text-slate-600">{tCommon('tagline')}</p>
+              </div>
+              <div>
+                <h3 className="mb-2 font-semibold text-slate-800">Contact Us</h3>
+                <p className="mb-1 text-sm text-slate-600">Phone: {tCommon('contact.phone')}</p>
+                <p className="text-sm text-slate-600">{tCommon('contact.address')}</p>
+              </div>
+              <div>
+                <h3 className="mb-2 font-semibold text-slate-800">Quick Links</h3>
+                <div className="flex flex-col gap-2 text-sm">
+                  <Link
+                    href={`/${locale}/privacy` as any}
+                    className="text-slate-600 transition hover:text-blue-600"
+                  >
+                    {tCommon('footer.privacy')}
+                  </Link>
+                  <Link
+                    href={`/${locale}/terms` as any}
+                    className="text-slate-600 transition hover:text-blue-600"
+                  >
+                    {tCommon('footer.terms')}
+                  </Link>
+                  <Link
+                    href={`/${locale}/compliance` as any}
+                    className="text-slate-600 transition hover:text-blue-600"
+                  >
+                    {tCommon('footer.compliance')}
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="border-t border-slate-200 pt-4">
+              <p className="text-center text-xs text-slate-600">{tCommon('footer.disclaimer')}</p>
+            </div>
+          </div>
+        </footer>
+
+        {/* Floating Contact and Back to Top Buttons */}
+        <FloatingContact />
+        <BackToTop />
+      </div>
+    </NextIntlClientProvider>
+  );
+}
