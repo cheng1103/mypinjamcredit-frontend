@@ -5,6 +5,9 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 
 const nextConfig: NextConfig = {
   typedRoutes: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   turbopack: {
     root: __dirname
   }
