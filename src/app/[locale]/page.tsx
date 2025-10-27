@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import { GoogleMap } from '@/components/GoogleMap';
 import { LeadForm } from '@/components/forms/LeadForm';
 import { FadeInSection } from '@/components/FadeInSection';
+import { CountUp } from '@/components/CountUp';
 import type { Locale } from '@/types/locale';
 
 type PageProps = { params: Promise<{ locale: string }> };
@@ -160,20 +161,51 @@ export default async function HomePage({ params }: PageProps) {
           </p>
         </div>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 md:mt-8 md:gap-8">
-          <div className="text-center">
-            <div className="text-3xl font-bold md:text-4xl lg:text-5xl">5,000+</div>
+          <div className="text-center group">
+            <div className="mb-3 flex justify-center">
+              <div className="rounded-full bg-white/20 p-4 transition-transform group-hover:scale-110">
+                <svg className="h-8 w-8 text-white md:h-10 md:w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+            </div>
+            <CountUp end={5000} suffix="+" className="text-3xl font-bold md:text-4xl lg:text-5xl" />
             <p className="mt-2 text-xs text-blue-50 md:text-sm">Satisfied Customers</p>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold md:text-4xl lg:text-5xl">RM 50M+</div>
+          <div className="text-center group">
+            <div className="mb-3 flex justify-center">
+              <div className="rounded-full bg-white/20 p-4 transition-transform group-hover:scale-110">
+                <svg className="h-8 w-8 text-white md:h-10 md:w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-1">
+              <span className="text-lg md:text-xl">RM</span>
+              <CountUp end={50} suffix="M+" className="text-3xl font-bold md:text-4xl lg:text-5xl" />
+            </div>
             <p className="mt-2 text-xs text-blue-50 md:text-sm">Loans Disbursed</p>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold md:text-4xl lg:text-5xl">98%</div>
+          <div className="text-center group">
+            <div className="mb-3 flex justify-center">
+              <div className="rounded-full bg-white/20 p-4 transition-transform group-hover:scale-110">
+                <svg className="h-8 w-8 text-white md:h-10 md:w-10" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              </div>
+            </div>
+            <CountUp end={98} suffix="%" className="text-3xl font-bold md:text-4xl lg:text-5xl" />
             <p className="mt-2 text-xs text-blue-50 md:text-sm">Customer Satisfaction</p>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold md:text-4xl lg:text-5xl">24 hrs</div>
+          <div className="text-center group">
+            <div className="mb-3 flex justify-center">
+              <div className="rounded-full bg-white/20 p-4 transition-transform group-hover:scale-110">
+                <svg className="h-8 w-8 text-white md:h-10 md:w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <CountUp end={24} suffix=" hrs" className="text-3xl font-bold md:text-4xl lg:text-5xl" />
             <p className="mt-2 text-xs text-blue-50 md:text-sm">Average Approval Time</p>
           </div>
         </div>
@@ -181,24 +213,59 @@ export default async function HomePage({ params }: PageProps) {
       </FadeInSection>
 
       <FadeInSection delay={100}>
-        <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        {cards.map((card) => (
-          <Link
-            key={card.key}
-            href={card.href as any}
-            className="group rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl"
-          >
-            <p className="text-sm uppercase tracking-[0.2em] text-blue-600 transition-colors group-hover:text-blue-700">
-              {tHomeCards(`${card.key}.title`)}
-            </p>
-            <p className="mt-3 text-base text-slate-600">
-              {tHomeCards(`${card.key}.description`)}
-            </p>
-            <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-blue-600 transition-all group-hover:gap-2">
-              {tCommon('actions.learnMore')} <span className="transition-transform group-hover:translate-x-1">{'\u2192'}</span>
-            </span>
-          </Link>
-        ))}
+        <section className="grid gap-6 md:grid-cols-2 md:gap-5 lg:gap-6 xl:grid-cols-4">
+        {cards.map((card) => {
+          const icons: Record<string, React.ReactNode> = {
+            products: (
+              <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            ),
+            calculator: (
+              <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            ),
+            community: (
+              <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+              </svg>
+            ),
+            contact: (
+              <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            )
+          };
+
+          return (
+            <Link
+              key={card.key}
+              href={card.href as any}
+              className="group relative overflow-hidden rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl"
+            >
+              <div className="mb-4 flex justify-between items-start">
+                <div className="rounded-xl bg-gradient-to-br from-blue-50 to-sky-50 p-3 text-blue-600 transition-all group-hover:scale-110 group-hover:from-blue-100 group-hover:to-sky-100">
+                  {icons[card.key]}
+                </div>
+                <div className="opacity-0 transition-opacity group-hover:opacity-100">
+                  <svg className="h-5 w-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </div>
+              </div>
+              <p className="text-sm uppercase tracking-[0.2em] text-blue-600 font-semibold transition-colors group-hover:text-blue-700">
+                {tHomeCards(`${card.key}.title`)}
+              </p>
+              <p className="mt-3 text-base text-slate-600 leading-relaxed">
+                {tHomeCards(`${card.key}.description`)}
+              </p>
+              <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-blue-600 transition-all group-hover:gap-2">
+                {tCommon('actions.learnMore')} <span className="transition-transform group-hover:translate-x-1">{'\u2192'}</span>
+              </span>
+            </Link>
+          );
+        })}
       </section>
       </FadeInSection>
 
