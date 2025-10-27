@@ -96,7 +96,7 @@ export async function generateMetadata({
       }
     },
     verification: {
-      google: 'google664199751d1f6894'
+      google: 'S2No0aIXoBfhoHVso3J3Zl5BVf8w0xr7It0wlg4jXTY'
     },
     manifest: '/manifest.json',
     appleWebApp: {
