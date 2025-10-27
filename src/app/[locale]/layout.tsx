@@ -10,6 +10,11 @@ import BackToTop from '@/components/BackToTop';
 import { Logo } from '@/components/Logo';
 import { MobileMenu } from '@/components/MobileMenu';
 import { AnimatedBackground } from '@/components/AnimatedBackground';
+import { Toaster } from '@/components/Toaster';
+import { GoogleAnalytics } from '@/components/GoogleAnalytics';
+import { WebVitals } from '@/components/WebVitals';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Locale } from '@/types/locale';
 import '../globals.css';
 
@@ -40,8 +45,65 @@ export async function generateMetadata({
   const tSeo = await getTranslations({ locale, namespace: 'seo.home' });
 
   return {
-    title: tSeo('title'),
-    description: tSeo('description')
+    metadataBase: new URL(siteUrl),
+    title: {
+      default: tSeo('title'),
+      template: `%s | ${tSeo('title')}`
+    },
+    description: tSeo('description'),
+    keywords: ['loan advisor', 'personal loan', 'business loan', 'malaysia loan', 'pinjaman', 'kredit'],
+    authors: [{ name: 'MyPinjam Credit' }],
+    creator: 'MyPinjam Credit',
+    publisher: 'Howard Loan Advisor',
+    alternates: {
+      canonical: `${siteUrl}/${locale}`,
+      languages: {
+        en: `${siteUrl}/en`,
+        ms: `${siteUrl}/ms`
+      }
+    },
+    openGraph: {
+      type: 'website',
+      locale: locale === 'ms' ? 'ms_MY' : 'en_MY',
+      url: `${siteUrl}/${locale}`,
+      siteName: 'MyPinjam Credit',
+      title: tSeo('title'),
+      description: tSeo('description'),
+      images: [
+        {
+          url: '/opengraph-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'MyPinjam Credit - Trusted Loan Advisor'
+        }
+      ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: tSeo('title'),
+      description: tSeo('description'),
+      images: ['/opengraph-image.png']
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    },
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    },
+    manifest: '/manifest.json',
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: 'default',
+      title: 'MyPinjam Credit'
+    }
   };
 }
 
@@ -205,6 +267,15 @@ export default async function LocaleLayout({
         {/* Floating Contact and Back to Top Buttons */}
         <FloatingContact />
         <BackToTop />
+
+        {/* Toast Notifications */}
+        <Toaster />
+
+        {/* Analytics and Monitoring */}
+        <GoogleAnalytics />
+        <WebVitals />
+        <Analytics />
+        <SpeedInsights />
       </div>
     </NextIntlClientProvider>
   );

@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.mypinjamcredit.com';
-  const lastModified = new Date('2025-10-24');
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+  const lastModified = new Date();
 
   // Define all routes
   const routes = ['', '/apply', '/contact', '/about', '/products', '/calculator', '/faq', '/blog', '/feedback', '/privacy', '/terms', '/compliance'];
