@@ -1,6 +1,5 @@
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
-// @ts-ignore - next-pwa doesn't have TypeScript types
 import withPWA from 'next-pwa';
 
 const withNextIntl = createNextIntlPlugin('./i18n.ts');
