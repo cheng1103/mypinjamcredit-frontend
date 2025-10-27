@@ -9,7 +9,6 @@ import FloatingContact from '@/components/FloatingContact';
 import BackToTop from '@/components/BackToTop';
 import { Logo } from '@/components/Logo';
 import { MobileMenu } from '@/components/MobileMenu';
-import { AnimatedBackground } from '@/components/AnimatedBackground';
 import { Toaster } from '@/components/Toaster';
 import { GoogleAnalytics } from '@/components/GoogleAnalytics';
 import { WebVitals } from '@/components/WebVitals';
@@ -171,7 +170,6 @@ export default async function LocaleLayout({
       <div
         className={`${geistSans.variable} ${geistMono.variable} relative text-slate-900 antialiased`}
       >
-        <AnimatedBackground />
         {organizationJsonLd ? (
           <script
             type="application/ld+json"
