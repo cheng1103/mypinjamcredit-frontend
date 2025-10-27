@@ -51,10 +51,10 @@ const leadFormSchema = z.object({
     .min(1000, 'Loan amount must be at least RM 1,000')
     .max(5000000, 'Loan amount must be less than RM 5,000,000'),
   loanType: z.enum(loanTypeValues, {
-    errorMap: () => ({ message: 'Please select a loan type' })
+    message: 'Please select a loan type'
   }),
   location: z.enum(malaysiaStates, {
-    errorMap: () => ({ message: 'Please select your location' })
+    message: 'Please select your location'
   })
 });
 
