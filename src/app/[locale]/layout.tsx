@@ -111,19 +111,19 @@ export default async function LocaleLayout({
           />
         ) : null}
         <header className="sticky top-0 z-20 border-b border-sky-200/60 bg-white/70 backdrop-blur">
-          <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
-            <Link href={`/${locale}` as any} className="flex items-center gap-3">
-              <Logo size={56} />
+          <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 md:gap-6 md:px-6 md:py-4">
+            <Link href={`/${locale}` as any} className="flex items-center gap-2 md:gap-3">
+              <Logo size={40} className="md:w-14 md:h-14" />
               <div className="flex flex-col">
-                <span className="text-lg font-bold tracking-wide text-blue-600">
+                <span className="text-base font-bold tracking-wide text-blue-600 md:text-lg">
                   {tCommon('brand')}
                 </span>
-                <span className="text-xs font-semibold text-slate-700">
+                <span className="text-[10px] font-semibold text-slate-700 md:text-xs">
                   {tCommon('brandFull')}
                 </span>
               </div>
             </Link>
-            <nav className="flex items-center gap-6 text-sm text-slate-700">
+            <nav className="hidden lg:flex items-center gap-6 text-sm text-slate-700">
               {navItems.map((item) => (
                 <Link key={item.href} href={item.href as any} className="transition hover:text-blue-500">
                   {item.label}
@@ -135,10 +135,10 @@ export default async function LocaleLayout({
             </Suspense>
           </div>
         </header>
-        <main className="mx-auto min-h-screen max-w-6xl px-6 py-12 text-slate-800">{children}</main>
-        <footer className="border-t border-sky-200/60 bg-white/70 py-8">
-          <div className="mx-auto max-w-6xl px-6">
-            <div className="mb-6 grid gap-8 md:grid-cols-3">
+        <main className="mx-auto min-h-screen max-w-6xl px-4 py-6 text-slate-800 md:px-6 md:py-12">{children}</main>
+        <footer className="border-t border-sky-200/60 bg-white/70 py-6 md:py-8">
+          <div className="mx-auto max-w-6xl px-4 md:px-6">
+            <div className="mb-6 grid gap-6 md:gap-8 md:grid-cols-3">
               <div>
                 <div className="mb-3 flex items-center gap-2">
                   <Logo size={40} />

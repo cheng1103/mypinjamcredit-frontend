@@ -103,15 +103,15 @@ export default async function HomePage({ params }: PageProps) {
   ] as const;
 
   return (
-    <div className="space-y-16">
-      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-sky-50 to-blue-100 p-10 shadow-xl shadow-blue-100">
+    <div className="space-y-8 md:space-y-16">
+      <section className="rounded-2xl border border-blue-100 bg-gradient-to-br from-white via-sky-50 to-blue-100 p-6 shadow-xl shadow-blue-100 md:rounded-3xl md:p-10">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl space-y-4">
-            <p className="text-sm uppercase tracking-[0.35em] text-blue-600">{tCommon('brand')}</p>
-            <h1 className="text-4xl font-semibold tracking-tight text-slate-900 md:text-5xl">
+            <p className="text-xs uppercase tracking-[0.35em] text-blue-600 md:text-sm">{tCommon('brand')}</p>
+            <h1 className="text-2xl font-semibold tracking-tight text-slate-900 md:text-4xl lg:text-5xl">
               {tHero('headline')}
             </h1>
-            <p className="text-lg text-slate-700">{tHero('subheadline')}</p>
+            <p className="text-base text-slate-700 md:text-lg">{tHero('subheadline')}</p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href={applyHref as any}
@@ -134,29 +134,29 @@ export default async function HomePage({ params }: PageProps) {
       </section>
 
       {/* Statistics Section */}
-      <section className="rounded-3xl border border-slate-200 bg-gradient-to-r from-slate-700 to-slate-800 p-10 text-white shadow-lg">
+      <section className="rounded-2xl border border-slate-200 bg-gradient-to-r from-slate-700 to-slate-800 p-6 text-white shadow-lg md:rounded-3xl md:p-10">
         <div className="text-center">
-          <h2 className="text-3xl font-semibold">Trusted by Thousands of Malaysians</h2>
-          <p className="mt-2 text-slate-300">
+          <h2 className="text-xl font-semibold md:text-3xl">Trusted by Thousands of Malaysians</h2>
+          <p className="mt-2 text-sm text-slate-300 md:text-base">
             Real results from real people who chose MyPinjam Credit
           </p>
         </div>
-        <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 md:mt-8 md:gap-8">
           <div className="text-center">
-            <div className="text-4xl font-bold md:text-5xl">5,000+</div>
-            <p className="mt-2 text-sm text-slate-300">Satisfied Customers</p>
+            <div className="text-3xl font-bold md:text-4xl lg:text-5xl">5,000+</div>
+            <p className="mt-2 text-xs text-slate-300 md:text-sm">Satisfied Customers</p>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold md:text-5xl">RM 50M+</div>
-            <p className="mt-2 text-sm text-slate-300">Loans Disbursed</p>
+            <div className="text-3xl font-bold md:text-4xl lg:text-5xl">RM 50M+</div>
+            <p className="mt-2 text-xs text-slate-300 md:text-sm">Loans Disbursed</p>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold md:text-5xl">98%</div>
-            <p className="mt-2 text-sm text-slate-300">Customer Satisfaction</p>
+            <div className="text-3xl font-bold md:text-4xl lg:text-5xl">98%</div>
+            <p className="mt-2 text-xs text-slate-300 md:text-sm">Customer Satisfaction</p>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold md:text-5xl">24 hrs</div>
-            <p className="mt-2 text-sm text-slate-300">Average Approval Time</p>
+            <div className="text-3xl font-bold md:text-4xl lg:text-5xl">24 hrs</div>
+            <p className="mt-2 text-xs text-slate-300 md:text-sm">Average Approval Time</p>
           </div>
         </div>
       </section>
