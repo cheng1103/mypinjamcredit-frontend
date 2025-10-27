@@ -117,7 +117,7 @@ export default async function LocaleLayout({
             dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
           />
         ) : null}
-        <header className="sticky top-0 z-20 border-b border-sky-200/60 bg-white/70 backdrop-blur">
+        <header className="sticky top-0 z-10 border-b border-sky-200/60 bg-white/70 backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 md:gap-6 md:px-6 md:py-4">
             <Link
               href={`/${locale}` as any}

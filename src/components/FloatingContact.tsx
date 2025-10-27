@@ -17,13 +17,13 @@ export default function FloatingContact() {
       {/* Backdrop */}
       {isExpanded && (
         <div
-          className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm"
+          className="fixed inset-0 z-30 bg-black/20 backdrop-blur-sm"
           onClick={() => setIsExpanded(false)}
         />
       )}
 
       {/* Floating Button Group */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-6 right-6 z-40">
         {/* Expanded Options */}
         {isExpanded && (
           <div className="mb-4 flex flex-col gap-3">
