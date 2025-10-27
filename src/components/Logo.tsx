@@ -8,7 +8,7 @@ export function Logo({ size = 48, className = '', priority = false }: { size?: n
   if (hasCustomLogo) {
     return (
       <div
-        className={`flex items-center justify-center overflow-hidden ${className}`}
+        className={`flex items-center justify-center overflow-hidden rounded-full bg-white p-1 shadow-sm ${className}`}
         style={{
           width: size,
           height: size
@@ -17,9 +17,9 @@ export function Logo({ size = 48, className = '', priority = false }: { size?: n
         <Image
           src="/logo.png"
           alt="MyPinjam Credit Logo"
-          width={size}
-          height={size}
-          className="object-contain"
+          width={size - 8}
+          height={size - 8}
+          className="object-contain rounded-full"
           priority={priority}
           loading={priority ? undefined : 'lazy'}
           placeholder="blur"

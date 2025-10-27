@@ -41,14 +41,14 @@ export function MobileMenu({ locale, navItems }: MobileMenuProps) {
       {/* Mobile Menu Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] bg-black/30 backdrop-blur-sm"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       {/* Mobile Menu Panel */}
       <div
-        className={`fixed right-0 top-0 z-50 h-full w-64 bg-white shadow-2xl transition-transform duration-300 ${
+        className={`fixed right-0 top-0 z-[101] h-full w-64 bg-white shadow-2xl transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
