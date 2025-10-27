@@ -147,8 +147,30 @@ export default async function FAQPage({ params }: PageProps) {
     }
   ];
 
+  // Generate FAQ Schema
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqCategories.flatMap(category =>
+      category.questions.map(item => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.a
+        }
+      }))
+    )
+  };
+
   return (
     <div className="space-y-12">
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       {/* Hero Section */}
       <section className="rounded-3xl border border-slate-200 bg-gradient-to-br from-white via-slate-50 to-slate-100 p-10 shadow-lg">
         <div className="mx-auto max-w-3xl text-center">

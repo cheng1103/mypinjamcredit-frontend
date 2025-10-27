@@ -12,6 +12,7 @@ import { MobileMenu } from '@/components/MobileMenu';
 import { Toaster } from '@/components/Toaster';
 import { GoogleAnalytics } from '@/components/GoogleAnalytics';
 import { WebVitals } from '@/components/WebVitals';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Locale } from '@/types/locale';
@@ -213,7 +214,10 @@ export default async function LocaleLayout({
             </div>
           </div>
         </header>
-        <main className="mx-auto min-h-screen max-w-6xl px-4 py-6 text-slate-800 md:px-6 md:py-12">{children}</main>
+        <main className="mx-auto min-h-screen max-w-6xl px-4 py-6 text-slate-800 md:px-6 md:py-12">
+          <Breadcrumbs />
+          {children}
+        </main>
         <footer className="border-t border-sky-200/60 bg-white/70 py-6 md:py-8">
           <div className="mx-auto max-w-6xl px-4 md:px-6">
             <div className="mb-6 grid gap-6 md:gap-8 md:grid-cols-3">

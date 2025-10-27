@@ -15,12 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     locales.forEach((locale) => {
       const url = `${baseUrl}/${locale}${route}`;
       const priority = route === '' ? 1.0 : route === '/apply' ? 0.9 : 0.7;
-      const changeFrequency = route === '' ? 'weekly' : 'monthly';
+      const changeFrequency = route === '' ? 'daily' : route === '/blog' ? 'weekly' : 'monthly';
 
       sitemap.push({
         url,
         lastModified,
-        changeFrequency: changeFrequency as 'weekly' | 'monthly',
+        changeFrequency: changeFrequency as 'daily' | 'weekly' | 'monthly',
         priority,
         alternates: {
           languages: {
