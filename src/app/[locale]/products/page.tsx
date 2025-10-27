@@ -111,8 +111,56 @@ export default async function ProductsPage({ params }: PageProps) {
     'Dedicated after-sales support throughout your tenure'
   ];
 
+  // Generate Service Schema for loan products
+  const servicesSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: products.map((product, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Service',
+        '@id': `${siteUrl}/${locale}/products#${product.title.replace(/\s+/g, '-').toLowerCase()}`,
+        name: product.title,
+        provider: {
+          '@type': 'FinancialService',
+          name: 'MyPinjam Credit',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Level M, M-01a, Wisma YNH, Kiara 163, 8, Jalan Kiara',
+            addressLocality: 'Mont Kiara',
+            addressRegion: 'Kuala Lumpur',
+            postalCode: '50480',
+            addressCountry: 'MY'
+          }
+        },
+        serviceType: product.title,
+        description: product.features.join('. '),
+        areaServed: {
+          '@type': 'Country',
+          name: 'Malaysia'
+        },
+        offers: {
+          '@type': 'Offer',
+          availability: 'https://schema.org/InStock',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            priceCurrency: 'MYR',
+            price: product.amount
+          }
+        }
+      }
+    }))
+  };
+
   return (
     <div className="space-y-12">
+      {/* Service Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
+
       <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-sky-50 to-blue-100 p-10 shadow-xl shadow-blue-100">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl space-y-4">

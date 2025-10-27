@@ -5,6 +5,7 @@ import { GoogleMap } from '@/components/GoogleMap';
 import { LeadForm } from '@/components/forms/LeadForm';
 import { FadeInSection } from '@/components/FadeInSection';
 import { CountUp } from '@/components/CountUp';
+import { generateSEO, keywordSets } from '@/lib/seo';
 import type { Locale } from '@/types/locale';
 
 type PageProps = { params: Promise<{ locale: string }> };
@@ -17,34 +18,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale: localeStr } = await params;
   const locale = localeStr as Locale;
   const tSeo = await getTranslations({ locale, namespace: 'seo.home' });
-  const title = tSeo('title');
-  const description = tSeo('description');
 
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: hrefForLocale(locale),
-      languages: {
-        'en-MY': hrefForLocale('en'),
-        'ms-MY': hrefForLocale('ms'),
-        'x-default': hrefForLocale('en')
-      }
-    },
-    openGraph: {
-      title,
-      description,
-      url: hrefForLocale(locale),
-      siteName: 'MyPinjam Credit',
-      locale: locale === 'ms' ? 'ms_MY' : 'en_MY',
-      type: 'website'
-    },
-    twitter: {
-      title,
-      description,
-      card: 'summary_large_image'
-    }
-  };
+  return generateSEO({
+    title: tSeo('title'),
+    description: tSeo('description'),
+    keywords: keywordSets.homepage,
+    canonical: hrefForLocale(locale),
+    locale,
+    type: 'website'
+  });
 }
 
 export const dynamic = 'force-static';
