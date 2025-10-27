@@ -8,17 +8,23 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 import FloatingContact from '@/components/FloatingContact';
 import BackToTop from '@/components/BackToTop';
 import { Logo } from '@/components/Logo';
+import { MobileMenu } from '@/components/MobileMenu';
+import { AnimatedBackground } from '@/components/AnimatedBackground';
 import type { Locale } from '@/types/locale';
 import '../globals.css';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
-  subsets: ['latin']
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true
 });
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
-  subsets: ['latin']
+  subsets: ['latin'],
+  display: 'swap',
+  preload: false
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
@@ -101,8 +107,9 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <div
-        className={`${geistSans.variable} ${geistMono.variable} bg-gradient-to-br from-white via-sky-100 to-blue-300 text-slate-900 antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} relative text-slate-900 antialiased`}
       >
+        <AnimatedBackground />
         {organizationJsonLd ? (
           <script
             type="application/ld+json"
@@ -112,8 +119,12 @@ export default async function LocaleLayout({
         ) : null}
         <header className="sticky top-0 z-20 border-b border-sky-200/60 bg-white/70 backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 md:gap-6 md:px-6 md:py-4">
-            <Link href={`/${locale}` as any} className="flex items-center gap-2 md:gap-3">
-              <Logo size={40} className="md:w-14 md:h-14" />
+            <Link
+              href={`/${locale}` as any}
+              className="flex items-center gap-2 md:gap-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg"
+              aria-label="MyPinjam Credit Home"
+            >
+              <Logo size={40} className="md:w-14 md:h-14" priority />
               <div className="flex flex-col">
                 <span className="text-base font-bold tracking-wide text-blue-600 md:text-lg">
                   {tCommon('brand')}
@@ -123,16 +134,23 @@ export default async function LocaleLayout({
                 </span>
               </div>
             </Link>
-            <nav className="hidden lg:flex items-center gap-6 text-sm text-slate-700">
-              {navItems.map((item) => (
-                <Link key={item.href} href={item.href as any} className="transition hover:text-blue-500">
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-            <Suspense fallback={<div className="h-8 w-16" />}>
-              <LanguageSwitcher />
-            </Suspense>
+            <div className="flex items-center gap-3">
+              <nav className="hidden lg:flex items-center gap-6 text-sm text-slate-700" aria-label="Main navigation">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href as any}
+                    className="transition hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-2 py-1"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+              <Suspense fallback={<div className="h-8 w-16" />}>
+                <LanguageSwitcher />
+              </Suspense>
+              <MobileMenu locale={locale} navItems={navItems} />
+            </div>
           </div>
         </header>
         <main className="mx-auto min-h-screen max-w-6xl px-4 py-6 text-slate-800 md:px-6 md:py-12">{children}</main>

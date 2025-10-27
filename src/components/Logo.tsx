@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export function Logo({ size = 48, className = '' }: { size?: number; className?: string }) {
+export function Logo({ size = 48, className = '', priority = false }: { size?: number; className?: string; priority?: boolean }) {
   // 如果有自定义logo图片，显示图片；否则显示默认样式
   // 将你的logo文件放在 /frontend/public/logo.png 或 /frontend/public/logo.svg
   const hasCustomLogo = true; // Logo已上传
@@ -8,20 +8,22 @@ export function Logo({ size = 48, className = '' }: { size?: number; className?:
   if (hasCustomLogo) {
     return (
       <div
-        className={`flex items-center justify-center overflow-hidden rounded-full bg-white shadow-md ${className}`}
+        className={`flex items-center justify-center overflow-hidden ${className}`}
         style={{
           width: size,
-          height: size,
-          padding: '4px'
+          height: size
         }}
       >
         <Image
           src="/logo.png"
           alt="MyPinjam Credit Logo"
-          width={size - 8}
-          height={size - 8}
-          className="object-contain rounded-full"
-          priority
+          width={size}
+          height={size}
+          className="object-contain"
+          priority={priority}
+          loading={priority ? undefined : 'lazy'}
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
         />
       </div>
     );

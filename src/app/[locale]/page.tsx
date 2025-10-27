@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { GoogleMap } from '@/components/GoogleMap';
 import { LeadForm } from '@/components/forms/LeadForm';
+import { FadeInSection } from '@/components/FadeInSection';
 import type { Locale } from '@/types/locale';
 
 type PageProps = { params: Promise<{ locale: string }> };
@@ -104,26 +105,42 @@ export default async function HomePage({ params }: PageProps) {
 
   return (
     <div className="space-y-8 md:space-y-16">
-      <section className="rounded-2xl border border-blue-100 bg-gradient-to-br from-white via-sky-50 to-blue-100 p-6 shadow-xl shadow-blue-100 md:rounded-3xl md:p-10">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <section className="relative overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-white via-sky-50 to-blue-100 p-6 shadow-xl shadow-blue-100 md:rounded-3xl md:p-10">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(to right, rgb(59, 130, 246, 0.1) 1px, transparent 1px),
+              linear-gradient(to bottom, rgb(59, 130, 246, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '40px 40px'
+          }} />
+          <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-gradient-to-br from-blue-400/20 to-transparent blur-3xl" />
+          <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-gradient-to-br from-sky-400/20 to-transparent blur-3xl" />
+        </div>
+        <div className="relative flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl space-y-4">
             <p className="text-xs uppercase tracking-[0.35em] text-blue-600 md:text-sm">{tCommon('brand')}</p>
             <h1 className="text-2xl font-semibold tracking-tight text-slate-900 md:text-4xl lg:text-5xl">
               {tHero('headline')}
             </h1>
             <p className="text-base text-slate-700 md:text-lg">{tHero('subheadline')}</p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4" role="group" aria-label="Call to action buttons">
               <Link
                 href={applyHref as any}
-                className="inline-flex items-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg transition hover:bg-blue-500"
+                className="group inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-500 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                aria-label="Start loan application"
               >
                 {tHero('ctaPrimary')}
+                <span className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
               </Link>
               <Link
                 href={`/${locale}/products` as any}
-                className="inline-flex items-center rounded-full border border-blue-500 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-blue-600 transition hover:bg-blue-50"
+                className="group inline-flex items-center gap-2 rounded-full border-2 border-blue-500 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-blue-600 transition-all duration-300 hover:scale-105 hover:bg-blue-50 hover:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                aria-label="View loan product options"
               >
                 {tHero('ctaSecondary')}
+                <span className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
               </Link>
             </div>
           </div>
@@ -134,54 +151,59 @@ export default async function HomePage({ params }: PageProps) {
       </section>
 
       {/* Statistics Section */}
-      <section className="rounded-2xl border border-slate-200 bg-gradient-to-r from-slate-700 to-slate-800 p-6 text-white shadow-lg md:rounded-3xl md:p-10">
+      <FadeInSection>
+        <section className="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-600 via-blue-500 to-sky-400 p-6 text-white shadow-xl md:rounded-3xl md:p-10">
         <div className="text-center">
           <h2 className="text-xl font-semibold md:text-3xl">Trusted by Thousands of Malaysians</h2>
-          <p className="mt-2 text-sm text-slate-300 md:text-base">
+          <p className="mt-2 text-sm text-blue-50 md:text-base">
             Real results from real people who chose MyPinjam Credit
           </p>
         </div>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 md:mt-8 md:gap-8">
           <div className="text-center">
             <div className="text-3xl font-bold md:text-4xl lg:text-5xl">5,000+</div>
-            <p className="mt-2 text-xs text-slate-300 md:text-sm">Satisfied Customers</p>
+            <p className="mt-2 text-xs text-blue-50 md:text-sm">Satisfied Customers</p>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold md:text-4xl lg:text-5xl">RM 50M+</div>
-            <p className="mt-2 text-xs text-slate-300 md:text-sm">Loans Disbursed</p>
+            <p className="mt-2 text-xs text-blue-50 md:text-sm">Loans Disbursed</p>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold md:text-4xl lg:text-5xl">98%</div>
-            <p className="mt-2 text-xs text-slate-300 md:text-sm">Customer Satisfaction</p>
+            <p className="mt-2 text-xs text-blue-50 md:text-sm">Customer Satisfaction</p>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold md:text-4xl lg:text-5xl">24 hrs</div>
-            <p className="mt-2 text-xs text-slate-300 md:text-sm">Average Approval Time</p>
+            <p className="mt-2 text-xs text-blue-50 md:text-sm">Average Approval Time</p>
           </div>
         </div>
       </section>
+      </FadeInSection>
 
-      <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <FadeInSection delay={100}>
+        <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         {cards.map((card) => (
           <Link
             key={card.key}
             href={card.href as any}
-            className="group rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
+            className="group rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl"
           >
-            <p className="text-sm uppercase tracking-[0.2em] text-blue-600">
+            <p className="text-sm uppercase tracking-[0.2em] text-blue-600 transition-colors group-hover:text-blue-700">
               {tHomeCards(`${card.key}.title`)}
             </p>
             <p className="mt-3 text-base text-slate-600">
               {tHomeCards(`${card.key}.description`)}
             </p>
-            <span className="mt-6 inline-flex items-center text-sm font-semibold text-blue-600">
-              {tCommon('actions.learnMore')} {'\u2192'}
+            <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-blue-600 transition-all group-hover:gap-2">
+              {tCommon('actions.learnMore')} <span className="transition-transform group-hover:translate-x-1">{'\u2192'}</span>
             </span>
           </Link>
         ))}
       </section>
+      </FadeInSection>
 
-      <section className="rounded-3xl border border-blue-100 bg-white/95 p-10 shadow-lg">
+      <FadeInSection delay={200}>
+        <section className="rounded-3xl border border-blue-100 bg-white/95 p-10 shadow-lg">
         <header className="space-y-3 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-500">
             Example Instalments
@@ -230,17 +252,20 @@ export default async function HomePage({ params }: PageProps) {
         <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-sm">
           <Link
             href={calculatorHref as any}
-            className="inline-flex items-center rounded-full border border-blue-200 px-6 py-3 text-blue-600 transition hover:border-blue-400 hover:text-blue-700"
+            className="group inline-flex items-center gap-2 rounded-full border-2 border-blue-200 px-6 py-3 text-blue-600 transition-all duration-300 hover:scale-105 hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700"
           >
             Launch repayment calculator
+            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
           <span className="rounded-full bg-blue-50 px-4 py-2 text-blue-600">
             Example purpose only — advisor will confirm your actual schedule
           </span>
         </div>
       </section>
+      </FadeInSection>
 
-      <section className="grid gap-8 md:grid-cols-2">
+      <FadeInSection delay={300}>
+        <section className="grid gap-8 md:grid-cols-2">
         <div className="h-[600px] overflow-hidden rounded-3xl border border-blue-100 bg-white shadow-lg">
           <GoogleMap />
         </div>
@@ -248,9 +273,11 @@ export default async function HomePage({ params }: PageProps) {
           <LeadForm />
         </div>
       </section>
+      </FadeInSection>
 
       {/* Customer Testimonials */}
-      <section className="rounded-3xl border border-blue-100 bg-white p-10 shadow-sm">
+      <FadeInSection delay={100}>
+        <section className="rounded-3xl border border-blue-100 bg-white p-10 shadow-sm">
         <div className="text-center">
           <h2 className="text-3xl font-semibold text-slate-900">What Our Customers Say</h2>
           <p className="mt-2 text-slate-600">Real feedback from people who trusted us with their financing needs</p>
@@ -301,8 +328,10 @@ export default async function HomePage({ params }: PageProps) {
           ))}
         </div>
       </section>
+      </FadeInSection>
 
-      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-sky-50 p-10 shadow-lg">
+      <FadeInSection delay={200}>
+        <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-sky-50 p-10 shadow-lg">
         <h2 className="text-2xl font-semibold text-blue-600">Operational assurances</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {operatingAssurances.map((assurance) => (
@@ -321,6 +350,7 @@ export default async function HomePage({ params }: PageProps) {
           ))}
         </div>
       </section>
+      </FadeInSection>
     </div>
   );
 }
