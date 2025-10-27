@@ -54,7 +54,7 @@ export function generateSEO(config: SEOConfig): Metadata {
       }
     },
     openGraph: {
-      type,
+      type: type === 'product' ? 'website' : type,
       locale: ogLocale,
       url: canonicalUrl,
       siteName,
