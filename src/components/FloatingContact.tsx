@@ -14,10 +14,10 @@ export default function FloatingContact() {
 
   return (
     <>
-      {/* Backdrop */}
+      {/* Backdrop - no blur for performance */}
       {isExpanded && (
         <div
-          className="fixed inset-0 z-30 bg-black/20 backdrop-blur-sm"
+          className="fixed inset-0 z-30 bg-black/30"
           onClick={() => setIsExpanded(false)}
         />
       )}
@@ -32,7 +32,7 @@ export default function FloatingContact() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-3 text-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+              className="group flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-3 text-white shadow-lg transition-colors"
             >
               <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center">
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -48,7 +48,7 @@ export default function FloatingContact() {
             {/* Phone */}
             <a
               href={`tel:${phoneNumber}`}
-              className="group flex items-center gap-3 rounded-full bg-blue-600 px-5 py-3 text-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+              className="group flex items-center gap-3 rounded-full bg-blue-600 px-5 py-3 text-white shadow-lg transition-colors"
             >
               <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center">
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,7 +64,7 @@ export default function FloatingContact() {
             {/* Email */}
             <a
               href={`mailto:${email}`}
-              className="group flex items-center gap-3 rounded-full bg-slate-700 px-5 py-3 text-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+              className="group flex items-center gap-3 rounded-full bg-slate-700 px-5 py-3 text-white shadow-lg transition-colors"
             >
               <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center">
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -82,10 +82,10 @@ export default function FloatingContact() {
         {/* Main Toggle Button */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className={`flex h-14 w-14 items-center justify-center rounded-full shadow-xl transition-all ${
+          className={`flex h-14 w-14 items-center justify-center rounded-full shadow-xl transition-transform duration-200 ${
             isExpanded
-              ? 'rotate-45 bg-slate-700 hover:bg-slate-600'
-              : 'bg-blue-600 hover:scale-110 hover:bg-blue-500'
+              ? 'rotate-45 bg-slate-700'
+              : 'bg-blue-600'
           }`}
           aria-label="Contact options"
         >

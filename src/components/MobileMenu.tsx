@@ -38,17 +38,17 @@ export function MobileMenu({ locale, navItems }: MobileMenuProps) {
         />
       </button>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay - no backdrop-blur for performance */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-[100] bg-black/30 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] bg-black/40"
           onClick={() => setIsOpen(false)}
         />
       )}
 
-      {/* Mobile Menu Panel */}
+      {/* Mobile Menu Panel - faster animation */}
       <div
-        className={`fixed right-0 top-0 z-[101] h-full w-64 bg-white shadow-2xl transition-transform duration-300 ${
+        className={`fixed right-0 top-0 z-[101] h-full w-64 bg-white shadow-2xl transition-transform duration-200 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
