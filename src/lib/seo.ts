@@ -107,47 +107,198 @@ export function generateSEO(config: SEOConfig): Metadata {
 // Common keyword sets for different page types
 export const keywordSets = {
   homepage: [
+    // English - General
     'personal loan malaysia',
     'business loan malaysia',
-    'pinjaman peribadi',
-    'loan advisor',
-    'mont kiara loan',
-    'kuala lumpur loan',
+    'loan advisor malaysia',
     'fast loan approval',
     'low interest loan',
-    'licensed credit facilitator'
+    'licensed credit facilitator',
+
+    // Malay - Targeting Malay community
+    'pinjaman peribadi malaysia',
+    'pinjaman perniagaan',
+    'pembiayaan islam',
+    'pinjaman cepat lulus',
+    'pinjaman tanpa cagaran',
+    'pembiayaan murabahah',
+    'pinjaman bumiputera',
+    'tekun loan',
+    'agrobank pinjaman',
+
+    // Chinese - Targeting Chinese community (Simplified)
+    '马来西亚贷款',
+    '个人贷款',
+    '商业贷款',
+    '快速批准贷款',
+    '低利息贷款',
+    '无抵押贷款',
+    '华人贷款顾问',
+
+    // Tamil - Targeting Indian community
+    'கடன் மலேசியா',
+    'தனிப்பட்ட கடன்',
+    'வணிக கடன்',
+
+    // Location-based
+    'mont kiara loan',
+    'kuala lumpur loan',
+    'klang valley loan',
+    'selangor loan',
+    'penang loan',
+    'johor bahru loan',
+
+    // Community-specific
+    'chinese loan advisor',
+    'malay loan consultant',
+    'indian loan helper',
+    'bumiputera financing',
+    'sme loan malaysia',
+    'online loan malaysia'
   ],
   personalLoan: [
-    'personal loan',
-    'pinjaman peribadi',
+    // English
+    'personal loan malaysia',
     'unsecured loan',
     'no collateral loan',
     'fast approval loan',
-    'low interest personal loan malaysia',
-    'online loan application'
+    'emergency loan',
+    'online loan application',
+    '24 hour loan approval',
+
+    // Malay
+    'pinjaman peribadi',
+    'pinjaman kecemasan',
+    'pinjaman cepat',
+    'pinjaman tanpa penjamin',
+    'pinjaman islam',
+    'pinjaman al-tawarruq',
+
+    // Chinese
+    '个人贷款马来西亚',
+    '紧急贷款',
+    '快速贷款',
+    '无需担保人',
+    '网上申请贷款',
+
+    // Tamil
+    'தனிப்பட்ட கடன் மலேசியா',
+    'விரைவு கடன்',
+
+    // Specific needs
+    'debt consolidation malaysia',
+    'wedding loan',
+    'medical emergency loan',
+    'education loan'
   ],
   businessLoan: [
-    'business loan',
+    // English
+    'business loan malaysia',
     'SME loan',
     'working capital loan',
     'equipment financing',
     'business expansion loan',
+    'startup loan malaysia',
+
+    // Malay
     'pinjaman perniagaan',
-    'SME financing malaysia'
+    'pinjaman PKS',
+    'modal kerja',
+    'pinjaman TEKUN',
+    'pembiayaan usahawan',
+    'pinjaman bumiputera',
+
+    // Chinese
+    '商业贷款马来西亚',
+    '中小企业贷款',
+    '营运资金贷款',
+    '设备融资',
+    '创业贷款',
+
+    // Tamil
+    'வணிக கடன் மலேசியா',
+
+    // Specific
+    'restaurant financing',
+    'retail business loan',
+    'franchise financing',
+    'factory loan',
+    'shop lot financing'
   ],
   calculator: [
-    'loan calculator',
+    // English
+    'loan calculator malaysia',
     'monthly installment calculator',
     'loan repayment calculator',
     'interest calculator',
-    'kalkulator pinjaman'
+    'DSR calculator',
+
+    // Malay
+    'kalkulator pinjaman',
+    'kalkulator ansuran bulanan',
+    'kira bayaran balik',
+
+    // Chinese
+    '贷款计算器',
+    '月供计算器',
+    '利息计算器',
+
+    // Tamil
+    'கடன் கணிப்பான்'
   ],
   faq: [
-    'loan FAQ',
-    'loan questions',
-    'loan application process',
+    // English
+    'loan FAQ malaysia',
+    'how to apply loan',
     'loan eligibility',
-    'loan requirements malaysia'
+    'loan requirements',
+    'credit score malaysia',
+
+    // Malay
+    'soalan lazim pinjaman',
+    'syarat kelayakan pinjaman',
+    'cara mohon pinjaman',
+
+    // Chinese
+    '贷款常见问题',
+    '如何申请贷款',
+    '贷款资格',
+
+    // Tamil
+    'கடன் கேள்விகள்'
+  ],
+  // New: Ethnic/Community specific
+  chinese: [
+    '华人贷款顾问',
+    '马来西亚华人贷款',
+    '中文贷款服务',
+    '华语顾问',
+    '新村贷款',
+    'chinese speaking loan advisor',
+    'mandarin loan service',
+    'cantonese loan consultant'
+  ],
+  malay: [
+    'pinjaman bumiputera',
+    'pembiayaan islam',
+    'pinjaman TEKUN',
+    'pinjaman MARA',
+    'bank rakyat',
+    'agrobank',
+    'bsn pinjaman',
+    'pinjaman felda',
+    'malay loan advisor',
+    'islamic financing'
+  ],
+  indian: [
+    'indian loan malaysia',
+    'tamil loan advisor',
+    'estate loan',
+    'hindu temple loan',
+    'deepavali loan',
+    'கடன் ஆலோசகர்',
+    'மலேசிய கடன்',
+    'விரைவு அனுமதி'
   ]
 };
 

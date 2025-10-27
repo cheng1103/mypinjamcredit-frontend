@@ -6,7 +6,7 @@ author: "MyPinjam Credit Team"
 publishedDate: "2025-01-16"
 modifiedDate: "2025-01-16"
 category: "Loan Comparison"
-tags: ["personal loan", "business loan", "SME financing", "loan comparison", "malaysia"]
+tags: ["personal loan", "business loan", "SME financing", "loan comparison", "malaysia", "pinjaman peribadi", "pinjaman perniagaan", "个人贷款", "商业贷款", "வணிக கடன்", "TEKUN", "SME Bank", "bumiputera loan", "chinese business", "indian business"]
 image: "/blog/personal-vs-business-loan.jpg"
 featured: true
 readTime: "8 min read"

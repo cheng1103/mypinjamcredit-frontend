@@ -6,7 +6,7 @@ author: "MyPinjam Credit Team"
 publishedDate: "2025-01-15"
 modifiedDate: "2025-01-15"
 category: "Loan Tips"
-tags: ["loan approval", "personal finance", "malaysia", "fast approval", "loan tips"]
+tags: ["loan approval", "personal finance", "malaysia", "fast approval", "loan tips", "pinjaman cepat", "快速贷款", "விரைவு கடன்", "bumiputera", "chinese loan", "indian loan", "CTOS", "CCRIS", "DSR calculator"]
 image: "/blog/loan-approval-tips.jpg"
 featured: true
 readTime: "6 min read"

@@ -20,13 +20,38 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: 'Expert Loan & Finance Tips - MyPinjam Credit Blog',
     description: 'Get expert advice on personal loans, business financing, credit scores, and financial planning in Malaysia. Free guides and tips from licensed loan advisors.',
     keywords: [
+      // English
       'loan blog malaysia',
       'personal finance tips',
       'credit score guide',
       'loan approval tips',
       'business financing guide',
       'financial advice malaysia',
-      'pinjaman tips'
+
+      // Malay
+      'pinjaman tips',
+      'panduan kewangan',
+      'nasihat pinjaman',
+      'pembiayaan islam',
+
+      // Chinese
+      '贷款博客',
+      '马来西亚贷款指南',
+      '个人理财建议',
+      '贷款批准技巧',
+      '华人贷款顾问',
+
+      // Tamil
+      'கடன் வழிகாட்டி',
+      'நிதி ஆலோசனை',
+
+      // Community-specific
+      'chinese loan advisor',
+      'malay loan tips',
+      'indian loan guide',
+      'bumiputera financing',
+      'CTOS guide',
+      'CCRIS tips'
     ],
     canonical: hrefForLocale(locale),
     locale,
