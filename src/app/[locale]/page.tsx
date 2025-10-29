@@ -6,6 +6,7 @@ import { LeadForm } from '@/components/forms/LeadForm';
 import { FadeInSection } from '@/components/FadeInSection';
 import { CountUp } from '@/components/CountUp';
 import { generateSEO, keywordSets } from '@/lib/seo';
+import { generateLocalBusinessSchema, generateWebsiteSchema, generateOrganizationSchema } from '@/lib/schemas';
 import type { Locale } from '@/types/locale';
 
 type PageProps = { params: Promise<{ locale: string }> };
@@ -86,8 +87,28 @@ export default async function HomePage({ params }: PageProps) {
     { key: 'contact', href: `/${locale}/contact` }
   ] as const;
 
+  // Generate structured data schemas
+  const localBusinessSchema = generateLocalBusinessSchema();
+  const websiteSchema = generateWebsiteSchema();
+  const organizationSchema = generateOrganizationSchema();
+
   return (
-    <div className="space-y-8 md:space-y-16">
+    <>
+      {/* Structured Data Schemas */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+
+      <div className="space-y-8 md:space-y-16">
       <section className="relative overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-white via-sky-50 to-blue-100 p-6 shadow-xl shadow-blue-100 md:rounded-3xl md:p-10">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-30">
@@ -401,5 +422,6 @@ export default async function HomePage({ params }: PageProps) {
       </section>
       </FadeInSection>
     </div>
+    </>
   );
 }
