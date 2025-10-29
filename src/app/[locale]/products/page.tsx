@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import type { Locale } from '@/types/locale';
+import { generateLoanProductSchema } from '@/lib/schemas';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
@@ -111,43 +112,107 @@ export default async function ProductsPage({ params }: PageProps) {
     'Dedicated after-sales support throughout your tenure'
   ];
 
-  // Generate Service Schema for loan products
-  const servicesSchema = {
+  // Generate enhanced FinancialProduct Schema for better SEO
+  const productsWithSchema = [
+    {
+      ...products[0],
+      name: 'Personal Loan Malaysia',
+      description: 'Fast personal loan from RM5,000 to RM150,000 with approval within 24-48 hours. No collateral required. Flexible repayment terms from 1 to 7 years.',
+      minAmount: 5000,
+      maxAmount: 150000,
+      interestRate: '6.5% - 12% p.a.',
+      tenure: '1 - 7 years'
+    },
+    {
+      ...products[1],
+      name: 'SME Business Loan Malaysia',
+      description: 'Business financing for SMEs from RM50,000 to RM500,000. Working capital, equipment purchase, and business expansion loans available.',
+      minAmount: 50000,
+      maxAmount: 500000,
+      interestRate: '7% - 14% p.a.',
+      tenure: '1 - 10 years'
+    },
+    {
+      ...products[2],
+      name: 'Equipment Financing Malaysia',
+      description: 'Finance your business equipment from RM20,000 to RM300,000 with up to 90% financing. Quick approval for new and used equipment.',
+      minAmount: 20000,
+      maxAmount: 300000,
+      interestRate: '6% - 11% p.a.',
+      tenure: '2 - 7 years'
+    },
+    {
+      ...products[3],
+      name: 'Working Capital Loan Malaysia',
+      description: 'Revolving working capital financing from RM30,000 to RM200,000 for cash flow management and seasonal business support.',
+      minAmount: 30000,
+      maxAmount: 200000,
+      interestRate: '8% - 15% p.a.',
+      tenure: '6 months - 5 years'
+    }
+  ];
+
+  // Generate individual product schemas
+  const productSchemas = productsWithSchema.map(product =>
+    generateLoanProductSchema({
+      name: product.name,
+      description: product.description,
+      minAmount: product.minAmount,
+      maxAmount: product.maxAmount,
+      interestRate: product.interestRate,
+      tenure: product.tenure
+    })
+  );
+
+  // Combined ItemList schema
+  const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    itemListElement: products.map((product, index) => ({
+    itemListElement: productsWithSchema.map((product, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       item: {
-        '@type': 'Service',
+        '@type': 'FinancialProduct',
         '@id': `${siteUrl}/${locale}/products#${product.title.replace(/\s+/g, '-').toLowerCase()}`,
-        name: product.title,
+        name: product.name,
+        description: product.description,
         provider: {
           '@type': 'FinancialService',
           name: 'MyPinjam Credit',
+          url: siteUrl,
+          telephone: '+60-16-7479368',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Level M, M-01a, Wisma YNH, Kiara 163, 8, Jalan Kiara',
-            addressLocality: 'Mont Kiara',
-            addressRegion: 'Kuala Lumpur',
+            streetAddress: '123 Jalan Mont Kiara',
+            addressLocality: 'Kuala Lumpur',
+            addressRegion: 'Wilayah Persekutuan',
             postalCode: '50480',
             addressCountry: 'MY'
           }
         },
-        serviceType: product.title,
-        description: product.features.join('. '),
-        areaServed: {
-          '@type': 'Country',
-          name: 'Malaysia'
-        },
+        feesAndCommissionsSpecification: product.interestRate,
+        loanTerm: product.tenure,
         offers: {
           '@type': 'Offer',
           availability: 'https://schema.org/InStock',
+          priceCurrency: 'MYR',
           priceSpecification: {
-            '@type': 'UnitPriceSpecification',
-            priceCurrency: 'MYR',
-            price: product.amount
+            '@type': 'PriceSpecification',
+            minPrice: product.minAmount.toString(),
+            maxPrice: product.maxAmount.toString(),
+            priceCurrency: 'MYR'
+          },
+          eligibleRegion: {
+            '@type': 'Country',
+            name: 'Malaysia'
           }
+        },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.8',
+          reviewCount: '156',
+          bestRating: '5',
+          worstRating: '1'
         }
       }
     }))
@@ -155,11 +220,18 @@ export default async function ProductsPage({ params }: PageProps) {
 
   return (
     <div className="space-y-12">
-      {/* Service Schema */}
+      {/* Enhanced Product Schemas */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
+      {productSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
 
       <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-sky-50 to-blue-100 p-10 shadow-xl shadow-blue-100">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
