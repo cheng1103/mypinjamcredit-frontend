@@ -20,7 +20,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/privacy',
     '/terms',
     '/compliance',
-    '/locations/kuala-lumpur'
+    '/locations/kuala-lumpur',
+    '/locations/penang',
+    '/locations/johor-bahru'
   ];
   const locales = ['en', 'ms'];
 
