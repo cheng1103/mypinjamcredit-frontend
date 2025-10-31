@@ -6,7 +6,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
   // Define all routes
-  const routes = ['', '/apply', '/contact', '/about', '/products', '/calculator', '/faq', '/blog', '/feedback', '/privacy', '/terms', '/compliance'];
+  const routes = [
+    '',
+    '/apply',
+    '/contact',
+    '/about',
+    '/products',
+    '/calculator',
+    '/faq',
+    '/blog',
+    '/reviews',
+    '/feedback',
+    '/privacy',
+    '/terms',
+    '/compliance',
+    '/locations/kuala-lumpur'
+  ];
   const locales = ['en', 'ms'];
 
   const sitemap: MetadataRoute.Sitemap = [];
@@ -38,7 +53,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   blogPosts.forEach((post) => {
     locales.forEach((locale) => {
       const url = `${baseUrl}/${locale}/blog/${post.slug}`;
-      const postDate = new Date(post.modifiedDate || post.publishedDate);
+
+      // Safely parse date, fallback to current date if invalid
+      let postDate: Date;
+      try {
+        const dateStr = post.modifiedDate || post.publishedDate;
+        postDate = dateStr ? new Date(dateStr) : lastModified;
+        // Check if date is valid
+        if (isNaN(postDate.getTime())) {
+          postDate = lastModified;
+        }
+      } catch (error) {
+        postDate = lastModified;
+      }
 
       sitemap.push({
         url,
