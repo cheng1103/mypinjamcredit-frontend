@@ -587,6 +587,30 @@ Still not sure which loan is right for you? Our licensed advisors can:
 
 ---
 
+## 📚 Related Resources
+
+**Ready to Apply?**
+- [Apply for Personal or Business Loan](/en/apply) - Get started with your application
+- [Loan Calculator](/en/calculator) - Calculate monthly payments and total costs
+- [FAQ](/en/faq) - Answers to common questions about eligibility and requirements
+
+**Improve Your Approval Chances:**
+- [CTOS Score Complete Guide 2025](/en/blog/ctos-score-complete-guide-2025) - Check and improve your credit score
+- [5 Tips to Get Loan Approval Faster](/en/blog/5-tips-get-loan-approval-faster) - Speed up your application
+- [Improve Credit Score Guide](/en/blog/improve-credit-score-malaysia-complete-guide) - Advanced strategies
+
+**Location-Specific Services:**
+- [Personal Loan Kuala Lumpur](/en/locations/kuala-lumpur) - KL, Mont Kiara, KLCC
+- [Personal Loan Penang](/en/locations/penang) - Georgetown, Bayan Lepas
+- [Personal Loan Johor Bahru](/en/locations/johor-bahru) - JB, Nusajaya, Skudai
+
+**Specialized Loan Guides:**
+- [TEKUN Loan Complete Guide](/en/blog/tekun-loan-complete-guide-2025) - For Bumiputera businesses
+- [Restaurant Financing Guide](/en/blog/restaurant-financing-complete-guide-2025) - For F&B businesses
+- [Shopee/Lazada Sellers Loan Guide](/en/blog/shopee-lazada-sellers-loan-guide-2025) - For e-commerce sellers
+
+---
+
 **About the Author:** Written by MyPinjam Credit's advisory team with combined experience of 15+ years in consumer and commercial financing.
 
 **Disclaimer:** Interest rates and eligibility criteria may vary by lender and individual circumstances. This article is for informational purposes only and does not constitute financial advice. Always consult with a licensed financial advisor for your specific situation.

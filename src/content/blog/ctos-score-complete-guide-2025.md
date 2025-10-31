@@ -691,6 +691,28 @@ Solution:
 
 ---
 
+## 📚 Related Resources
+
+**Want to apply for a loan with improved credit?**
+- [Apply for Personal or Business Loan](/en/apply) - Fast approval with CTOS improvement assistance
+- [Loan Calculator](/en/calculator) - Calculate your monthly repayments
+- [FAQ - Common Loan Questions](/en/faq) - Get answers to 40+ questions
+
+**Location-Specific Loan Services:**
+- [Loan Advisor Kuala Lumpur](/en/locations/kuala-lumpur) - KL, Mont Kiara, KLCC, Bangsar
+- [Loan Advisor Penang](/en/locations/penang) - Georgetown, Bayan Lepas, Bukit Mertajam
+- [Loan Advisor Johor Bahru](/en/locations/johor-bahru) - JB City, Nusajaya, Skudai
+
+**More Helpful Guides:**
+- [Personal Loan Complete Guide 2025](/en/blog/personal-loan-vs-business-loan-complete-guide) - Everything about personal loans
+- [5 Tips to Get Loan Approval Faster](/en/blog/5-tips-get-loan-approval-faster) - Speed up your application
+- [Improve Credit Score Guide](/en/blog/improve-credit-score-malaysia-complete-guide) - Advanced credit improvement strategies
+
+**Need Help Improving Your CTOS Score?**
+[Contact our CTOS improvement specialists](/en/contact) - Free consultation in Chinese 华语, Malay, or Tamil தமிழ்
+
+---
+
 **Disclaimer:** This guide is for educational purposes. Credit scores are determined by CTOS algorithms and bank criteria. Individual results may vary. Always borrow responsibly and within your means.
 
 **Last Updated:** January 18, 2025

@@ -294,6 +294,30 @@ At MyPinjam Credit, we've helped over 5,000 Malaysians get loan approvals in as 
 
 ---
 
+## 📚 Related Resources
+
+**Essential Guides:**
+- [CTOS Score Complete Guide](/en/blog/ctos-score-complete-guide-2025) - Improve your credit score for better approval
+- [Personal vs Business Loan Guide](/en/blog/personal-loan-vs-business-loan-complete-guide) - Choose the right loan type
+- [Improve Credit Score Guide](/en/blog/improve-credit-score-malaysia-complete-guide) - Advanced credit strategies
+
+**Apply for a Loan:**
+- [Apply Now](/en/apply) - Start your fast-track application
+- [Loan Calculator](/en/calculator) - Calculate your monthly payments
+- [FAQ](/en/faq) - Get answers to common questions
+
+**Location-Based Services:**
+- [Kuala Lumpur Loan Services](/en/locations/kuala-lumpur) - Fast approval in KL
+- [Penang Loan Services](/en/locations/penang) - Georgetown, Bayan Lepas
+- [Johor Bahru Loan Services](/en/locations/johor-bahru) - JB, Nusajaya
+
+**Specialized Guides:**
+- [TEKUN Loan Guide](/en/blog/tekun-loan-complete-guide-2025) - 4% interest for Bumiputera
+- [Restaurant Financing](/en/blog/restaurant-financing-complete-guide-2025) - F&B business loans
+- [E-commerce Seller Loans](/en/blog/shopee-lazada-sellers-loan-guide-2025) - Shopee/Lazada financing
+
+---
+
 **About the Author:** This article was written by the MyPinjam Credit advisory team, licensed loan facilitators with over 10 years of combined experience in Malaysian consumer and commercial financing.
 
 **Disclaimer:** Loan approval is subject to individual circumstances and bank criteria. The tips in this article are based on our experience but do not guarantee approval. Always borrow responsibly and within your means.
