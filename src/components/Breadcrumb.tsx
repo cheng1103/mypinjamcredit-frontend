@@ -48,7 +48,7 @@ export function Breadcrumb({ items, locale }: BreadcrumbProps) {
                 </span>
               ) : (
                 <Link
-                  href={item.href}
+                  href={item.href as any}
                   className="text-slate-600 transition-colors hover:text-blue-600 hover:underline"
                 >
                   {item.label}
