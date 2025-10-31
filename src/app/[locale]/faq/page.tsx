@@ -13,8 +13,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const locale = localeStr as Locale;
 
   return {
-    title: 'Frequently Asked Questions - MyPinjam Credit',
-    description: 'Find answers to common questions about our loan products, application process, requirements, and more.',
+    title: 'Loan FAQ Malaysia 2025 - Personal & Business Loan Questions Answered',
+    description: 'Get expert answers to 40+ common loan questions: CTOS score, loan eligibility, application process, interest rates, requirements for personal & business loans in Malaysia. English, Malay, Chinese support.',
+    keywords: [
+      'loan FAQ malaysia',
+      'soalan lazim pinjaman',
+      '贷款常见问题',
+      'how to apply personal loan',
+      'business loan requirements',
+      'CTOS score questions',
+      'loan eligibility malaysia',
+      'what documents needed for loan',
+      'minimum salary for loan',
+      'loan with bad credit',
+      'chinese loan questions',
+      'malay loan FAQ',
+      'indian loan help'
+    ],
     alternates: {
       canonical: hrefForLocale(locale),
       languages: {
@@ -24,8 +39,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     },
     openGraph: {
-      title: 'FAQ - MyPinjam Credit',
-      description: 'Get answers to your loan-related questions',
+      title: 'Loan FAQ Malaysia 2025 - 40+ Questions Answered',
+      description: 'Expert answers to loan questions: CTOS, eligibility, applications, interest rates. Chinese, Malay, Indian community support.',
       url: hrefForLocale(locale),
       siteName: 'MyPinjam Credit',
       locale: locale === 'ms' ? 'ms_MY' : 'en_MY',
@@ -40,11 +55,28 @@ export default async function FAQPage({ params }: PageProps) {
 
   const faqCategories = [
     {
+      title: 'General & Services',
+      questions: [
+        {
+          q: 'What is MyPinjam Credit and what services do you provide?',
+          a: 'MyPinjam Credit is a licensed loan advisory service helping Malaysians find the best financing from 20+ banks and lenders. Services: Personal Loans (RM5K-RM150K), Business Loans (RM50K-RM500K), Equipment Financing, CTOS improvement, Multilingual support (English/Malay/Chinese/Tamil). Free consultation, only pay 1-3% if approved.'
+        },
+        {
+          q: 'Do you provide service in Chinese, Malay, or Tamil?',
+          a: 'YES! We provide full consultation in 华语 (Mandarin), 粤语 (Cantonese), Bahasa Malaysia, and தமிழ் (Tamil). Our consultants understand Chinese business culture, Islamic financing, and estate worker needs. Contact us and specify your language preference!'
+        },
+        {
+          q: 'Are you different from banks? How do you help?',
+          a: 'We are NOT a bank - we are loan consultants. We help you: 1) Find suitable lenders (you may not know all options), 2) Prepare complete documents (avoid rejection), 3) Negotiate better rates, 4) Submit to multiple lenders, 5) Handle follow-ups. Like a real estate agent but for loans. Success rate: 78%.'
+        }
+      ]
+    },
+    {
       title: 'Application Process',
       questions: [
         {
-          q: 'How long does the application process take?',
-          a: 'Our online application takes just 5-10 minutes to complete. Once submitted, our licensed advisor will review your application and respond within one business day with the approval decision or request for additional documents.'
+          q: 'How long does the loan application and approval take?',
+          a: 'Timeline varies by lender: Shopee/Lazada financing 1-2 days, Fintech (Funding Societies) 2-5 days, Bank Rakyat 1-2 weeks, Commercial banks 2-4 weeks, SME Bank 3-6 weeks. We expedite by ensuring complete applications. Total process: Document prep (1-2 days) + Lender review (above timeline) + Disbursement (1-3 days).'
         },
         {
           q: 'Can I apply online or do I need to visit an office?',
