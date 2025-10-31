@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import type { Locale } from '@/types/locale';
+import { Breadcrumb, generateBreadcrumbSchema } from '@/components/Breadcrumb';
+import Link from 'next/link';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
@@ -248,6 +250,14 @@ export default async function JohorBahruLocationPage({ params }: PageProps) {
     { name: 'Iskandar Investment Berhad', speciality: 'IDR Project Financing', icon: '🏛️' }
   ];
 
+  const breadcrumbItems = [
+    { label: 'Home', href: `/${locale}` },
+    { label: 'Locations', href: `/${locale}/locations` },
+    { label: 'Johor Bahru', href: `/${locale}/locations/johor-bahru` }
+  ];
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems, siteUrl);
+
   return (
     <div className="space-y-12">
       {/* LocalBusiness Schema */}
@@ -255,6 +265,14 @@ export default async function JohorBahruLocationPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(generateJohorLocationSchema()) }}
       />
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb items={breadcrumbItems} locale={locale} />
 
       {/* Hero Section */}
       <section className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-10 shadow-lg">

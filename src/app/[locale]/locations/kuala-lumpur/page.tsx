@@ -3,6 +3,7 @@ import type { Locale } from '@/types/locale';
 import { generateSEO } from '@/lib/seo';
 import { MapPin, Phone, Mail, Clock, Star, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
+import { Breadcrumb, generateBreadcrumbSchema } from '@/components/Breadcrumb';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
@@ -135,6 +136,14 @@ export default async function KualaLumpurPage({ params }: PageProps) {
     { name: 'Funding Societies', location: 'Online (KL-based)', specialty: 'Fast Fintech Loans 2-5 days' }
   ];
 
+  const breadcrumbItems = [
+    { label: 'Home', href: `/${locale}` },
+    { label: 'Locations', href: `/${locale}/locations` },
+    { label: 'Kuala Lumpur', href: `/${locale}/locations/kuala-lumpur` }
+  ];
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems, siteUrl);
+
   return (
     <>
       {/* KL Location Schema */}
@@ -142,11 +151,18 @@ export default async function KualaLumpurPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(klSchema) }}
       />
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-blue-100">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4 max-w-7xl">
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb items={breadcrumbItems} locale={locale} />
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
