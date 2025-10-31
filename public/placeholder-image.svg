@@ -1,0 +1,10 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#F1F5F9"/>
+  <g opacity="0.3">
+    <path d="M320 280L400 200L520 320L600 240V400H200V280L320 280Z" fill="#94A3B8"/>
+    <circle cx="320" cy="240" r="40" fill="#94A3B8"/>
+  </g>
+  <text x="400" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#64748B" text-anchor="middle">
+    Image not available
+  </text>
+</svg>

@@ -11,7 +11,27 @@ const nextConfig: NextConfig = {
   },
   turbopack: {
     root: __dirname
-  }
+  },
+  // Image optimization configuration
+  images: {
+    formats: ['image/avif', 'image/webp'], // Use modern formats (AVIF first, then WebP fallback)
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840], // Responsive breakpoints
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384], // Icon and thumbnail sizes
+    minimumCacheTTL: 60 * 60 * 24 * 365, // Cache images for 1 year
+    dangerouslyAllowSVG: true, // Allow SVG images
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.mypinjamcredit.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'mypinjamcredit.com',
+      },
+    ],
+  },
 };
 
 const pwaConfig = withPWA({
