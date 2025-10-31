@@ -1,7 +1,4 @@
-'use client';
-
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
 interface BreadcrumbItem {
   label: string;
@@ -14,14 +11,12 @@ interface BreadcrumbProps {
 }
 
 export function Breadcrumb({ items, locale }: BreadcrumbProps) {
-  const pathname = usePathname();
-
-  // Auto-generate breadcrumbs from URL if not provided
-  const breadcrumbs = items || generateBreadcrumbs(pathname, locale);
-
-  if (breadcrumbs.length <= 1) {
+  // Items should always be provided from the page
+  if (!items || items.length <= 1) {
     return null; // Don't show breadcrumb on homepage
   }
+
+  const breadcrumbs = items;
 
   return (
     <nav aria-label="Breadcrumb" className="mb-6">
@@ -62,50 +57,7 @@ export function Breadcrumb({ items, locale }: BreadcrumbProps) {
   );
 }
 
-function generateBreadcrumbs(pathname: string, locale: string): BreadcrumbItem[] {
-  const breadcrumbs: BreadcrumbItem[] = [
-    { label: 'Home', href: `/${locale}` }
-  ];
-
-  // Remove locale from pathname
-  const path = pathname.replace(`/${locale}`, '');
-
-  if (!path || path === '/') {
-    return breadcrumbs;
-  }
-
-  const segments = path.split('/').filter(Boolean);
-  let currentPath = `/${locale}`;
-
-  segments.forEach((segment, index) => {
-    currentPath += `/${segment}`;
-
-    // Generate label from segment
-    let label = segment
-      .split('-')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
-
-    // Special cases for better labels
-    if (segment === 'kuala-lumpur') label = 'Kuala Lumpur';
-    if (segment === 'johor-bahru') label = 'Johor Bahru';
-    if (segment === 'ctos-score-complete-guide-2025') label = 'CTOS Score Guide 2025';
-    if (segment === 'personal-loan-guide-malaysia-2025') label = 'Personal Loan Guide';
-    if (segment === 'business-loan-sme-guide-2025') label = 'Business Loan Guide';
-    if (segment === 'debt-consolidation-guide-malaysia') label = 'Debt Consolidation Guide';
-    if (segment === 'faq') label = 'FAQ';
-    if (segment === 'locations') label = 'Locations';
-
-    breadcrumbs.push({
-      label,
-      href: currentPath
-    });
-  });
-
-  return breadcrumbs;
-}
-
-// Generate BreadcrumbList Schema for SEO
+// Generate BreadcrumbList Schema for SEO (Server-side only)
 export function generateBreadcrumbSchema(items: BreadcrumbItem[], siteUrl: string) {
   return {
     '@context': 'https://schema.org',
