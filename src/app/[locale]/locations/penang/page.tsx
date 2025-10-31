@@ -161,7 +161,7 @@ export default async function PenangLocationPage({ params }: PageProps) {
       area: 'Georgetown',
       business: 'Coffee Shop Owner',
       loan: 'RM120,000 Business Expansion',
-      story: 'Georgetown coffee shop owner needed RM120K to open 2nd outlet in Gurney Plaza. Banks rejected due to high existing mortgage. We secured Business Term Loan from SME Bank at 5.2% p.a. Used Hokkien-speaking consultant who understood hawker business model. Approved in 3 weeks. Now operates 2 successful outlets.',
+      story: 'Georgetown coffee shop owner needed RM 120,000 to open a 2nd outlet in Gurney Plaza. Banks rejected due to high existing mortgage. We secured a Business Term Loan from SME Bank at 5.2% p.a. Our Hokkien-speaking consultant understood the hawker business model. Approved in 3 weeks. Now operates 2 successful outlets.',
       language: 'Hokkien 福建话',
       icon: '🍜'
     },
@@ -170,7 +170,7 @@ export default async function PenangLocationPage({ params }: PageProps) {
       area: 'Bukit Mertajam',
       business: 'Tudung Online Business',
       loan: 'RM50,000 Inventory Financing',
-      story: 'Bukit Mertajam entrepreneur needed RM50K to buy bulk inventory for Ramadan season. No business bank account yet. We helped open SME account and secured invoice financing from Funding Societies at 8% p.a. Malay-speaking advisor handled all documentation. Approved in 5 days. Sales tripled during Ramadan.',
+      story: 'Bukit Mertajam entrepreneur needed RM 50,000 to buy bulk inventory for Ramadan season. No business bank account yet. We helped open an SME account and secured invoice financing from Funding Societies at 8% p.a. Our Malay-speaking advisor handled all documentation. Approved in 5 days. Sales tripled during Ramadan.',
       language: 'Bahasa Malaysia',
       icon: '🧕'
     },
@@ -179,7 +179,7 @@ export default async function PenangLocationPage({ params }: PageProps) {
       area: 'Butterworth',
       business: 'Logistics Driver',
       loan: 'RM80,000 Lorry Purchase',
-      story: 'Butterworth lorry driver needed RM80K to buy own 3-ton lorry and start transport business. CTOS score 620 (low). We improved score to 680 in 2 months and secured hire purchase from Hong Leong Bank at 4.5% p.a. Tamil-speaking consultant explained all terms clearly. Now owns 2 lorries and employs 3 drivers.',
+      story: 'Butterworth lorry driver needed RM 80,000 to buy his own 3-ton lorry and start a transport business. CTOS score 620 (low). We improved his score to 680 in 2 months and secured hire purchase from Hong Leong Bank at 4.5% p.a. Our Tamil-speaking consultant explained all terms clearly. Now owns 2 lorries and employs 3 drivers.',
       language: 'Tamil தமிழ்',
       icon: '🚚'
     }

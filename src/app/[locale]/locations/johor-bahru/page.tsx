@@ -161,7 +161,7 @@ export default async function JohorBahruLocationPage({ params }: PageProps) {
       area: 'Johor Bahru City',
       business: 'Import-Export Trader',
       loan: 'RM200,000 Working Capital',
-      story: 'JB trader importing goods from Singapore needed RM200K working capital for bulk purchases. Banks wanted collateral he didn\'t have. We secured invoice financing from Funding Societies at 7.5% p.a. using purchase orders as proof. Mandarin-speaking consultant expedited approval in 1 week. Now turns over RM2M annually with Singapore-JB trade.',
+      story: 'Johor Bahru (JB) trader importing goods from Singapore needed RM 200,000 working capital for bulk purchases. Banks wanted collateral he didn\'t have. We secured invoice financing from Funding Societies at 7.5% p.a. using purchase orders as proof. Our Mandarin-speaking consultant expedited approval in 1 week. Now turns over RM 2M annually with Singapore-JB trade.',
       language: 'Mandarin 华语',
       icon: '📦'
     },
@@ -170,7 +170,7 @@ export default async function JohorBahruLocationPage({ params }: PageProps) {
       area: 'Nusajaya',
       business: 'Construction Contractor',
       loan: 'RM150,000 Equipment Financing',
-      story: 'Nusajaya contractor won government project but needed RM150K for excavator and machinery. CTOS score 640 due to past late payments. We improved score to 700 in 3 months, then secured equipment financing from MBSB Bank at 5.8% p.a. Malay-speaking advisor handled all Islamic financing requirements. Project completed successfully.',
+      story: 'Nusajaya contractor won a government project but needed RM 150,000 for excavator and machinery. CTOS score 640 due to past late payments. We improved his score to 700 in 3 months, then secured equipment financing from MBSB Bank at 5.8% p.a. Our Malay-speaking advisor handled all Islamic financing requirements. Project completed successfully.',
       language: 'Bahasa Malaysia',
       icon: '🏗️'
     },
@@ -179,7 +179,7 @@ export default async function JohorBahruLocationPage({ params }: PageProps) {
       area: 'Skudai',
       business: 'Restaurant Owner',
       loan: 'RM80,000 Business Expansion',
-      story: 'Skudai restaurant owner near UTM campus wanted to open 2nd outlet. Banks rejected due to limited financial records. We prepared comprehensive business plan and secured SME loan from Bank Rakyat at 6.2% p.a. Tamil-speaking consultant explained terms and helped with documentation. 2nd outlet now serves 200+ students daily.',
+      story: 'Skudai restaurant owner near UTM campus wanted to open a 2nd outlet. Banks rejected due to limited financial records. We prepared a comprehensive business plan and secured an SME loan from Bank Rakyat at 6.2% p.a. Our Tamil-speaking consultant explained terms and helped with documentation. The 2nd outlet now serves 200+ students daily.',
       language: 'Tamil தமிழ்',
       icon: '🍛'
     }

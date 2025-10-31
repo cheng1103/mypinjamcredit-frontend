@@ -59,7 +59,7 @@ export default async function FAQPage({ params }: PageProps) {
       questions: [
         {
           q: 'What is MyPinjam Credit and what services do you provide?',
-          a: 'MyPinjam Credit is a licensed loan advisory service helping Malaysians find the best financing from 20+ banks and lenders. Services: Personal Loans (RM5K-RM150K), Business Loans (RM50K-RM500K), Equipment Financing, CTOS improvement, Multilingual support (English/Malay/Chinese/Tamil). Free consultation, only pay 1-3% if approved.'
+          a: 'MyPinjam Credit is a licensed loan advisory service that helps Malaysians find the best financing from 20+ banks and lenders. Services: Personal Loans (RM 5,000-RM 150,000), Business Loans (RM 50,000-RM 500,000), Equipment Financing, CTOS improvement, Multilingual support (English/Malay/Chinese/Tamil). Free consultation, only pay 1-3% if approved.'
         },
         {
           q: 'Do you provide service in Chinese, Malay, or Tamil?',
