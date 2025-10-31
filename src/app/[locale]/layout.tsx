@@ -185,7 +185,7 @@ export default async function LocaleLayout({
               className="flex items-center gap-2 md:gap-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg"
               aria-label="MyPinjam Credit Home"
             >
-              <Logo size={40} className="md:w-14 md:h-14" priority />
+              <Logo size={48} className="md:w-16 md:h-16" priority />
               <div className="flex flex-col">
                 <span className="text-base font-bold tracking-wide text-blue-600 md:text-lg">
                   {tCommon('brand')}
@@ -223,7 +223,7 @@ export default async function LocaleLayout({
             <div className="mb-6 grid gap-6 md:gap-8 md:grid-cols-3">
               <div>
                 <div className="mb-3 flex items-center gap-2">
-                  <Logo size={40} />
+                  <Logo size={48} />
                   <div>
                     <p className="font-bold text-blue-600">{tCommon('brand')}</p>
                     <p className="text-xs font-semibold text-slate-700">{tCommon('brandFull')}</p>

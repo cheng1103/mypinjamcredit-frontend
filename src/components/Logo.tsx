@@ -1,43 +1,39 @@
 import Image from 'next/image';
 
-export function Logo({ size = 48, className = '', priority = false }: { size?: number; className?: string; priority?: boolean }) {
-  // 如果有自定义logo图片，显示图片；否则显示默认样式
-  // 将你的logo文件放在 /frontend/public/logo.png 或 /frontend/public/logo.svg
-  const hasCustomLogo = true; // Logo已上传
-
-  if (hasCustomLogo) {
-    return (
-      <div
-        className={`flex items-center justify-center overflow-hidden rounded-full bg-white p-1 shadow-sm ${className}`}
-        style={{
-          width: size,
-          height: size
-        }}
-      >
-        <Image
-          src="/logo.png"
-          alt="MyPinjam Credit Logo"
-          width={size - 8}
-          height={size - 8}
-          className="object-contain rounded-full"
-          priority={priority}
-          loading={priority ? undefined : 'lazy'}
-          placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
-        />
-      </div>
-    );
-  }
-
-  // 默认logo样式
+export function Logo({
+  size = 48,
+  className = '',
+  priority = false,
+  variant = 'photo' // 'photo' 显示照片, 'icon' 显示图标样式
+}: {
+  size?: number;
+  className?: string;
+  priority?: boolean;
+  variant?: 'photo' | 'icon';
+}) {
+  // 使用照片作为Logo
   return (
     <div
-      className={`flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-blue-500 to-blue-700 shadow-lg ${className}`}
-      style={{ width: size, height: size }}
+      className={`relative flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-slate-100 to-slate-200 shadow-lg ring-2 ring-blue-500 ring-offset-2 ${className}`}
+      style={{
+        width: size,
+        height: size
+      }}
     >
-      <span className="text-white font-bold" style={{ fontSize: size * 0.4 }}>
-        MP
-      </span>
+      <Image
+        src="/logo.png"
+        alt="MyPinjam Credit - Professional Loan Advisory"
+        width={size}
+        height={size}
+        className="object-cover rounded-full"
+        priority={priority}
+        loading={priority ? undefined : 'lazy'}
+        quality={95}
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+      />
+      {/* 悬停效果 */}
+      <div className="absolute inset-0 rounded-full bg-blue-600 opacity-0 transition-opacity duration-300 hover:opacity-10" />
     </div>
   );
 }
