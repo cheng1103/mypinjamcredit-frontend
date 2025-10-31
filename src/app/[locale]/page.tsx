@@ -345,8 +345,167 @@ export default async function HomePage({ params }: PageProps) {
       </section>
       </FadeInSection>
 
-      {/* Customer Testimonials */}
+      {/* Locations Section */}
       <FadeInSection delay={100}>
+        <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-blue-50 to-sky-50 p-10 shadow-lg">
+          <div className="text-center">
+            <h2 className="text-3xl font-semibold text-slate-900">📍 Locations We Serve</h2>
+            <p className="mt-2 text-slate-600">Licensed loan advisory services across Malaysia's major cities</p>
+          </div>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                city: 'Kuala Lumpur',
+                slug: 'kuala-lumpur',
+                areas: 'Mont Kiara, KLCC, Bangsar, Damansara, Cheras, Kepong, Ampang',
+                clients: '156+',
+                icon: '🏙️',
+                color: 'from-emerald-500 to-teal-500'
+              },
+              {
+                city: 'Penang',
+                slug: 'penang',
+                areas: 'Georgetown, Bayan Lepas, Bukit Mertajam, Butterworth, Tanjung Bungah',
+                clients: '142+',
+                icon: '🌊',
+                color: 'from-emerald-500 to-green-500'
+              },
+              {
+                city: 'Johor Bahru',
+                slug: 'johor-bahru',
+                areas: 'JB City, Nusajaya, Skudai, Pasir Gudang, Gelang Patah, Senai',
+                clients: '189+',
+                icon: '🌏',
+                color: 'from-blue-500 to-indigo-500'
+              }
+            ].map((location) => (
+              <Link
+                key={location.slug}
+                href={`/${locale}/locations/${location.slug}` as any}
+                className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl"
+              >
+                <div className="mb-4 flex items-center justify-between">
+                  <span className="text-4xl">{location.icon}</span>
+                  <span className={`rounded-full bg-gradient-to-r ${location.color} px-3 py-1 text-xs font-bold text-white`}>
+                    {location.clients} Clients
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                  {location.city}
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  {location.areas}
+                </p>
+                <div className="mt-4 flex items-center text-sm font-semibold text-blue-600 group-hover:text-blue-700">
+                  View {location.city} Services
+                  <svg className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <p className="text-sm text-slate-600">
+              Can't find your city?{' '}
+              <Link href={`/${locale}/contact` as any} className="font-semibold text-blue-600 hover:text-blue-700 hover:underline">
+                Contact us
+              </Link>{' '}
+              - we serve clients nationwide!
+            </p>
+          </div>
+        </section>
+      </FadeInSection>
+
+      {/* Resources Section */}
+      <FadeInSection delay={150}>
+        <section className="rounded-3xl border border-slate-200 bg-white p-10 shadow-sm">
+          <div className="text-center">
+            <h2 className="text-3xl font-semibold text-slate-900">📚 Helpful Resources</h2>
+            <p className="mt-2 text-slate-600">Learn about loans, CTOS scores, and financial planning</p>
+          </div>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <Link
+              href={`/${locale}/blog/ctos-score-complete-guide-2025` as any}
+              className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
+            >
+              <div className="mb-3 flex items-center gap-3">
+                <span className="text-3xl">📊</span>
+                <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-700">Popular Guide</span>
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600">
+                CTOS Score Complete Guide 2025
+              </h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Everything you need to know about checking and improving your CTOS credit score in Malaysia
+              </p>
+              <div className="mt-4 text-sm font-semibold text-blue-600 group-hover:text-blue-700">
+                Read Guide →
+              </div>
+            </Link>
+
+            <Link
+              href={`/${locale}/faq` as any}
+              className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
+            >
+              <div className="mb-3 flex items-center gap-3">
+                <span className="text-3xl">❓</span>
+                <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-700">40+ Questions</span>
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600">
+                Frequently Asked Questions
+              </h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Get answers to common questions about loans, eligibility, interest rates, and application process
+              </p>
+              <div className="mt-4 text-sm font-semibold text-blue-600 group-hover:text-blue-700">
+                View All FAQs →
+              </div>
+            </Link>
+
+            <Link
+              href={`/${locale}/blog` as any}
+              className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
+            >
+              <div className="mb-3 flex items-center gap-3">
+                <span className="text-3xl">✍️</span>
+                <span className="rounded-full bg-purple-100 px-3 py-1 text-xs font-bold text-purple-700">5 Guides</span>
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600">
+                Loan Guides & Articles
+              </h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Expert articles on personal loans, business loans, debt consolidation, and financial tips
+              </p>
+              <div className="mt-4 text-sm font-semibold text-blue-600 group-hover:text-blue-700">
+                Browse Blog →
+              </div>
+            </Link>
+
+            <Link
+              href={`/${locale}/reviews` as any}
+              className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
+            >
+              <div className="mb-3 flex items-center gap-3">
+                <span className="text-3xl">⭐</span>
+                <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-700">4.8/5.0</span>
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600">
+                Customer Reviews
+              </h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Read verified reviews from real customers who secured loans through MyPinjam Credit
+              </p>
+              <div className="mt-4 text-sm font-semibold text-blue-600 group-hover:text-blue-700">
+                Read Reviews →
+              </div>
+            </Link>
+          </div>
+        </section>
+      </FadeInSection>
+
+      {/* Customer Testimonials */}
+      <FadeInSection delay={200}>
         <section className="rounded-3xl border border-blue-100 bg-white p-10 shadow-sm">
         <div className="text-center">
           <h2 className="text-3xl font-semibold text-slate-900">What Our Customers Say</h2>
@@ -400,7 +559,7 @@ export default async function HomePage({ params }: PageProps) {
       </section>
       </FadeInSection>
 
-      <FadeInSection delay={200}>
+      <FadeInSection delay={250}>
         <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-sky-50 p-10 shadow-lg">
         <h2 className="text-2xl font-semibold text-blue-600">Operational assurances</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
