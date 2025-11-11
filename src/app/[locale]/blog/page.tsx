@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const locale = localeStr as Locale;
 
   return generateSEO({
-    title: 'Expert Loan & Finance Tips - MyPinjam Credit Blog',
+    title: 'Expert Loan & Finance Tips - Money Line Solutions Blog',
     description: 'Get expert advice on personal loans, business financing, credit scores, and financial planning in Malaysia. Free guides and tips from licensed loan advisors.',
     keywords: [
       // English

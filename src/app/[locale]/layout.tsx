@@ -52,9 +52,9 @@ export async function generateMetadata({
     },
     description: tSeo('description'),
     keywords: ['loan advisor', 'personal loan', 'business loan', 'malaysia loan', 'pinjaman', 'kredit'],
-    authors: [{ name: 'MyPinjam Credit' }],
-    creator: 'MyPinjam Credit',
-    publisher: 'Howard Loan Advisor',
+    authors: [{ name: 'Money Line Solutions' }],
+    creator: 'Money Line Solutions',
+    publisher: 'Money Line Solutions',
     alternates: {
       canonical: `${siteUrl}/${locale}`,
       languages: {
@@ -66,7 +66,7 @@ export async function generateMetadata({
       type: 'website',
       locale: locale === 'ms' ? 'ms_MY' : 'en_MY',
       url: `${siteUrl}/${locale}`,
-      siteName: 'MyPinjam Credit',
+      siteName: 'Money Line Solutions',
       title: tSeo('title'),
       description: tSeo('description'),
       images: [
@@ -74,7 +74,7 @@ export async function generateMetadata({
           url: '/opengraph-image.png',
           width: 1200,
           height: 630,
-          alt: 'MyPinjam Credit - Trusted Loan Advisor'
+          alt: 'Money Line Solutions - Trusted Loan Advisor'
         }
       ]
     },
@@ -102,7 +102,7 @@ export async function generateMetadata({
     appleWebApp: {
       capable: true,
       statusBarStyle: 'default',
-      title: 'MyPinjam Credit'
+      title: 'Money Line Solutions'
     }
   };
 }
@@ -144,8 +144,8 @@ export default async function LocaleLayout({
     ? {
         '@context': 'https://schema.org',
         '@type': 'FinancialService',
-        name: organization.name ?? 'MyPinjam Credit',
-        legalName: organization.legalName ?? 'Howard Loan Advisor',
+        name: organization.name ?? 'Money Line Solutions',
+        legalName: organization.legalName ?? 'Money Line Solutions',
         url: organization.url ?? siteUrl,
         logo: organization.logo ? new URL(organization.logo, siteUrl).toString() : `${siteUrl}/logo.png`,
         email: organization.email ?? 'hello@mypinjamcredit.com',
@@ -183,7 +183,7 @@ export default async function LocaleLayout({
             <Link
               href={`/${locale}` as any}
               className="flex items-center gap-2 md:gap-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg"
-              aria-label="MyPinjam Credit Home"
+              aria-label="Money Line Solutions Home"
             >
               <Logo size={48} className="md:w-16 md:h-16" priority />
               <div className="flex flex-col">

@@ -1,7 +1,7 @@
 {
-  "name": "MyPinjam Credit - Loan Advisor",
-  "short_name": "MyPinjam",
-  "description": "Your trusted partner for personal and business loans in Malaysia",
+  "name": "Money Line Solutions - Licensed Loan Advisor",
+  "short_name": "MLS",
+  "description": "Your trusted partner for personal and business loans in Malaysia. Licensed under SSM (1404850-H) and KPKT (WL2684/14/02-9/161026)",
   "start_url": "/en",
   "display": "standalone",
   "background_color": "#ffffff",

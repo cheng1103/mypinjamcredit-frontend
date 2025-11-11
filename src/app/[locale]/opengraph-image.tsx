@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'MyPinjam Credit - Trusted Loan Advisor in Malaysia';
+export const alt = 'Money Line Solutions - Trusted Loan Advisor in Malaysia';
 export const size = {
   width: 1200,
   height: 630
@@ -41,7 +41,7 @@ export default async function Image() {
               lineHeight: 1.2
             }}
           >
-            MyPinjam Credit
+            Money Line Solutions
           </h1>
           <p
             style={{
@@ -51,7 +51,7 @@ export default async function Image() {
               marginBottom: '40px'
             }}
           >
-            Howard Loan Advisor
+            Money Line Solutions
           </p>
           <p
             style={{

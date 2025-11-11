@@ -7,20 +7,20 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'MyPinjam Credit Malaysia | Personal & SME Loans',
-    template: '%s | MyPinjam Credit'
+    default: 'Money Line Solutions Malaysia | Personal & SME Loans',
+    template: '%s | Money Line Solutions'
   },
   description:
     'Licensed Malaysian loan consultancy offering personal, SME and working capital financing with transparent rates and bilingual support.',
   keywords: [
-    'MyPinjam Credit',
+    'Money Line Solutions',
     'personal loan Malaysia',
     'SME financing',
     'licensed money lender',
     'loan advisor',
-    'Howard Loan Advisor'
+    'Money Line Solutions'
   ],
-  authors: [{ name: 'MyPinjam Credit' }],
+  authors: [{ name: 'Money Line Solutions' }],
   viewport: {
     width: 'device-width',
     initialScale: 1,
@@ -29,16 +29,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: siteUrl,
-    siteName: 'MyPinjam Credit',
+    siteName: 'Money Line Solutions',
     locale: 'en_MY',
-    title: 'MyPinjam Credit Malaysia | Personal & SME Loans',
+    title: 'Money Line Solutions Malaysia | Personal & SME Loans',
     description:
-      'Compare personal and SME loan options, discover flexible repayment plans, and apply in minutes with MyPinjam Credit Malaysia.'
+      'Compare personal and SME loan options, discover flexible repayment plans, and apply in minutes with Money Line Solutions Malaysia.'
   },
   twitter: {
     card: 'summary_large_image',
     site: '@mypinjamcredit',
-    title: 'MyPinjam Credit Malaysia | Licensed Loan Advisor',
+    title: 'Money Line Solutions Malaysia | Licensed Loan Advisor',
     description:
       'Transparent financing advisory in Malaysia for personal, SME and working capital loans.'
   },

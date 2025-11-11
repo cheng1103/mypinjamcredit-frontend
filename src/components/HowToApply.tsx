@@ -2,7 +2,7 @@ import { generateHowToSchema } from '@/lib/seo';
 
 export function HowToApplySchema() {
   const howtoData = {
-    name: 'How to Apply for a Loan at MyPinjam Credit',
+    name: 'How to Apply for a Loan at Money Line Solutions',
     description: 'Step-by-step guide to applying for a personal or business loan in Malaysia',
     totalTime: 'PT15M', // 15 minutes
     steps: [

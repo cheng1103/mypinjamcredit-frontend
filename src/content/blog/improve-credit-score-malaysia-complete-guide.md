@@ -2,7 +2,7 @@
 title: "How to Improve Your Credit Score in Malaysia: Complete 2025 Guide"
 slug: "improve-credit-score-malaysia-complete-guide"
 description: "Step-by-step guide to improving your CTOS and CCRIS credit score in Malaysia. Learn proven strategies to raise your score from 600 to 800+ and qualify for better loan rates."
-author: "MyPinjam Credit Team"
+author: "Money Line Solutions Team"
 publishedDate: "2025-01-17"
 modifiedDate: "2025-01-17"
 category: "Credit Score"

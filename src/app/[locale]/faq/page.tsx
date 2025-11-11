@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: 'Loan FAQ Malaysia 2025 - 40+ Questions Answered',
       description: 'Expert answers to loan questions: CTOS, eligibility, applications, interest rates. Chinese, Malay, Indian community support.',
       url: hrefForLocale(locale),
-      siteName: 'MyPinjam Credit',
+      siteName: 'Money Line Solutions',
       locale: locale === 'ms' ? 'ms_MY' : 'en_MY',
       type: 'website'
     }
@@ -58,8 +58,8 @@ export default async function FAQPage({ params }: PageProps) {
       title: 'General & Services',
       questions: [
         {
-          q: 'What is MyPinjam Credit and what services do you provide?',
-          a: 'MyPinjam Credit is a licensed loan advisory service that helps Malaysians find the best financing from 20+ banks and lenders. Services: Personal Loans (RM 5,000-RM 150,000), Business Loans (RM 50,000-RM 500,000), Equipment Financing, CTOS improvement, Multilingual support (English/Malay/Chinese/Tamil). Free consultation, only pay 1-3% if approved.'
+          q: 'What is Money Line Solutions and what services do you provide?',
+          a: 'Money Line Solutions is a licensed loan advisory service that helps Malaysians find the best financing from 20+ banks and lenders. Services: Personal Loans (RM 5,000-RM 150,000), Business Loans (RM 50,000-RM 500,000), Equipment Financing, CTOS improvement, Multilingual support (English/Malay/Chinese/Tamil). Free consultation, only pay 1-3% if approved.'
         },
         {
           q: 'Do you provide service in Chinese, Malay, or Tamil?',

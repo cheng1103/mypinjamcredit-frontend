@@ -200,7 +200,7 @@ export function LogoImage({
   return (
     <Image
       src="/logo.png"
-      alt="MyPinjam Credit Logo"
+      alt="Money Line Solutions Logo"
       width={180}
       height={60}
       className={className}

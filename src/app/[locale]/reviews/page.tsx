@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale } = await params;
 
   return generateSEO({
-    title: 'Customer Reviews & Testimonials - MyPinjam Credit',
-    description: 'Read real reviews from our satisfied customers across Malaysia. See why Chinese, Malay, and Indian clients trust MyPinjam Credit for their loan needs.',
+    title: 'Customer Reviews & Testimonials - Money Line Solutions',
+    description: 'Read real reviews from our satisfied customers across Malaysia. See why Chinese, Malay, and Indian clients trust Money Line Solutions for their loan needs.',
     keywords: [
       'mypinjam credit reviews',
       'loan testimonials malaysia',
@@ -47,7 +47,7 @@ const customerReviews = [
   {
     author: 'Ahmad bin Abdullah',
     rating: 5,
-    reviewBody: 'Alhamdulillah, sangat berpuas hati dengan perkhidmatan MyPinjam Credit. Mereka bantu saya dapat pinjaman TEKUN dengan cepat. Penasihat Melayu sangat memahami keperluan usahawan bumiputera. Syukur!',
+    reviewBody: 'Alhamdulillah, sangat berpuas hati dengan perkhidmatan Money Line Solutions. Mereka bantu saya dapat pinjaman TEKUN dengan cepat. Penasihat Melayu sangat memahami keperluan usahawan bumiputera. Syukur!',
     datePublished: '2025-01-08',
     language: 'ms',
     location: 'Shah Alam, Selangor',
@@ -67,7 +67,7 @@ const customerReviews = [
   {
     author: 'Siti Nurhaliza',
     rating: 5,
-    reviewBody: 'Sangat membantu! Proses cepat dan telus. Saya mohon pinjaman untuk kahwin, dapat kelulusan dalam masa 2 hari. Penasihat sangat baik dan faham keperluan saya. Terima kasih MyPinjam Credit!',
+    reviewBody: 'Sangat membantu! Proses cepat dan telus. Saya mohon pinjaman untuk kahwin, dapat kelulusan dalam masa 2 hari. Penasihat sangat baik dan faham keperluan saya. Terima kasih Money Line Solutions!',
     datePublished: '2025-01-03',
     language: 'ms',
     location: 'Petaling Jaya',
@@ -97,7 +97,7 @@ const customerReviews = [
   {
     author: 'Wong Siew Lee',
     rating: 5,
-    reviewBody: '我的新村房子需要装修，但银行不愿意贷款。MyPinjam Credit帮我找到愿意接受的银行。顾问很专业，了解新村土地的特殊情况。Thank you so much! Excellent for rural Chinese properties.',
+    reviewBody: '我的新村房子需要装修，但银行不愿意贷款。Money Line Solutions帮我找到愿意接受的银行。顾问很专业，了解新村土地的特殊情况。Thank you so much! Excellent for rural Chinese properties.',
     datePublished: '2024-12-15',
     language: 'zh',
     location: 'Kajang New Village',
@@ -117,7 +117,7 @@ const customerReviews = [
   {
     author: 'Chen Xiao Ming',
     rating: 5,
-    reviewBody: '我在蒲种开餐馆，需要扩张资金。MyPinjam Credit帮我拿到商业贷款，利息比我自己申请的低。他们了解华人餐饮业的运作。Very professional for restaurant financing!',
+    reviewBody: '我在蒲种开餐馆，需要扩张资金。Money Line Solutions帮我拿到商业贷款，利息比我自己申请的低。他们了解华人餐饮业的运作。Very professional for restaurant financing!',
     datePublished: '2024-12-05',
     language: 'zh',
     location: 'Puchong, Selangor',
@@ -127,7 +127,7 @@ const customerReviews = [
   {
     author: 'Murugan Pillai',
     rating: 5,
-    reviewBody: 'I needed money for my son\'s education overseas. MyPinjam Credit helped me get education loan with reasonable interest. The advisor spoke Tamil which made everything easier. Great service! மிக நன்றி!',
+    reviewBody: 'I needed money for my son\'s education overseas. Money Line Solutions helped me get education loan with reasonable interest. The advisor spoke Tamil which made everything easier. Great service! மிக நன்றி!',
     datePublished: '2024-11-25',
     language: 'en',
     location: 'Sentul, KL',
@@ -137,7 +137,7 @@ const customerReviews = [
   {
     author: 'Noor Azlin',
     rating: 5,
-    reviewBody: 'Saya seorang usahawan bumiputera. MyPinjam Credit bantu saya mohon pinjaman SME Bank. Mereka tahu semua skim Kerajaan dan guide saya step by step. Lulus dalam 2 minggu! Sangat bersyukur.',
+    reviewBody: 'Saya seorang usahawan bumiputera. Money Line Solutions bantu saya mohon pinjaman SME Bank. Mereka tahu semua skim Kerajaan dan guide saya step by step. Lulus dalam 2 minggu! Sangat bersyukur.',
     datePublished: '2024-11-18',
     language: 'ms',
     location: 'Putrajaya',
@@ -147,7 +147,7 @@ const customerReviews = [
   {
     author: 'David Tan',
     rating: 5,
-    reviewBody: '紧急需要医疗费用，银行太慢了。MyPinjam Credit帮我24小时内拿到个人贷款。顾问很有同情心，利率也公道。在紧急时刻帮了大忙！Fast emergency loan service!',
+    reviewBody: '紧急需要医疗费用，银行太慢了。Money Line Solutions帮我24小时内拿到个人贷款。顾问很有同情心，利率也公道。在紧急时刻帮了大忙！Fast emergency loan service!',
     datePublished: '2024-12-01',
     language: 'zh',
     location: 'Cheras, KL',

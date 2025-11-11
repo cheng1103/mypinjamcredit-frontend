@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale } = await params;
 
   return generateSEO({
-    title: 'Loan Advisor Kuala Lumpur 2025 - Personal & Business Loan KL | MyPinjam Credit',
+    title: 'Loan Advisor Kuala Lumpur 2025 - Personal & Business Loan KL | Money Line Solutions',
     description: 'Best loan advisor in Kuala Lumpur. Get personal loans (RM5K-RM150K) & business loans (RM50K-RM500K) in KL, Mont Kiara, KLCC, Bangsar. Chinese, Malay, Indian community support. Fast approval 24-48hrs.',
     keywords: [
       'loan advisor kuala lumpur',
@@ -42,7 +42,7 @@ function generateKLLocationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'FinancialService',
-    name: 'MyPinjam Credit - Kuala Lumpur',
+    name: 'Money Line Solutions - Kuala Lumpur',
     image: `${siteUrl}/images/kl-office.jpg`,
     '@id': `${siteUrl}/en/locations/kuala-lumpur`,
     url: `${siteUrl}/en/locations/kuala-lumpur`,
@@ -399,7 +399,7 @@ export default async function KualaLumpurPage({ params }: PageProps) {
           <div className="container mx-auto px-4 max-w-4xl prose prose-lg">
             <h2>Loan Advisor Kuala Lumpur - Complete Guide 2025</h2>
 
-            <h3>Why Choose MyPinjam Credit for Your KL Loan Needs?</h3>
+            <h3>Why Choose Money Line Solutions for Your KL Loan Needs?</h3>
             <p>
               As Kuala Lumpur's trusted loan advisory service since 2015, we've helped over 500 KL residents and
               businesses secure financing from RM5,000 to RM500,000. Whether you're in Mont Kiara, KLCC, Bangsar,

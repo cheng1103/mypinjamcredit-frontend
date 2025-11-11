@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: ApplyPageProps): Promise<Meta
       description: tSeo('description'),
       url: hrefForLocale(locale),
       type: 'website',
-      siteName: 'MyPinjam Credit',
+      siteName: 'Money Line Solutions',
       locale: locale === 'ms' ? 'ms_MY' : 'en_MY'
     },
     twitter: {

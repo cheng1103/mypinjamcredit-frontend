@@ -271,7 +271,7 @@ export default function AdminDashboard() {
         <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-900">Admin Portal</h1>
-            <p className="text-gray-600 mt-2">MyPinjam Credit Management System</p>
+            <p className="text-gray-600 mt-2">Money Line Solutions Management System</p>
           </div>
 
           <form onSubmit={handleLogin} className="space-y-6">
@@ -330,7 +330,7 @@ export default function AdminDashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Admin Dashboard</h1>
-            <p className="text-sm text-gray-600">MyPinjam Credit Management</p>
+            <p className="text-sm text-gray-600">Money Line Solutions Management</p>
           </div>
           <div className="flex items-center gap-4">
             <div className="text-right">

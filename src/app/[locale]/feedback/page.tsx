@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title,
       description,
       url: hrefForLocale(locale),
-      siteName: 'MyPinjam Credit',
+      siteName: 'Money Line Solutions',
       locale: locale === 'ms' ? 'ms_MY' : 'en_MY',
       type: 'website'
     },

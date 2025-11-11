@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const locale = localeStr as Locale;
 
   return {
-    title: 'Regulatory Compliance - MyPinjam Credit',
-    description: 'Learn about MyPinjam Credit\'s commitment to regulatory compliance and responsible lending practices in Malaysia.',
+    title: 'Regulatory Compliance - Money Line Solutions',
+    description: 'Learn about Money Line Solutions\'s commitment to regulatory compliance and responsible lending practices in Malaysia.',
     alternates: {
       canonical: hrefForLocale(locale),
       languages: {
@@ -156,11 +156,11 @@ export default async function CompliancePage({ params }: PageProps) {
           <div className="space-y-4">
             <div>
               <p className="text-sm font-semibold text-blue-600">Company Name</p>
-              <p className="mt-1 text-lg text-slate-900">Howard Loan Advisor</p>
+              <p className="mt-1 text-lg text-slate-900">Money Line Solutions</p>
             </div>
             <div>
               <p className="text-sm font-semibold text-blue-600">Trading As</p>
-              <p className="mt-1 text-lg text-slate-900">MyPinjam Credit</p>
+              <p className="mt-1 text-lg text-slate-900">Money Line Solutions</p>
             </div>
             <div>
               <p className="text-sm font-semibold text-blue-600">License Type</p>

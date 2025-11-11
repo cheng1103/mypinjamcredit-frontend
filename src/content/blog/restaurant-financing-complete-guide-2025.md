@@ -4,7 +4,7 @@ description: "Complete restaurant loan guide for Malaysian F&B businesses. Get f
 date: "2025-01-12"
 slug: "restaurant-financing-complete-guide-2025"
 tags: ["restaurant loan malaysia", "F&B financing", "kopitiam loan", "mamak shop financing", "chinese restaurant", "malay food business", "indian restaurant", "餐馆贷款", "pinjaman restoran", "SME bank loan", "equipment financing"]
-author: "Howard Tan - MyPinjam Credit"
+author: "Howard Tan - Money Line Solutions"
 readTime: "15 min read"
 featured: true
 ---
@@ -1188,7 +1188,7 @@ DSR = (Total Monthly Debt + Proposed Loan) ÷ Total Monthly Income × 100%
 ✅ Want to compare multiple lenders
 ✅ Don't have time to handle applications
 
-**MyPinjam Credit Services for F&B:**
+**Money Line Solutions Services for F&B:**
 ```
 ✅ Free consultation (no upfront fees)
 ✅ Access to 20+ lenders (banks, government schemes, fintech)
@@ -1273,7 +1273,7 @@ Restaurant Performance (After 18 months):
 - Cash business (no bank deposits)
 
 **Solution:**
-- Contacted MyPinjam Credit for guidance
+- Contacted Money Line Solutions for guidance
 - We helped him:
   1. Register with SSM (RM60 for Enterprise)
   2. Open business bank account
@@ -1302,9 +1302,9 @@ Results After 1 Year:
 ```
 
 **Pak Ali's Testimonial:**
-"Terima kasih MyPinjam Credit! Saya tak tahu kena register SSM dan ambil lesen. Mereka guide step by step. Sekarang kedai saya ada air-cond, ramai pelanggan datang. Alhamdulillah!"
+"Terima kasih Money Line Solutions! Saya tak tahu kena register SSM dan ambil lesen. Mereka guide step by step. Sekarang kedai saya ada air-cond, ramai pelanggan datang. Alhamdulillah!"
 
-(Translation: "Thank you MyPinjam Credit! I didn't know need to register SSM and get licenses. They guided step by step. Now my restaurant has air-con, many customers come. Alhamdulillah!")
+(Translation: "Thank you Money Line Solutions! I didn't know need to register SSM and get licenses. They guided step by step. Now my restaurant has air-con, many customers come. Alhamdulillah!")
 
 ---
 
@@ -1843,7 +1843,7 @@ Experience:
 
 7.3 Advisors
 Accountant: [Name], [Firm] - handles bookkeeping & tax
-Consultant: MyPinjam Credit - business loan advisory
+Consultant: Money Line Solutions - business loan advisory
 ```
 
 ---
@@ -2091,7 +2091,7 @@ It's VERY difficult because:
    - Payment moratorium (3-6 months grace period)
    - Reduce interest rate
 3. Show willingness to resolve (propose payment plan)
-4. Seek professional help (credit counselor, MyPinjam Credit can mediate with bank)
+4. Seek professional help (credit counselor, Money Line Solutions can mediate with bank)
 
 ---
 
@@ -2132,7 +2132,7 @@ It's VERY difficult because:
 
 ---
 
-## Contact MyPinjam Credit for Expert Assistance
+## Contact Money Line Solutions for Expert Assistance
 
 **Why Choose Us for F&B Financing?**
 
@@ -2240,7 +2240,7 @@ Whether you're starting a small mamak stall with RM20,000 or opening a full-fled
 4. ✅ **Proven track record** (operate 6-12 months before expansion loan)
 5. ✅ **Professional presentation** (neat records, clear projections)
 6. ✅ **Right financing match** (choose lender that suits your profile)
-7. ✅ **Expert assistance** (use MyPinjam Credit to save time & get better rates!)
+7. ✅ **Expert assistance** (use Money Line Solutions to save time & get better rates!)
 
 **Don't let financing stop your F&B dream. Take action today!**
 
@@ -2251,7 +2251,7 @@ Whether you're starting a small mamak stall with RM20,000 or opening a full-fled
 **Next Steps:**
 - [Download F&B Business Plan Template](PDF link)
 - [Check Your CTOS Score](https://www.ctosdigital.com)
-- [Free Consultation with MyPinjam Credit](https://wa.me/60167479368)
+- [Free Consultation with Money Line Solutions](https://wa.me/60167479368)
 - [Register Business with SSM](https://www.ssm.com.my)
 
 ---
@@ -2260,4 +2260,4 @@ Whether you're starting a small mamak stall with RM20,000 or opening a full-fled
 
 **Last Updated:** January 12, 2025
 
-**About the Author:** Howard Tan is founder of MyPinjam Credit, a loan consultancy specializing in SME and F&B financing. With 12+ years of experience, he has helped 400+ Malaysian restaurant owners secure over RM85 million in financing.
+**About the Author:** Howard Tan is founder of Money Line Solutions, a loan consultancy specializing in SME and F&B financing. With 12+ years of experience, he has helped 400+ Malaysian restaurant owners secure over RM85 million in financing.
