@@ -118,7 +118,8 @@ export default async function HomePage({ params }: PageProps) {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            filter: 'brightness(0.75)'
+            filter: 'brightness(0.75) contrast(1.15) saturate(1.1)',
+            imageRendering: 'crisp-edges'
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-white/15" />
