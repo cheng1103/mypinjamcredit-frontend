@@ -35,8 +35,8 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-## Money Line Solutions - Latest Updates
-- Complete company rebranding to Money Line Solutions
+## MyPinjam Credit - Latest Updates
+- Complete company information update
 - Updated company information and license details (SSM 1404850-H, KPKT WL2684/14/02-9/161026)
 - Added trust badges and customer testimonials
 - Google Search Console verification added

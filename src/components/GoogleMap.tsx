@@ -24,7 +24,7 @@ export function GoogleMap() {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="Money Line Solutions - Wisma YNH Kiara 163 Office"
+        title="MyPinjam Credit - Wisma YNH Kiara 163 Office"
         onLoad={() => setIsLoading(false)}
         className={`transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
       />

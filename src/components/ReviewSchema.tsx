@@ -22,7 +22,7 @@ export function ReviewSchema({ reviews }: ReviewSchemaProps) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'FinancialService',
-    name: 'Money Line Solutions',
+    name: 'MyPinjam Credit',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: aggregateRating.ratingValue,

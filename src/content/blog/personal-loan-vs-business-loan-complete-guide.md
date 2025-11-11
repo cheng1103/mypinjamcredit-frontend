@@ -2,7 +2,7 @@
 title: "Personal Loan vs Business Loan: Complete Guide for Malaysians 2025"
 slug: "personal-loan-vs-business-loan-complete-guide"
 description: "Should you take a personal loan or business loan in Malaysia? Compare interest rates, eligibility, tax benefits, and more. Expert guide to choosing the right financing."
-author: "Money Line Solutions Team"
+author: "MyPinjam Credit Team"
 publishedDate: "2025-01-16"
 modifiedDate: "2025-01-16"
 category: "Loan Comparison"
@@ -14,7 +14,7 @@ readTime: "8 min read"
 
 # Personal Loan vs Business Loan: Complete Guide for Malaysians 2025
 
-One of the most common questions we hear at Money Line Solutions is: *"Should I take a personal loan or business loan for my business?"*
+One of the most common questions we hear at MyPinjam Credit is: *"Should I take a personal loan or business loan for my business?"*
 
 It's a critical decision that can save you thousands of ringgit and impact your business for years. In this comprehensive guide, we'll break down everything you need to know to make the right choice.
 
@@ -611,7 +611,7 @@ Still not sure which loan is right for you? Our licensed advisors can:
 
 ---
 
-**About the Author:** Written by Money Line Solutions's advisory team with combined experience of 15+ years in consumer and commercial financing.
+**About the Author:** Written by MyPinjam Credit's advisory team with combined experience of 15+ years in consumer and commercial financing.
 
 **Disclaimer:** Interest rates and eligibility criteria may vary by lender and individual circumstances. This article is for informational purposes only and does not constitute financial advice. Always consult with a licensed financial advisor for your specific situation.
 

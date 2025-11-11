@@ -2,7 +2,7 @@
 title: "CTOS Score Complete Guide 2025: How to Check & Improve Your Credit Score in Malaysia"
 slug: "ctos-score-complete-guide-2025"
 description: "Complete guide to understanding, checking, and improving your CTOS credit score in Malaysia. Learn what affects your score and how to fix it fast."
-author: "Money Line Solutions Team"
+author: "MyPinjam Credit Team"
 publishedDate: "2025-01-18"
 modifiedDate: "2025-01-18"
 category: "Credit Score Guide"
@@ -111,7 +111,7 @@ Many estate workers have no credit history because salaries are paid in cash. Th
 
 **Pro Tip:** Check **BOTH** CCRIS (free) and CTOS (paid) before applying for loans!
 
-### Method 3: Through Money Line Solutions (FREE Consultation)
+### Method 3: Through MyPinjam Credit (FREE Consultation)
 
 We can help you:
 - ✅ Check your CTOS score
@@ -605,7 +605,7 @@ Solution:
 
 ## 📞 Need Help with Your CTOS Score?
 
-**Money Line Solutions Can Help You:**
+**MyPinjam Credit Can Help You:**
 
 ✅ **Free CTOS Check**
 - We'll check your score
@@ -719,5 +719,5 @@ Solution:
 
 ---
 
-*Money Line Solutions - Helping All Malaysians Achieve Better Credit*
+*MyPinjam Credit - Helping All Malaysians Achieve Better Credit*
 *帮助所有马来西亚人提升信用 | Membantu Semua Rakyat Malaysia | அனைத்து மலேசியர்களுக்கும் உதவுகிறது*

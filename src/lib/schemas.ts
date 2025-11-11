@@ -7,8 +7,8 @@ export function generateLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'FinancialService',
-    name: 'Money Line Solutions',
-    alternateName: 'Money Line Solutions Sdn Bhd',
+    name: 'MyPinjam Credit',
+    alternateName: 'MyPinjam Credit Sdn Bhd',
     image: `${siteUrl}/logo.png`,
     '@id': siteUrl,
     url: siteUrl,
@@ -101,7 +101,7 @@ export function generateReviewSchema(reviews: Array<{
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: 'Money Line Solutions Loan Advisory Services',
+    name: 'MyPinjam Credit Loan Advisory Services',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.8',
@@ -167,7 +167,7 @@ export function generateLoanProductSchema(product: {
     description: product.description,
     provider: {
       '@type': 'FinancialService',
-      name: 'Money Line Solutions'
+      name: 'MyPinjam Credit'
     },
     offers: {
       '@type': 'Offer',
@@ -194,7 +194,7 @@ export function generateWebsiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Money Line Solutions',
+    name: 'MyPinjam Credit',
     url: siteUrl,
     potentialAction: {
       '@type': 'SearchAction',
@@ -212,8 +212,8 @@ export function generateOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Money Line Solutions',
-    legalName: 'Money Line Solutions Sdn Bhd',
+    name: 'MyPinjam Credit',
+    legalName: 'MyPinjam Credit Sdn Bhd',
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
     foundingDate: '2015',

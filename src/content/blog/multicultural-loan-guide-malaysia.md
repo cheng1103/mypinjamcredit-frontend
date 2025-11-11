@@ -2,7 +2,7 @@
 title: "Loan Guide for All Malaysians: Chinese, Malay & Indian Communities 2025"
 slug: "multicultural-loan-guide-malaysia"
 description: "Comprehensive loan guide for Chinese, Malay, and Indian communities in Malaysia. Learn about special schemes, cultural considerations, and how to get approved fast."
-author: "Money Line Solutions Team"
+author: "MyPinjam Credit Team"
 publishedDate: "2025-01-17"
 modifiedDate: "2025-01-17"
 category: "Community Guide"
@@ -16,7 +16,7 @@ readTime: "9 min read"
 
 ## 马来西亚各族贷款完整指南 | Panduan Pinjaman Untuk Semua Kaum | எல்லா இனத்தவருக்கும் கடன் வழிகாட்டி
 
-Malaysia is a beautiful multicultural country, and at **Money Line Solutions**, we serve **ALL Malaysians** regardless of race, religion, or background. Whether you're Chinese (华人), Malay (Melayu), Indian (India), or any other ethnicity, we're here to help you get the financing you need.
+Malaysia is a beautiful multicultural country, and at **MyPinjam Credit**, we serve **ALL Malaysians** regardless of race, religion, or background. Whether you're Chinese (华人), Malay (Melayu), Indian (India), or any other ethnicity, we're here to help you get the financing you need.
 
 This guide covers loan options, special schemes, and cultural considerations for each community.
 
@@ -348,7 +348,7 @@ We work with all major Islamic banks:
 
 ---
 
-## 🤝 Why All Malaysians Trust Money Line Solutions
+## 🤝 Why All Malaysians Trust MyPinjam Credit
 
 ### Our Multicultural Team:
 
@@ -629,7 +629,7 @@ We submit to:
 
 ### We Are NOT Ah Long! (我们不是大耳窿!)
 
-**Money Line Solutions is:**
+**MyPinjam Credit is:**
 - ✅ Licensed Credit Advisor (有执照的信贷顾问)
 - ✅ Registered with SSM (在SSM注册)
 - ✅ Regulated by authorities (受当局监管)
@@ -674,7 +674,7 @@ We submit to:
 ## 📞 Contact Our Multilingual Team
 
 **Office Address:**
-Money Line Solutions Sdn Bhd
+MyPinjam Credit Sdn Bhd
 123 Jalan Mont Kiara
 50480 Kuala Lumpur
 (Near Publika Mall)
@@ -709,7 +709,7 @@ Money Line Solutions Sdn Bhd
 
 ---
 
-## ✅ Why Choose Money Line Solutions?
+## ✅ Why Choose MyPinjam Credit?
 
 ### 1. **Truly Multicultural (真正的多元文化)**
 - Speak your language (说您的语言 / Bahasa anda / உங்கள் மொழி)
@@ -772,7 +772,7 @@ We promise fair, transparent, and respectful service to everyone, regardless of 
 
 ---
 
-**Disclaimer:** Interest rates and eligibility vary by individual circumstances and bank criteria. All loans subject to approval. Money Line Solutions is a licensed loan facilitator, not a lender. We connect you with banks and financial institutions.
+**Disclaimer:** Interest rates and eligibility vary by individual circumstances and bank criteria. All loans subject to approval. MyPinjam Credit is a licensed loan facilitator, not a lender. We connect you with banks and financial institutions.
 
 **Important:** Borrow responsibly. Only borrow what you can afford to repay. Defaulting on loans will affect your credit score and may result in legal action.
 
@@ -780,5 +780,5 @@ We promise fair, transparent, and respectful service to everyone, regardless of 
 
 ---
 
-*Money Line Solutions - Serving All Malaysians with Pride*
+*MyPinjam Credit - Serving All Malaysians with Pride*
 *为所有马来西亚人服务 | Berkhidmat Untuk Semua Rakyat Malaysia | அனைத்து மலேசியர்களுக்கும் சேவை*

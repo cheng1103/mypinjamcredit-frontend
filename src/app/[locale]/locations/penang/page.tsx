@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const locale = localeStr as Locale;
 
   return {
-    title: 'Personal & Business Loan Penang 2025 - Licensed Loan Consultant | Money Line Solutions',
+    title: 'Personal & Business Loan Penang 2025 - Licensed Loan Consultant | MyPinjam Credit',
     description: 'Licensed loan advisory in Penang. Personal loans RM5K-RM150K, business loans RM50K-RM500K. Georgetown, Bayan Lepas, Bukit Mertajam coverage. Chinese 华语, Malay, Tamil support. 78% approval rate. Free consultation, only 1-3% fee if approved.',
     keywords: [
       'loan advisor penang',
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: 'Personal & Business Loan Penang - Licensed Consultant',
       description: 'Licensed loan advisory covering Georgetown, Bayan Lepas, Bukit Mertajam. Chinese/Malay/Tamil support. 78% approval rate.',
       url: hrefForLocale(locale),
-      siteName: 'Money Line Solutions',
+      siteName: 'MyPinjam Credit',
       locale: locale === 'ms' ? 'ms_MY' : 'en_MY',
       type: 'website',
       images: [
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           url: `${siteUrl}/og-penang-location.jpg`,
           width: 1200,
           height: 630,
-          alt: 'Money Line Solutions Penang - Licensed Loan Consultant'
+          alt: 'MyPinjam Credit Penang - Licensed Loan Consultant'
         }
       ]
     }
@@ -64,7 +64,7 @@ function generatePenangLocationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'FinancialService',
-    name: 'Money Line Solutions - Penang',
+    name: 'MyPinjam Credit - Penang',
     description: 'Licensed loan advisory service in Penang providing personal loans, business loans, and CTOS improvement services',
     address: {
       '@type': 'PostalAddress',
@@ -433,14 +433,14 @@ export default async function PenangLocationPage({ params }: PageProps) {
       {/* SEO Content Section */}
       <section className="rounded-3xl border border-slate-200 bg-white p-10 shadow-sm">
         <h2 className="mb-6 text-3xl font-bold text-slate-800">
-          Why Choose Money Line Solutions for Loans in Penang?
+          Why Choose MyPinjam Credit for Loans in Penang?
         </h2>
 
         <div className="prose prose-slate max-w-none space-y-6 text-slate-700">
           <div>
             <h3 className="text-2xl font-semibold text-slate-800">Licensed Loan Consultant Serving All Penang</h3>
             <p>
-              Money Line Solutions is a fully licensed loan advisory service with deep roots in Penang. Whether you're a coffee shop owner in Georgetown's heritage zone, a factory worker in Bayan Lepas Free Trade Zone, or a business owner in Bukit Mertajam, we understand the unique financial needs of Penang residents.
+              MyPinjam Credit is a fully licensed loan advisory service with deep roots in Penang. Whether you're a coffee shop owner in Georgetown's heritage zone, a factory worker in Bayan Lepas Free Trade Zone, or a business owner in Bukit Mertajam, we understand the unique financial needs of Penang residents.
             </p>
             <p>
               Our Penang team speaks <strong>Hokkien (福建话)</strong>, <strong>Mandarin (华语)</strong>, <strong>Bahasa Malaysia</strong>, and <strong>Tamil (தமிழ்)</strong> - ensuring you get consultation in your preferred language. We've helped over 142 Penang clients secure financing totaling over RM18 million.

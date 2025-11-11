@@ -2,7 +2,7 @@
 title: "TEKUN Loan Complete Guide 2025: How to Apply for Bumiputera Business Financing"
 slug: "tekun-loan-complete-guide-2025"
 description: "Complete guide to TEKUN loan application for Bumiputera entrepreneurs in Malaysia. Learn eligibility, requirements, application process, and approval tips."
-author: "Money Line Solutions Team"
+author: "MyPinjam Credit Team"
 publishedDate: "2025-01-18"
 modifiedDate: "2025-01-18"
 category: "Government Schemes"
@@ -540,7 +540,7 @@ Contoh: Jualan RM 20,000 → Max pinjam RM 240,000
 
 ---
 
-## 🤝 Money Line Solutions Boleh Bantu
+## 🤝 MyPinjam Credit Boleh Bantu
 
 **Kami Bantu Anda:**
 
@@ -580,5 +580,5 @@ Contoh: Jualan RM 20,000 → Max pinjam RM 240,000
 
 ---
 
-*Money Line Solutions - Membantu Usahawan Bumiputera Berjaya*
+*MyPinjam Credit - Membantu Usahawan Bumiputera Berjaya*
 *Helping Bumiputera Entrepreneurs Succeed*

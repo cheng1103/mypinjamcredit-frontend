@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title,
       description,
       url: hrefForLocale(locale),
-      siteName: 'Money Line Solutions',
+      siteName: 'MyPinjam Credit',
       locale: locale === 'ms' ? 'ms_MY' : 'en_MY',
       type: 'website'
     },
@@ -178,7 +178,7 @@ export default async function ProductsPage({ params }: PageProps) {
         description: product.description,
         provider: {
           '@type': 'FinancialService',
-          name: 'Money Line Solutions',
+          name: 'MyPinjam Credit',
           url: siteUrl,
           telephone: '+60-16-7479368',
           address: {

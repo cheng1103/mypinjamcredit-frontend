@@ -163,7 +163,7 @@ export default async function HomePage({ params }: PageProps) {
         <div className="relative text-center">
           <h2 className="text-xl font-semibold md:text-3xl">Trusted by Thousands of Malaysians</h2>
           <p className="mt-2 text-sm text-blue-50 md:text-base">
-            Real results from real people who chose Money Line Solutions
+            Real results from real people who chose MyPinjam Credit
           </p>
         </div>
         <div className="relative mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 md:mt-8 md:gap-8">
@@ -497,7 +497,7 @@ export default async function HomePage({ params }: PageProps) {
                 Customer Reviews
               </h3>
               <p className="mt-2 text-sm text-slate-600">
-                Read verified reviews from real customers who secured loans through Money Line Solutions
+                Read verified reviews from real customers who secured loans through MyPinjam Credit
               </p>
               <div className="mt-4 text-sm font-semibold text-blue-600 group-hover:text-blue-700">
                 Read Reviews →
@@ -519,7 +519,7 @@ export default async function HomePage({ params }: PageProps) {
             {
               name: 'Ahmad Hassan',
               role: 'Business Owner',
-              text: 'Money Line Solutions helped me expand my restaurant with a business loan. The process was smooth and the advisor was very professional. Highly recommended!',
+              text: 'MyPinjam Credit helped me expand my restaurant with a business loan. The process was smooth and the advisor was very professional. Highly recommended!',
               rating: 5
             },
             {

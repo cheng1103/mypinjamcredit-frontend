@@ -4,7 +4,7 @@ description: "Complete loan guide for Malaysian estate workers (Tamil, Indian co
 date: "2025-01-12"
 slug: "estate-workers-loan-guide-2025"
 tags: ["estate workers loan", "low income loan", "tamil loan guide", "indian community", "plantation workers", "microcredit malaysia", "கடன் வழிகாட்டி", "தோட்ட தொழிலாளர்கள்", "TEKUN microcredit", "AIM loan"]
-author: "Howard Tan - Money Line Solutions"
+author: "Howard Tan - MyPinjam Credit"
 readTime: "10 min read"
 featured: true
 ---
@@ -598,7 +598,7 @@ Step 4: Now you have RM30,000 total!
 - Negotiate better interest rates
 - Tamil-speaking consultants available
 
-**Money Line Solutions Services for Estate Workers:**
+**MyPinjam Credit Services for Estate Workers:**
 ```
 ✅ Free consultation (no upfront fees)
 ✅ Tamil, English, Malay support
@@ -790,7 +790,7 @@ REALITY: NEVER give your ATM card to anyone!
 - Rejected by 5 banks
 
 **Solution:**
-- Contacted **Money Line Solutions** for advice
+- Contacted **MyPinjam Credit** for advice
 - We recommended applying with **guarantor**
 - Raju's son (working in government) became guarantor
 - Applied to **Maybank Islamic**
@@ -804,9 +804,9 @@ REALITY: NEVER give your ATM card to anyone!
 ```
 
 **Raju's Testimonial:**
-"என் மகன் உத்தரவாதம் அளித்தபின் கடன் கிடைத்தது. இப்போது என் வேலைக்கு செல்வது எளிதாகிவிட்டது. Money Line Solutions-க்கு நன்றி!"
+"என் மகன் உத்தரவாதம் அளித்தபின் கடன் கிடைத்தது. இப்போது என் வேலைக்கு செல்வது எளிதாகிவிட்டது. MyPinjam Credit-க்கு நன்றி!"
 
-(Translation: "After my son became guarantor, I got the loan. Now going to work is easier. Thanks to Money Line Solutions!")
+(Translation: "After my son became guarantor, I got the loan. Now going to work is easier. Thanks to MyPinjam Credit!")
 
 ---
 
@@ -972,7 +972,7 @@ REALITY: NEVER give your ATM card to anyone!
 
 **A:** **Yes!**
 
-**Money Line Solutions has Tamil consultants:**
+**MyPinjam Credit has Tamil consultants:**
 - WhatsApp: +60 16-747 9368
 - Say: "I need Tamil consultant"
 - We'll connect you with Kumar or Devi
@@ -1010,7 +1010,7 @@ Many estate workers think loans are impossible due to low income or poor credit.
 
 5. **Help is available**
    - Tamil-speaking consultants ready to help
-   - Free consultation from Money Line Solutions
+   - Free consultation from MyPinjam Credit
    - Community support groups
 
 ---
@@ -1047,7 +1047,7 @@ Start planning your repayment
 
 ---
 
-## Contact Money Line Solutions for Free Help
+## Contact MyPinjam Credit for Free Help
 
 **Why Choose Us?**
 
@@ -1093,4 +1093,4 @@ Whether you need RM5,000 for emergency, RM15,000 for family needs, or RM30,000 t
 **Share This Guide:**
 Help other estate workers! Share this article with your friends and family. தமிழ் சமூகத்திற்கு உதவுங்கள்!
 
-[Apply Now with Money Line Solutions] [WhatsApp Tamil Consultant] [Download PDF Guide]
+[Apply Now with MyPinjam Credit] [WhatsApp Tamil Consultant] [Download PDF Guide]

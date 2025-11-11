@@ -15,7 +15,7 @@ interface SEOConfig {
 }
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.mypinjamcredit.com';
-const siteName = 'Money Line Solutions';
+const siteName = 'MyPinjam Credit';
 const defaultImage = '/opengraph-image.png';
 
 export function generateSEO(config: SEOConfig): Metadata {
@@ -44,7 +44,7 @@ export function generateSEO(config: SEOConfig): Metadata {
     keywords: keywords.join(', '),
     authors: author ? [{ name: author }] : [{ name: siteName }],
     creator: siteName,
-    publisher: 'Money Line Solutions',
+    publisher: 'MyPinjam Credit',
     alternates: {
       canonical: canonicalUrl,
       languages: {

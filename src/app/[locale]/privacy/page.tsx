@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const locale = localeStr as Locale;
 
   return {
-    title: 'Privacy Policy - Money Line Solutions',
-    description: 'Learn how Money Line Solutions collects, uses, and protects your personal information in compliance with Malaysian privacy laws.',
+    title: 'Privacy Policy - MyPinjam Credit',
+    description: 'Learn how MyPinjam Credit collects, uses, and protects your personal information in compliance with Malaysian privacy laws.',
     alternates: {
       canonical: hrefForLocale(locale),
       languages: {
@@ -45,7 +45,7 @@ export default async function PrivacyPage({ params }: PageProps) {
         <section>
           <h2 className="text-2xl font-semibold text-blue-600">Introduction</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            Money Line Solutions (Money Line Solutions) ("we", "our", or "us") is committed to protecting your privacy
+            MyPinjam Credit (MyPinjam Credit) ("we", "our", or "us") is committed to protecting your privacy
             and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard
             your information when you visit our website or use our services.
           </p>
@@ -219,7 +219,7 @@ export default async function PrivacyPage({ params }: PageProps) {
             If you have questions or concerns about this Privacy Policy or our data practices, please contact:
           </p>
           <div className="mt-4 rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-sky-50 p-6">
-            <p className="font-semibold text-slate-900">Money Line Solutions (Money Line Solutions)</p>
+            <p className="font-semibold text-slate-900">MyPinjam Credit (MyPinjam Credit)</p>
             <p className="mt-2 text-slate-700">
               Level M, M-01a, Wisma YNH, Kiara 163<br />
               8, Jalan Kiara, Mont Kiara<br />

@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const locale = localeStr as Locale;
 
   return {
-    title: 'About Us - Money Line Solutions | Licensed Loan Advisory',
-    description: 'Learn about Money Line Solutions, your trusted licensed loan advisory service in Malaysia. We provide transparent, customer-focused financing solutions.',
+    title: 'About Us - MyPinjam Credit | Licensed Loan Advisory',
+    description: 'Learn about MyPinjam Credit, your trusted licensed loan advisory service in Malaysia. We provide transparent, customer-focused financing solutions.',
     alternates: {
       canonical: hrefForLocale(locale),
       languages: {
@@ -25,10 +25,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     },
     openGraph: {
-      title: 'About Money Line Solutions',
+      title: 'About MyPinjam Credit',
       description: 'Licensed loan advisory service committed to transparent financing',
       url: hrefForLocale(locale),
-      siteName: 'Money Line Solutions',
+      siteName: 'MyPinjam Credit',
       locale: locale === 'ms' ? 'ms_MY' : 'en_MY',
       type: 'website'
     }
@@ -99,13 +99,13 @@ export default async function AboutPage({ params }: PageProps) {
       <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-sky-50 to-blue-100 p-10 shadow-xl shadow-blue-100">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-600">
-            About Money Line Solutions
+            About MyPinjam Credit
           </p>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight text-slate-900 md:text-5xl">
             Your Trusted Partner in Financial Solutions
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-slate-700">
-            Since 2018, Money Line Solutions has been helping Malaysians access fair, transparent financing.
+            Since 2018, MyPinjam Credit has been helping Malaysians access fair, transparent financing.
             We believe everyone deserves honest advice and competitive rates without hidden charges.
           </p>
         </div>
@@ -219,7 +219,7 @@ export default async function AboutPage({ params }: PageProps) {
 
       {/* Why Choose Us */}
       <section className="rounded-3xl border border-blue-100 bg-white p-10 shadow-sm">
-        <h2 className="text-center text-3xl font-semibold text-slate-900">Why Choose Money Line Solutions?</h2>
+        <h2 className="text-center text-3xl font-semibold text-slate-900">Why Choose MyPinjam Credit?</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50/50 to-sky-50/50 p-6">
             <div className="mb-3 text-3xl">📊</div>
@@ -249,7 +249,7 @@ export default async function AboutPage({ params }: PageProps) {
 
       {/* CTA */}
       <section className="rounded-3xl border border-blue-100 bg-gradient-to-r from-blue-600 to-sky-600 p-10 text-center text-white shadow-xl shadow-blue-100">
-        <h2 className="text-2xl font-semibold">Ready to experience the Money Line Solutions difference?</h2>
+        <h2 className="text-2xl font-semibold">Ready to experience the MyPinjam Credit difference?</h2>
         <p className="mt-3 text-blue-100">
           Join thousands of satisfied customers who trust us for their financing needs.
         </p>

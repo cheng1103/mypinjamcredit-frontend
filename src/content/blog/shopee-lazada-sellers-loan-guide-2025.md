@@ -4,7 +4,7 @@ description: "Complete loan guide for Malaysian online sellers. Get business loa
 date: "2025-01-12"
 slug: "shopee-lazada-sellers-loan-guide-2025"
 tags: ["shopee seller loan", "lazada financing", "e-commerce loan malaysia", "online seller funding", "working capital", "inventory financing", "digital business loan", "SME financing", "网店贷款", "pinjaman perniagaan online"]
-author: "Howard Tan - Money Line Solutions"
+author: "Howard Tan - MyPinjam Credit"
 readTime: "12 min read"
 featured: true
 ---
@@ -880,7 +880,7 @@ RM200K loan over 5 years:
 ✅ **Complex business structure** - expert can present your case properly
 ✅ **Want best interest rates** - consultant compares 10+ lenders
 
-**Money Line Solutions Services for E-commerce Sellers:**
+**MyPinjam Credit Services for E-commerce Sellers:**
 ```
 ✅ Free initial consultation
 ✅ Specialized in digital business financing
@@ -989,7 +989,7 @@ RM200K loan over 5 years:
 - Previous loan application rejected (CIMB)
 
 **Solution:**
-- Contacted **Money Line Solutions** for consultation
+- Contacted **MyPinjam Credit** for consultation
 - We helped combine data from all 3 platforms
 - Prepared comprehensive business plan showing total revenue
 - Applied to **BOOST Capital** (they accept digital businesses)
@@ -1004,9 +1004,9 @@ RM200K loan over 5 years:
 ```
 
 **Melissa's Quote:**
-"Money Line Solutions 帮我整理所有平台的data。银行看到total sales RM45K 就比较容易批准。自己申请时没想到要combine data!"
+"MyPinjam Credit 帮我整理所有平台的data。银行看到total sales RM45K 就比较容易批准。自己申请时没想到要combine data!"
 
-(Translation: "Money Line Solutions helped me compile data from all platforms. When bank saw total sales RM45K, easier to approve. When I applied myself, didn't think to combine data!")
+(Translation: "MyPinjam Credit helped me compile data from all platforms. When bank saw total sales RM45K, easier to approve. When I applied myself, didn't think to combine data!")
 
 ---
 
@@ -1284,7 +1284,7 @@ Monthly Sales RM100,000 = Can borrow RM250,000 - RM500,000
 ```
 Week 1: Apply to top choice lender (wait for decision)
 Week 2: If rejected, apply to 2nd choice
-Week 3: If still rejected, seek professional help (Money Line Solutions)
+Week 3: If still rejected, seek professional help (MyPinjam Credit)
 ```
 
 **Exception:** Platform financing (Shopee Capital, LazCapital) doesn't affect CCRIS as much. Can apply simultaneously.
@@ -1328,7 +1328,7 @@ Week 3: If still rejected, seek professional help (Money Line Solutions)
 - You have perfect credit and just need simple platform financing
 - You enjoy DIY and have time to research
 
-**Money Line Solutions Fees:**
+**MyPinjam Credit Fees:**
 - Free consultation
 - Success fee: 1-3% of approved loan amount
 - Example: RM100K loan = RM1,000 - RM3,000 fee
@@ -1391,7 +1391,7 @@ If need cash flow management:
 
 ---
 
-## Contact Money Line Solutions for Free Consultation
+## Contact MyPinjam Credit for Free Consultation
 
 **Specialized E-commerce Financing Consultation**
 
@@ -1461,7 +1461,7 @@ Don't let bank rejections discourage you. Platform financing, fintech lenders, a
 - [Check Your CTOS Score Now](https://www.ctosdigital.com)
 - [Register Your Business with SSM](https://www.ssm.com.my)
 - [Apply for Shopee Capital](https://seller.shopee.com.my) (if selling on Shopee)
-- [Contact Money Line Solutions for Free Consultation](https://wa.me/60167479368)
+- [Contact MyPinjam Credit for Free Consultation](https://wa.me/60167479368)
 
 ---
 

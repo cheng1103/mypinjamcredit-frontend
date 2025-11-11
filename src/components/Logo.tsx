@@ -22,7 +22,7 @@ export function Logo({
     >
       <Image
         src="/logo.png"
-        alt="Money Line Solutions - Professional Loan Advisory"
+        alt="MyPinjam Credit - Professional Loan Advisory"
         width={size}
         height={size}
         className="object-cover rounded-full"

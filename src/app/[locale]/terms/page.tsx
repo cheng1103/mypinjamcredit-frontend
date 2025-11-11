@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const locale = localeStr as Locale;
 
   return {
-    title: 'Terms of Service - Money Line Solutions',
-    description: 'Read the terms and conditions for using Money Line Solutions loan advisory services.',
+    title: 'Terms of Service - MyPinjam Credit',
+    description: 'Read the terms and conditions for using MyPinjam Credit loan advisory services.',
     alternates: {
       canonical: hrefForLocale(locale),
       languages: {
@@ -45,7 +45,7 @@ export default async function TermsPage({ params }: PageProps) {
         <section>
           <h2 className="text-2xl font-semibold text-blue-600">1. Agreement to Terms</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            By accessing and using the services of Money Line Solutions (Money Line Solutions), you agree to be
+            By accessing and using the services of MyPinjam Credit (MyPinjam Credit), you agree to be
             bound by these Terms of Service and all applicable laws and regulations. If you do not agree
             with any of these terms, you are prohibited from using our services.
           </p>
@@ -54,7 +54,7 @@ export default async function TermsPage({ params }: PageProps) {
         <section>
           <h2 className="text-2xl font-semibold text-blue-600">2. Services Description</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            Money Line Solutions provides loan advisory and intermediary services connecting borrowers with
+            MyPinjam Credit provides loan advisory and intermediary services connecting borrowers with
             licensed financial institutions. We do not directly provide loans but facilitate the loan
             application process.
           </p>
@@ -182,7 +182,7 @@ export default async function TermsPage({ params }: PageProps) {
           <h2 className="text-2xl font-semibold text-blue-600">9. Intellectual Property</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
             All content on this website, including text, graphics, logos, and software, is the property
-            of Money Line Solutions or its licensors and is protected by Malaysian and international
+            of MyPinjam Credit or its licensors and is protected by Malaysian and international
             intellectual property laws.
           </p>
           <p className="mt-4 leading-relaxed text-slate-700">
@@ -226,7 +226,7 @@ export default async function TermsPage({ params }: PageProps) {
         <section>
           <h2 className="text-2xl font-semibold text-blue-600">13. Indemnification</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            You agree to indemnify and hold harmless Money Line Solutions, its officers, directors, employees,
+            You agree to indemnify and hold harmless MyPinjam Credit, its officers, directors, employees,
             and agents from any claims, damages, losses, or expenses arising from:
           </p>
           <ul className="mt-4 list-inside list-disc space-y-2 text-slate-700">
@@ -278,7 +278,7 @@ export default async function TermsPage({ params }: PageProps) {
             For questions about these Terms of Service, please contact:
           </p>
           <div className="mt-4 rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-sky-50 p-6">
-            <p className="font-semibold text-slate-900">Money Line Solutions (Money Line Solutions)</p>
+            <p className="font-semibold text-slate-900">MyPinjam Credit (MyPinjam Credit)</p>
             <p className="mt-2 text-slate-700">
               Level M, M-01a, Wisma YNH, Kiara 163<br />
               8, Jalan Kiara, Mont Kiara<br />
