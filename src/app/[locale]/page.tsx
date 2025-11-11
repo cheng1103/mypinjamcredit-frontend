@@ -113,7 +113,7 @@ export default async function HomePage({ params }: PageProps) {
         {/* Background Image with Blur */}
         <div className="absolute inset-0">
           <div
-            className="absolute inset-0 opacity-15 blur-md"
+            className="absolute inset-0 opacity-40 blur-sm"
             style={{
               backgroundImage: 'url(/hero-bg.jpeg)',
               backgroundSize: 'cover',
@@ -121,7 +121,7 @@ export default async function HomePage({ params }: PageProps) {
               backgroundRepeat: 'no-repeat'
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-sky-50/70 to-blue-100/70" />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-sky-50/40 to-blue-100/50" />
         </div>
         <div className="relative flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl space-y-4">
@@ -161,7 +161,7 @@ export default async function HomePage({ params }: PageProps) {
         {/* Background Image with Blur */}
         <div className="absolute inset-0">
           <div
-            className="absolute inset-0 opacity-25 blur-md"
+            className="absolute inset-0 opacity-45 blur-sm"
             style={{
               backgroundImage: 'url(/hero-bg.jpeg)',
               backgroundSize: 'cover',
@@ -169,7 +169,7 @@ export default async function HomePage({ params }: PageProps) {
               backgroundRepeat: 'no-repeat'
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 via-blue-500/80 to-sky-400/80" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/70 via-blue-500/70 to-sky-400/70" />
         </div>
         <div className="relative text-center">
           <h2 className="text-xl font-semibold md:text-3xl">Trusted by Thousands of Malaysians</h2>
