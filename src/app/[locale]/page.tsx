@@ -113,7 +113,7 @@ export default async function HomePage({ params }: PageProps) {
         {/* Background Image with Blur */}
         <div className="absolute inset-0">
           <div
-            className="absolute inset-0 opacity-20 blur-sm"
+            className="absolute inset-0 opacity-15 blur-md"
             style={{
               backgroundImage: 'url(/hero-bg.jpeg)',
               backgroundSize: 'cover',
@@ -121,7 +121,7 @@ export default async function HomePage({ params }: PageProps) {
               backgroundRepeat: 'no-repeat'
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-sky-50/60 to-blue-100/60" />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-sky-50/70 to-blue-100/70" />
         </div>
         <div className="relative flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl space-y-4">
@@ -157,14 +157,27 @@ export default async function HomePage({ params }: PageProps) {
 
       {/* Statistics Section */}
       <FadeInSection>
-        <section className="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-600 via-blue-500 to-sky-400 p-6 text-white shadow-xl md:rounded-3xl md:p-10">
-        <div className="text-center">
+        <section className="relative overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-600 via-blue-500 to-sky-400 p-6 text-white shadow-xl md:rounded-3xl md:p-10">
+        {/* Background Image with Blur */}
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 opacity-25 blur-md"
+            style={{
+              backgroundImage: 'url(/hero-bg.jpeg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 via-blue-500/80 to-sky-400/80" />
+        </div>
+        <div className="relative text-center">
           <h2 className="text-xl font-semibold md:text-3xl">Trusted by Thousands of Malaysians</h2>
           <p className="mt-2 text-sm text-blue-50 md:text-base">
             Real results from real people who chose MyPinjam Credit
           </p>
         </div>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 md:mt-8 md:gap-8">
+        <div className="relative mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 md:mt-8 md:gap-8">
           <div className="text-center group">
             <div className="mb-3 flex justify-center">
               <div className="rounded-full bg-white/20 p-4 transition-transform duration-300 group-hover:scale-110">
