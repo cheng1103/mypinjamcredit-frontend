@@ -1,12 +1,26 @@
 {
   "common": {
-    "brand": "MyPinjam Credit",
+    "brand": "Money Line Solutions",
     "brandFull": "",
     "tagline": "Rakan Pinjaman Dipercayai di Malaysia",
+    "licenses": {
+      "ssm": "1404850-H",
+      "kpkt": "KPKT/BL/19/W2684/14/02",
+      "license": "WL2684/14/02-9/161026"
+    },
+    "trust": {
+      "since": "Dipercayai oleh Rakyat Malaysia Sejak 2018",
+      "customers": "Lebih 5,000 pelanggan telah menerima bantuan kewangan dari kami",
+      "badges": {
+        "ssm": "Berdaftar di bawah Suruhanjaya Syarikat Malaysia (SSM)",
+        "kpkt": "Bekerjasama dengan pemberi pinjaman berlesen (lesen KPKT)",
+        "security": "Keselamatan data pelanggan dijamin sepenuhnya"
+      }
+    },
     "contact": {
       "phone": "016-7479368",
-      "address": "Wisma YNH Sovo - Kiara 163",
-      "fullAddress": "Level M, M-01a, Wisma YNH, Kiara 163, 8, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur"
+      "address": "S-11-01, Wisma YNH, Kiara 163",
+      "fullAddress": "S-11-01, Wisma YNH, Kiara 163, No. 8, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia"
     },
     "language": {
       "current": "Bahasa Melayu",
@@ -117,37 +131,40 @@
   },
   "seo": {
     "home": {
-      "title": "MyPinjam Credit Malaysia | Pinjaman Peribadi & PKS",
-      "description": "Bandingkan pilihan pinjaman peribadi dan PKS, nikmati pelan bayaran fleksibel, dan mohon dalam beberapa minit bersama MyPinjam Credit Malaysia."
+      "title": "Money Line Solutions Malaysia | Pinjaman Peribadi & PKS",
+      "description": "Bandingkan pilihan pinjaman peribadi dan PKS, nikmati pelan bayaran fleksibel, dan mohon dalam beberapa minit bersama Money Line Solutions Malaysia."
     },
     "apply": {
-      "title": "Mohon Pinjaman | MyPinjam Credit Malaysia",
+      "title": "Mohon Pinjaman | Money Line Solutions Malaysia",
       "description": "Hantar permohonan pinjaman anda secara dalam talian. Dapatkan nasihat pembiayaan yang disesuaikan untuk keperluan peribadi dan perniagaan di seluruh Malaysia."
     },
     "products": {
-      "title": "Produk Pinjaman MyPinjam Credit | Peribadi, PKS & Modal Kerja",
+      "title": "Produk Pinjaman Money Line Solutions | Peribadi, PKS & Modal Kerja",
       "description": "Lihat pakej pinjaman peribadi, PKS, pembiayaan peralatan dan modal kerja dengan kadar telus, tempoh fleksibel dan sokongan dwibahasa di Malaysia."
     },
     "contact": {
-      "title": "Hubungi MyPinjam Credit | Penasihat Pinjaman Berlesen Malaysia",
-      "description": "Hubungi MyPinjam Credit untuk konsultasi pinjaman peribadi atau perniagaan, maklumat cawangan dan bantuan pantas di seluruh Malaysia."
+      "title": "Hubungi Money Line Solutions | Penasihat Pinjaman Berlesen Malaysia",
+      "description": "Hubungi Money Line Solutions untuk konsultasi pinjaman peribadi atau perniagaan, maklumat cawangan dan bantuan pantas di seluruh Malaysia."
     },
     "feedback": {
-      "title": "Ulasan MyPinjam Credit | Testimoni & Pengalaman Pelanggan",
-      "description": "Baca testimoni pelanggan yang disahkan tentang kelulusan pinjaman, sokongan pelanggan dan pengalaman pembiayaan bersama MyPinjam Credit."
+      "title": "Ulasan Money Line Solutions | Testimoni & Pengalaman Pelanggan",
+      "description": "Baca testimoni pelanggan yang disahkan tentang kelulusan pinjaman, sokongan pelanggan dan pengalaman pembiayaan bersama Money Line Solutions."
     },
     "calculator": {
-      "title": "Kalkulator Ansuran Pinjaman | Rancang Bayaran MyPinjam Credit",
-      "description": "Anggarkan bayaran bulanan pinjaman peribadi atau PKS bersama MyPinjam Credit. Laraskan jumlah pinjaman, tempoh dan bersedia untuk permohonan."
+      "title": "Kalkulator Ansuran Pinjaman | Rancang Bayaran Money Line Solutions",
+      "description": "Anggarkan bayaran bulanan pinjaman peribadi atau PKS bersama Money Line Solutions. Laraskan jumlah pinjaman, tempoh dan bersedia untuk permohonan."
     },
     "organization": {
-      "name": "MyPinjam Credit oleh MyPinjam Credit",
-      "legalName": "Howard Loan Advisor",
+      "name": "Money Line Solutions",
+      "legalName": "Money Line Solutions",
       "url": "https://www.mypinjamcredit.com",
       "logo": "/logo.png",
       "email": "hello@mypinjamcredit.com",
       "telephone": "+60-16-7479368",
-      "address": "Level M, M-01a, Wisma YNH, Kiara 163, 8, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur",
+      "address": "S-11-01, Wisma YNH, Kiara 163, No. 8, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+      "ssmNumber": "1404850-H",
+      "kpktLicense": "KPKT/BL/19/W2684/14/02",
+      "license": "WL2684/14/02-9/161026",
       "sameAs": [
         "https://www.facebook.com/mypinjamcredit",
         "https://www.instagram.com/mypinjamcredit"

@@ -1,12 +1,26 @@
 {
   "common": {
-    "brand": "MyPinjam Credit",
+    "brand": "Money Line Solutions",
     "brandFull": "",
     "tagline": "Your Trusted Loan Partner in Malaysia",
+    "licenses": {
+      "ssm": "1404850-H",
+      "kpkt": "KPKT/BL/19/W2684/14/02",
+      "license": "WL2684/14/02-9/161026"
+    },
+    "trust": {
+      "since": "Trusted by Malaysians Since 2018",
+      "customers": "Over 5,000 customers have received financial assistance from us",
+      "badges": {
+        "ssm": "Registered under Companies Commission of Malaysia (SSM)",
+        "kpkt": "Partnered with licensed lenders (KPKT license)",
+        "security": "Customer data security fully guaranteed"
+      }
+    },
     "contact": {
       "phone": "016-7479368",
-      "address": "Wisma YNH Sovo - Kiara 163",
-      "fullAddress": "Level M, M-01a, Wisma YNH, Kiara 163, 8, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur"
+      "address": "S-11-01, Wisma YNH, Kiara 163",
+      "fullAddress": "S-11-01, Wisma YNH, Kiara 163, No. 8, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia"
     },
     "language": {
       "current": "English",
@@ -127,37 +141,40 @@
   },
   "seo": {
     "home": {
-      "title": "MyPinjam Credit Malaysia | Personal & SME Loans in MYR",
-      "description": "Compare personal and SME loan options, discover flexible repayment plans, and apply in minutes with MyPinjam Credit Malaysia."
+      "title": "Money Line Solutions Malaysia | Personal & SME Loans in MYR",
+      "description": "Compare personal and SME loan options, discover flexible repayment plans, and apply in minutes with Money Line Solutions Malaysia."
     },
     "apply": {
-      "title": "Apply for a Loan | MyPinjam Credit Malaysia",
+      "title": "Apply for a Loan | Money Line Solutions Malaysia",
       "description": "Submit your loan application online. Get tailored financing advice for personal and business needs across Malaysia."
     },
     "products": {
-      "title": "MyPinjam Credit Loan Products | Personal, SME & Working Capital",
+      "title": "Money Line Solutions Loan Products | Personal, SME & Working Capital",
       "description": "Review personal, SME, equipment and working capital loan packages with transparent rates, tenure options and bilingual support across Malaysia."
     },
     "contact": {
-      "title": "Contact MyPinjam Credit | Licensed Loan Advisors in Malaysia",
-      "description": "Get in touch with MyPinjam Credit for personalised loan consultations, branch details, and quick assistance for personal or business financing."
+      "title": "Contact Money Line Solutions | Licensed Loan Advisors in Malaysia",
+      "description": "Get in touch with Money Line Solutions for personalised loan consultations, branch details, and quick assistance for personal or business financing."
     },
     "feedback": {
-      "title": "MyPinjam Credit Reviews | Community Feedback & Success Stories",
-      "description": "Read verified customer testimonials about MyPinjam Credit loan approvals, customer support, and financing experiences across Malaysia."
+      "title": "Money Line Solutions Reviews | Community Feedback & Success Stories",
+      "description": "Read verified customer testimonials about Money Line Solutions loan approvals, customer support, and financing experiences across Malaysia."
     },
     "calculator": {
-      "title": "Loan Repayment Calculator | Plan Your MyPinjam Credit Instalments",
-      "description": "Estimate monthly repayments for personal and SME loans with MyPinjam Credit. Adjust loan amounts, tenure and get ready for your application."
+      "title": "Loan Repayment Calculator | Plan Your Money Line Solutions Instalments",
+      "description": "Estimate monthly repayments for personal and SME loans with Money Line Solutions. Adjust loan amounts, tenure and get ready for your application."
     },
     "organization": {
-      "name": "MyPinjam Credit",
-      "legalName": "Howard Loan Advisor",
+      "name": "Money Line Solutions",
+      "legalName": "Money Line Solutions",
       "url": "https://www.mypinjamcredit.com",
       "logo": "/logo.png",
       "email": "hello@mypinjamcredit.com",
       "telephone": "+60-16-7479368",
-      "address": "Level M, M-01a, Wisma YNH, Kiara 163, 8, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur",
+      "address": "S-11-01, Wisma YNH, Kiara 163, No. 8, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+      "ssmNumber": "1404850-H",
+      "kpktLicense": "KPKT/BL/19/W2684/14/02",
+      "license": "WL2684/14/02-9/161026",
       "sameAs": [
         "https://www.facebook.com/mypinjamcredit",
         "https://www.instagram.com/mypinjamcredit"
