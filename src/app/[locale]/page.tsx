@@ -112,16 +112,16 @@ export default async function HomePage({ params }: PageProps) {
       {/* Full Background Image */}
       <div className="fixed inset-0 -z-10">
         <div
-          className="absolute inset-0 opacity-65"
+          className="absolute inset-0 opacity-75"
           style={{
             backgroundImage: 'url(/hero-bg.jpeg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            filter: 'blur(1px) brightness(0.8)'
+            filter: 'brightness(0.75)'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/25 via-white/10 to-white/25" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-white/15" />
       </div>
 
       <section className="relative overflow-hidden rounded-2xl border border-blue-100 bg-white/80 backdrop-blur-sm p-6 shadow-xl shadow-blue-100 md:rounded-3xl md:p-10">
