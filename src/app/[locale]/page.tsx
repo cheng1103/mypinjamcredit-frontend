@@ -114,12 +114,12 @@ export default async function HomePage({ params }: PageProps) {
         <div
           className="absolute inset-0 opacity-75"
           style={{
-            backgroundImage: 'url(/hero-bg.jpeg)',
+            backgroundImage: 'url(/hero-bg-hd.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             filter: 'brightness(0.75) contrast(1.15) saturate(1.1)',
-            imageRendering: 'crisp-edges'
+            imageRendering: 'high-quality'
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-white/15" />
