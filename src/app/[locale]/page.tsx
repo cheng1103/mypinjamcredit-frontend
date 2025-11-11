@@ -110,17 +110,18 @@ export default async function HomePage({ params }: PageProps) {
 
       <div className="space-y-8 md:space-y-16">
       <section className="relative overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-white via-sky-50 to-blue-100 p-6 shadow-xl shadow-blue-100 md:rounded-3xl md:p-10">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `
-              linear-gradient(to right, rgb(59, 130, 246, 0.1) 1px, transparent 1px),
-              linear-gradient(to bottom, rgb(59, 130, 246, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '40px 40px'
-          }} />
-          <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-gradient-to-br from-blue-400/20 to-transparent blur-3xl" />
-          <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-gradient-to-br from-sky-400/20 to-transparent blur-3xl" />
+        {/* Background Image with Blur */}
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 opacity-20 blur-sm"
+            style={{
+              backgroundImage: 'url(/hero-bg.jpeg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-sky-50/60 to-blue-100/60" />
         </div>
         <div className="relative flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl space-y-4">
