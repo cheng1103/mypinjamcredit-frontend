@@ -112,7 +112,7 @@ export default async function HomePage({ params }: PageProps) {
       {/* Full Background Image */}
       <div className="fixed inset-0 -z-10">
         <div
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-45"
           style={{
             backgroundImage: 'url(/hero-bg.jpeg)',
             backgroundSize: 'cover',
@@ -121,7 +121,7 @@ export default async function HomePage({ params }: PageProps) {
             filter: 'blur(3px) brightness(0.9)'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-white/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-white/30 to-white/50" />
       </div>
 
       <section className="relative overflow-hidden rounded-2xl border border-blue-100 bg-white/80 backdrop-blur-sm p-6 shadow-xl shadow-blue-100 md:rounded-3xl md:p-10">
