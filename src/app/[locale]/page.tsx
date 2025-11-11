@@ -114,7 +114,7 @@ export default async function HomePage({ params }: PageProps) {
         <div
           className="absolute inset-0 opacity-75"
           style={{
-            backgroundImage: 'url(/hero-bg-hd.jpg)',
+            backgroundImage: 'url(/hero-bg-hd.webp)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
