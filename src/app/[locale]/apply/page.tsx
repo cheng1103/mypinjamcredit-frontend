@@ -6,6 +6,8 @@ import { TrustBadges } from '@/components/TrustBadges';
 import { QuickCalculator } from '@/components/QuickCalculator';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
 import { ExitIntentPopup } from '@/components/ExitIntentPopup';
+import { TodayStats } from '@/components/TodayStats';
+import { LiveNotification } from '@/components/LiveNotification';
 import type { Locale } from '@/types/locale';
 
 type ApplyPageProps = { params: Promise<{ locale: string }> };
@@ -82,6 +84,9 @@ export default async function ApplyPage({ params }: ApplyPageProps) {
       {/* Exit Intent Popup */}
       <ExitIntentPopup />
 
+      {/* Live Notification */}
+      <LiveNotification />
+
     <div className="space-y-12">
       <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-sky-50 to-blue-100 p-10 shadow-xl shadow-blue-100">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
@@ -148,6 +153,9 @@ export default async function ApplyPage({ params }: ApplyPageProps) {
           </div>
         </div>
         <div className="space-y-6">
+          {/* Today's Stats */}
+          <TodayStats />
+
           {/* Application Form */}
           <div className="rounded-3xl border border-blue-100 bg-white/95 p-8 shadow-xl shadow-blue-100">
             <MultiStepLeadForm />
