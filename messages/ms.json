@@ -96,7 +96,18 @@
     "placeholderOption": "Pilih satu pilihan",
     "error": {
       "generic": "Berlaku ralat. Sila cuba lagi.",
-      "email_already_exists": "E-mel ini telah berdaftar dengan kami."
+      "email_already_exists": "E-mel ini telah berdaftar dengan kami.",
+      "phone_already_exists": "Nombor telefon ini telah berdaftar dengan kami.",
+      "too_many_requests": "Terlalu banyak permintaan. Sila cuba lagi dalam satu minit.",
+      "lead_not_found": "Permohonan tidak dijumpai.",
+      "testimonial_not_found": "Maklum balas tidak dijumpai.",
+      "invalid_credentials": "Nama pengguna atau kata laluan tidak sah.",
+      "user_not_found": "Pengguna tidak dijumpai.",
+      "username_exists": "Nama pengguna ini telah digunakan.",
+      "email_exists": "E-mel ini telah digunakan.",
+      "invalid_old_password": "Kata laluan semasa yang anda masukkan tidak betul.",
+      "unauthorized": "Anda tidak mempunyai kebenaran untuk mengakses sumber ini.",
+      "invalid_input": "Data yang dimasukkan tidak sah. Sila semak semula."
     }
   },
   "feedback": {

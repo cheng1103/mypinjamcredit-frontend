@@ -106,7 +106,8 @@
       "username_exists": "This username is already taken.",
       "email_exists": "This email is already in use.",
       "invalid_old_password": "The current password you entered is incorrect.",
-      "unauthorized": "You don't have permission to access this resource."
+      "unauthorized": "You don't have permission to access this resource.",
+      "invalid_input": "Invalid data submitted. Please check your input."
     }
   },
   "feedback": {

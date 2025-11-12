@@ -182,7 +182,7 @@ export default async function ApplyPage({ params }: ApplyPageProps) {
           ))}
         </ul>
         <p className="mt-6 text-xs text-slate-500">
-          By submitting this form you consent to Aurora Credit contacting you via phone, SMS, or
+          By submitting this form you consent to MyPinjam Credit contacting you via phone, SMS, or
           email to process your application. Read our privacy policy for more details on how we
           protect your information.
         </p>
