@@ -37,10 +37,10 @@
       "menu": "Menu"
     },
     "footer": {
-      "disclaimer": "Fasilitator kredit berlesen patuh kepada peraturan Malaysia dan PDPA.",
+      "disclaimer": "Syarikat pinjaman berlesen patuh kepada peraturan Malaysia dan PDPA.",
       "privacy": "Dasar Privasi",
       "terms": "Terma Perkhidmatan",
-      "compliance": "Regulatori & Pematuhan"
+      "compliance": "Peraturan & Pematuhan peraturan"
     },
     "actions": {
       "learnMore": "Ketahui lebih lanjut"
@@ -55,7 +55,7 @@
   },
   "form": {
     "title": "Permohonan Pinjaman",
-    "description": "Lengkapkan borang dan pakar kredit kami akan menghubungi anda dalam sehari bekerja.",
+    "description": "Lengkapkan borang dan pegawai pinjaman kami akan menghubungi anda dalam sehari bekerja.",
     "fields": {
       "name": "Nama Penuh",
       "phone": "Nombor Telefon",
@@ -67,10 +67,10 @@
     },
     "loanTypeOptions": {
       "PERSONAL_USE": "Kegunaan peribadi",
-      "BUSINESS_EXPANSION": "Pengembangan perniagaan",
-      "EQUIPMENT_FINANCING": "Pembiayaan peralatan",
-      "WORKING_CAPITAL": "Modal kerja",
-      "DEBT_CONSOLIDATION": "Penyatuan hutang"
+      "BUSINESS_EXPANSION": "Besarkan perniagaan",
+      "EQUIPMENT_FINANCING": "Pinjaman untuk beli peralatan",
+      "WORKING_CAPITAL": "Wang untuk jalankan perniagaan",
+      "DEBT_CONSOLIDATION": "Gabungkan semua hutang"
     },
     "locationOptions": {
       "JOHOR": "Johor",
@@ -125,7 +125,7 @@
       },
       "contact": {
         "title": "Hubungi Kami",
-        "description": "Berhubung dengan penasihat dwibahasa kami untuk panduan peribadi."
+        "description": "Berhubung dengan pegawai yang boleh cakap 2 bahasa kami untuk panduan peribadi."
       }
     }
   },
@@ -140,11 +140,11 @@
     },
     "products": {
       "title": "Produk Pinjaman MyPinjam Credit | Peribadi, PKS & Modal Kerja",
-      "description": "Lihat pakej pinjaman peribadi, PKS, pembiayaan peralatan dan modal kerja dengan kadar telus, tempoh fleksibel dan sokongan dwibahasa di Malaysia."
+      "description": "Lihat pakej pinjaman peribadi, PKS, pembiayaan peralatan dan wang untuk jalankan perniagaan dengan kadar telus, tempoh fleksibel dan sokongan dwibahasa di Malaysia."
     },
     "contact": {
       "title": "Hubungi MyPinjam Credit | Penasihat Pinjaman Berlesen Malaysia",
-      "description": "Hubungi MyPinjam Credit untuk konsultasi pinjaman peribadi atau perniagaan, maklumat cawangan dan bantuan pantas di seluruh Malaysia."
+      "description": "Hubungi MyPinjam Credit untuk perbincangan pinjaman peribadi atau perniagaan, maklumat cawangan dan bantuan pantas di seluruh Malaysia."
     },
     "feedback": {
       "title": "Ulasan MyPinjam Credit | Testimoni & Pengalaman Pelanggan",

@@ -37,10 +37,10 @@
       "menu": "Menu"
     },
     "footer": {
-      "disclaimer": "Licensed credit facilitator compliant with Malaysian regulations and PDPA.",
+      "disclaimer": "Licensed loan company compliant with Malaysian regulations and PDPA.",
       "privacy": "Privacy Policy",
       "terms": "Terms of Service",
-      "compliance": "Regulatory & Compliance"
+      "compliance": "Rules & Following Regulations"
     },
     "actions": {
       "learnMore": "Learn more"
@@ -48,14 +48,14 @@
   },
   "hero": {
     "headline": "Personal & SME Loans Designed for Malaysia",
-    "subheadline": "Transparent rates, fast approvals, bilingual support.",
+    "subheadline": "Transparent rates, fast approvals, support in 2 languages.",
     "ctaPrimary": "Get Started",
     "ctaSecondary": "View Loan Options",
     "alt": "Professional credit advisor assisting Malaysian clients"
   },
   "form": {
     "title": "Loan Application",
-    "description": "Complete the form and our credit specialist will reach out within one business day.",
+    "description": "Complete the form and our loan officer will reach out within one business day.",
     "fields": {
       "name": "Full Name",
       "phone": "Contact Number",
@@ -67,10 +67,10 @@
     },
     "loanTypeOptions": {
       "PERSONAL_USE": "For personal use",
-      "BUSINESS_EXPANSION": "Business expansion",
-      "EQUIPMENT_FINANCING": "Equipment financing",
-      "WORKING_CAPITAL": "Working capital",
-      "DEBT_CONSOLIDATION": "Debt consolidation"
+      "BUSINESS_EXPANSION": "Grow your business",
+      "EQUIPMENT_FINANCING": "Loan to buy equipment",
+      "WORKING_CAPITAL": "Money to run your business",
+      "DEBT_CONSOLIDATION": "Combine all your debts"
     },
     "locationOptions": {
       "JOHOR": "Johor",
@@ -150,11 +150,11 @@
     },
     "products": {
       "title": "MyPinjam Credit Loan Products | Personal, SME & Working Capital",
-      "description": "Review personal, SME, equipment and working capital loan packages with transparent rates, tenure options and bilingual support across Malaysia."
+      "description": "Review personal, SME, equipment and money to run your business loan packages with transparent rates, tenure options and support in 2 languages across Malaysia."
     },
     "contact": {
       "title": "Contact MyPinjam Credit | Licensed Loan Advisors in Malaysia",
-      "description": "Get in touch with MyPinjam Credit for personalised loan consultations, branch details, and quick assistance for personal or business financing."
+      "description": "Get in touch with MyPinjam Credit for personalised loan discussions, branch details, and quick assistance for personal or business financing."
     },
     "feedback": {
       "title": "MyPinjam Credit Reviews | Community Feedback & Success Stories",
