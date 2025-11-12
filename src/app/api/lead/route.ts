@@ -48,7 +48,7 @@ export async function POST(request: Request) {
     if (!validationResult.success) {
       return NextResponse.json({
         errorKey: 'invalid_input',
-        errors: validationResult.error.errors
+        errors: validationResult.error.issues
       }, { status: 400 });
     }
 
