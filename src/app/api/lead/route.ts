@@ -4,6 +4,12 @@ import { rateLimit } from '@/lib/rateLimit';
 
 const API_BASE_URL = process.env.BACKEND_BASE_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL || 'http://localhost:4000/api';
 
+// Rate limiter instance: 5 requests per minute
+const limiter = rateLimit({
+  interval: 60 * 1000, // 1 minute
+  uniqueTokenPerInterval: 500
+});
+
 // Validation schema matching MultiStepLeadForm
 const leadSchema = z.object({
   loanAmount: z.number()
@@ -28,8 +34,8 @@ const leadSchema = z.object({
 export async function POST(request: Request) {
   try {
     // Rate limiting
-    const ip = request.headers.get('x-forwarded-for') || 'unknown';
-    const rateLimitResult = await rateLimit(ip);
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0].trim() || 'unknown';
+    const rateLimitResult = limiter.check(request as any, 5, ip);
 
     if (!rateLimitResult.success) {
       return NextResponse.json({ errorKey: 'too_many_requests' }, { status: 429 });
