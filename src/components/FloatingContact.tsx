@@ -5,7 +5,7 @@ import { useState } from 'react';
 export default function FloatingContact() {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const whatsappNumber = '60167479368'; // Remove + and spaces
+  const whatsappNumber = '601124335406'; // Remove + and spaces
   const whatsappMessage = encodeURIComponent('Hello! I would like to inquire about your loan services.');
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 

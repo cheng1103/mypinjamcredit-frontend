@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { LeadForm } from '@/components/forms/LeadForm';
+import { MultiStepLeadForm } from '@/components/forms/MultiStepLeadForm';
 import { TrustBadges } from '@/components/TrustBadges';
 import { QuickCalculator } from '@/components/QuickCalculator';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
@@ -150,7 +150,7 @@ export default async function ApplyPage({ params }: ApplyPageProps) {
         <div className="space-y-6">
           {/* Application Form */}
           <div className="rounded-3xl border border-blue-100 bg-white/95 p-8 shadow-xl shadow-blue-100">
-            <LeadForm />
+            <MultiStepLeadForm />
           </div>
 
           {/* Quick Calculator */}

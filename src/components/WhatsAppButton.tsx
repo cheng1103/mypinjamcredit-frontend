@@ -6,7 +6,7 @@ export function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
 
   // WhatsApp business number
-  const whatsappNumber = '60167479368'; // Format: country code + number (no + or spaces)
+  const whatsappNumber = '601124335406'; // Format: country code + number (no + or spaces)
   const message = encodeURIComponent('Hi, saya ingin bertanya tentang permohonan pinjaman. / Hi, I would like to inquire about a loan application.');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 

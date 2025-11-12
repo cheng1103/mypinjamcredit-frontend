@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { GoogleMap } from '@/components/GoogleMap';
-import { LeadForm } from '@/components/forms/LeadForm';
+import { MultiStepLeadForm } from '@/components/forms/MultiStepLeadForm';
 import { FadeInSection } from '@/components/FadeInSection';
 import { CountUp } from '@/components/CountUp';
 import { generateSEO, keywordSets } from '@/lib/seo';
@@ -343,7 +343,7 @@ export default async function HomePage({ params }: PageProps) {
           <GoogleMap />
         </div>
         <div className="rounded-3xl border border-blue-100 bg-white/95 p-8 shadow-lg shadow-blue-100">
-          <LeadForm />
+          <MultiStepLeadForm />
         </div>
       </section>
       </FadeInSection>
