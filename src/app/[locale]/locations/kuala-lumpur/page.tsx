@@ -46,7 +46,7 @@ function generateKLLocationSchema() {
     image: `${siteUrl}/images/kl-office.jpg`,
     '@id': `${siteUrl}/en/locations/kuala-lumpur`,
     url: `${siteUrl}/en/locations/kuala-lumpur`,
-    telephone: '+60-16-7479368',
+    telephone: '+60-11-24335406',
     email: 'hello@mypinjamcredit.com',
     address: {
       '@type': 'PostalAddress',
@@ -280,7 +280,7 @@ export default async function KualaLumpurPage({ params }: PageProps) {
           <div className="container mx-auto px-4 max-w-7xl">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">Areas We Serve in Kuala Lumpur</h2>
             <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
-              Professional loan advisory services across all KL neighborhoods
+              Professional loan services services across all KL neighborhoods
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {klAreas.map((area, index) => (
@@ -401,7 +401,7 @@ export default async function KualaLumpurPage({ params }: PageProps) {
 
             <h3>Why Choose MyPinjam Credit for Your KL Loan Needs?</h3>
             <p>
-              As Kuala Lumpur's trusted loan advisory service since 2015, we've helped over 500 KL residents and
+              As Kuala Lumpur's trusted loan services service since 2015, we've helped over 500 KL residents and
               businesses secure financing from RM5,000 to RM500,000. Whether you're in Mont Kiara, KLCC, Bangsar,
               or any part of KL, we provide expert loan consultation in your language.
             </p>

@@ -566,7 +566,7 @@ Contoh: Jualan RM 20,000 → Max pinjam RM 240,000
 - MARA
 
 **Hubungi Kami:**
-- 📱 WhatsApp: +60-16-7479368
+- 📱 WhatsApp: +60-11-24335406
 - 📧 Email: melayu@mypinjamcredit.com
 - 🖥️ Website: www.mypinjamcredit.com
 

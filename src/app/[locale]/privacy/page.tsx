@@ -227,7 +227,7 @@ export default async function PrivacyPage({ params }: PageProps) {
             </p>
             <p className="mt-2 text-slate-700">
               <strong>Email:</strong> hello@mypinjamcredit.com<br />
-              <strong>Phone:</strong> +60-16-7479368
+              <strong>Phone:</strong> +60-11-24335406
             </p>
           </div>
         </section>

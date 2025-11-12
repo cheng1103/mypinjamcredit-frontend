@@ -149,7 +149,7 @@ export default async function LocaleLayout({
         url: organization.url ?? siteUrl,
         logo: organization.logo ? new URL(organization.logo, siteUrl).toString() : `${siteUrl}/logo.png`,
         email: organization.email ?? 'hello@mypinjamcredit.com',
-        telephone: organization.telephone ?? '+60-16-7479368',
+        telephone: organization.telephone ?? '+60-11-24335406',
         address: organization.address ?? 'Level M, M-01a, Wisma YNH, Kiara 163, 8, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur',
         sameAs: organization.sameAs ?? []
       }

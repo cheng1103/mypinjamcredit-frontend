@@ -276,7 +276,7 @@ export default async function CompliancePage({ params }: PageProps) {
             <div>
               <h3 className="font-semibold text-slate-900">Submit Your Complaint</h3>
               <p className="mt-1 text-sm text-slate-700">
-                Email us at hello@mypinjamcredit.com or call +60-16-7479368
+                Email us at hello@mypinjamcredit.com or call +60-11-24335406
               </p>
             </div>
           </div>

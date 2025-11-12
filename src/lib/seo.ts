@@ -113,7 +113,7 @@ export const keywordSets = {
     'loan advisor malaysia',
     'fast loan approval',
     'low interest loan',
-    'licensed credit facilitator',
+    'licensed loan company',
 
     // Malay - Targeting Malay community
     'pinjaman peribadi malaysia',

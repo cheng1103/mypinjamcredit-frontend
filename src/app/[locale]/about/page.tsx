@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: 'About Us - MyPinjam Credit | Licensed Loan Advisory',
-    description: 'Learn about MyPinjam Credit, your trusted licensed loan advisory service in Malaysia. We provide transparent, customer-focused financing solutions.',
+    description: 'Learn about MyPinjam Credit, your trusted licensed loan services service in Malaysia. We provide transparent, customer-focused financing solutions.',
     alternates: {
       canonical: hrefForLocale(locale),
       languages: {
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     openGraph: {
       title: 'About MyPinjam Credit',
-      description: 'Licensed loan advisory service committed to transparent financing',
+      description: 'Licensed loan services service committed to transparent financing',
       url: hrefForLocale(locale),
       siteName: 'MyPinjam Credit',
       locale: locale === 'ms' ? 'ms_MY' : 'en_MY',
@@ -127,7 +127,7 @@ export default async function AboutPage({ params }: PageProps) {
           <div className="mb-4 text-4xl">🌟</div>
           <h2 className="text-2xl font-semibold text-blue-600">Our Vision</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            To be Malaysia's most trusted and customer-centric loan advisory service, recognized for our
+            To be Malaysia's most trusted and customer-centric loan services service, recognized for our
             integrity, transparency, and commitment to helping people make sound financial decisions.
           </p>
         </div>

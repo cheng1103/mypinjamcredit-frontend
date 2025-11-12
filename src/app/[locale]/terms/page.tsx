@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: 'Terms of Service - MyPinjam Credit',
-    description: 'Read the terms and conditions for using MyPinjam Credit loan advisory services.',
+    description: 'Read the terms and conditions for using MyPinjam Credit loan services services.',
     alternates: {
       canonical: hrefForLocale(locale),
       languages: {
@@ -54,7 +54,7 @@ export default async function TermsPage({ params }: PageProps) {
         <section>
           <h2 className="text-2xl font-semibold text-blue-600">2. Services Description</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            MyPinjam Credit provides loan advisory and intermediary services connecting borrowers with
+            MyPinjam Credit provides loan services and intermediary services connecting borrowers with
             licensed financial institutions. We do not directly provide loans but facilitate the loan
             application process.
           </p>
@@ -286,7 +286,7 @@ export default async function TermsPage({ params }: PageProps) {
             </p>
             <p className="mt-2 text-slate-700">
               <strong>Email:</strong> hello@mypinjamcredit.com<br />
-              <strong>Phone:</strong> +60-16-7479368
+              <strong>Phone:</strong> +60-11-24335406
             </p>
           </div>
         </section>

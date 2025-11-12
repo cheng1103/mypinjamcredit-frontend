@@ -1,0 +1,184 @@
+{
+  "common": {
+    "brand": "MyPinjam Credit",
+    "brandFull": "",
+    "tagline": "Your Trusted Loan Partner in Malaysia",
+    "licenses": {
+      "ssm": "1404850-H",
+      "kpkt": "KPKT/BL/19/W2684/14/02",
+      "license": "WL2684/14/02-9/161026"
+    },
+    "trust": {
+      "since": "Trusted by Malaysians Since 2018",
+      "customers": "Over 5,000 customers have received financial assistance from us",
+      "badges": {
+        "ssm": "Registered under Companies Commission of Malaysia (SSM)",
+        "kpkt": "Partnered with licensed lenders (KPKT license)",
+        "security": "Customer data security fully guaranteed"
+      }
+    },
+    "contact": {
+      "phone": "016-7479368",
+      "address": "S-11-01, Wisma YNH, Kiara 163",
+      "fullAddress": "S-11-01, Wisma YNH, Kiara 163, No. 8, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia"
+    },
+    "language": {
+      "current": "English",
+      "switchLabel": "Bahasa Melayu",
+      "ariaLabel": "Switch language to Bahasa Melayu"
+    },
+    "nav": {
+      "home": "Home",
+      "apply": "Apply",
+      "products": "Loan Products",
+      "calculator": "Calculator",
+      "feedback": "Community Feedback",
+      "contact": "Contact",
+      "menu": "Menu"
+    },
+    "footer": {
+      "disclaimer": "Licensed credit facilitator compliant with Malaysian regulations and PDPA.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "compliance": "Regulatory & Compliance"
+    },
+    "actions": {
+      "learnMore": "Learn more"
+    }
+  },
+  "hero": {
+    "headline": "Personal & SME Loans Designed for Malaysia",
+    "subheadline": "Transparent rates, fast approvals, bilingual support.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "View Loan Options",
+    "alt": "Professional credit advisor assisting Malaysian clients"
+  },
+  "form": {
+    "title": "Loan Application",
+    "description": "Complete the form and our credit specialist will reach out within one business day.",
+    "fields": {
+      "name": "Full Name",
+      "phone": "Contact Number",
+      "occupation": "Occupation",
+      "salary": "Monthly Income (MYR)",
+      "loanAmount": "Desired Loan Amount (MYR)",
+      "loanType": "Loan Purpose",
+      "location": "State"
+    },
+    "loanTypeOptions": {
+      "PERSONAL_USE": "For personal use",
+      "BUSINESS_EXPANSION": "Business expansion",
+      "EQUIPMENT_FINANCING": "Equipment financing",
+      "WORKING_CAPITAL": "Working capital",
+      "DEBT_CONSOLIDATION": "Debt consolidation"
+    },
+    "locationOptions": {
+      "JOHOR": "Johor",
+      "KEDAH": "Kedah",
+      "KELANTAN": "Kelantan",
+      "MELAKA": "Melaka",
+      "NEGERI_SEMBILAN": "Negeri Sembilan",
+      "PAHANG": "Pahang",
+      "PENANG": "Penang (Pulau Pinang)",
+      "PERAK": "Perak",
+      "PERLIS": "Perlis",
+      "SABAH": "Sabah",
+      "SARAWAK": "Sarawak",
+      "SELANGOR": "Selangor",
+      "TERENGGANU": "Terengganu",
+      "KUALA_LUMPUR": "Kuala Lumpur",
+      "PUTRAJAYA": "Putrajaya",
+      "LABUAN": "Labuan"
+    },
+    "cta": "Submit Application",
+    "submitting": "Submitting...",
+    "success": "Thanks! A loan specialist will contact you soon.",
+    "placeholderOption": "Select an option",
+    "error": {
+      "generic": "Something went wrong. Please try again.",
+      "email_already_exists": "This email is already registered with us.",
+      "phone_already_exists": "This phone number is already registered with us.",
+      "too_many_requests": "Too many requests. Please try again in a minute.",
+      "lead_not_found": "Application not found.",
+      "testimonial_not_found": "Feedback not found.",
+      "invalid_credentials": "Invalid username or password.",
+      "user_not_found": "User not found.",
+      "username_exists": "This username is already taken.",
+      "email_exists": "This email is already in use.",
+      "invalid_old_password": "The current password you entered is incorrect.",
+      "unauthorized": "You don't have permission to access this resource."
+    }
+  },
+  "feedback": {
+    "title": "Community Feedback",
+    "subtitle": "Our moderation team reviews every submission to keep this space transparent and constructive.",
+    "status": {
+      "PENDING": "Pending review",
+      "APPROVED": "Approved",
+      "REJECTED": "Rejected"
+    },
+    "empty": "No feedback yet. Be the first to share your experience."
+  },
+  "home": {
+    "cards": {
+      "products": {
+        "title": "Loan Products",
+        "description": "Explore personal and SME financing curated for Malaysian borrowers."
+      },
+      "calculator": {
+        "title": "Repayment Calculator",
+        "description": "Estimate instalments and pick the right tenure ahead of time."
+      },
+      "community": {
+        "title": "Community Feedback",
+        "description": "Read moderated experiences from fellow customers."
+      },
+      "contact": {
+        "title": "Talk to Us",
+        "description": "Reach our bilingual advisors for personalised guidance."
+      }
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "MyPinjam Credit Malaysia | Personal & SME Loans in MYR",
+      "description": "Compare personal and SME loan options, discover flexible repayment plans, and apply in minutes with MyPinjam Credit Malaysia."
+    },
+    "apply": {
+      "title": "Apply for a Loan | MyPinjam Credit Malaysia",
+      "description": "Submit your loan application online. Get tailored financing advice for personal and business needs across Malaysia."
+    },
+    "products": {
+      "title": "MyPinjam Credit Loan Products | Personal, SME & Working Capital",
+      "description": "Review personal, SME, equipment and working capital loan packages with transparent rates, tenure options and bilingual support across Malaysia."
+    },
+    "contact": {
+      "title": "Contact MyPinjam Credit | Licensed Loan Advisors in Malaysia",
+      "description": "Get in touch with MyPinjam Credit for personalised loan consultations, branch details, and quick assistance for personal or business financing."
+    },
+    "feedback": {
+      "title": "MyPinjam Credit Reviews | Community Feedback & Success Stories",
+      "description": "Read verified customer testimonials about MyPinjam Credit loan approvals, customer support, and financing experiences across Malaysia."
+    },
+    "calculator": {
+      "title": "Loan Repayment Calculator | Plan Your MyPinjam Credit Instalments",
+      "description": "Estimate monthly repayments for personal and SME loans with MyPinjam Credit. Adjust loan amounts, tenure and get ready for your application."
+    },
+    "organization": {
+      "name": "MyPinjam Credit",
+      "legalName": "MyPinjam Credit",
+      "url": "https://www.mypinjamcredit.com",
+      "logo": "/logo.png",
+      "email": "hello@mypinjamcredit.com",
+      "telephone": "+60-16-7479368",
+      "address": "S-11-01, Wisma YNH, Kiara 163, No. 8, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+      "ssmNumber": "1404850-H",
+      "kpktLicense": "KPKT/BL/19/W2684/14/02",
+      "license": "WL2684/14/02-9/161026",
+      "sameAs": [
+        "https://www.facebook.com/mypinjamcredit",
+        "https://www.instagram.com/mypinjamcredit"
+      ]
+    }
+  }
+}

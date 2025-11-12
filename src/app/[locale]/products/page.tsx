@@ -180,7 +180,7 @@ export default async function ProductsPage({ params }: PageProps) {
           '@type': 'FinancialService',
           name: 'MyPinjam Credit',
           url: siteUrl,
-          telephone: '+60-16-7479368',
+          telephone: '+60-11-24335406',
           address: {
             '@type': 'PostalAddress',
             streetAddress: '123 Jalan Mont Kiara',

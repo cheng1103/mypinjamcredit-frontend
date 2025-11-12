@@ -1,0 +1,174 @@
+{
+  "common": {
+    "brand": "MyPinjam Credit",
+    "brandFull": "",
+    "tagline": "Rakan Pinjaman Dipercayai di Malaysia",
+    "licenses": {
+      "ssm": "1404850-H",
+      "kpkt": "KPKT/BL/19/W2684/14/02",
+      "license": "WL2684/14/02-9/161026"
+    },
+    "trust": {
+      "since": "Dipercayai oleh Rakyat Malaysia Sejak 2018",
+      "customers": "Lebih 5,000 pelanggan telah menerima bantuan kewangan dari kami",
+      "badges": {
+        "ssm": "Berdaftar di bawah Suruhanjaya Syarikat Malaysia (SSM)",
+        "kpkt": "Bekerjasama dengan pemberi pinjaman berlesen (lesen KPKT)",
+        "security": "Keselamatan data pelanggan dijamin sepenuhnya"
+      }
+    },
+    "contact": {
+      "phone": "016-7479368",
+      "address": "S-11-01, Wisma YNH, Kiara 163",
+      "fullAddress": "S-11-01, Wisma YNH, Kiara 163, No. 8, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia"
+    },
+    "language": {
+      "current": "Bahasa Melayu",
+      "switchLabel": "English",
+      "ariaLabel": "Tukar bahasa ke English"
+    },
+    "nav": {
+      "home": "Utama",
+      "apply": "Mohon",
+      "products": "Produk Pinjaman",
+      "calculator": "Kalkulator",
+      "feedback": "Maklum Balas Komuniti",
+      "contact": "Hubungi",
+      "menu": "Menu"
+    },
+    "footer": {
+      "disclaimer": "Fasilitator kredit berlesen patuh kepada peraturan Malaysia dan PDPA.",
+      "privacy": "Dasar Privasi",
+      "terms": "Terma Perkhidmatan",
+      "compliance": "Regulatori & Pematuhan"
+    },
+    "actions": {
+      "learnMore": "Ketahui lebih lanjut"
+    }
+  },
+  "hero": {
+    "headline": "Pinjaman Peribadi & PKS Khusus untuk Malaysia",
+    "subheadline": "Kadar telus, kelulusan pantas, sokongan dwibahasa.",
+    "ctaPrimary": "Mulakan Sekarang",
+    "ctaSecondary": "Lihat Pilihan Pinjaman",
+    "alt": "Penasihat kredit profesional membantu pelanggan Malaysia"
+  },
+  "form": {
+    "title": "Permohonan Pinjaman",
+    "description": "Lengkapkan borang dan pakar kredit kami akan menghubungi anda dalam sehari bekerja.",
+    "fields": {
+      "name": "Nama Penuh",
+      "phone": "Nombor Telefon",
+      "occupation": "Pekerjaan",
+      "salary": "Pendapatan Bulanan (MYR)",
+      "loanAmount": "Jumlah Pinjaman Diperlukan (MYR)",
+      "loanType": "Tujuan Pinjaman",
+      "location": "Negeri"
+    },
+    "loanTypeOptions": {
+      "PERSONAL_USE": "Kegunaan peribadi",
+      "BUSINESS_EXPANSION": "Pengembangan perniagaan",
+      "EQUIPMENT_FINANCING": "Pembiayaan peralatan",
+      "WORKING_CAPITAL": "Modal kerja",
+      "DEBT_CONSOLIDATION": "Penyatuan hutang"
+    },
+    "locationOptions": {
+      "JOHOR": "Johor",
+      "KEDAH": "Kedah",
+      "KELANTAN": "Kelantan",
+      "MELAKA": "Melaka",
+      "NEGERI_SEMBILAN": "Negeri Sembilan",
+      "PAHANG": "Pahang",
+      "PENANG": "Pulau Pinang",
+      "PERAK": "Perak",
+      "PERLIS": "Perlis",
+      "SABAH": "Sabah",
+      "SARAWAK": "Sarawak",
+      "SELANGOR": "Selangor",
+      "TERENGGANU": "Terengganu",
+      "KUALA_LUMPUR": "Kuala Lumpur",
+      "PUTRAJAYA": "Putrajaya",
+      "LABUAN": "Labuan"
+    },
+    "cta": "Hantar Permohonan",
+    "submitting": "Sedang dihantar...",
+    "success": "Terima kasih! Pakar pinjaman kami akan menghubungi anda.",
+    "placeholderOption": "Pilih satu pilihan",
+    "error": {
+      "generic": "Berlaku ralat. Sila cuba lagi.",
+      "email_already_exists": "E-mel ini telah berdaftar dengan kami."
+    }
+  },
+  "feedback": {
+    "title": "Maklum Balas Komuniti",
+    "subtitle": "Pasukan moderasi kami menyemak setiap kiriman untuk kekalkan keterbukaan dan ketelusan.",
+    "status": {
+      "PENDING": "Menunggu semakan",
+      "APPROVED": "Diluluskan",
+      "REJECTED": "Ditolak"
+    },
+    "empty": "Belum ada maklum balas. Kongsikan pengalaman anda sekarang."
+  },
+  "home": {
+    "cards": {
+      "products": {
+        "title": "Produk Pinjaman",
+        "description": "Terokai pembiayaan peribadi dan PKS yang disesuaikan untuk peminjam Malaysia."
+      },
+      "calculator": {
+        "title": "Kalkulator Ansuran",
+        "description": "Anggarkan bayaran bulanan dan pilih tempoh lebih sesuai sebelum anda mohon."
+      },
+      "community": {
+        "title": "Maklum Balas Komuniti",
+        "description": "Baca pengalaman yang dimoderasi daripada pelanggan lain."
+      },
+      "contact": {
+        "title": "Hubungi Kami",
+        "description": "Berhubung dengan penasihat dwibahasa kami untuk panduan peribadi."
+      }
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "MyPinjam Credit Malaysia | Pinjaman Peribadi & PKS",
+      "description": "Bandingkan pilihan pinjaman peribadi dan PKS, nikmati pelan bayaran fleksibel, dan mohon dalam beberapa minit bersama MyPinjam Credit Malaysia."
+    },
+    "apply": {
+      "title": "Mohon Pinjaman | MyPinjam Credit Malaysia",
+      "description": "Hantar permohonan pinjaman anda secara dalam talian. Dapatkan nasihat pembiayaan yang disesuaikan untuk keperluan peribadi dan perniagaan di seluruh Malaysia."
+    },
+    "products": {
+      "title": "Produk Pinjaman MyPinjam Credit | Peribadi, PKS & Modal Kerja",
+      "description": "Lihat pakej pinjaman peribadi, PKS, pembiayaan peralatan dan modal kerja dengan kadar telus, tempoh fleksibel dan sokongan dwibahasa di Malaysia."
+    },
+    "contact": {
+      "title": "Hubungi MyPinjam Credit | Penasihat Pinjaman Berlesen Malaysia",
+      "description": "Hubungi MyPinjam Credit untuk konsultasi pinjaman peribadi atau perniagaan, maklumat cawangan dan bantuan pantas di seluruh Malaysia."
+    },
+    "feedback": {
+      "title": "Ulasan MyPinjam Credit | Testimoni & Pengalaman Pelanggan",
+      "description": "Baca testimoni pelanggan yang disahkan tentang kelulusan pinjaman, sokongan pelanggan dan pengalaman pembiayaan bersama MyPinjam Credit."
+    },
+    "calculator": {
+      "title": "Kalkulator Ansuran Pinjaman | Rancang Bayaran MyPinjam Credit",
+      "description": "Anggarkan bayaran bulanan pinjaman peribadi atau PKS bersama MyPinjam Credit. Laraskan jumlah pinjaman, tempoh dan bersedia untuk permohonan."
+    },
+    "organization": {
+      "name": "MyPinjam Credit",
+      "legalName": "MyPinjam Credit",
+      "url": "https://www.mypinjamcredit.com",
+      "logo": "/logo.png",
+      "email": "hello@mypinjamcredit.com",
+      "telephone": "+60-16-7479368",
+      "address": "S-11-01, Wisma YNH, Kiara 163, No. 8, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+      "ssmNumber": "1404850-H",
+      "kpktLicense": "KPKT/BL/19/W2684/14/02",
+      "license": "WL2684/14/02-9/161026",
+      "sameAs": [
+        "https://www.facebook.com/mypinjamcredit",
+        "https://www.instagram.com/mypinjamcredit"
+      ]
+    }
+  }
+}

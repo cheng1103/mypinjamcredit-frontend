@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: 'Personal & Business Loan Johor Bahru 2025 - Licensed Loan Consultant | MyPinjam Credit',
-    description: 'Licensed loan advisory in JB. Personal loans RM5K-RM150K, business loans RM50K-RM500K. Skudai, Nusajaya, Pasir Gudang coverage. Chinese 华语, Malay, Tamil support. 78% approval rate. Free consultation, only 1-3% fee if approved.',
+    description: 'Licensed loan services in JB. Personal loans RM5K-RM150K, business loans RM50K-RM500K. Skudai, Nusajaya, Pasir Gudang coverage. Chinese 华语, Malay, Tamil support. 78% approval rate. Free consultation, only 1-3% fee if approved.',
     keywords: [
       'loan advisor johor bahru',
       'pinjaman JB',
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     openGraph: {
       title: 'Personal & Business Loan Johor Bahru - Licensed Consultant',
-      description: 'Licensed loan advisory covering JB, Skudai, Nusajaya, Pasir Gudang. Chinese/Malay/Tamil support. 78% approval rate.',
+      description: 'Licensed loan services covering JB, Skudai, Nusajaya, Pasir Gudang. Chinese/Malay/Tamil support. 78% approval rate.',
       url: hrefForLocale(locale),
       siteName: 'MyPinjam Credit',
       locale: locale === 'ms' ? 'ms_MY' : 'en_MY',
@@ -65,7 +65,7 @@ function generateJohorLocationSchema() {
     '@context': 'https://schema.org',
     '@type': 'FinancialService',
     name: 'MyPinjam Credit - Johor Bahru',
-    description: 'Licensed loan advisory service in Johor Bahru providing personal loans, business loans, and CTOS improvement services',
+    description: 'Licensed loan services service in Johor Bahru providing personal loans, business loans, and CTOS improvement services',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Jalan Wong Ah Fook',
@@ -287,7 +287,7 @@ export default async function JohorBahruLocationPage({ params }: PageProps) {
             Personal & Business Loan Consultant in Johor Bahru
           </h1>
           <p className="mt-4 text-xl text-slate-700">
-            Licensed loan advisory serving JB City, Nusajaya, Skudai, Pasir Gudang & all Johor areas
+            Licensed loan services serving JB City, Nusajaya, Skudai, Pasir Gudang & all Johor areas
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <span className="inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-800">
@@ -440,7 +440,7 @@ export default async function JohorBahruLocationPage({ params }: PageProps) {
           <div>
             <h3 className="text-2xl font-semibold text-slate-800">Licensed Loan Consultant Serving All Johor</h3>
             <p>
-              MyPinjam Credit is a fully licensed loan advisory service with strong presence in Johor Bahru and throughout Johor state. Whether you're a Singapore commuter living in JB, a factory owner in Pasir Gudang, a developer in Iskandar Malaysia, or a business owner in Muar or Batu Pahat, we understand the unique financial landscape of Johor.
+              MyPinjam Credit is a fully licensed loan services service with strong presence in Johor Bahru and throughout Johor state. Whether you're a Singapore commuter living in JB, a factory owner in Pasir Gudang, a developer in Iskandar Malaysia, or a business owner in Muar or Batu Pahat, we understand the unique financial landscape of Johor.
             </p>
             <p>
               Our Johor team speaks <strong>Mandarin (华语)</strong>, <strong>Bahasa Malaysia</strong>, and <strong>Tamil (தமிழ்)</strong> - ensuring clear communication in your preferred language. We've helped over 189 Johor clients secure financing totaling over RM24 million, with special expertise in cross-border financing for Malaysians earning Singapore dollars.

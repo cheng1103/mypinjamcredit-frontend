@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: 'Personal & Business Loan Penang 2025 - Licensed Loan Consultant | MyPinjam Credit',
-    description: 'Licensed loan advisory in Penang. Personal loans RM5K-RM150K, business loans RM50K-RM500K. Georgetown, Bayan Lepas, Bukit Mertajam coverage. Chinese 华语, Malay, Tamil support. 78% approval rate. Free consultation, only 1-3% fee if approved.',
+    description: 'Licensed loan services in Penang. Personal loans RM5K-RM150K, business loans RM50K-RM500K. Georgetown, Bayan Lepas, Bukit Mertajam coverage. Chinese 华语, Malay, Tamil support. 78% approval rate. Free consultation, only 1-3% fee if approved.',
     keywords: [
       'loan advisor penang',
       'pinjaman penang',
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     openGraph: {
       title: 'Personal & Business Loan Penang - Licensed Consultant',
-      description: 'Licensed loan advisory covering Georgetown, Bayan Lepas, Bukit Mertajam. Chinese/Malay/Tamil support. 78% approval rate.',
+      description: 'Licensed loan services covering Georgetown, Bayan Lepas, Bukit Mertajam. Chinese/Malay/Tamil support. 78% approval rate.',
       url: hrefForLocale(locale),
       siteName: 'MyPinjam Credit',
       locale: locale === 'ms' ? 'ms_MY' : 'en_MY',
@@ -65,7 +65,7 @@ function generatePenangLocationSchema() {
     '@context': 'https://schema.org',
     '@type': 'FinancialService',
     name: 'MyPinjam Credit - Penang',
-    description: 'Licensed loan advisory service in Penang providing personal loans, business loans, and CTOS improvement services',
+    description: 'Licensed loan services service in Penang providing personal loans, business loans, and CTOS improvement services',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Lebuh Bishop',
@@ -287,7 +287,7 @@ export default async function PenangLocationPage({ params }: PageProps) {
             Personal & Business Loan Consultant in Penang
           </h1>
           <p className="mt-4 text-xl text-slate-700">
-            Licensed loan advisory serving Georgetown, Bayan Lepas, Bukit Mertajam & all Penang areas
+            Licensed loan services serving Georgetown, Bayan Lepas, Bukit Mertajam & all Penang areas
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <span className="inline-flex items-center rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-800">
@@ -440,7 +440,7 @@ export default async function PenangLocationPage({ params }: PageProps) {
           <div>
             <h3 className="text-2xl font-semibold text-slate-800">Licensed Loan Consultant Serving All Penang</h3>
             <p>
-              MyPinjam Credit is a fully licensed loan advisory service with deep roots in Penang. Whether you're a coffee shop owner in Georgetown's heritage zone, a factory worker in Bayan Lepas Free Trade Zone, or a business owner in Bukit Mertajam, we understand the unique financial needs of Penang residents.
+              MyPinjam Credit is a fully licensed loan services service with deep roots in Penang. Whether you're a coffee shop owner in Georgetown's heritage zone, a factory worker in Bayan Lepas Free Trade Zone, or a business owner in Bukit Mertajam, we understand the unique financial needs of Penang residents.
             </p>
             <p>
               Our Penang team speaks <strong>Hokkien (福建话)</strong>, <strong>Mandarin (华语)</strong>, <strong>Bahasa Malaysia</strong>, and <strong>Tamil (தமிழ்)</strong> - ensuring you get consultation in your preferred language. We've helped over 142 Penang clients secure financing totaling over RM18 million.

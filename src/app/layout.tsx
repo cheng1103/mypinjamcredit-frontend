@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s | MyPinjam Credit'
   },
   description:
-    'Licensed Malaysian loan consultancy offering personal, SME and working capital financing with transparent rates and bilingual support.',
+    'Licensed Malaysian loan consultancy offering personal, SME and working capital financing with transparent rates and support in 2 languages.',
   keywords: [
     'MyPinjam Credit',
     'personal loan Malaysia',

@@ -9,7 +9,7 @@ export default function FloatingContact() {
   const whatsappMessage = encodeURIComponent('Hello! I would like to inquire about your loan services.');
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-  const phoneNumber = '+60-16-7479368';
+  const phoneNumber = '+60-11-24335406';
   const email = 'hello@mypinjamcredit.com';
 
   return (

@@ -12,14 +12,14 @@ export function generateLocalBusinessSchema() {
     image: `${siteUrl}/logo.png`,
     '@id': siteUrl,
     url: siteUrl,
-    telephone: '+60-16-7479368',
+    telephone: '+60-11-24335406',
     email: 'hello@mypinjamcredit.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '123 Jalan Mont Kiara',
+      streetAddress: 'S-11-01, Wisma YNH, Kiara 163, No. 8, Jalan Kiara, Mont Kiara',
       addressLocality: 'Kuala Lumpur',
       postalCode: '50480',
-      addressRegion: 'Wilayah Persekutuan',
+      addressRegion: 'Wilayah Persekutuan Kuala Lumpur',
       addressCountry: 'MY'
     },
     geo: {
@@ -101,7 +101,7 @@ export function generateReviewSchema(reviews: Array<{
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: 'MyPinjam Credit Loan Advisory Services',
+    name: 'MyPinjam Credit Loan Services',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.8',
@@ -225,7 +225,7 @@ export function generateOrganizationSchema() {
     ],
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '123 Jalan Mont Kiara',
+      streetAddress: 'S-11-01, Wisma YNH, Kiara 163, No. 8, Jalan Kiara, Mont Kiara',
       addressLocality: 'Kuala Lumpur',
       postalCode: '50480',
       addressCountry: 'MY'
@@ -233,7 +233,7 @@ export function generateOrganizationSchema() {
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+60-16-7479368',
+        telephone: '+60-11-24335406',
         contactType: 'Customer Service',
         availableLanguage: ['English', 'Malay', 'Chinese', 'Tamil'],
         areaServed: 'MY'

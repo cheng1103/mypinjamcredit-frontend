@@ -569,22 +569,22 @@ A: Yes, we consider overall situation. Low score? We explain and find solutions.
 ### Step 1: Contact Us in Your Preferred Language
 
 **中文 (Chinese):**
-- 📱 WhatsApp: +60-16-7479368 (华语服务)
+- 📱 WhatsApp: +60-11-24335406 (华语服务)
 - 📧 Email: chinese@mypinjamcredit.com
 - 说明您的需求，我们会安排华语顾问
 
 **Bahasa Melayu:**
-- 📱 WhatsApp: +60-16-7479368 (Khidmat Melayu)
+- 📱 WhatsApp: +60-11-24335406 (Khidmat Melayu)
 - 📧 Email: melayu@mypinjamcredit.com
 - Terangkan keperluan anda, kami akan bantu
 
 **Tamil (தமிழ்):**
-- 📱 WhatsApp: +60-16-7479368 (Tamil Service)
+- 📱 WhatsApp: +60-11-24335406 (Tamil Service)
 - 📧 Email: tamil@mypinjamcredit.com
 - உங்கள் தேவையை விளக்குங்கள்
 
 **English:**
-- 📱 WhatsApp: +60-16-7479368
+- 📱 WhatsApp: +60-11-24335406
 - 📧 Email: hello@mypinjamcredit.com
 
 ### Step 2: Free Consultation (免费咨询 | Konsultasi Percuma | இலவச ஆலோசனை)
@@ -687,13 +687,13 @@ MyPinjam Credit Sdn Bhd
 **Contact Methods:**
 
 **General Hotline:**
-📱 +60-16-7479368
+📱 +60-11-24335406
 
 **Language-Specific Lines:**
-- 🇨🇳 华语: +60-16-7479368 (Mandarin/Cantonese)
-- 🇲🇾 Melayu: +60-16-7479368 (Bahasa Malaysia)
-- 🇮🇳 Tamil: +60-16-7479368 (தமிழ்)
-- 🇬🇧 English: +60-16-7479368
+- 🇨🇳 华语: +60-11-24335406 (Mandarin/Cantonese)
+- 🇲🇾 Melayu: +60-11-24335406 (Bahasa Malaysia)
+- 🇮🇳 Tamil: +60-11-24335406 (தமிழ்)
+- 🇬🇧 English: +60-11-24335406
 
 **Email:**
 - General: hello@mypinjamcredit.com
@@ -768,7 +768,7 @@ We promise fair, transparent, and respectful service to everyone, regardless of 
 
 **Click Here to Start:** [Apply Online](/apply)
 
-**Or WhatsApp Us:** +60-16-7479368
+**Or WhatsApp Us:** +60-11-24335406
 
 ---
 

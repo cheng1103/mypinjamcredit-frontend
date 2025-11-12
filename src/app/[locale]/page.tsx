@@ -64,10 +64,10 @@ const formatMonthly = (amount: number, tenureKey: keyof typeof baseMonthlyByTenu
 const formatAmount = (value: number) => `RM ${currencyFormatter.format(value)}`;
 
 const operatingAssurances = [
-  'Licensed credit facilitator with PDPA-compliant processes',
-  'Dedicated advisor assigned once your form is submitted',
+  'Licensed loan company with PDPA-compliant processes',
+  'Dedicated loan officer assigned once your form is submitted',
   'Transparent fee structure with no hidden handling charges',
-  'Bilingual customer support (English & Bahasa Melayu)'
+  'Support in 2 languages (English & Bahasa Melayu)'
 ];
 
 export default async function HomePage({ params }: PageProps) {
@@ -353,7 +353,7 @@ export default async function HomePage({ params }: PageProps) {
         <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-blue-50 to-sky-50 p-10 shadow-lg">
           <div className="text-center">
             <h2 className="text-3xl font-semibold text-slate-900">📍 Locations We Serve</h2>
-            <p className="mt-2 text-slate-600">Licensed loan advisory services across Malaysia's major cities</p>
+            <p className="mt-2 text-slate-600">Licensed loan services across Malaysia's major cities</p>
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {[

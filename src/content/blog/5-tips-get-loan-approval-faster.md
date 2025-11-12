@@ -288,7 +288,7 @@ Remember: The fastest approval comes from a well-prepared application. Spend 80%
 At MyPinjam Credit, we've helped over 5,000 Malaysians get loan approvals in as fast as 24 hours. Our licensed advisors pre-screen your application, submit to multiple banks, and handle all follow-ups.
 
 **Ready to get started?**
-- 📱 WhatsApp us: +60-16-7479368
+- 📱 WhatsApp us: +60-11-24335406
 - 📧 Email: hello@mypinjamcredit.com
 - 🖥️ Apply online: [Start Application](/apply)
 

@@ -1843,7 +1843,7 @@ Experience:
 
 7.3 Advisors
 Accountant: [Name], [Firm] - handles bookkeeping & tax
-Consultant: MyPinjam Credit - business loan advisory
+Consultant: MyPinjam Credit - business loan services
 ```
 
 ---
