@@ -26,6 +26,14 @@ export const metadata: Metadata = {
     initialScale: 1,
     maximumScale: 5
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/logo.png', type: 'image/png', sizes: '192x192' }
+    ],
+    apple: '/logo.png',
+    shortcut: '/favicon.ico'
+  },
   openGraph: {
     type: 'website',
     url: siteUrl,
@@ -33,14 +41,23 @@ export const metadata: Metadata = {
     locale: 'en_MY',
     title: 'MyPinjam Credit Malaysia | Personal & SME Loans',
     description:
-      'Compare personal and SME loan options, discover flexible repayment plans, and apply in minutes with MyPinjam Credit Malaysia.'
+      'Compare personal and SME loan options, discover flexible repayment plans, and apply in minutes with MyPinjam Credit Malaysia.',
+    images: [
+      {
+        url: '/logo.png',
+        width: 192,
+        height: 192,
+        alt: 'MyPinjam Credit Logo'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@mypinjamcredit',
     title: 'MyPinjam Credit Malaysia | Licensed Loan Advisor',
     description:
-      'Transparent financing advisory in Malaysia for personal, SME and working capital loans.'
+      'Transparent financing advisory in Malaysia for personal, SME and working capital loans.',
+    images: ['/logo.png']
   },
   robots: {
     index: true,
