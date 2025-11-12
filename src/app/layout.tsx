@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: siteUrl,
     siteName: 'MyPinjam Credit',
-    locale: 'en_MY',
+    locale: 'ms_MY',
     title: 'MyPinjam Credit Malaysia | Personal & SME Loans',
     description:
       'Compare personal and SME loan options, discover flexible repayment plans, and apply in minutes with MyPinjam Credit Malaysia.',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="ms" suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );

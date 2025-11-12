@@ -2,8 +2,8 @@ import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
 
 const intlMiddleware = createMiddleware({
-  locales: ['en', 'ms'],
-  defaultLocale: 'en'
+  locales: ['ms', 'en'],
+  defaultLocale: 'ms'
 });
 
 export default function middleware(request: NextRequest) {
