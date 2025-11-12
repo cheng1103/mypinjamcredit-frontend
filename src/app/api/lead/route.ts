@@ -10,6 +10,16 @@ const limiter = rateLimit({
   uniqueTokenPerInterval: 500
 });
 
+// Phone number formatter - removes all non-digits and formats properly
+const formatPhoneNumber = (phone: string): string => {
+  // Remove all non-digit characters except leading +
+  const cleaned = phone.replace(/[^\d+]/g, '');
+  // Remove + if present and any leading 6 (country code)
+  const withoutCountryCode = cleaned.replace(/^\+?6?/, '');
+  // Ensure it starts with 0
+  return withoutCountryCode.startsWith('0') ? withoutCountryCode : '0' + withoutCountryCode;
+};
+
 // Validation schema matching MultiStepLeadForm
 const leadSchema = z.object({
   loanAmount: z.number()
@@ -21,7 +31,12 @@ const leadSchema = z.object({
     .max(100, 'Name must be less than 100 characters')
     .regex(/^[a-zA-Z\s]+$/, 'Name can only contain letters and spaces'),
   phone: z.string()
-    .regex(/^(\+?6?01)[0-46-9][0-9]{7,8}$/, 'Please enter a valid Malaysian phone number'),
+    .min(10, 'Phone number must be at least 10 digits')
+    .transform(formatPhoneNumber)
+    .refine(
+      (phone) => /^01[0-46-9]\d{7,8}$/.test(phone),
+      'Please enter a valid Malaysian phone number'
+    ),
   occupation: z.string()
     .min(2, 'Occupation must be at least 2 characters')
     .max(100, 'Occupation must be less than 100 characters'),

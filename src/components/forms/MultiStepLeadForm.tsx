@@ -44,6 +44,16 @@ const step1Schema = z.object({
   })
 });
 
+// Phone number formatter - removes all non-digits and formats properly
+const formatPhoneNumber = (phone: string): string => {
+  // Remove all non-digit characters except leading +
+  const cleaned = phone.replace(/[^\d+]/g, '');
+  // Remove + if present and any leading 6 (country code)
+  const withoutCountryCode = cleaned.replace(/^\+?6?/, '');
+  // Ensure it starts with 0
+  return withoutCountryCode.startsWith('0') ? withoutCountryCode : '0' + withoutCountryCode;
+};
+
 // Step 2 Schema: Personal Info
 const step2Schema = z.object({
   fullName: z.string()
@@ -51,7 +61,12 @@ const step2Schema = z.object({
     .max(100, 'Name must be less than 100 characters')
     .regex(/^[a-zA-Z\s]+$/, 'Name can only contain letters and spaces'),
   phone: z.string()
-    .regex(/^(\+?6?01)[0-46-9]-*[0-9]{7,8}$/, 'Please enter a valid Malaysian phone number'),
+    .min(10, 'Phone number must be at least 10 digits')
+    .transform(formatPhoneNumber)
+    .refine(
+      (phone) => /^01[0-46-9]\d{7,8}$/.test(phone),
+      'Please enter a valid Malaysian phone number (e.g. 012-345-6789)'
+    ),
   occupation: z.string()
     .min(2, 'Occupation must be at least 2 characters')
     .max(100, 'Occupation must be less than 100 characters')
@@ -245,7 +260,7 @@ export function MultiStepLeadForm() {
               <span>{t('fields.phone')}</span>
               <input
                 {...register('phone')}
-                placeholder="e.g. 0123456789"
+                placeholder="e.g. 012-345-6789 or +60123456789"
                 className={`rounded-lg border ${
                   errors.phone ? 'border-red-400 focus:border-red-400 focus:ring-red-100' : 'border-slate-200 focus:border-blue-400 focus:ring-blue-100'
                 } bg-white/90 px-4 py-3 text-slate-900 placeholder:text-slate-500 shadow-sm transition focus:outline-none focus:ring-2`}
@@ -253,6 +268,9 @@ export function MultiStepLeadForm() {
               {errors.phone && (
                 <span className="text-xs text-red-600">{errors.phone.message}</span>
               )}
+              <span className="text-xs text-slate-500">
+                Accepts any format: with/without spaces, dashes, or +60
+              </span>
             </label>
 
             <label className="flex flex-col gap-1 text-sm font-medium">
