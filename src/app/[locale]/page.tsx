@@ -124,65 +124,64 @@ export default async function HomePage({ params }: PageProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-white/15" />
       </div>
 
-      {/* Hero Section with Form */}
+      {/* Hero Section */}
       <section className="relative overflow-hidden rounded-xl border border-blue-100 bg-white/80 backdrop-blur-sm p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6">
-        <div className="relative grid gap-4 lg:grid-cols-2 lg:gap-6">
-          {/* Left side: Hero content */}
-          <div className="space-y-3">
-            <p className="text-xs uppercase tracking-[0.2em] text-blue-600 font-semibold">{tCommon('brand')}</p>
-            <h1 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl lg:text-4xl leading-tight">
-              {tHero('headline')}
-            </h1>
-            <p className="text-sm text-slate-600 md:text-base max-w-3xl leading-relaxed">{tHero('subheadline')}</p>
+        <div className="relative space-y-3">
+          <p className="text-xs uppercase tracking-[0.2em] text-blue-600 font-semibold">{tCommon('brand')}</p>
+          <h1 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl lg:text-4xl leading-tight">
+            {tHero('headline')}
+          </h1>
+          <p className="text-sm text-slate-600 md:text-base max-w-3xl leading-relaxed">{tHero('subheadline')}</p>
 
-            <div className="flex flex-wrap gap-2 pt-1" role="group" aria-label="Call to action buttons">
-              <Link
-                href={applyHref as any}
-                className="group inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-500 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                aria-label="Start loan application"
-              >
-                {tHero('ctaPrimary')}
-                <span className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
-              </Link>
-              <Link
-                href={`/${locale}/products` as any}
-                className="group inline-flex items-center gap-2 rounded-full border-2 border-blue-500 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-blue-600 transition-all duration-300 hover:scale-105 hover:bg-blue-50 hover:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                aria-label="View loan product options"
-              >
-                {tHero('ctaSecondary')}
-                <span className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
-              </Link>
-            </div>
+          <div className="flex flex-wrap gap-2 pt-1" role="group" aria-label="Call to action buttons">
+            <Link
+              href={applyHref as any}
+              className="group inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-500 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              aria-label="Start loan application"
+            >
+              {tHero('ctaPrimary')}
+              <span className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
+            </Link>
+            <Link
+              href={`/${locale}/products` as any}
+              className="group inline-flex items-center gap-2 rounded-full border-2 border-blue-500 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-blue-600 transition-all duration-300 hover:scale-105 hover:bg-blue-50 hover:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              aria-label="View loan product options"
+            >
+              {tHero('ctaSecondary')}
+              <span className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
+            </Link>
+          </div>
 
-            {/* Verification Badge */}
-            <div className="inline-flex rounded-xl border-2 border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 p-2 shadow-lg">
-              <div className="flex items-center gap-2">
-                <div className="flex-shrink-0">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-500 shadow-lg">
-                    <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
+          {/* Verification Badge */}
+          <div className="inline-flex rounded-xl border-2 border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 p-2 shadow-lg">
+            <div className="flex items-center gap-2">
+              <div className="flex-shrink-0">
+                <div className="relative flex h-10 w-10 items-center justify-center">
+                  {/* Shield Background */}
+                  <svg className="absolute h-10 w-10 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11.53 8.97l-3 3a.75.75 0 01-1.06 0l-1.5-1.5a.75.75 0 111.06-1.06l.97.97 2.47-2.47a.75.75 0 011.06 1.06z" clipRule="evenodd" />
+                  </svg>
                 </div>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-wide text-green-700">VERIFIED</p>
-                  <p className="text-sm font-semibold text-slate-800 leading-snug">
-                    Rakan Pinjaman Dipercayai di Malaysia
-                  </p>
-                  <p className="text-xs text-slate-600">
-                    {tCommon('trust.since')}
-                  </p>
-                </div>
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-slate-800 leading-snug">
+                  Rakan Pinjaman Dipercayai di Malaysia
+                </p>
+                <p className="text-xs text-slate-600">
+                  {tCommon('trust.since')}
+                </p>
               </div>
             </div>
           </div>
-
-          {/* Right side: Application Form */}
-          <div className="rounded-xl border border-blue-100 bg-white p-4 shadow-lg md:p-5">
-            <SimpleLeadForm />
-          </div>
         </div>
       </section>
+
+      {/* Application Form Section */}
+      <FadeInSection>
+        <section className="rounded-xl border border-blue-100 bg-white p-4 shadow-lg md:p-5 max-w-2xl mx-auto">
+          <SimpleLeadForm />
+        </section>
+      </FadeInSection>
 
       {/* Statistics Section */}
       <FadeInSection>
