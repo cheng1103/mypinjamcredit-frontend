@@ -60,19 +60,6 @@ export function PromoModal({ showAfterMs = 2000 }: PromoModalProps) {
           </svg>
         </button>
 
-        {/* Image Section */}
-        <div className="relative h-48 w-full bg-gradient-to-br from-blue-50 to-sky-50 sm:h-56">
-          <Image
-            src="/mypinjamcredit.jpeg"
-            alt={t('imageAlt')}
-            fill
-            className="object-cover"
-            priority
-          />
-          {/* Overlay gradient for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-        </div>
-
         {/* Content Section */}
         <div className="p-6 space-y-4">
           {/* Badge */}
