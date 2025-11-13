@@ -161,11 +161,14 @@ export default async function HomePage({ params }: PageProps) {
           <div className="inline-flex rounded-xl border-2 border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 p-2 shadow-lg">
             <div className="flex items-center gap-2">
               <div className="flex-shrink-0">
-                <div className="relative flex h-10 w-10 items-center justify-center">
-                  {/* Shield Background */}
-                  <svg className="absolute h-10 w-10 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11.53 8.97l-3 3a.75.75 0 01-1.06 0l-1.5-1.5a.75.75 0 111.06-1.06l.97.97 2.47-2.47a.75.75 0 011.06 1.06z" clipRule="evenodd" />
-                  </svg>
+                <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full ring-2 ring-green-500">
+                  <Image
+                    src="/mypinjamcredit.jpeg"
+                    alt="MyPinjam Credit"
+                    width={40}
+                    height={40}
+                    className="object-cover"
+                  />
                 </div>
               </div>
               <div>
@@ -201,9 +204,15 @@ export default async function HomePage({ params }: PageProps) {
                 {/* Benefit 1 */}
                 <div className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-blue-50 to-sky-50 border border-blue-100">
                   <div className="flex-shrink-0 mt-0.5">
-                    <svg className="h-5 w-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
+                    <div className="relative h-5 w-5 overflow-hidden rounded-full ring-1 ring-blue-600">
+                      <Image
+                        src="/mypinjamcredit.jpeg"
+                        alt="MyPinjam Credit"
+                        width={20}
+                        height={20}
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-slate-900">Kelulusan Pantas</h4>
@@ -214,9 +223,15 @@ export default async function HomePage({ params }: PageProps) {
                 {/* Benefit 2 */}
                 <div className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 border border-green-100">
                   <div className="flex-shrink-0 mt-0.5">
-                    <svg className="h-5 w-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
+                    <div className="relative h-5 w-5 overflow-hidden rounded-full ring-1 ring-green-600">
+                      <Image
+                        src="/mypinjamcredit.jpeg"
+                        alt="MyPinjam Credit"
+                        width={20}
+                        height={20}
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-slate-900">Kadar Telus</h4>
@@ -227,9 +242,15 @@ export default async function HomePage({ params }: PageProps) {
                 {/* Benefit 3 */}
                 <div className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-100">
                   <div className="flex-shrink-0 mt-0.5">
-                    <svg className="h-5 w-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
+                    <div className="relative h-5 w-5 overflow-hidden rounded-full ring-1 ring-purple-600">
+                      <Image
+                        src="/mypinjamcredit.jpeg"
+                        alt="MyPinjam Credit"
+                        width={20}
+                        height={20}
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-slate-900">Bayaran Fleksibel</h4>
@@ -240,9 +261,15 @@ export default async function HomePage({ params }: PageProps) {
                 {/* Benefit 4 */}
                 <div className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-100">
                   <div className="flex-shrink-0 mt-0.5">
-                    <svg className="h-5 w-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
+                    <div className="relative h-5 w-5 overflow-hidden rounded-full ring-1 ring-amber-600">
+                      <Image
+                        src="/mypinjamcredit.jpeg"
+                        alt="MyPinjam Credit"
+                        width={20}
+                        height={20}
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-slate-900">Sokongan Dwibahasa</h4>
@@ -253,9 +280,15 @@ export default async function HomePage({ params }: PageProps) {
                 {/* Benefit 5 */}
                 <div className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-slate-50 to-gray-50 border border-slate-200">
                   <div className="flex-shrink-0 mt-0.5">
-                    <svg className="h-5 w-5 text-slate-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
+                    <div className="relative h-5 w-5 overflow-hidden rounded-full ring-1 ring-slate-600">
+                      <Image
+                        src="/mypinjamcredit.jpeg"
+                        alt="MyPinjam Credit"
+                        width={20}
+                        height={20}
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-slate-900">Keselamatan Terjamin</h4>
