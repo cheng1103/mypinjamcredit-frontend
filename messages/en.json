@@ -166,6 +166,17 @@
       }
     }
   },
+  "modal": {
+    "badge": "Limited Time Offer",
+    "headline": "Get Your Loan Approved in 30 Minutes!",
+    "description": "Fast, transparent, and secure loan processing for all Malaysians.",
+    "benefit1": "✓ Approval within 24 hours or less",
+    "benefit2": "✓ Transparent rates with no hidden fees",
+    "benefit3": "✓ Flexible repayment up to 5 years",
+    "ctaPrimary": "Apply Now",
+    "ctaSecondary": "Maybe Later",
+    "imageAlt": "MyPinjam Credit - Professional loan services"
+  },
   "seo": {
     "home": {
       "title": "MyPinjam Credit Malaysia | Personal & SME Loans in MYR",

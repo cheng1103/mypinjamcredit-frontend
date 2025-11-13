@@ -5,6 +5,7 @@ import { GoogleMap } from '@/components/GoogleMap';
 import { SimpleLeadForm } from '@/components/forms/SimpleLeadForm';
 import { FadeInSection } from '@/components/FadeInSection';
 import { CountUp } from '@/components/CountUp';
+import { PromoModal } from '@/components/PromoModal';
 import { generateSEO, keywordSets } from '@/lib/seo';
 import { generateLocalBusinessSchema, generateWebsiteSchema, generateOrganizationSchema } from '@/lib/schemas';
 import type { Locale } from '@/types/locale';
@@ -109,6 +110,9 @@ export default async function HomePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
 
+      {/* Promo Modal - Shows after 2 seconds on first visit */}
+      <PromoModal showAfterMs={2000} />
+
       <div className="relative space-y-4 md:space-y-6">
       {/* Full Background Image */}
       <div className="fixed inset-0 -z-10">
@@ -179,7 +183,7 @@ export default async function HomePage({ params }: PageProps) {
 
       {/* Application Form Section with Benefits */}
       <FadeInSection>
-        <section className="rounded-xl border border-blue-100 bg-white/80 backdrop-blur-sm p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6">
+        <section id="form" className="rounded-xl border border-blue-100 bg-white/80 backdrop-blur-sm p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6">
           <div className="grid gap-6 lg:grid-cols-2">
             {/* Left: Application Form */}
             <div className="rounded-xl border border-blue-100 bg-white p-4 shadow-lg md:p-5">

@@ -166,6 +166,17 @@
       }
     }
   },
+  "modal": {
+    "badge": "Tawaran Terhad",
+    "headline": "Dapatkan Kelulusan Pinjaman Dalam 30 Minit!",
+    "description": "Pemprosesan pinjaman yang pantas, telus dan selamat untuk semua rakyat Malaysia.",
+    "benefit1": "✓ Kelulusan dalam 24 jam atau kurang",
+    "benefit2": "✓ Kadar telus tanpa caj tersembunyi",
+    "benefit3": "✓ Bayaran fleksibel sehingga 5 tahun",
+    "ctaPrimary": "Mohon Sekarang",
+    "ctaSecondary": "Mungkin Nanti",
+    "imageAlt": "MyPinjam Credit - Perkhidmatan pinjaman profesional"
+  },
   "seo": {
     "home": {
       "title": "MyPinjam Credit Malaysia | Pinjaman Peribadi & PKS",
