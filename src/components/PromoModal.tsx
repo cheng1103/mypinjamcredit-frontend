@@ -65,9 +65,15 @@ export function PromoModal({ showAfterMs = 2000 }: PromoModalProps) {
           {/* Badge */}
           <div className="flex justify-center">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700">
-              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
+              <div className="relative h-4 w-4 overflow-hidden rounded-full ring-1 ring-green-700">
+                <Image
+                  src="/mypinjamcredit.jpeg"
+                  alt="MyPinjam Credit"
+                  width={16}
+                  height={16}
+                  className="object-cover"
+                />
+              </div>
               {t('badge')}
             </span>
           </div>
@@ -86,9 +92,15 @@ export function PromoModal({ showAfterMs = 2000 }: PromoModalProps) {
           <ul className="space-y-2 pt-2">
             {['benefit1', 'benefit2', 'benefit3'].map((key) => (
               <li key={key} className="flex items-start gap-2 text-sm text-slate-700">
-                <svg className="h-5 w-5 flex-shrink-0 text-green-500 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
+                <div className="relative h-5 w-5 flex-shrink-0 overflow-hidden rounded-full ring-1 ring-green-500 mt-0.5">
+                  <Image
+                    src="/mypinjamcredit.jpeg"
+                    alt="MyPinjam Credit"
+                    width={20}
+                    height={20}
+                    className="object-cover"
+                  />
+                </div>
                 <span>{t(key)}</span>
               </li>
             ))}
