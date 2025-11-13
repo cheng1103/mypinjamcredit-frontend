@@ -108,7 +108,7 @@ export default async function HomePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
 
-      <div className="relative space-y-8 md:space-y-16">
+      <div className="relative space-y-4 md:space-y-6">
       {/* Full Background Image */}
       <div className="fixed inset-0 -z-10">
         <div
@@ -125,20 +125,20 @@ export default async function HomePage({ params }: PageProps) {
       </div>
 
       {/* Hero Section with Form */}
-      <section className="relative overflow-hidden rounded-2xl border border-blue-100 bg-white/80 backdrop-blur-sm p-8 shadow-xl shadow-blue-100 md:rounded-3xl md:p-12">
-        <div className="relative grid gap-8 lg:grid-cols-2 lg:gap-12">
+      <section className="relative overflow-hidden rounded-xl border border-blue-100 bg-white/80 backdrop-blur-sm p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6">
+        <div className="relative grid gap-4 lg:grid-cols-2 lg:gap-6">
           {/* Left side: Hero content */}
-          <div className="space-y-6">
-            <p className="text-sm uppercase tracking-[0.3em] text-blue-600 font-semibold">{tCommon('brand')}</p>
-            <h1 className="text-3xl font-bold tracking-tight text-slate-900 md:text-5xl lg:text-6xl leading-tight">
+          <div className="space-y-3">
+            <p className="text-xs uppercase tracking-[0.2em] text-blue-600 font-semibold">{tCommon('brand')}</p>
+            <h1 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl lg:text-4xl leading-tight">
               {tHero('headline')}
             </h1>
-            <p className="text-lg text-slate-600 md:text-xl max-w-3xl leading-relaxed">{tHero('subheadline')}</p>
+            <p className="text-sm text-slate-600 md:text-base max-w-3xl leading-relaxed">{tHero('subheadline')}</p>
 
-            <div className="flex flex-wrap gap-4 pt-2" role="group" aria-label="Call to action buttons">
+            <div className="flex flex-wrap gap-2 pt-1" role="group" aria-label="Call to action buttons">
               <Link
                 href={applyHref as any}
-                className="group inline-flex items-center gap-2 rounded-full bg-blue-600 px-8 py-4 text-base font-semibold uppercase tracking-wide text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-500 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="group inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-500 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 aria-label="Start loan application"
               >
                 {tHero('ctaPrimary')}
@@ -146,7 +146,7 @@ export default async function HomePage({ params }: PageProps) {
               </Link>
               <Link
                 href={`/${locale}/products` as any}
-                className="group inline-flex items-center gap-2 rounded-full border-2 border-blue-500 px-8 py-4 text-base font-semibold uppercase tracking-wide text-blue-600 transition-all duration-300 hover:scale-105 hover:bg-blue-50 hover:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="group inline-flex items-center gap-2 rounded-full border-2 border-blue-500 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-blue-600 transition-all duration-300 hover:scale-105 hover:bg-blue-50 hover:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 aria-label="View loan product options"
               >
                 {tHero('ctaSecondary')}
@@ -155,21 +155,21 @@ export default async function HomePage({ params }: PageProps) {
             </div>
 
             {/* Verification Badge */}
-            <div className="inline-flex rounded-2xl border-2 border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 p-4 shadow-lg">
-              <div className="flex items-center gap-3">
+            <div className="inline-flex rounded-xl border-2 border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 p-2 shadow-lg">
+              <div className="flex items-center gap-2">
                 <div className="flex-shrink-0">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-500 shadow-lg">
-                    <svg className="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-500 shadow-lg">
+                    <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-wide text-green-700 mb-1">VERIFIED</p>
-                  <p className="text-base font-semibold text-slate-800 leading-snug">
+                  <p className="text-xs font-bold uppercase tracking-wide text-green-700">VERIFIED</p>
+                  <p className="text-sm font-semibold text-slate-800 leading-snug">
                     Rakan Pinjaman Dipercayai di Malaysia
                   </p>
-                  <p className="text-sm text-slate-600 mt-1">
+                  <p className="text-xs text-slate-600">
                     {tCommon('trust.since')}
                   </p>
                 </div>
@@ -178,7 +178,7 @@ export default async function HomePage({ params }: PageProps) {
           </div>
 
           {/* Right side: Application Form */}
-          <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-lg md:p-8">
+          <div className="rounded-xl border border-blue-100 bg-white p-4 shadow-lg md:p-5">
             <SimpleLeadForm />
           </div>
         </div>

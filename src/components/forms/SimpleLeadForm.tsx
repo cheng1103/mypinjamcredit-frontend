@@ -119,18 +119,18 @@ export function SimpleLeadForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-      <header className="space-y-2">
-        <h2 className="text-xl font-semibold text-sky-600">{t('title')}</h2>
-        <p className="text-sm text-slate-600">{t('description')}</p>
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
+      <header className="space-y-1">
+        <h2 className="text-base font-semibold text-sky-600">{t('title')}</h2>
+        <p className="text-xs text-slate-600">{t('description')}</p>
       </header>
 
-      <div className="space-y-4">
+      <div className="space-y-2">
         {/* Loan Details Section */}
-        <div className="space-y-4 pb-4 border-b border-slate-200">
-          <h3 className="text-sm font-semibold text-slate-700 uppercase tracking-wide">Loan Details</h3>
+        <div className="space-y-2 pb-2 border-b border-slate-200">
+          <h3 className="text-xs font-semibold text-slate-700 uppercase tracking-wide">Loan Details</h3>
 
-          <label className="flex flex-col gap-1 text-sm font-medium">
+          <label className="flex flex-col gap-1 text-xs font-medium">
             <span>{t('fields.loanAmount')}</span>
             <input
               type="number"
@@ -138,7 +138,7 @@ export function SimpleLeadForm() {
               placeholder="e.g. 10000"
               className={`rounded-lg border ${
                 errors.loanAmount ? 'border-red-400 focus:border-red-400 focus:ring-red-100' : 'border-slate-200 focus:border-blue-400 focus:ring-blue-100'
-              } bg-white/90 px-4 py-3 text-slate-900 placeholder:text-slate-500 shadow-sm transition focus:outline-none focus:ring-2`}
+              } bg-white/90 px-2 py-1.5 text-sm text-slate-900 placeholder:text-slate-500 shadow-sm transition focus:outline-none focus:ring-2`}
             />
             {errors.loanAmount && (
               <span className="text-xs text-red-600">{errors.loanAmount.message}</span>
@@ -152,7 +152,7 @@ export function SimpleLeadForm() {
               defaultValue=""
               className={`rounded-lg border ${
                 errors.loanType ? 'border-red-400 focus:border-red-400 focus:ring-red-100' : 'border-slate-200 focus:border-blue-400 focus:ring-blue-100'
-              } bg-white/90 px-4 py-3 text-slate-900 shadow-sm transition focus:outline-none focus:ring-2`}
+              } bg-white/90 px-2 py-1.5 text-sm text-slate-900 shadow-sm transition focus:outline-none focus:ring-2`}
             >
               <option value="" disabled>
                 {t('placeholderOption')}
@@ -170,17 +170,17 @@ export function SimpleLeadForm() {
         </div>
 
         {/* Personal Info Section */}
-        <div className="space-y-4 pb-4 border-b border-slate-200">
-          <h3 className="text-sm font-semibold text-slate-700 uppercase tracking-wide">Personal Information</h3>
+        <div className="space-y-2 pb-2 border-b border-slate-200">
+          <h3 className="text-xs font-semibold text-slate-700 uppercase tracking-wide">Personal Information</h3>
 
-          <label className="flex flex-col gap-1 text-sm font-medium">
+          <label className="flex flex-col gap-1 text-xs font-medium">
             <span>{t('fields.name')}</span>
             <input
               {...register('fullName')}
               placeholder="e.g. Ahmad bin Abdullah"
               className={`rounded-lg border ${
                 errors.fullName ? 'border-red-400 focus:border-red-400 focus:ring-red-100' : 'border-slate-200 focus:border-blue-400 focus:ring-blue-100'
-              } bg-white/90 px-4 py-3 text-slate-900 placeholder:text-slate-500 shadow-sm transition focus:outline-none focus:ring-2`}
+              } bg-white/90 px-2 py-1.5 text-sm text-slate-900 placeholder:text-slate-500 shadow-sm transition focus:outline-none focus:ring-2`}
             />
             {errors.fullName && (
               <span className="text-xs text-red-600">{errors.fullName.message}</span>
@@ -194,7 +194,7 @@ export function SimpleLeadForm() {
               placeholder="e.g. 012-345-6789 or +60123456789"
               className={`rounded-lg border ${
                 errors.phone ? 'border-red-400 focus:border-red-400 focus:ring-red-100' : 'border-slate-200 focus:border-blue-400 focus:ring-blue-100'
-              } bg-white/90 px-4 py-3 text-slate-900 placeholder:text-slate-500 shadow-sm transition focus:outline-none focus:ring-2`}
+              } bg-white/90 px-2 py-1.5 text-sm text-slate-900 placeholder:text-slate-500 shadow-sm transition focus:outline-none focus:ring-2`}
             />
             {errors.phone && (
               <span className="text-xs text-red-600">{errors.phone.message}</span>
@@ -211,7 +211,7 @@ export function SimpleLeadForm() {
               placeholder="e.g. Business Owner"
               className={`rounded-lg border ${
                 errors.occupation ? 'border-red-400 focus:border-red-400 focus:ring-red-100' : 'border-slate-200 focus:border-blue-400 focus:ring-blue-100'
-              } bg-white/90 px-4 py-3 text-slate-900 placeholder:text-slate-500 shadow-sm transition focus:outline-none focus:ring-2`}
+              } bg-white/90 px-2 py-1.5 text-sm text-slate-900 placeholder:text-slate-500 shadow-sm transition focus:outline-none focus:ring-2`}
             />
             {errors.occupation && (
               <span className="text-xs text-red-600">{errors.occupation.message}</span>
@@ -220,10 +220,10 @@ export function SimpleLeadForm() {
         </div>
 
         {/* Financial & Location Section */}
-        <div className="space-y-4">
-          <h3 className="text-sm font-semibold text-slate-700 uppercase tracking-wide">Financial & Location</h3>
+        <div className="space-y-2">
+          <h3 className="text-xs font-semibold text-slate-700 uppercase tracking-wide">Financial & Location</h3>
 
-          <label className="flex flex-col gap-1 text-sm font-medium">
+          <label className="flex flex-col gap-1 text-xs font-medium">
             <span>{t('fields.salary')}</span>
             <input
               type="number"
@@ -231,7 +231,7 @@ export function SimpleLeadForm() {
               placeholder="e.g. 3000"
               className={`rounded-lg border ${
                 errors.monthlyIncome ? 'border-red-400 focus:border-red-400 focus:ring-red-100' : 'border-slate-200 focus:border-blue-400 focus:ring-blue-100'
-              } bg-white/90 px-4 py-3 text-slate-900 placeholder:text-slate-500 shadow-sm transition focus:outline-none focus:ring-2`}
+              } bg-white/90 px-2 py-1.5 text-sm text-slate-900 placeholder:text-slate-500 shadow-sm transition focus:outline-none focus:ring-2`}
             />
             {errors.monthlyIncome && (
               <span className="text-xs text-red-600">{errors.monthlyIncome.message}</span>
@@ -245,7 +245,7 @@ export function SimpleLeadForm() {
               defaultValue=""
               className={`rounded-lg border ${
                 errors.location ? 'border-red-400 focus:border-red-400 focus:ring-red-100' : 'border-slate-200 focus:border-blue-400 focus:ring-blue-100'
-              } bg-white/90 px-4 py-3 text-slate-900 shadow-sm transition focus:outline-none focus:ring-2`}
+              } bg-white/90 px-2 py-1.5 text-sm text-slate-900 shadow-sm transition focus:outline-none focus:ring-2`}
             >
               <option value="" disabled>
                 {t('placeholderOption')}
@@ -267,7 +267,7 @@ export function SimpleLeadForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full inline-flex items-center justify-center rounded-full bg-green-500 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-md transition duration-200 hover:bg-green-400 disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full inline-flex items-center justify-center rounded-full bg-green-500 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white shadow-md transition duration-200 hover:bg-green-400 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {isSubmitting ? (
           <>
