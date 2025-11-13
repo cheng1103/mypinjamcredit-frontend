@@ -125,7 +125,7 @@ export default async function HomePage({ params }: PageProps) {
       </div>
 
       <section className="relative overflow-hidden rounded-2xl border border-blue-100 bg-white/80 backdrop-blur-sm p-6 shadow-xl shadow-blue-100 md:rounded-3xl md:p-10">
-        <div className="relative flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div className="max-w-2xl space-y-4">
             <p className="text-xs uppercase tracking-[0.35em] text-blue-600 md:text-sm">{tCommon('brand')}</p>
             <h1 className="text-2xl font-semibold tracking-tight text-slate-900 md:text-4xl lg:text-5xl">
@@ -151,8 +151,25 @@ export default async function HomePage({ params }: PageProps) {
               </Link>
             </div>
           </div>
-          <div className="rounded-2xl border border-blue-100 bg-white p-6 text-sm text-slate-600 shadow-sm">
-            <p>{tCommon('tagline')}</p>
+          <div className="rounded-2xl border-2 border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 p-6 shadow-lg max-w-xs">
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-500 shadow-lg">
+                  <svg className="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+              </div>
+              <div className="flex-1">
+                <p className="text-xs font-bold uppercase tracking-wide text-green-700 mb-1">VERIFIED</p>
+                <p className="text-sm font-semibold text-slate-800 leading-snug">
+                  Rakan Pinjaman Dipercayai di Malaysia
+                </p>
+                <p className="text-xs text-slate-600 mt-2">
+                  {tCommon('trust.since')}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
