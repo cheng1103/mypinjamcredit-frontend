@@ -138,6 +138,32 @@
         "title": "Talk to Us",
         "description": "Reach our bilingual advisors for personalised guidance."
       }
+    },
+    "benefits": {
+      "title": "Why Choose Us?",
+      "description": "We are committed to providing you with the best service",
+      "items": {
+        "fastApproval": {
+          "title": "Fast Approval",
+          "description": "Get approved within 24 hours or less"
+        },
+        "transparentRates": {
+          "title": "Transparent Rates",
+          "description": "No hidden charges, all fees clearly explained"
+        },
+        "flexiblePayment": {
+          "title": "Flexible Payment",
+          "description": "Repayment period up to 5 years according to your ability"
+        },
+        "bilingualSupport": {
+          "title": "Bilingual Support",
+          "description": "Our professional team speaks Bahasa Melayu & English"
+        },
+        "securityGuaranteed": {
+          "title": "Security Guaranteed",
+          "description": "Your data is fully protected under PDPA"
+        }
+      }
     }
   },
   "seo": {

@@ -76,6 +76,7 @@ export default async function HomePage({ params }: PageProps) {
   const tHero = await getTranslations({ locale, namespace: 'hero' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
   const tHomeCards = await getTranslations({ locale, namespace: 'home.cards' });
+  const tHomeBenefits = await getTranslations({ locale, namespace: 'home.benefits' });
 
   const applyHref = `/${locale}/apply`;
   const calculatorHref = `/${locale}/calculator`;
@@ -188,8 +189,8 @@ export default async function HomePage({ params }: PageProps) {
             {/* Right: Benefits/Advantages */}
             <div className="space-y-4">
               <div>
-                <h3 className="text-lg font-bold text-slate-900 mb-3">Mengapa Pilih Kami?</h3>
-                <p className="text-sm text-slate-600 mb-4">Kami komited untuk memberikan perkhidmatan terbaik kepada anda</p>
+                <h3 className="text-lg font-bold text-slate-900 mb-3">{tHomeBenefits('title')}</h3>
+                <p className="text-sm text-slate-600 mb-4">{tHomeBenefits('description')}</p>
               </div>
 
               <div className="space-y-3">

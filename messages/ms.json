@@ -138,6 +138,32 @@
         "title": "Hubungi Kami",
         "description": "Berhubung dengan pegawai yang boleh cakap 2 bahasa kami untuk panduan peribadi."
       }
+    },
+    "benefits": {
+      "title": "Mengapa Pilih Kami?",
+      "description": "Kami komited untuk memberikan perkhidmatan terbaik kepada anda",
+      "items": {
+        "fastApproval": {
+          "title": "Kelulusan Pantas",
+          "description": "Dapatkan kelulusan dalam 24 jam atau kurang"
+        },
+        "transparentRates": {
+          "title": "Kadar Telus",
+          "description": "Tiada caj tersembunyi, semua yuran dijelaskan dengan jelas"
+        },
+        "flexiblePayment": {
+          "title": "Bayaran Fleksibel",
+          "description": "Tempoh bayaran balik sehingga 5 tahun mengikut kemampuan anda"
+        },
+        "bilingualSupport": {
+          "title": "Sokongan Dwibahasa",
+          "description": "Pasukan profesional kami bercakap Bahasa Melayu & English"
+        },
+        "securityGuaranteed": {
+          "title": "Keselamatan Terjamin",
+          "description": "Data anda dilindungi sepenuhnya mengikut PDPA"
+        }
+      }
     }
   },
   "seo": {
