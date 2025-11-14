@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { exportLeadToPDF, exportLeadsToPDF } from '@/lib/pdfExport';
 
 interface User {
   id: string;
@@ -54,6 +56,10 @@ export default function AdminDashboard() {
   const [loanTypeFilter, setLoanTypeFilter] = useState('ALL');
   const [sortBy, setSortBy] = useState<'date' | 'amount' | 'name'>('date');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+
+  // Date range filter state
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
@@ -290,7 +296,13 @@ export default function AdminDashboard() {
       const matchesStatus = statusFilter === 'ALL' || lead.status === statusFilter;
       const matchesLoanType = loanTypeFilter === 'ALL' || lead.loanType === loanTypeFilter;
 
-      return matchesSearch && matchesStatus && matchesLoanType;
+      // Date range filter
+      const leadDate = new Date(lead.createdAt);
+      const matchesDateRange =
+        (!startDate || leadDate >= new Date(startDate)) &&
+        (!endDate || leadDate <= new Date(endDate + 'T23:59:59'));
+
+      return matchesSearch && matchesStatus && matchesLoanType && matchesDateRange;
     })
     .sort((a, b) => {
       let comparison = 0;
@@ -318,7 +330,7 @@ export default function AdminDashboard() {
   // Reset to page 1 when filters change
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchTerm, statusFilter, loanTypeFilter, sortBy, sortOrder]);
+  }, [searchTerm, statusFilter, loanTypeFilter, sortBy, sortOrder, startDate, endDate]);
 
   if (loading) {
     return (
@@ -478,35 +490,71 @@ export default function AdminDashboard() {
               </div>
             </div>
 
-            {/* Daily Stats Chart */}
+            {/* Daily Stats Chart - Recharts */}
             <div className="bg-white rounded-xl shadow-sm p-6">
               <h3 className="text-lg font-semibold text-slate-900 mb-4">Last 7 Days Performance</h3>
-              <div className="space-y-3">
-                {dailyStats.map((stat, index) => (
-                  <div key={index} className="space-y-1">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-slate-600">{new Date(stat.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
-                      <div className="flex gap-4">
-                        <span className="text-purple-600 font-medium">{stat.visits} visits</span>
-                        <span className="text-blue-600 font-medium">{stat.leads} leads</span>
-                      </div>
-                    </div>
-                    <div className="flex gap-2">
-                      <div className="flex-1 bg-slate-100 rounded-full h-2 overflow-hidden">
-                        <div
-                          className="bg-purple-500 h-full rounded-full transition-all"
-                          style={{ width: `${(stat.visits / 250) * 100}%` }}
-                        />
-                      </div>
-                      <div className="flex-1 bg-slate-100 rounded-full h-2 overflow-hidden">
-                        <div
-                          className="bg-blue-500 h-full rounded-full transition-all"
-                          style={{ width: `${(stat.leads / 25) * 100}%` }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                ))}
+              <div className="h-80">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart
+                    data={dailyStats.map(stat => ({
+                      ...stat,
+                      formattedDate: new Date(stat.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+                    }))}
+                    margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+                  >
+                    <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                    <XAxis
+                      dataKey="formattedDate"
+                      stroke="#64748b"
+                      style={{ fontSize: '12px' }}
+                    />
+                    <YAxis
+                      yAxisId="left"
+                      stroke="#a855f7"
+                      style={{ fontSize: '12px' }}
+                      label={{ value: 'Visits', angle: -90, position: 'insideLeft', style: { fill: '#a855f7' } }}
+                    />
+                    <YAxis
+                      yAxisId="right"
+                      orientation="right"
+                      stroke="#3b82f6"
+                      style={{ fontSize: '12px' }}
+                      label={{ value: 'Leads', angle: 90, position: 'insideRight', style: { fill: '#3b82f6' } }}
+                    />
+                    <Tooltip
+                      contentStyle={{
+                        backgroundColor: '#ffffff',
+                        border: '1px solid #e2e8f0',
+                        borderRadius: '8px',
+                        boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                      }}
+                    />
+                    <Legend
+                      wrapperStyle={{ paddingTop: '20px' }}
+                      iconType="line"
+                    />
+                    <Line
+                      yAxisId="left"
+                      type="monotone"
+                      dataKey="visits"
+                      stroke="#a855f7"
+                      strokeWidth={2}
+                      dot={{ fill: '#a855f7', r: 4 }}
+                      activeDot={{ r: 6 }}
+                      name="Visits"
+                    />
+                    <Line
+                      yAxisId="right"
+                      type="monotone"
+                      dataKey="leads"
+                      stroke="#3b82f6"
+                      strokeWidth={2}
+                      dot={{ fill: '#3b82f6', r: 4 }}
+                      activeDot={{ r: 6 }}
+                      name="Leads"
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
               </div>
             </div>
 
@@ -549,7 +597,7 @@ export default function AdminDashboard() {
           <div className="space-y-4">
             {/* Search and Filters */}
             <div className="bg-white rounded-xl shadow-sm p-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
                 {/* Search */}
                 <div className="lg:col-span-2">
                   <label className="block text-sm font-medium text-slate-700 mb-1">Search</label>
@@ -559,6 +607,28 @@ export default function AdminDashboard() {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+                  />
+                </div>
+
+                {/* Date Range - Start */}
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">Start Date</label>
+                  <input
+                    type="date"
+                    value={startDate}
+                    onChange={(e) => setStartDate(e.target.value)}
+                    className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 text-sm"
+                  />
+                </div>
+
+                {/* Date Range - End */}
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">End Date</label>
+                  <input
+                    type="date"
+                    value={endDate}
+                    onChange={(e) => setEndDate(e.target.value)}
+                    className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 text-sm"
                   />
                 </div>
 
@@ -595,7 +665,10 @@ export default function AdminDashboard() {
                     <option value="DEBT_CONSOLIDATION">Debt Consolidation</option>
                   </select>
                 </div>
+              </div>
 
+              {/* Second Row: Sort By */}
+              <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mt-4">
                 {/* Sort By */}
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1">Sort By</label>
@@ -618,6 +691,24 @@ export default function AdminDashboard() {
                     </button>
                   </div>
                 </div>
+
+                {/* Clear Filters Button */}
+                <div className="md:col-span-5 flex items-end">
+                  <button
+                    onClick={() => {
+                      setSearchTerm('');
+                      setStartDate('');
+                      setEndDate('');
+                      setStatusFilter('ALL');
+                      setLoanTypeFilter('ALL');
+                      setSortBy('date');
+                      setSortOrder('desc');
+                    }}
+                    className="px-4 py-2 border border-slate-300 rounded-lg hover:bg-slate-50 text-sm font-medium text-slate-700"
+                  >
+                    Clear Filters
+                  </button>
+                </div>
               </div>
 
               {/* Export and Stats */}
@@ -626,13 +717,22 @@ export default function AdminDashboard() {
                   Showing {paginatedLeads.length} of {filteredAndSortedLeads.length} leads
                   {filteredAndSortedLeads.length !== leads.length && ` (filtered from ${leads.length} total)`}
                 </div>
-                <button
-                  onClick={exportToCSV}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
-                  disabled={filteredAndSortedLeads.length === 0}
-                >
-                  Export to CSV
-                </button>
+                <div className="flex gap-2">
+                  <button
+                    onClick={exportToCSV}
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                    disabled={filteredAndSortedLeads.length === 0}
+                  >
+                    Export to CSV
+                  </button>
+                  <button
+                    onClick={() => exportLeadsToPDF(filteredAndSortedLeads)}
+                    className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm font-medium"
+                    disabled={filteredAndSortedLeads.length === 0}
+                  >
+                    Export to PDF
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -1042,22 +1142,37 @@ export default function AdminDashboard() {
               </div>
 
               {/* Actions */}
-              <div className="pt-4 border-t border-slate-200">
-                <h4 className="text-sm font-semibold text-slate-700 uppercase tracking-wide mb-3">Update Status</h4>
-                <select
-                  value={selectedLead.status}
-                  onChange={(e) => {
-                    handleStatusChange(selectedLead.id, e.target.value);
-                    setSelectedLead({ ...selectedLead, status: e.target.value });
-                  }}
-                  className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 text-sm"
-                >
-                  <option value="SUBMITTED">Submitted</option>
-                  <option value="UNDER_REVIEW">Under Review</option>
-                  <option value="APPROVED">Approved</option>
-                  <option value="REJECTED">Rejected</option>
-                  <option value="COMPLETED">Completed</option>
-                </select>
+              <div className="pt-4 border-t border-slate-200 space-y-4">
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-700 uppercase tracking-wide mb-3">Update Status</h4>
+                  <select
+                    value={selectedLead.status}
+                    onChange={(e) => {
+                      handleStatusChange(selectedLead.id, e.target.value);
+                      setSelectedLead({ ...selectedLead, status: e.target.value });
+                    }}
+                    className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 text-sm"
+                  >
+                    <option value="SUBMITTED">Submitted</option>
+                    <option value="UNDER_REVIEW">Under Review</option>
+                    <option value="APPROVED">Approved</option>
+                    <option value="REJECTED">Rejected</option>
+                    <option value="COMPLETED">Completed</option>
+                  </select>
+                </div>
+
+                {/* PDF Export Button */}
+                <div>
+                  <button
+                    onClick={() => exportLeadToPDF(selectedLead)}
+                    className="w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm font-medium flex items-center justify-center gap-2"
+                  >
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Export to PDF
+                  </button>
+                </div>
               </div>
             </div>
           </div>
