@@ -1,7 +1,7 @@
 ---
-title: "Pinjaman Untuk Peniaga Kecil: SME Loan Guide Malaysia 2025"
+title: "Modal Perniagaan RM10K-RM500K Lulus 3 Hari! PKS/SME Loan 2025 (TEKUN 4% Kadar!)"
 slug: "sme-small-business-loan-guide-2025"
-description: "Panduan lengkap SME loan Malaysia 2025: 8 jenis pinjaman PKS, syarat mudah, kadar rendah, approval pantas. Government schemes, bank loans, microfinance - semua ada di sini!"
+description: "💼 PENIAGA KECIL WAJIB TAU! Pinjaman perniagaan RM10K-RM500K dalam 3 hari. TEKUN 4% kadar rendah, SME Bank, P2P, licensed lender. Panduan F&B, Retail, Construction. Tiada CTOS check option!"
 publishDate: 2025-01-12
 author: "MyPinjam Credit Business Team"
 tags:

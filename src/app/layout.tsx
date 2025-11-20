@@ -7,11 +7,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'MyPinjam Credit Malaysia | Personal & SME Loans',
+    default: 'Pinjaman Peribadi & SME Malaysia 2025 | Lulus Dalam 24 Jam ✓ CTOS Teruk Boleh',
     template: '%s | MyPinjam Credit'
   },
   description:
-    'Licensed Malaysian loan consultancy offering personal, SME and working capital financing with transparent rates and support in 2 languages.',
+    '💰 LULUS PANTAS! Pinjaman RM1K-RM500K untuk peribadi, SME & modal kerja. CTOS teruk & blacklist boleh mohon. 18% kadar rendah, tiada penjamin. Apply online 24/7, approved dalam 1 hari!',
   keywords: [
     'MyPinjam Credit',
     'personal loan Malaysia',

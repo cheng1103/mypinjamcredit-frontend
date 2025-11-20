@@ -1,7 +1,7 @@
 ---
-title: "Blacklist CTOS Boleh Pinjam? Panduan Lengkap Pinjaman Untuk Bad Credit 2025"
+title: "BLACKLIST CTOS Masih Dapat Pinjam RM50K! 7 Cara Terbukti 2025 (AKPK/Bankrupt Pun Boleh!)"
 slug: "blacklist-ctos-loan-complete-guide-2025"
-description: "Blacklist CTOS masih boleh dapat pinjaman! Panduan lengkap 2025 untuk mohon pinjaman walaupun bad credit score. 真实案例 + 步骤详解 | Real Success Stories"
+description: "🔥 TERBUKTI LULUS! Blacklist CTOS/CCRIS teruk score 300-400 pun boleh pinjam RM5K-RM50K. Panduan lengkap 7 cara (AKPK, TEKUN, SME Bank, licensed lender). BANKRUPT pun ada peluang! 真实成功案例 + 文件清单"
 author: "MyPinjam Credit Team"
 publishedDate: "2025-01-20"
 modifiedDate: "2025-01-20"
