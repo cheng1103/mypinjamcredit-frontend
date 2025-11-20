@@ -1833,6 +1833,366 @@ TAX SAVINGS: RM2,040/year!
 
 ---
 
+## 🏭 Industry-Specific Financing Guide - Panduan Mengikut Sektor
+
+Setiap industri ada unique financing needs. Berikut panduan khusus untuk sector anda:
+
+---
+
+### **1. F&B / Restaurant / Cafe** 🍽️
+
+**Typical Needs**:
+- Equipment (oven, fridge, coffee machine): RM50K-RM200K
+- Renovation: RM80K-RM300K
+- Working capital (inventory, staff): RM30K-RM100K/month
+- Franchise fee (kalau franchise): RM150K-RM500K
+
+**Best Financing Mix**:
+```
+PRIMARY: Equipment Financing
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Amount: Up to 90% of equipment value
+Rate: 5-7% p.a.
+Tenure: 3-5 years
+Why: Equipment itself is collateral
+Best for: Kitchen equipment, POS systems
+
+SECONDARY: Working Capital
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Amount: 3-6 months operating expenses
+Rate: 7-12% p.a.
+Tenure: 1-3 years
+Why: Cash flow management, inventory
+Options: Revolving credit, business overdraft
+```
+
+**Industry Tips**:
+- ✓ Food cost control critical (aim for 28-35% food cost)
+- ✓ High staff turnover - factor in training costs
+- ✓ Seasonal variations - buffer for slow months
+- ✓ Health license & HACCP compliance important
+- ✓ Consider cloud kitchen model (lower overhead)
+
+**Success Metric Lenders Look For**:
+- Table turnover rate: 2-3x daily
+- Average check: RM25-40/pax (casual dining)
+- Gross margin: 60-70%
+- Monthly revenue trend (consistent growth)
+
+---
+
+### **2. Retail / E-commerce** 🛍️
+
+**Typical Needs**:
+- Inventory purchase: RM50K-RM500K
+- E-commerce platform: RM10K-RM50K
+- Marketing budget: RM20K-RM100K
+- Warehouse/outlet fit-out: RM50K-RM200K
+
+**Best Financing Mix**:
+```
+PRIMARY: Inventory Financing / Invoice Financing
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Amount: 70-80% of purchase order value
+Rate: 8-12% p.a.
+Tenure: 30-90 days revolving
+Why: Tied to actual sales
+Best for: Fast-moving products
+
+SECONDARY: E-commerce Platform Loans
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Shopee Capital: Up to RM500K
+Lazada LazFinance: Up to RM300K
+Rate: 10-15% p.a.
+Approval: Based on sales data
+```
+
+**Industry Tips**:
+- ✓ Track inventory turnover (aim for 6-12x/year)
+- ✓ Diversify suppliers (don't depend on 1)
+- ✓ Monitor cash conversion cycle
+- ✓ Invest in good inventory management system
+- ✓ Reserve 15-20% budget for marketing
+
+**Key Metrics**:
+- Stock turnover days: <60 days ideal
+- Gross margin: 40-50% (retail), 60-70% (dropship)
+- Customer acquisition cost vs lifetime value
+- Return rate: <5% good, >10% problema
+
+---
+
+### **3. Services / Professional Services** 💼
+
+**Typical Needs**:
+- Office setup: RM30K-RM100K
+- Software/tools subscription: RM5K-RM30K/year
+- Staff salaries (first 3-6 months): RM50K-RM200K
+- Marketing & branding: RM20K-RM80K
+
+**Best Financing Mix**:
+```
+PRIMARY: Working Capital / Business Overdraft
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Amount: 3-6 months operating costs
+Rate: 6-10% p.a.
+Tenure: Revolving
+Why: Smooth cash flow gaps
+Best for: Project-based billing delays
+
+SECONDARY: Professional Practice Loan
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Specific for: Lawyers, accountants, doctors
+Amount: RM50K-RM500K
+Rate: 5-8% p.a.
+Tenure: 3-7 years
+Requirement: Professional license
+```
+
+**Industry Tips**:
+- ✓ Manage accounts receivable aggressively
+- ✓ Standard payment terms: 30 days (not 60-90!)
+- ✓ Deposit policy: Minimum 30% upfront
+- ✓ Diversify client base (avoid 1 client >25% revenue)
+- ✓ Build recurring revenue model
+
+**Key Metrics**:
+- Utilization rate: 70-80% billable hours
+- Realization rate: >90%
+- Collection period: <45 days
+- Client concentration: No single client >20%
+
+---
+
+### **4. Manufacturing / Production** 🏭
+
+**Typical Needs**:
+- Machinery: RM100K-RM2M
+- Raw material inventory: RM50K-RM500K
+- Factory/warehouse: RM200K-RM2M
+- Working capital: RM100K-RM1M
+
+**Best Financing Mix**:
+```
+PRIMARY: SME Bank / PUNB Manufacturing Loan
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Amount: Up to RM5M
+Rate: 4-7% p.a.
+Tenure: 7-10 years
+Why: Government support, low rates
+Best for: Machinery, expansion
+
+SECONDARY: Trade Financing / LC
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Amount: Based on PO value
+Rate: 6-9% p.a.
+Tenure: 30-180 days
+Why: Fund raw material purchase
+Best for: Export-oriented businesses
+```
+
+**Industry Tips**:
+- ✓ Maintain 30-60 days raw material buffer
+- ✓ Lean manufacturing principles
+- ✓ Preventive maintenance schedule (reduce downtime)
+- ✓ Quality control system (reduce waste)
+- ✓ Consider Industry 4.0 automation incentives
+
+**Key Metrics**:
+- Production capacity utilization: >75%
+- Defect rate: <3%
+- On-time delivery: >95%
+- Inventory days: Raw material 30-45, Finished goods <30
+
+---
+
+### **5. Construction / Renovation** 🏗️
+
+**Typical Needs**:
+- Project working capital: RM50K-RM1M
+- Equipment (excavator, mixer, etc.): RM200K-RM1M
+- Material deposit: RM100K-RM500K
+- Staff/subcontractor payments: RM50K-RM300K
+
+**Best Financing Mix**:
+```
+PRIMARY: PUNB Contract Financing
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Amount: 50-80% of contract value
+Rate: 4-6% p.a.
+Tenure: According to project period
+Why: Government contractor financing
+Requirement: Bumiputera, have tender
+
+SECONDARY: Bridging Loan
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Amount: RM50K-RM500K
+Rate: 10-15% p.a.
+Tenure: 6-18 months
+Why: Bridge gap between payment milestones
+```
+
+**Industry Tips**:
+- ✓ Manage progress claims efficiently
+- ✓ Factor in retention sum (5-10%)
+- ✓ Build buffer for project delays
+- ✓ Maintain good site records (photos, documents)
+- ✓ Consider performance bond financing
+
+**Key Metrics**:
+- Project margin: 10-20%
+- Receivables: <90 days (after claim submission)
+- Equipment downtime: <10%
+- Subcontractor on-time payment (maintain reputation)
+
+---
+
+### **6. Tech / Digital Startups** 💻
+
+**Typical Needs**:
+- Product development: RM50K-RM300K
+- Cloud infrastructure: RM10K-RM50K/year
+- Marketing/user acquisition: RM50K-RM200K
+- Team salaries: RM100K-RM500K (6 months runway)
+
+**Best Financing Mix**:
+```
+PRIMARY: MDEC / Cradle Funding
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Cradle Grant: Up to RM300K (equity-free!)
+MDEC Grant: Various programs
+MAVCAP: Seed funding RM500K-RM2M
+Why: Non-dilutive or minority equity
+Best for: Early-stage tech companies
+
+SECONDARY: P2P / Revenue-Based Financing
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Amount: 3-12 months revenue
+Rate: 12-18% p.a. OR % of revenue
+Tenure: 1-3 years
+Why: Flexible repayment
+Best for: Companies with revenue traction
+```
+
+**Industry Tips**:
+- ✓ Focus on recurring revenue (SaaS model)
+- ✓ Track: MRR, churn rate, CAC, LTV
+- ✓ Extend runway: 18+ months ideal
+- ✓ Milestone-based funding strategy
+- ✓ Consider convertible notes for initial funding
+
+**Key Metrics Investors/Lenders Want**:
+- Monthly Recurring Revenue (MRR) growth: 10-20%/month
+- Customer Acquisition Cost (CAC) < 3x LTV
+- Churn rate: <5% monthly
+- Burn rate vs runway
+- User engagement metrics
+
+---
+
+## 📊 Complete Financing Options Comparison Table
+
+Memilih financing yang sesuai? Gunakan table ini untuk compare semua options:
+
+| **Financing Type** | **Amount Range** | **Interest Rate** | **Approval Time** | **Best For** | **Main Requirement** | **Pros** | **Cons** |
+|-------------------|-----------------|-------------------|-------------------|--------------|---------------------|----------|----------|
+| **TEKUN** | RM1K-RM500K | 4% p.a. | 2-4 weeks | Bumiputera entrepreneurs | Business plan, Bumiputera | Ultra-low rate, no collateral (small amounts) | Bumiputera only, slower approval |
+| **SME Bank** | RM50K-RM5M | 4-7% p.a. | 2-4 weeks | Established SMEs | 1+ year operations, financials | Low rates, various products | Strict requirements, slower |
+| **PUNB** | RM50K-RM3M | 4-5% p.a. | 3-4 weeks | Bumiputera, contractors | Bumiputera 51%+, contract/project | Very low rates, flexible | Bumiputera only, project-based |
+| **Bank Loan** | RM50K-RM10M | 5-8% p.a. | 2-4 weeks | Established (2+ years) | Audited accounts, collateral, good CCRIS | Large amounts, professional service | Strict requirements, lengthy process |
+| **P2P Financing** | RM50K-RM500K | 8-15% p.a. | 2-7 days | Revenue-generating SMEs | 6+ months operations, revenue proof | Fast, less strict, online | Higher rates, public listing |
+| **Invoice Financing** | 70-80% of invoice | 8-12% p.a. | 1-3 days | B2B businesses | Valid invoices from creditworthy clients | Very fast, tied to sales | Only for invoiced sales, short-term |
+| **Equipment Financing** | 80-90% of equipment value | 5-8% p.a. | 1-2 weeks | Businesses buying equipment | Quotation, business proof | Equipment is collateral, lower rates | Only for equipment, asset-tied |
+| **Licensed Moneylender** | RM10K-RM500K | 8-18% p.a. | 2-5 days | Urgent needs, weaker credit | 6+ months business, bank statements | Fast, flexible, less strict | Higher rates, smaller amounts |
+| **Microfinance** | RM5K-RM50K | 8-12% p.a. | 1-2 weeks | Micro enterprises, startups | Basic business proof | Small amounts accessible, simpler process | Limited amount, may need guarantor |
+| **Business Credit Card** | RM10K-RM100K limit | 15-18% p.a. | 1-2 weeks | Operational expenses | Business proof, personal guarantor | Convenience, rewards, grace period | High interest if not paid in full |
+| **Islamic Financing** | RM50K-RM5M | 5-8% profit rate | 2-4 weeks | Shariah-compliant businesses | Similar to conventional banks | Shariah-compliant, competitive rates | Similar requirements as banks |
+| **Venture Capital** | RM500K-RM50M | Equity stake (15-40%) | 2-6 months | High-growth tech startups | Scalable business model, strong team | Large amounts, mentorship | Equity dilution, lose control |
+| **Angel Investors** | RM100K-RM3M | Equity stake (10-25%) | 1-3 months | Early-stage startups | Innovative idea, committed founder | Flexible terms, guidance | Equity dilution, harder to find |
+
+---
+
+### **How To Use This Table**:
+
+**Step 1**: Identify your needs
+- Amount needed?
+- How urgent?
+- What stage is your business?
+
+**Step 2**: Check eligibility
+- Do you meet the requirements?
+- Do you have necessary documents?
+
+**Step 3**: Compare rates vs speed
+- Lower rate = slower approval (usually)
+- Higher rate = faster money (usually)
+- Balance based on urgency
+
+**Step 4**: Calculate total cost
+```
+Example: RM100,000 loan for 3 years
+
+Option A: Bank 6% p.a.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Monthly: RM3,042
+Total repayment: RM109,512
+Total interest: RM9,512
+
+Option B: P2P 12% p.a.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Monthly: RM3,321
+Total repayment: RM119,556
+Total interest: RM19,556
+
+Difference: RM10,044 (but P2P 10x faster!)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+**💡 Smart Strategy**:
+- Start with cheapest (TEKUN, SME Bank, PUNB)
+- If tak qualify or urgent, move to P2P/Licensed ML
+- Use short-term financing untuk immediate needs
+- Refinance to lower rate loan bila qualify later
+
+---
+
+### **Financing Mix Strategy** (Recommended):
+
+Jangan bergantung pada 1 source sahaja! Best practice adalah mix different financing:
+
+```
+EXAMPLE: Restaurant Expansion (Total RM350K needed)
+
+Component 1: Equipment (RM150K)
+→ Equipment Financing 7% p.a., 5 years
+   Why: Cheapest, equipment is collateral
+
+Component 2: Renovation (RM120K)
+→ SME Bank / Bank Loan 6% p.a., 7 years
+   Why: Long tenure, manageable monthly payment
+
+Component 3: Working Capital (RM80K)
+→ P2P / Business Overdraft 10% p.a., 2 years
+   Why: Flexibility, cover 6 months operations
+
+TOTAL MONTHLY:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Equipment: RM2,970
+Renovation: RM1,820
+Working capital: RM3,680
+──────────────────────────────
+TOTAL: RM8,470/month
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Diversification benefits:
+✓ Lower average interest rate
+✓ Match repayment to cash flow
+✓ Not dependent on single lender
+✓ Flexibility in management
+```
+
+---
+
 ## 📞 Ready To Get Funding? We Can Help
 
 Mencari SME financing yang sesuai boleh overwhelming. Let us help you navigate!
