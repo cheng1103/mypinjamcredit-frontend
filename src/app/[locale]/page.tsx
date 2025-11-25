@@ -469,7 +469,6 @@ export default async function HomePage({ params }: PageProps) {
                 slug: 'kuala-lumpur',
                 areas: 'Mont Kiara, KLCC, Bangsar, Damansara, Cheras, Kepong, Ampang',
                 clients: '156+',
-                icon: '🏙️',
                 color: 'from-emerald-500 to-teal-500'
               },
               {
@@ -477,7 +476,6 @@ export default async function HomePage({ params }: PageProps) {
                 slug: 'penang',
                 areas: 'Georgetown, Bayan Lepas, Bukit Mertajam, Butterworth, Tanjung Bungah',
                 clients: '142+',
-                icon: '🌊',
                 color: 'from-emerald-500 to-green-500'
               },
               {
@@ -485,7 +483,6 @@ export default async function HomePage({ params }: PageProps) {
                 slug: 'johor-bahru',
                 areas: 'JB City, Nusajaya, Skudai, Pasir Gudang, Gelang Patah, Senai',
                 clients: '189+',
-                icon: '🌏',
                 color: 'from-blue-500 to-indigo-500'
               }
             ].map((location) => (
@@ -495,7 +492,7 @@ export default async function HomePage({ params }: PageProps) {
                 className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl"
               >
                 <div className="mb-4 flex items-center justify-between">
-                  <span className="text-4xl">{location.icon}</span>
+                  <Image src="/logo.png" alt={location.city} width={48} height={48} className="object-contain" />
                   <span className={`rounded-full bg-gradient-to-r ${location.color} px-3 py-1 text-xs font-bold text-white`}>
                     {location.clients} Clients
                   </span>
@@ -540,7 +537,7 @@ export default async function HomePage({ params }: PageProps) {
               className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
             >
               <div className="mb-3 flex items-center gap-3">
-                <span className="text-3xl">📊</span>
+                <Image src="/logo.png" alt="CTOS Guide" width={36} height={36} className="object-contain" />
                 <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-700">Popular Guide</span>
               </div>
               <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600">
@@ -559,7 +556,7 @@ export default async function HomePage({ params }: PageProps) {
               className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
             >
               <div className="mb-3 flex items-center gap-3">
-                <span className="text-3xl">❓</span>
+                <Image src="/logo.png" alt="FAQ" width={36} height={36} className="object-contain" />
                 <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-700">40+ Questions</span>
               </div>
               <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600">
@@ -578,7 +575,7 @@ export default async function HomePage({ params }: PageProps) {
               className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
             >
               <div className="mb-3 flex items-center gap-3">
-                <span className="text-3xl">✍️</span>
+                <Image src="/logo.png" alt="Blog" width={36} height={36} className="object-contain" />
                 <span className="rounded-full bg-purple-100 px-3 py-1 text-xs font-bold text-purple-700">5 Guides</span>
               </div>
               <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600">
@@ -597,7 +594,7 @@ export default async function HomePage({ params }: PageProps) {
               className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
             >
               <div className="mb-3 flex items-center gap-3">
-                <span className="text-3xl">⭐</span>
+                <Image src="/logo.png" alt="Reviews" width={36} height={36} className="object-contain" />
                 <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-700">4.8/5.0</span>
               </div>
               <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600">
