@@ -12,29 +12,26 @@ interface Notification {
 
 // Expanded data pool for maximum randomization and variety
 const names = [
-  // Malay names
+  // Malay names (50 names)
   'Ahmad', 'Siti', 'Fatimah', 'Hassan', 'Aziz', 'Nurul', 'Zainab', 'Ibrahim', 'Aminah', 'Ismail',
   'Aisha', 'Rahman', 'Khadijah', 'Yusuf', 'Maryam', 'Ali', 'Farah', 'Omar', 'Nadia', 'Hakim',
   'Zulaikha', 'Karim', 'Sofea', 'Rashid', 'Aisyah', 'Hamid', 'Laila', 'Farhan', 'Amira', 'Hadi',
-  // Chinese names
+  'Halim', 'Razak', 'Noriah', 'Idris', 'Zarina', 'Kamal', 'Sharifah', 'Jalil', 'Norzila', 'Rizal',
+  'Rahmah', 'Fadzil', 'Mazlan', 'Hafiz', 'Hidayah', 'Hisham', 'Latifah', 'Zainal', 'Rohani', 'Rosli',
+  // Chinese names (30 names)
   'Lee', 'Wong', 'Tan', 'Lim', 'Chen', 'Ng', 'Chong', 'Teo', 'Ong', 'Goh',
   'Mei Ling', 'Wei', 'Xin Yi', 'Jun Hao', 'Yi Ting', 'Jia Wei', 'Hui Min', 'Kai', 'Lin', 'Yang',
   'Cheng', 'Feng', 'Yun', 'Ming', 'Hui', 'Wen', 'Li', 'Hao', 'Xiang', 'Yu',
-  // Indian names
+  // Indian names (15 names)
   'Kumar', 'Raj', 'Priya', 'Ravi', 'Devi', 'Suresh', 'Lakshmi', 'Anand', 'Maya', 'Sanjay',
-  'Kavitha', 'Deepak', 'Indra', 'Ganesh', 'Rani', 'Vijay', 'Shanti', 'Rajan', 'Muthu', 'Selvam',
-  // Other names
-  'David', 'Sarah', 'Michael', 'Linda', 'James', 'Emily', 'Daniel', 'Jessica', 'Robert', 'Maria'
+  'Kavitha', 'Deepak', 'Indra', 'Ganesh', 'Rani',
+  // Other names (5 names)
+  'David', 'Sarah', 'Michael', 'Emily', 'Daniel'
 ];
 
 const locations = [
-  // States
-  'Kuala Lumpur', 'Selangor', 'Johor Bahru', 'Penang', 'Melaka', 'Perak', 'Kedah', 'Sabah', 'Sarawak',
-  'N. Sembilan', 'Pahang', 'Terengganu', 'Kelantan', 'Perlis', 'Putrajaya', 'Labuan',
-  // Major cities
-  'Petaling Jaya', 'Shah Alam', 'Subang Jaya', 'Klang', 'Ipoh', 'Kota Kinabalu', 'Kuching',
-  'Kota Bharu', 'Alor Setar', 'Kuantan', 'Muar', 'Batu Pahat', 'Seremban', 'Taiping',
-  'Kulai', 'Segamat', 'Kluang', 'Sandakan', 'Tawau', 'Sibu', 'Miri'
+  'Kuala Lumpur', 'Selangor', 'Johor', 'Penang', 'Melaka', 'Perak', 'Kedah',
+  'Sabah', 'Sarawak', 'N. Sembilan', 'Pahang', 'Terengganu', 'Kelantan', 'Perlis', 'Putrajaya'
 ];
 
 const loanAmounts = [
