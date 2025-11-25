@@ -10,29 +10,101 @@ interface Notification {
   timeAgo: string;
 }
 
-// Sample data pool for realistic notifications
+// Expanded data pool for maximum randomization and variety
 const names = [
-  'Ahmad', 'Siti', 'Lee', 'Kumar', 'Tan', 'Fatimah', 'Wong', 'Raj', 'Mei Ling', 'Hassan',
-  'Aziz', 'Nurul', 'Chen', 'Priya', 'Lim', 'Aisha', 'David', 'Sarah', 'Michael', 'Linda'
+  // Malay names
+  'Ahmad', 'Siti', 'Fatimah', 'Hassan', 'Aziz', 'Nurul', 'Zainab', 'Ibrahim', 'Aminah', 'Ismail',
+  'Aisha', 'Rahman', 'Khadijah', 'Yusuf', 'Maryam', 'Ali', 'Farah', 'Omar', 'Nadia', 'Hakim',
+  'Zulaikha', 'Karim', 'Sofea', 'Rashid', 'Aisyah', 'Hamid', 'Laila', 'Farhan', 'Amira', 'Hadi',
+  // Chinese names
+  'Lee', 'Wong', 'Tan', 'Lim', 'Chen', 'Ng', 'Chong', 'Teo', 'Ong', 'Goh',
+  'Mei Ling', 'Wei', 'Xin Yi', 'Jun Hao', 'Yi Ting', 'Jia Wei', 'Hui Min', 'Kai', 'Lin', 'Yang',
+  'Cheng', 'Feng', 'Yun', 'Ming', 'Hui', 'Wen', 'Li', 'Hao', 'Xiang', 'Yu',
+  // Indian names
+  'Kumar', 'Raj', 'Priya', 'Ravi', 'Devi', 'Suresh', 'Lakshmi', 'Anand', 'Maya', 'Sanjay',
+  'Kavitha', 'Deepak', 'Indra', 'Ganesh', 'Rani', 'Vijay', 'Shanti', 'Rajan', 'Muthu', 'Selvam',
+  // Other names
+  'David', 'Sarah', 'Michael', 'Linda', 'James', 'Emily', 'Daniel', 'Jessica', 'Robert', 'Maria'
 ];
 
 const locations = [
-  'KL', 'Selangor', 'JB', 'Penang', 'Melaka', 'Perak', 'Kedah', 'Sabah', 'Sarawak',
-  'N. Sembilan', 'Pahang', 'Terengganu', 'Kelantan', 'Perlis', 'Putrajaya'
+  // States
+  'Kuala Lumpur', 'Selangor', 'Johor Bahru', 'Penang', 'Melaka', 'Perak', 'Kedah', 'Sabah', 'Sarawak',
+  'N. Sembilan', 'Pahang', 'Terengganu', 'Kelantan', 'Perlis', 'Putrajaya', 'Labuan',
+  // Major cities
+  'Petaling Jaya', 'Shah Alam', 'Subang Jaya', 'Klang', 'Ipoh', 'Kota Kinabalu', 'Kuching',
+  'Kota Bharu', 'Alor Setar', 'Kuantan', 'Muar', 'Batu Pahat', 'Seremban', 'Taiping',
+  'Kulai', 'Segamat', 'Kluang', 'Sandakan', 'Tawau', 'Sibu', 'Miri'
 ];
 
-const loanAmounts = [5000, 8000, 10000, 12000, 15000, 18000, 20000, 25000, 30000, 35000, 40000, 50000];
+const loanAmounts = [
+  // Small loans
+  3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500,
+  // Medium loans
+  8000, 8500, 9000, 9500, 10000, 11000, 12000, 13000, 14000, 15000,
+  // Large loans
+  16000, 17000, 18000, 19000, 20000, 22000, 24000, 26000, 28000, 30000,
+  // Very large loans
+  32000, 35000, 38000, 40000, 42000, 45000, 48000, 50000, 55000, 60000
+];
 
-const timeAgoOptions = ['2 mins ago', '5 mins ago', '8 mins ago', '12 mins ago', '15 mins ago', '20 mins ago'];
+const timeAgoOptions = [
+  '1 min ago', '2 mins ago', '3 mins ago', '5 mins ago', '7 mins ago', '10 mins ago',
+  '12 mins ago', '15 mins ago', '18 mins ago', '20 mins ago', '25 mins ago', '30 mins ago'
+];
 
-function generateNotification(id: number): Notification {
-  return {
-    id,
-    name: names[Math.floor(Math.random() * names.length)],
-    location: locations[Math.floor(Math.random() * locations.length)],
-    amount: loanAmounts[Math.floor(Math.random() * loanAmounts.length)],
-    timeAgo: timeAgoOptions[Math.floor(Math.random() * timeAgoOptions.length)]
-  };
+// Fisher-Yates shuffle for better randomization
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+// Generate unique notification pool with no immediate repetition
+function generateNotificationPool(count: number): Notification[] {
+  const shuffledNames = shuffleArray(names);
+  const shuffledLocations = shuffleArray(locations);
+  const shuffledAmounts = shuffleArray(loanAmounts);
+  const shuffledTimes = shuffleArray(timeAgoOptions);
+
+  const notifications: Notification[] = [];
+  const usedCombinations = new Set<string>();
+
+  let attempts = 0;
+  const maxAttempts = count * 10; // Prevent infinite loop
+
+  while (notifications.length < count && attempts < maxAttempts) {
+    const nameIndex = attempts % shuffledNames.length;
+    const locationIndex = Math.floor(attempts / shuffledNames.length) % shuffledLocations.length;
+    const amountIndex = Math.floor(attempts / (shuffledNames.length * shuffledLocations.length)) % shuffledAmounts.length;
+    const timeIndex = attempts % shuffledTimes.length;
+
+    const name = shuffledNames[nameIndex];
+    const location = shuffledLocations[locationIndex];
+    const amount = shuffledAmounts[amountIndex];
+    const timeAgo = shuffledTimes[timeIndex];
+
+    // Create unique key to avoid exact duplicates
+    const combinationKey = `${name}-${location}-${amount}`;
+
+    if (!usedCombinations.has(combinationKey)) {
+      notifications.push({
+        id: notifications.length,
+        name,
+        location,
+        amount,
+        timeAgo
+      });
+      usedCombinations.add(combinationKey);
+    }
+
+    attempts++;
+  }
+
+  return shuffleArray(notifications); // Final shuffle for extra randomness
 }
 
 export function LiveNotification() {
@@ -41,8 +113,8 @@ export function LiveNotification() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    // Generate initial pool of notifications
-    const initialNotifications = Array.from({ length: 10 }, (_, i) => generateNotification(i));
+    // Generate large pool of highly randomized, non-repeating notifications
+    const initialNotifications = generateNotificationPool(40);
     setNotifications(initialNotifications);
 
     // Show first notification after 3 seconds
