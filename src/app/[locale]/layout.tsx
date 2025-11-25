@@ -7,6 +7,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import FloatingContact from '@/components/FloatingContact';
 import BackToTop from '@/components/BackToTop';
+import { LiveNotification } from '@/components/LiveNotification';
 import { Logo } from '@/components/Logo';
 import { MobileMenu } from '@/components/MobileMenu';
 import { Toaster } from '@/components/Toaster';
@@ -14,7 +15,7 @@ import { GoogleAnalytics } from '@/components/GoogleAnalytics';
 import { WebVitals } from '@/components/WebVitals';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights} from '@vercel/speed-insights/next';
 import type { Locale } from '@/types/locale';
 import '../globals.css';
 
@@ -269,6 +270,9 @@ export default async function LocaleLayout({
         {/* Floating Contact and Back to Top Buttons */}
         <FloatingContact />
         <BackToTop />
+
+        {/* Live Notification Widget */}
+        <LiveNotification />
 
         {/* Toast Notifications */}
         <Toaster />
