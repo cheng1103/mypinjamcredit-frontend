@@ -184,8 +184,52 @@ export default async function HomePage({ params }: PageProps) {
         <section id="form" className="rounded-xl border border-blue-100 bg-white/80 backdrop-blur-sm p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6">
           <div className="grid gap-6 lg:grid-cols-2">
             {/* Left: Application Form */}
-            <div className="rounded-xl border border-blue-100 bg-white p-4 shadow-lg md:p-5">
-              <SimpleLeadForm />
+            <div className="space-y-4">
+              <div className="rounded-xl border border-blue-100 bg-white p-4 shadow-lg md:p-5">
+                <SimpleLeadForm />
+              </div>
+
+              {/* Trust Badges - Displayed below form */}
+              <div className="rounded-xl border border-green-100 bg-gradient-to-br from-green-50 to-emerald-50 p-4">
+                <div className="text-center mb-3">
+                  <h3 className="text-sm font-bold text-slate-900">Trusted & Licensed</h3>
+                  <p className="text-xs text-slate-600 mt-1">{tCommon('trust.since')}</p>
+                </div>
+                <div className="grid grid-cols-3 gap-2">
+                  {/* SSM Badge */}
+                  <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-white shadow-sm">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 mb-1">
+                      <svg className="h-5 w-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <span className="text-xs font-bold text-blue-600">SSM</span>
+                    <span className="text-[10px] text-slate-600 text-center leading-tight">Registered</span>
+                  </div>
+
+                  {/* KPKT Badge */}
+                  <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-white shadow-sm">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100 mb-1">
+                      <svg className="h-5 w-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <span className="text-xs font-bold text-green-600">KPKT</span>
+                    <span className="text-[10px] text-slate-600 text-center leading-tight">Licensed</span>
+                  </div>
+
+                  {/* PDPA Badge */}
+                  <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-white shadow-sm">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100 mb-1">
+                      <svg className="h-5 w-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <span className="text-xs font-bold text-purple-600">PDPA</span>
+                    <span className="text-[10px] text-slate-600 text-center leading-tight">Protected</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Right: Benefits/Advantages */}
