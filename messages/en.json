@@ -2,7 +2,7 @@
   "common": {
     "brand": "MyPinjam Credit",
     "brandFull": "",
-    "tagline": "Your Trusted Loan Partner in Malaysia",
+    "tagline": "Your Trusted Loan Advisor in Malaysia",
     "licenses": {
       "ssm": "1404850-H",
       "kpkt": "KPKT/BL/19/W2684/14/02",
@@ -40,22 +40,22 @@
       "disclaimer": "Licensed loan company compliant with Malaysian regulations and PDPA.",
       "privacy": "Privacy Policy",
       "terms": "Terms of Service",
-      "compliance": "Rules & Following Regulations"
+      "compliance": "Compliance & Regulations"
     },
     "actions": {
       "learnMore": "Learn more"
     }
   },
   "hero": {
-    "headline": "Need Cash Now? We Help You Get a Loan in 30 Minutes.",
-    "subheadline": "Transparent rates, fast approvals, support in 2 languages.",
+    "headline": "Need Cash Urgently? Get Your Loan Approved in 30 Minutes!",
+    "subheadline": "Transparent rates, fast approval, bilingual support.",
     "ctaPrimary": "Get Started",
     "ctaSecondary": "View Loan Options",
     "alt": "Professional credit advisor assisting Malaysian clients"
   },
   "form": {
     "title": "Loan Application",
-    "description": "Complete the form and our loan officer will reach out within one business day.",
+    "description": "Complete the form and our loan officer will contact you within one business day.",
     "fields": {
       "name": "Full Name",
       "phone": "Contact Number",
@@ -66,11 +66,11 @@
       "location": "State"
     },
     "loanTypeOptions": {
-      "PERSONAL_USE": "For personal use",
-      "BUSINESS_EXPANSION": "Grow your business",
-      "EQUIPMENT_FINANCING": "Loan to buy equipment",
-      "WORKING_CAPITAL": "Money to run your business",
-      "DEBT_CONSOLIDATION": "Combine all your debts"
+      "PERSONAL_USE": "Personal Use",
+      "BUSINESS_EXPANSION": "Business Expansion",
+      "EQUIPMENT_FINANCING": "Equipment Financing",
+      "WORKING_CAPITAL": "Working Capital",
+      "DEBT_CONSOLIDATION": "Debt Consolidation"
     },
     "locationOptions": {
       "JOHOR": "Johor",
@@ -127,16 +127,16 @@
         "description": "Explore personal and SME financing curated for Malaysian borrowers."
       },
       "calculator": {
-        "title": "Repayment Calculator",
-        "description": "Estimate instalments and pick the right tenure ahead of time."
+        "title": "Loan Calculator",
+        "description": "Estimate monthly instalments and choose the best repayment tenure for you."
       },
       "community": {
         "title": "Community Feedback",
         "description": "Read moderated experiences from fellow customers."
       },
       "contact": {
-        "title": "Talk to Us",
-        "description": "Reach our bilingual advisors for personalised guidance."
+        "title": "Contact Us",
+        "description": "Speak with our bilingual advisors for personalized guidance."
       }
     },
     "benefits": {
@@ -148,8 +148,8 @@
           "description": "Get approved within 24 hours or less"
         },
         "transparentRates": {
-          "title": "Transparent Rates",
-          "description": "No hidden charges, all fees clearly explained"
+          "title": "RM30 CTOS Check Fee",
+          "description": "One-time CTOS credit report checking fee of RM30"
         },
         "flexiblePayment": {
           "title": "Flexible Payment",
@@ -188,7 +188,7 @@
     },
     "products": {
       "title": "MyPinjam Credit Loan Products | Personal, SME & Working Capital",
-      "description": "Review personal, SME, equipment and money to run your business loan packages with transparent rates, tenure options and support in 2 languages across Malaysia."
+      "description": "Explore personal, SME, equipment and working capital loan packages with transparent rates, flexible tenure options and bilingual support across Malaysia."
     },
     "contact": {
       "title": "Contact MyPinjam Credit | Licensed Loan Advisors in Malaysia",

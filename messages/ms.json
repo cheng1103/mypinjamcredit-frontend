@@ -148,8 +148,8 @@
           "description": "Dapatkan kelulusan dalam 24 jam atau kurang"
         },
         "transparentRates": {
-          "title": "Kadar Telus",
-          "description": "Tiada caj tersembunyi, semua yuran dijelaskan dengan jelas"
+          "title": "Yuran Semakan CTOS RM30",
+          "description": "Yuran semakan laporan kredit CTOS satu kali sebanyak RM30"
         },
         "flexiblePayment": {
           "title": "Bayaran Fleksibel",
