@@ -114,9 +114,17 @@ export default async function HomePage({ params }: PageProps) {
       {/* Promo Modal - Shows after 2 seconds on first visit */}
       <PromoModal showAfterMs={2000} />
 
-      <div className="relative space-y-4 md:space-y-6">
-      {/* Full Background Image */}
-      <div className="absolute inset-0 -z-10 lg:fixed">
+      {/* Background layers: gradient on touch, full image on desktop */}
+      <div className="pointer-events-none absolute inset-0 -z-10 block lg:hidden" aria-hidden="true">
+        <div
+          className="absolute inset-0 opacity-80"
+          style={{
+            background: 'linear-gradient(135deg, #ffffff 0%, #e0f2fe 45%, #dbeafe 100%)'
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white/70" />
+      </div>
+      <div className="pointer-events-none hidden lg:block fixed inset-0 -z-10" aria-hidden="true">
         <div
           className="absolute inset-0 opacity-75"
           style={{
@@ -129,6 +137,8 @@ export default async function HomePage({ params }: PageProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-white/15" />
       </div>
+
+      <div className="relative space-y-4 md:space-y-6">
 
       {/* Hero Section */}
       <section className="relative overflow-hidden rounded-xl border border-blue-100 bg-white/80 backdrop-blur-sm p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6">
