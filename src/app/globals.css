@@ -12,32 +12,23 @@
 }
 
 body {
-  background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 45%, #bfdbfe 100%);
+  background-color: #ffffff;
   color: var(--color-foreground);
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   min-height: 100vh;
+  position: relative;
+  isolation: isolate;
 }
 
 body::before {
-  content: none;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  body {
-    background-color: #ffffff;
-    position: relative;
-    isolation: isolate;
-  }
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 45%, #bfdbfe 100%);
-    pointer-events: none;
-    transform: translateZ(0); /* keep the layer on the GPU without forcing body repaints */
-  }
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 45%, #bfdbfe 100%);
+  pointer-events: none;
+  transform: translateZ(0); /* keep the layer on the GPU without forcing body repaints */
 }
 
 @keyframes shimmer {

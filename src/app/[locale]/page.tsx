@@ -114,21 +114,9 @@ export default async function HomePage({ params }: PageProps) {
       {/* Promo Modal - Shows after 2 seconds on first visit */}
       <PromoModal showAfterMs={2000} />
 
-      {/* Background layers: photo on mobile (scrolls) and fixed on desktop */}
-      <div className="pointer-events-none absolute inset-0 -z-10 block lg:hidden" aria-hidden="true">
-        <div
-          className="absolute inset-0 opacity-80"
-          style={{
-            backgroundImage: 'url(/hero-bg-hd.webp)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            filter: 'brightness(0.78) contrast(1.1)'
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/10 to-white/70" />
-      </div>
-      <div className="pointer-events-none hidden lg:block fixed inset-0 -z-10" aria-hidden="true">
+      <div className="relative space-y-4 md:space-y-6">
+      {/* Full Background Image */}
+      <div className="fixed inset-0 -z-10">
         <div
           className="absolute inset-0 opacity-75"
           style={{
@@ -142,10 +130,8 @@ export default async function HomePage({ params }: PageProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-white/15" />
       </div>
 
-      <div className="relative space-y-4 md:space-y-6">
-
       {/* Hero Section */}
-      <section className="relative overflow-hidden rounded-xl border border-blue-100 bg-white/95 p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6 lg:bg-white/80 lg:backdrop-blur-sm">
+      <section className="relative overflow-hidden rounded-xl border border-blue-100 bg-white/80 backdrop-blur-sm p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6">
         <div className="relative space-y-3">
           <p className="text-xs uppercase tracking-[0.2em] text-blue-600 font-semibold">{tCommon('brand')}</p>
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl lg:text-4xl leading-tight">
@@ -195,7 +181,7 @@ export default async function HomePage({ params }: PageProps) {
 
       {/* Application Form Section with Benefits */}
       <FadeInSection>
-        <section id="form" className="rounded-xl border border-blue-100 bg-white/95 p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6 lg:bg-white/80 lg:backdrop-blur-sm">
+        <section id="form" className="rounded-xl border border-blue-100 bg-white/80 backdrop-blur-sm p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6">
           <div className="grid gap-6 lg:grid-cols-2">
             {/* Left: Application Form */}
             <div className="space-y-4">
@@ -327,7 +313,7 @@ export default async function HomePage({ params }: PageProps) {
 
       {/* Statistics Section */}
       <FadeInSection>
-        <section className="relative overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-600/90 via-blue-500/90 to-sky-400/90 p-6 text-white shadow-xl md:rounded-3xl md:p-10 lg:backdrop-blur-sm">
+        <section className="relative overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-600/90 via-blue-500/90 to-sky-400/90 backdrop-blur-sm p-6 text-white shadow-xl md:rounded-3xl md:p-10">
         <div className="relative text-center">
           <h2 className="text-xl font-semibold md:text-3xl">Trusted by Thousands of Malaysians</h2>
           <p className="mt-2 text-sm text-blue-50 md:text-base">

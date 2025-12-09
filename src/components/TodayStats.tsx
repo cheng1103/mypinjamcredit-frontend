@@ -75,7 +75,7 @@ export function TodayStats() {
       {/* Stats Grid */}
       <div className="grid grid-cols-3 gap-3">
         {/* Approved Today */}
-        <div className="rounded-xl bg-white/95 p-3 text-center shadow-sm transition-all hover:shadow-md lg:bg-white/80 lg:backdrop-blur-sm">
+        <div className="rounded-xl bg-white/80 p-3 text-center backdrop-blur-sm transition-all hover:shadow-md">
           <div className={`text-2xl font-bold text-green-600 transition-all duration-500 ${isAnimating ? 'scale-110' : 'scale-100'}`}>
             {stats.approvedToday}
           </div>
@@ -85,7 +85,7 @@ export function TodayStats() {
         </div>
 
         {/* Total Amount */}
-        <div className="rounded-xl bg-white/95 p-3 text-center shadow-sm transition-all hover:shadow-md lg:bg-white/80 lg:backdrop-blur-sm">
+        <div className="rounded-xl bg-white/80 p-3 text-center backdrop-blur-sm transition-all hover:shadow-md">
           <div className={`text-2xl font-bold text-blue-600 transition-all duration-500 ${isAnimating ? 'scale-110' : 'scale-100'}`}>
             {formatCurrency(stats.totalAmountToday)}
           </div>
@@ -95,7 +95,7 @@ export function TodayStats() {
         </div>
 
         {/* Avg Approval Time */}
-        <div className="rounded-xl bg-white/95 p-3 text-center shadow-sm transition-all hover:shadow-md lg:bg-white/80 lg:backdrop-blur-sm">
+        <div className="rounded-xl bg-white/80 p-3 text-center backdrop-blur-sm transition-all hover:shadow-md">
           <div className={`text-2xl font-bold text-purple-600 transition-all duration-500 ${isAnimating ? 'scale-110' : 'scale-100'}`}>
             {stats.avgApprovalTime}m
           </div>
