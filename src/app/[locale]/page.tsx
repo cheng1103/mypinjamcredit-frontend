@@ -116,7 +116,7 @@ export default async function HomePage({ params }: PageProps) {
 
       <div className="relative space-y-4 md:space-y-6">
       {/* Full Background Image */}
-      <div className="fixed inset-0 -z-10">
+      <div className="absolute inset-0 -z-10 lg:fixed">
         <div
           className="absolute inset-0 opacity-75"
           style={{
