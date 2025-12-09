@@ -141,7 +141,7 @@ export default async function HomePage({ params }: PageProps) {
       <div className="relative space-y-4 md:space-y-6">
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden rounded-xl border border-blue-100 bg-white/80 backdrop-blur-sm p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6">
+      <section className="relative overflow-hidden rounded-xl border border-blue-100 bg-white/95 p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6 lg:bg-white/80 lg:backdrop-blur-sm">
         <div className="relative space-y-3">
           <p className="text-xs uppercase tracking-[0.2em] text-blue-600 font-semibold">{tCommon('brand')}</p>
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl lg:text-4xl leading-tight">
@@ -191,7 +191,7 @@ export default async function HomePage({ params }: PageProps) {
 
       {/* Application Form Section with Benefits */}
       <FadeInSection>
-        <section id="form" className="rounded-xl border border-blue-100 bg-white/80 backdrop-blur-sm p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6">
+        <section id="form" className="rounded-xl border border-blue-100 bg-white/95 p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6 lg:bg-white/80 lg:backdrop-blur-sm">
           <div className="grid gap-6 lg:grid-cols-2">
             {/* Left: Application Form */}
             <div className="space-y-4">
@@ -323,7 +323,7 @@ export default async function HomePage({ params }: PageProps) {
 
       {/* Statistics Section */}
       <FadeInSection>
-        <section className="relative overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-600/90 via-blue-500/90 to-sky-400/90 backdrop-blur-sm p-6 text-white shadow-xl md:rounded-3xl md:p-10">
+        <section className="relative overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-600/90 via-blue-500/90 to-sky-400/90 p-6 text-white shadow-xl md:rounded-3xl md:p-10 lg:backdrop-blur-sm">
         <div className="relative text-center">
           <h2 className="text-xl font-semibold md:text-3xl">Trusted by Thousands of Malaysians</h2>
           <p className="mt-2 text-sm text-blue-50 md:text-base">

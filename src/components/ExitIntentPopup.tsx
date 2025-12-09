@@ -74,7 +74,7 @@ export function ExitIntentPopup() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 animate-in fade-in duration-200 lg:bg-black/50 lg:backdrop-blur-sm">
       <div className="relative w-full max-w-lg mx-4 rounded-3xl border border-blue-200 bg-white p-8 shadow-2xl animate-in slide-in-from-top duration-300">
         {/* Close Button */}
         <button
