@@ -114,15 +114,19 @@ export default async function HomePage({ params }: PageProps) {
       {/* Promo Modal - Shows after 2 seconds on first visit */}
       <PromoModal showAfterMs={2000} />
 
-      {/* Background layers: gradient on touch, full image on desktop */}
+      {/* Background layers: photo on mobile (scrolls) and fixed on desktop */}
       <div className="pointer-events-none absolute inset-0 -z-10 block lg:hidden" aria-hidden="true">
         <div
           className="absolute inset-0 opacity-80"
           style={{
-            background: 'linear-gradient(135deg, #ffffff 0%, #e0f2fe 45%, #dbeafe 100%)'
+            backgroundImage: 'url(/hero-bg-hd.webp)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            filter: 'brightness(0.78) contrast(1.1)'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/10 to-white/70" />
       </div>
       <div className="pointer-events-none hidden lg:block fixed inset-0 -z-10" aria-hidden="true">
         <div
