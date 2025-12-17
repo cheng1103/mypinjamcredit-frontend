@@ -8,6 +8,7 @@ import { FadeInSection } from '@/components/FadeInSection';
 import { CountUp } from '@/components/CountUp';
 import { PromoModal } from '@/components/PromoModal';
 import { generateSEO, keywordSets } from '@/lib/seo';
+import { getSeoCopy } from '@/lib/seo-content';
 import { generateLocalBusinessSchema, generateWebsiteSchema, generateOrganizationSchema } from '@/lib/schemas';
 import type { Locale } from '@/types/locale';
 
@@ -20,11 +21,11 @@ const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}`;
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale: localeStr } = await params;
   const locale = localeStr as Locale;
-  const tSeo = await getTranslations({ locale, namespace: 'seo.home' });
+  const { title, description } = getSeoCopy(locale, 'home');
 
   return generateSEO({
-    title: tSeo('title'),
-    description: tSeo('description'),
+    title,
+    description,
     keywords: keywordSets.homepage,
     canonical: hrefForLocale(locale),
     locale,

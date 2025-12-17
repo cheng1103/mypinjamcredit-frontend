@@ -17,6 +17,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights} from '@vercel/speed-insights/next';
 import type { Locale } from '@/types/locale';
+import { getSeoCopy } from '@/lib/seo-content';
 import '../globals.css';
 
 const geistSans = Geist({
@@ -43,15 +44,15 @@ export async function generateMetadata({
   params: Promise<LayoutParams>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const tSeo = await getTranslations({ locale, namespace: 'seo.home' });
+  const { title, description } = getSeoCopy(locale as Locale, 'home');
 
   return {
     metadataBase: new URL(siteUrl),
     title: {
-      default: tSeo('title'),
-      template: `%s | ${tSeo('title')}`
+      default: title,
+      template: `%s | ${title}`
     },
-    description: tSeo('description'),
+    description,
     keywords: ['loan advisor', 'personal loan', 'business loan', 'malaysia loan', 'pinjaman', 'kredit'],
     authors: [{ name: 'MyPinjam Credit' }],
     creator: 'MyPinjam Credit',
@@ -68,8 +69,8 @@ export async function generateMetadata({
       locale: locale === 'ms' ? 'ms_MY' : 'en_MY',
       url: `${siteUrl}/${locale}`,
       siteName: 'MyPinjam Credit',
-      title: tSeo('title'),
-      description: tSeo('description'),
+      title,
+      description,
       images: [
         {
           url: '/opengraph-image.png',
@@ -81,8 +82,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: tSeo('title'),
-      description: tSeo('description'),
+      title,
+      description,
       images: ['/opengraph-image.png']
     },
     robots: {

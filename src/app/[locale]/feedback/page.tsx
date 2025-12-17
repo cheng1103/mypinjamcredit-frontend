@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import type { Locale } from '@/types/locale';
+import { getSeoCopy } from '@/lib/seo-content';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
@@ -34,9 +35,7 @@ const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}/feedback`;
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale: localeStr } = await params;
   const locale = localeStr as Locale;
-  const tSeo = await getTranslations({ locale, namespace: 'seo.feedback' });
-  const title = tSeo('title');
-  const description = tSeo('description');
+  const { title, description } = getSeoCopy(locale, 'feedback');
 
   return {
     title,

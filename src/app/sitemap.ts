@@ -54,6 +54,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogPosts = getAllBlogPosts();
   blogPosts.forEach((post) => {
     locales.forEach((locale) => {
+      if (post.language !== locale) {
+        return;
+      }
       const url = `${baseUrl}/${locale}/blog/${post.slug}`;
 
       // Safely parse date, fallback to current date if invalid

@@ -63,9 +63,10 @@ export default async function BlogPage({ params }: PageProps) {
   const { locale: localeStr } = await params;
   const locale = localeStr as Locale;
 
-  const allPosts = getAllBlogPosts();
-  const featuredPosts = getFeaturedPosts();
-  const categories = getAllCategories();
+  const typedLocale = locale as Locale;
+  const allPosts = getAllBlogPosts(typedLocale);
+  const featuredPosts = getFeaturedPosts(typedLocale);
+  const categories = getAllCategories(typedLocale);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-blue-100 py-16">

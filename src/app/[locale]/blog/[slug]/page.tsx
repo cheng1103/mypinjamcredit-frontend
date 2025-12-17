@@ -19,16 +19,19 @@ export async function generateStaticParams() {
   const locales = ['en', 'ms'];
 
   return locales.flatMap(locale =>
-    posts.map(post => ({
-      locale,
-      slug: post.slug
-    }))
+    posts
+      .filter(post => post.language === locale)
+      .map(post => ({
+        locale,
+        slug: post.slug
+      }))
   );
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params;
-  const post = getBlogPost(slug);
+  const typedLocale = locale as Locale;
+  const post = getBlogPost(slug, typedLocale);
 
   if (!post) {
     return {
@@ -52,13 +55,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function BlogPostPage({ params }: PageProps) {
   const { locale, slug } = await params;
-  const post = getBlogPost(slug);
+  const typedLocale = locale as Locale;
+  const post = getBlogPost(slug, typedLocale);
 
   if (!post) {
     notFound();
   }
 
-  const relatedPosts = getRelatedPosts(slug, 3);
+  const relatedPosts = getRelatedPosts(slug, typedLocale, 3);
 
   // Generate Article Schema
   const articleSchema = generateArticleSchema({
@@ -243,7 +247,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 {relatedPosts.map(relatedPost => (
                   <Link
                     key={relatedPost.slug}
-                    href={`/${locale}/blog/${relatedPost.slug}`}
+            href={`/${typedLocale}/blog/${relatedPost.slug}`}
                     className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
                   >
                     <div className="h-32 bg-gradient-to-br from-blue-50 to-purple-50" />

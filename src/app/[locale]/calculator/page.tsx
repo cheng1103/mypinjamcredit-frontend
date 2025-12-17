@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { LoanCalculator } from '@/components/LoanCalculator';
 import type { Locale } from '@/types/locale';
+import { getSeoCopy } from '@/lib/seo-content';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
@@ -15,9 +16,7 @@ const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}/calculator`;
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale: localeStr } = await params;
   const locale = localeStr as Locale;
-  const tSeo = await getTranslations({ locale, namespace: 'seo.calculator' });
-  const title = tSeo('title');
-  const description = tSeo('description');
+  const { title, description } = getSeoCopy(locale, 'calculator');
 
   return {
     title,

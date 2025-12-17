@@ -9,6 +9,7 @@ import { ExitIntentPopup } from '@/components/ExitIntentPopup';
 import { TodayStats } from '@/components/TodayStats';
 import { LiveNotification } from '@/components/LiveNotification';
 import type { Locale } from '@/types/locale';
+import { getSeoCopy } from '@/lib/seo-content';
 
 type ApplyPageProps = { params: Promise<{ locale: string }> };
 
@@ -19,11 +20,11 @@ const hrefForLocale = (locale: Locale) => `${baseUrl}/${locale}/apply`;
 export async function generateMetadata({ params }: ApplyPageProps): Promise<Metadata> {
   const { locale: localeStr } = await params;
   const locale = localeStr as Locale;
-  const tSeo = await getTranslations({ locale, namespace: 'seo.apply' });
+  const { title, description } = getSeoCopy(locale, 'apply');
 
   return {
-    title: tSeo('title'),
-    description: tSeo('description'),
+    title,
+    description,
     alternates: {
       canonical: hrefForLocale(locale),
       languages: {
@@ -33,16 +34,16 @@ export async function generateMetadata({ params }: ApplyPageProps): Promise<Meta
       }
     },
     openGraph: {
-      title: tSeo('title'),
-      description: tSeo('description'),
+      title,
+      description,
       url: hrefForLocale(locale),
       type: 'website',
       siteName: 'MyPinjam Credit',
       locale: locale === 'ms' ? 'ms_MY' : 'en_MY'
     },
     twitter: {
-      title: tSeo('title'),
-      description: tSeo('description'),
+      title,
+      description,
       card: 'summary_large_image'
     }
   };
@@ -191,4 +192,3 @@ export default async function ApplyPage({ params }: ApplyPageProps) {
     </>
   );
 }
-

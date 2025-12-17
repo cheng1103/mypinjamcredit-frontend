@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { GoogleMap } from '@/components/GoogleMap';
 import type { Locale } from '@/types/locale';
+import { getSeoCopy } from '@/lib/seo-content';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
@@ -13,9 +14,7 @@ const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}/contact`;
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale: localeStr } = await params;
   const locale = localeStr as Locale;
-  const tSeo = await getTranslations({ locale, namespace: 'seo.contact' });
-  const title = tSeo('title');
-  const description = tSeo('description');
+  const { title, description } = getSeoCopy(locale, 'contact');
 
   return {
     title,

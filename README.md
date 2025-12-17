@@ -44,3 +44,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - High-quality blog content (9 articles)
 - PWA manifest and service worker optimization
 - Last updated: January 2025
+
+## Automated Malay Translations
+
+Use `pnpm translate:blog` to run the local `facebook/m2m100_418M` transformer and generate Malay markdown versions automatically. See [`scripts/TRANSLATION_WORKFLOW.md`](scripts/TRANSLATION_WORKFLOW.md) for notes about the initial model download, command-line flags (`--force`, `--dry-run`, `--slug=...`) and locale overrides. Review the generated Malay text afterwards for tone/style adjustments.

@@ -21,11 +21,6 @@ export const metadata: Metadata = {
     'MyPinjam'
   ],
   authors: [{ name: 'MyPinjam Credit' }],
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5
-  },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -63,6 +58,12 @@ export const metadata: Metadata = {
     index: true,
     follow: true
   }
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

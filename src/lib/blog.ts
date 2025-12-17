@@ -1,8 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import type { Locale } from '@/types/locale';
 
+const BLOG_LOCALES: Locale[] = ['en', 'ms'];
 const blogDirectory = path.join(process.cwd(), 'src/content/blog');
+
+const getLocaleDirectory = (locale: Locale) => path.join(blogDirectory, locale);
+
+const readFileSafe = (filePath: string) => {
+  try {
+    return fs.readFileSync(filePath, 'utf8');
+  } catch {
+    return null;
+  }
+};
 
 export interface BlogPost {
   slug: string;
@@ -17,6 +29,7 @@ export interface BlogPost {
   featured: boolean;
   readTime: string;
   content: string;
+  language: Locale;
 }
 
 export interface BlogPostMeta {
@@ -31,19 +44,30 @@ export interface BlogPostMeta {
   image: string;
   featured: boolean;
   readTime: string;
+  language: Locale;
 }
 
-export function getAllBlogPosts(): BlogPostMeta[] {
-  const fileNames = fs.readdirSync(blogDirectory);
-  const allPosts = fileNames
-    .filter(fileName => fileName.endsWith('.md'))
-    .map(fileName => {
+export function getAllBlogPosts(locale?: Locale): BlogPostMeta[] {
+  const localesToLoad = locale ? [locale] : BLOG_LOCALES;
+  const posts: BlogPostMeta[] = [];
+
+  localesToLoad.forEach(currentLocale => {
+    const dir = getLocaleDirectory(currentLocale);
+    if (!fs.existsSync(dir)) {
+      return;
+    }
+    const fileNames = fs.readdirSync(dir).filter(fileName => fileName.endsWith('.md'));
+
+    fileNames.forEach(fileName => {
       const slug = fileName.replace(/\.md$/, '');
-      const fullPath = path.join(blogDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
+      const fullPath = path.join(dir, fileName);
+      const fileContents = readFileSafe(fullPath);
+      if (!fileContents) {
+        return;
+      }
       const { data } = matter(fileContents);
 
-      return {
+      posts.push({
         slug: data.slug || slug,
         title: data.title,
         description: data.description,
@@ -54,73 +78,75 @@ export function getAllBlogPosts(): BlogPostMeta[] {
         tags: data.tags || [],
         image: data.image || '/blog/default.jpg',
         featured: data.featured || false,
-        readTime: data.readTime
-      };
+        readTime: data.readTime,
+        language: currentLocale
+      });
     });
+  });
 
-  // Sort by published date (newest first)
-  return allPosts.sort((a, b) =>
-    new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+  return posts.sort(
+    (a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
   );
 }
 
-export function getBlogPost(slug: string): BlogPost | null {
-  try {
-    const fullPath = path.join(blogDirectory, `${slug}.md`);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data, content } = matter(fileContents);
-
-    return {
-      slug: data.slug || slug,
-      title: data.title,
-      description: data.description,
-      author: data.author,
-      publishedDate: data.publishedDate,
-      modifiedDate: data.modifiedDate,
-      category: data.category,
-      tags: data.tags || [],
-      image: data.image || '/blog/default.jpg',
-      featured: data.featured || false,
-      readTime: data.readTime,
-      content
-    };
-  } catch (error) {
+export function getBlogPost(slug: string, locale: Locale): BlogPost | null {
+  const fullPath = path.join(getLocaleDirectory(locale), `${slug}.md`);
+  const fileContents = readFileSafe(fullPath);
+  if (!fileContents) {
     return null;
   }
+
+  const { data, content } = matter(fileContents);
+
+  return {
+    slug: data.slug || slug,
+    title: data.title,
+    description: data.description,
+    author: data.author,
+    publishedDate: data.publishedDate,
+    modifiedDate: data.modifiedDate,
+    category: data.category,
+    tags: data.tags || [],
+    image: data.image || '/blog/default.jpg',
+    featured: data.featured || false,
+    readTime: data.readTime,
+    content,
+    language: locale
+  };
 }
 
-export function getFeaturedPosts(): BlogPostMeta[] {
-  const allPosts = getAllBlogPosts();
-  return allPosts.filter(post => post.featured).slice(0, 3);
+export function getFeaturedPosts(locale?: Locale): BlogPostMeta[] {
+  const posts = getAllBlogPosts(locale);
+  return posts.filter(post => post.featured).slice(0, 3);
 }
 
-export function getPostsByCategory(category: string): BlogPostMeta[] {
-  const allPosts = getAllBlogPosts();
-  return allPosts.filter(post => post.category === category);
+export function getPostsByCategory(category: string, locale?: Locale): BlogPostMeta[] {
+  const posts = getAllBlogPosts(locale);
+  return posts.filter(post => post.category === category);
 }
 
-export function getPostsByTag(tag: string): BlogPostMeta[] {
-  const allPosts = getAllBlogPosts();
-  return allPosts.filter(post => post.tags.includes(tag));
+export function getPostsByTag(tag: string, locale?: Locale): BlogPostMeta[] {
+  const posts = getAllBlogPosts(locale);
+  return posts.filter(post => post.tags.includes(tag));
 }
 
-export function getAllCategories(): string[] {
-  const allPosts = getAllBlogPosts();
+export function getAllCategories(locale?: Locale): string[] {
+  const allPosts = getAllBlogPosts(locale);
   const categories = new Set(allPosts.map(post => post.category));
   return Array.from(categories);
 }
 
-export function getAllTags(): string[] {
-  const allPosts = getAllBlogPosts();
+export function getAllTags(locale?: Locale): string[] {
+  const allPosts = getAllBlogPosts(locale);
   const tags = new Set(allPosts.flatMap(post => post.tags));
   return Array.from(tags);
 }
 
-export function getRelatedPosts(currentSlug: string, limit: number = 3): BlogPostMeta[] {
-  const currentPost = getBlogPost(currentSlug);
+export function getRelatedPosts(currentSlug: string, locale: Locale, limit: number = 3): BlogPostMeta[] {
+  const currentPost = getBlogPost(currentSlug, locale);
   if (!currentPost) return [];
 
-  const allPosts = getAllBlogPosts();
+  const allPosts = getAllBlogPosts(locale);
 
   // Calculate relevance score based on matching tags and category
   const scoredPosts = allPosts
