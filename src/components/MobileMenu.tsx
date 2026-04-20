@@ -1,15 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
+// Using native <a> for mobile menu links to avoid Link typing issues in this small overlay
 import { useTranslations } from 'next-intl';
 
 interface MobileMenuProps {
-  locale: string;
   navItems: Array<{ href: string; label: string }>;
 }
 
-export function MobileMenu({ locale, navItems }: MobileMenuProps) {
+export function MobileMenu({ navItems }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const tCommon = useTranslations('common');
 
@@ -80,15 +79,15 @@ export function MobileMenu({ locale, navItems }: MobileMenuProps) {
           {/* Navigation Links */}
           <nav className="flex-1 overflow-y-auto p-4">
             <div className="space-y-2">
-              {navItems.map((item) => (
-                <Link
+                {navItems.map((item) => (
+                <a
                   key={item.href}
-                  href={item.href as any}
+                  href={item.href}
                   onClick={() => setIsOpen(false)}
                   className="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-600"
                 >
                   {item.label}
-                </Link>
+                </a>
               ))}
             </div>
           </nav>

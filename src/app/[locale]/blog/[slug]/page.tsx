@@ -7,12 +7,13 @@ import { generateSEO, generateArticleSchema } from '@/lib/seo';
 import { Calendar, Clock, User, Tag, ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 export async function generateStaticParams() {
   const posts = getAllBlogPosts();

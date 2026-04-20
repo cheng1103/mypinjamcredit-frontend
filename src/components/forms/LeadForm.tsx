@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import toast from 'react-hot-toast';
+import { phonePattern } from '@/lib/phone';
 
 const loanTypeValues = [
   'PERSONAL_USE',
@@ -34,13 +35,14 @@ const malaysiaStates = [
   'LABUAN'
 ] as const;
 
+const DEFAULT_LEAD_SOURCE = 'website_main_form';
 const leadFormSchema = z.object({
   fullName: z.string()
     .min(2, 'Name must be at least 2 characters')
     .max(100, 'Name must be less than 100 characters')
     .regex(/^[a-zA-Z\s]+$/, 'Name can only contain letters and spaces'),
   phone: z.string()
-    .regex(/^(\+?6?01)[0-46-9]-*[0-9]{7,8}$/, 'Please enter a valid Malaysian phone number'),
+    .regex(phonePattern, 'Please enter a valid Malaysian phone number'),
   occupation: z.string()
     .min(2, 'Occupation must be at least 2 characters')
     .max(100, 'Occupation must be less than 100 characters'),
@@ -49,7 +51,7 @@ const leadFormSchema = z.object({
     .max(1000000, 'Monthly income must be less than RM 1,000,000'),
   loanAmount: z.number()
     .min(1000, 'Loan amount must be at least RM 1,000')
-    .max(5000000, 'Loan amount must be less than RM 5,000,000'),
+    .max(500000, 'Loan amount must be less than RM 500,000'),
   loanType: z.enum(loanTypeValues, {
     message: 'Please select a loan type'
   }),
@@ -84,7 +86,7 @@ export function LeadForm() {
       const response = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        body: JSON.stringify({ ...data, leadSource: DEFAULT_LEAD_SOURCE })
       });
 
       if (!response.ok) {
@@ -245,4 +247,3 @@ export function LeadForm() {
     </form>
   );
 }
-

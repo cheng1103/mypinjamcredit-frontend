@@ -48,7 +48,7 @@ export const exportLeadToPDF = (lead: Lead) => {
   });
 
   // Financial Information
-  const finalY = (doc as any).lastAutoTable.finalY || 80;
+  const finalY = ((doc as unknown as { lastAutoTable?: { finalY?: number } }).lastAutoTable?.finalY) || 80;
   doc.setFontSize(14);
   doc.text('Financial Information', 14, finalY + 10);
 
@@ -67,7 +67,7 @@ export const exportLeadToPDF = (lead: Lead) => {
   });
 
   // Location & Timing
-  const finalY2 = (doc as any).lastAutoTable.finalY || 140;
+  const finalY2 = ((doc as unknown as { lastAutoTable?: { finalY?: number } }).lastAutoTable?.finalY) || 140;
   doc.setFontSize(14);
   doc.text('Location & Timing', 14, finalY2 + 10);
 

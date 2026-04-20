@@ -1,16 +1,16 @@
 import type { Metadata } from 'next';
 import type { Locale } from '@/types/locale';
+import { getSiteUrl } from '@/lib/siteUrl';
 
-type PageProps = { params: Promise<{ locale: string }> };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+
+const siteUrl = getSiteUrl();
 
 const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}/terms`;
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { locale: localeStr } = await params;
-  const locale = localeStr as Locale;
 
+export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
+  const { locale } = params;
   return {
     title: 'Terms of Service - MyPinjam Credit',
     description: 'Read the terms and conditions for using MyPinjam Credit loan services services.',
@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function TermsPage({ params }: PageProps) {
-  const { locale: localeStr } = await params;
+export default async function TermsPage() {
+
 
   return (
     <div className="space-y-8">
@@ -60,7 +60,7 @@ export default async function TermsPage({ params }: PageProps) {
           </p>
           <div className="mt-4 rounded-2xl border border-blue-100 bg-blue-50 p-4">
             <p className="text-sm text-slate-700">
-              <strong>Important:</strong> Final loan approval is subject to the lending institution's
+              <strong>Important:</strong> Final loan approval is subject to the lending institution&apos;s
               assessment and criteria. We cannot guarantee loan approval.
             </p>
           </div>
@@ -171,7 +171,7 @@ export default async function TermsPage({ params }: PageProps) {
           <ul className="mt-4 list-inside list-disc space-y-2 text-slate-700">
             <li>Use the website for any unlawful purpose</li>
             <li>Attempt to gain unauthorized access to our systems</li>
-            <li>Interfere with the website's functionality</li>
+            <li>Interfere with the website&apos;s functionality</li>
             <li>Upload malicious code or viruses</li>
             <li>Harvest or collect user data without permission</li>
             <li>Impersonate another person or entity</li>
@@ -218,7 +218,7 @@ export default async function TermsPage({ params }: PageProps) {
         <section>
           <h2 className="text-2xl font-semibold text-blue-600">12. Disclaimer of Warranties</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            Our services are provided "as is" without warranties of any kind, either express or implied.
+            Our services are provided &quot;as is&quot; without warranties of any kind, either express or implied.
             We do not warrant that our services will be uninterrupted, error-free, or secure.
           </p>
         </section>

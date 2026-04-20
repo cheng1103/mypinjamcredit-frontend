@@ -1,8 +1,9 @@
 'use client';
 
-import Link from 'next/link';
+// Use native anchors for breadcrumbs to avoid Link typing overhead in this component
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 interface BreadcrumbItem {
   label: string;
@@ -30,15 +31,14 @@ export function Breadcrumbs() {
   ];
 
   let currentPath = `/${locale}`;
-  segments.forEach((segment, index) => {
+  segments.forEach((segment) => {
     currentPath += `/${segment}`;
 
-    // Get label from translation or capitalize segment
-    const labelKey = `nav.${segment}`;
+    // Fallback label: capitalize segment
     const label = segment.charAt(0).toUpperCase() + segment.slice(1);
 
     breadcrumbs.push({
-      label: label,
+      label,
       href: currentPath
     });
   });
@@ -51,7 +51,7 @@ export function Breadcrumbs() {
       '@type': 'ListItem',
       position: index + 1,
       name: crumb.label,
-      item: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.mypinjamcredit.com'}${crumb.href}`
+      item: `${getSiteUrl()}${crumb.href}`
     }))
   };
 
@@ -81,12 +81,9 @@ export function Breadcrumbs() {
                     {crumb.label}
                   </span>
                 ) : (
-                  <Link
-                    href={crumb.href as any}
-                    className="transition hover:text-blue-600 hover:underline"
-                  >
+                  <a href={crumb.href} className="transition hover:text-blue-600 hover:underline">
                     {crumb.label}
-                  </Link>
+                  </a>
                 )}
               </li>
             );

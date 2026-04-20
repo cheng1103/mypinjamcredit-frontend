@@ -3,9 +3,9 @@
  * Offline blog translation helper powered by @xenova/transformers.
  * Downloads the facebook/m2m100_418M model on first run and caches it locally.
  */
-const fs = require('fs');
-const path = require('path');
-const matter = require('gray-matter');
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 
 const SOURCE_LOCALE = process.env.TRANSLATE_SOURCE_LOCALE || 'en';
 const TARGET_LOCALE = process.env.TRANSLATE_TARGET_LOCALE || 'ms';

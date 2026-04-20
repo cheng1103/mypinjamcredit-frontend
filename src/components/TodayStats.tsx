@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
+
 
 interface StatsData {
   approvedToday: number;
@@ -10,7 +10,7 @@ interface StatsData {
 }
 
 export function TodayStats() {
-  const t = useTranslations();
+  // const t = useTranslations();
   const [stats, setStats] = useState<StatsData>({
     approvedToday: 0,
     totalAmountToday: 0,
@@ -64,7 +64,7 @@ export function TodayStats() {
           </svg>
         </div>
         <div>
-          <h3 className="text-sm font-bold text-slate-900">Today's Activity</h3>
+          <h3 className="text-sm font-bold text-slate-900">Today&apos;s Activity</h3>
           <div className="flex items-center gap-1">
             <div className="h-2 w-2 animate-pulse rounded-full bg-green-500"></div>
             <span className="text-xs text-slate-600">Live Updates</span>

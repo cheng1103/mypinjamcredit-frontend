@@ -1,6 +1,7 @@
 // Centralized Schema.org structured data
+import { getSiteUrl } from './siteUrl';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 // LocalBusiness Schema for Homepage
 export function generateLocalBusinessSchema() {

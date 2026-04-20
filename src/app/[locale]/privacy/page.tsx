@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import type { Locale } from '@/types/locale';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}/privacy`;
 
@@ -25,8 +26,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function PrivacyPage({ params }: PageProps) {
-  const { locale: localeStr } = await params;
+export default async function PrivacyPage() {
+  // const { locale: localeStr } = await params;
 
   return (
     <div className="space-y-8">
@@ -45,7 +46,7 @@ export default async function PrivacyPage({ params }: PageProps) {
         <section>
           <h2 className="text-2xl font-semibold text-blue-600">Introduction</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            MyPinjam Credit (MyPinjam Credit) ("we", "our", or "us") is committed to protecting your privacy
+             MyPinjam Credit (MyPinjam Credit) (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting your privacy
             and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard
             your information when you visit our website or use our services.
           </p>
@@ -108,7 +109,7 @@ export default async function PrivacyPage({ params }: PageProps) {
         <section>
           <h2 className="text-2xl font-semibold text-blue-600">Information Sharing and Disclosure</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            We may share your information with:
+          We may share your information with:
           </p>
           <ul className="mt-4 list-inside list-disc space-y-2 text-slate-700">
             <li><strong>Financial Institutions:</strong> Banks and lenders for loan processing</li>
@@ -157,7 +158,7 @@ export default async function PrivacyPage({ params }: PageProps) {
         <section>
           <h2 className="text-2xl font-semibold text-blue-600">Your Rights</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            Under the PDPA, you have the right to:
+          Under the PDPA, you have the right to:
           </p>
           <ul className="mt-4 list-inside list-disc space-y-2 text-slate-700">
             <li><strong>Access:</strong> Request a copy of your personal data we hold</li>
@@ -197,7 +198,7 @@ export default async function PrivacyPage({ params }: PageProps) {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-blue-600">Children's Privacy</h2>
+          <h2 className="text-2xl font-semibold text-blue-600">Children&apos;s Privacy</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
             Our services are not directed to individuals under 18 years of age. We do not knowingly collect
             personal information from children.
@@ -207,7 +208,7 @@ export default async function PrivacyPage({ params }: PageProps) {
         <section>
           <h2 className="text-2xl font-semibold text-blue-600">Updates to This Policy</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            We may update this Privacy Policy from time to time. Changes will be posted on this page with
+          We may update this Privacy Policy from time to time. Changes will be posted on this page with
             an updated revision date. Significant changes will be communicated via email or prominent notice
             on our website.
           </p>

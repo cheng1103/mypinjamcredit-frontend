@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import type { Locale } from '@/types/locale';
 import { Breadcrumb, generateBreadcrumbSchema } from '@/components/Breadcrumb';
-import Link from 'next/link';
+// import Link from 'next/link';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}/locations/johor-bahru`;
 
@@ -272,7 +273,7 @@ export default async function JohorBahruLocationPage({ params }: PageProps) {
       />
 
       {/* Breadcrumb Navigation */}
-      <Breadcrumb items={breadcrumbItems} locale={locale} />
+  <Breadcrumb items={breadcrumbItems} />
 
       {/* Hero Section */}
       <section className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-10 shadow-lg">
@@ -440,10 +441,10 @@ export default async function JohorBahruLocationPage({ params }: PageProps) {
           <div>
             <h3 className="text-2xl font-semibold text-slate-800">Licensed Loan Consultant Serving All Johor</h3>
             <p>
-              MyPinjam Credit is a fully licensed loan services service with strong presence in Johor Bahru and throughout Johor state. Whether you're a Singapore commuter living in JB, a factory owner in Pasir Gudang, a developer in Iskandar Malaysia, or a business owner in Muar or Batu Pahat, we understand the unique financial landscape of Johor.
+              MyPinjam Credit is a fully licensed loan services service with strong presence in Johor Bahru and throughout Johor state. Whether you&apos;re a Singapore commuter living in JB, a factory owner in Pasir Gudang, a developer in Iskandar Malaysia, or a business owner in Muar or Batu Pahat, we understand the unique financial landscape of Johor.
             </p>
             <p>
-              Our Johor team speaks <strong>Mandarin (华语)</strong>, <strong>Bahasa Malaysia</strong>, and <strong>Tamil (தமிழ்)</strong> - ensuring clear communication in your preferred language. We've helped over 189 Johor clients secure financing totaling over RM24 million, with special expertise in cross-border financing for Malaysians earning Singapore dollars.
+              Our Johor team speaks <strong>Mandarin (华语)</strong>, <strong>Bahasa Malaysia</strong>, and <strong>Tamil (தமிழ்)</strong> - ensuring clear communication in your preferred language. We&apos;ve helped over 189 Johor clients secure financing totaling over RM24 million, with special expertise in cross-border financing for Malaysians earning Singapore dollars.
             </p>
           </div>
 
@@ -468,18 +469,18 @@ export default async function JohorBahruLocationPage({ params }: PageProps) {
           <div>
             <h3 className="text-2xl font-semibold text-slate-800">Business Loans in Johor Bahru (RM50,000 - RM500,000)</h3>
             <p>
-              Johor is Malaysia's southern economic powerhouse and Iskandar Malaysia is a key development region. We specialize in financing businesses unique to Johor:
+              Johor is Malaysia&apos;s southern economic powerhouse and Iskandar Malaysia is a key development region. We specialize in financing businesses unique to Johor:
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Iskandar Malaysia Project Financing:</strong> Loans for developers, contractors, and businesses within the Iskandar Development Region (IDR). We navigate Iskandar Investment Berhad schemes and special incentives</li>
               <li><strong>Cross-Border Trade Financing:</strong> Working capital for import-export businesses trading between Singapore and Malaysia. Invoice financing and trade facilities available</li>
               <li><strong>Manufacturing & Logistics Loans:</strong> Equipment and expansion financing for Pasir Gudang factories, warehouses, and logistics companies serving Port of Tanjung Pelepas</li>
               <li><strong>F&B Business Financing:</strong> Loans for restaurants, cafes, kopitiams throughout JB - from City Square to Paradigm Mall to neighborhood kopitiams</li>
-              <li><strong>Property Development Loans:</strong> Financing for small to medium property developers in JB's booming real estate market</li>
+              <li><strong>Property Development Loans:</strong> Financing for small to medium property developers in JB&apos;s booming real estate market</li>
               <li><strong>Professional Services Setup:</strong> Loans for clinics, law firms, accounting practices, IT companies setting up in JB</li>
             </ul>
             <p>
-              We've secured funding for businesses ranging from traditional shophouses to high-tech startups in Medini. Our expertise includes navigating <strong>Iskandar Investment Berhad</strong> schemes, <strong>MIDA incentives</strong>, and specialized financing for Iskandar Malaysia businesses.
+              We&apos;ve secured funding for businesses ranging from traditional shophouses to high-tech startups in Medini. Our expertise includes navigating <strong>Iskandar Investment Berhad</strong> schemes, <strong>MIDA incentives</strong>, and specialized financing for Iskandar Malaysia businesses.
             </p>
           </div>
 
@@ -535,7 +536,7 @@ export default async function JohorBahruLocationPage({ params }: PageProps) {
             <h3 className="text-2xl font-semibold text-slate-800">How to Apply for a Loan in Johor Bahru</h3>
             <ol className="list-decimal pl-6 space-y-2">
               <li><strong>Free Consultation:</strong> Contact us via phone, WhatsApp, or online form. Consultation available in Mandarin, Malay, or Tamil</li>
-              <li><strong>Document Preparation:</strong> We'll guide you on required documents (MyKad, income proof, bank statements). For Singapore income earners: SGD payslips accepted</li>
+              <li><strong>Document Preparation:</strong> We&apos;ll guide you on required documents (MyKad, income proof, bank statements). For Singapore income earners: SGD payslips accepted</li>
               <li><strong>Lender Matching:</strong> We submit your application to suitable banks and lenders in Johor based on your profile and needs</li>
               <li><strong>Approval & Disbursement:</strong> Once approved, funds are disbursed to your account within 1-3 business days</li>
               <li><strong>Pay Our Fee:</strong> You only pay our 1-3% fee after successful loan disbursement</li>
@@ -548,10 +549,10 @@ export default async function JohorBahruLocationPage({ params }: PageProps) {
           <div>
             <h3 className="text-2xl font-semibold text-slate-800">Frequently Asked Questions - Johor Loans</h3>
             <p><strong>Q: Can I get a loan if I work in Singapore but live in JB?</strong></p>
-            <p>A: Yes! We work with select lenders who accept Singapore salary (in SGD). You'll need SGD payslips, Singapore bank statements, and proof of Malaysian residence. Interest rates can be lower due to stable Singapore employment.</p>
+            <p>A: Yes! We work with select lenders who accept Singapore salary (in SGD). You&apos;ll need SGD payslips, Singapore bank statements, and proof of Malaysian residence. Interest rates can be lower due to stable Singapore employment.</p>
 
             <p className="mt-4"><strong>Q: Do you help with Iskandar Malaysia project financing?</strong></p>
-            <p>A: Absolutely! We have expertise in Iskandar Investment Berhad schemes, MIDA incentives, and special financing for IDR businesses. We've funded projects in Medini, EduCity, and other Iskandar zones.</p>
+            <p>A: Absolutely! We have expertise in Iskandar Investment Berhad schemes, MIDA incentives, and special financing for IDR businesses. We&apos;ve funded projects in Medini, EduCity, and other Iskandar zones.</p>
 
             <p className="mt-4"><strong>Q: I have existing loans and CTOS score 620. Can I still get financing?</strong></p>
             <p>A: Yes! We can help improve your CTOS score first (typically 2-3 months), then apply for financing. Many of our Johor clients started with low scores and successfully obtained loans after improvement.</p>
@@ -570,19 +571,19 @@ export default async function JohorBahruLocationPage({ params }: PageProps) {
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
-            href={`/${locale}/apply` as any}
+            href={`/${locale}/apply`}
             className="inline-flex items-center rounded-full bg-white px-8 py-4 text-base font-bold uppercase tracking-wide text-blue-600 shadow-lg transition hover:bg-blue-50"
           >
             Apply Now
           </a>
           <a
-            href={`/${locale}/contact` as any}
+            href={`/${locale}/contact`}
             className="inline-flex items-center rounded-full border-2 border-white px-8 py-4 text-base font-bold uppercase tracking-wide text-white transition hover:bg-white/10"
           >
             Contact JB Office
           </a>
           <a
-            href={`/${locale}/calculator` as any}
+            href={`/${locale}/calculator`}
             className="inline-flex items-center rounded-full border-2 border-white px-8 py-4 text-base font-bold uppercase tracking-wide text-white transition hover:bg-white/10"
           >
             Calculate Loan

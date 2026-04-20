@@ -1,16 +1,16 @@
 import type { Metadata } from 'next';
 import type { Locale } from '@/types/locale';
+import { getSiteUrl } from '@/lib/siteUrl';
 
-type PageProps = { params: Promise<{ locale: string }> };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+
+const siteUrl = getSiteUrl();
 
 const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}/compliance`;
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { locale: localeStr } = await params;
-  const locale = localeStr as Locale;
 
+export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
+  const { locale } = params;
   return {
     title: 'Regulatory Compliance - MyPinjam Credit',
     description: 'Learn about MyPinjam Credit\'s commitment to regulatory compliance and responsible lending practices in Malaysia.',
@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function CompliancePage({ params }: PageProps) {
-  const { locale: localeStr } = await params;
+export default async function CompliancePage() {
+
 
   const regulations = [
     {
@@ -312,7 +312,7 @@ export default async function CompliancePage({ params }: PageProps) {
             <div>
               <h3 className="font-semibold text-slate-900">External Resolution</h3>
               <p className="mt-1 text-sm text-slate-700">
-                If unsatisfied, you may escalate to Bank Negara Malaysia's Financial Ombudsman Service
+                If unsatisfied, you may escalate to Bank Negara Malaysia&apos;s Financial Ombudsman Service
               </p>
             </div>
           </div>

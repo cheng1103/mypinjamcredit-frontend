@@ -38,7 +38,7 @@ export function OptimizedImage({
   const [hasError, setHasError] = useState(false);
 
   // Fallback image for errors
-  const fallbackSrc = '/placeholder-image.svg';
+
 
   if (hasError) {
     return (
@@ -79,6 +79,7 @@ export function OptimizedImage({
       <div className="relative" style={{ width, height }}>
         <Image
           {...imageProps}
+          alt={imageProps.alt || ''}
           fill
           style={{ objectFit }}
         />
@@ -93,6 +94,7 @@ export function OptimizedImage({
     <div className="relative inline-block">
       <Image
         {...imageProps}
+        alt={imageProps.alt || ''}
         width={width || 800}
         height={height || 600}
         style={{ objectFit }}

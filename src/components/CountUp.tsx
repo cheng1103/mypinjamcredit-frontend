@@ -19,14 +19,19 @@ export function CountUp({ end, duration = 2000, suffix = '', prefix = '', classN
   useEffect(() => {
     // 检测性能：如果是低性能设备或启用了节能模式，直接显示最终值
     if (typeof window !== 'undefined') {
+      const nav = navigator as unknown as {
+        hardwareConcurrency?: number;
+        deviceMemory?: number;
+        userAgent?: string;
+      };
+
       const isLowPerformance =
         // 检测CPU核心数
-        (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) ||
+        (nav.hardwareConcurrency !== undefined && nav.hardwareConcurrency <= 2) ||
         // 检测设备内存（如果可用）
-        // @ts-ignore
-        (navigator.deviceMemory && navigator.deviceMemory <= 2) ||
+        (nav.deviceMemory !== undefined && nav.deviceMemory <= 2) ||
         // 检测是否是移动设备
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(nav.userAgent || navigator.userAgent);
 
       if (isLowPerformance) {
         setShouldAnimate(false);
@@ -44,13 +49,14 @@ export function CountUp({ end, duration = 2000, suffix = '', prefix = '', classN
       { threshold: 0.3 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const el = ref.current;
+    if (el) {
+      observer.observe(el);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (el) {
+        observer.unobserve(el);
       }
     };
   }, [isVisible, end]);
@@ -58,11 +64,11 @@ export function CountUp({ end, duration = 2000, suffix = '', prefix = '', classN
   useEffect(() => {
     if (!isVisible || !shouldAnimate) return;
 
-    let startTime: number;
-    let animationFrame: number;
+  let startTime: number | null = null;
+  let animationFrame: number | null = null;
 
     const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
+  if (startTime === null) startTime = timestamp;
       const progress = timestamp - startTime;
       const percentage = Math.min(progress / duration, 1);
 
@@ -80,7 +86,7 @@ export function CountUp({ end, duration = 2000, suffix = '', prefix = '', classN
     animationFrame = requestAnimationFrame(animate);
 
     return () => {
-      if (animationFrame) {
+      if (animationFrame !== null) {
         cancelAnimationFrame(animationFrame);
       }
     };

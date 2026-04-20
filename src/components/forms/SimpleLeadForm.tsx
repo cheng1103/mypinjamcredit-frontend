@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import toast from 'react-hot-toast';
+import { formatPhoneNumber, phonePattern } from '@/lib/phone';
 
 const loanTypeValues = [
   'PERSONAL_USE',
@@ -34,35 +35,24 @@ const malaysiaStates = [
   'LABUAN'
 ] as const;
 
-// Phone number formatter - removes all non-digits and formats properly
-const formatPhoneNumber = (phone: string): string => {
-  // Remove all non-digit characters except leading +
-  const cleaned = phone.replace(/[^\d+]/g, '');
-  // Remove + if present and any leading 6 (country code)
-  const withoutCountryCode = cleaned.replace(/^\+?6?/, '');
-  // Ensure it starts with 0
-  return withoutCountryCode.startsWith('0') ? withoutCountryCode : '0' + withoutCountryCode;
-};
+const DEFAULT_LEAD_SOURCE = 'website_simple_form';
 
-// Full form schema - all fields in one form
 const leadFormSchema = z.object({
   loanAmount: z.number()
     .min(1000, 'Loan amount must be at least RM 1,000')
-    .max(5000000, 'Loan amount must be less than RM 5,000,000'),
+    .max(500000, 'Loan amount must be less than RM 500,000'),
   loanType: z.enum(loanTypeValues, {
     message: 'Please select a loan type'
   }),
   fullName: z.string()
     .min(2, 'Name must be at least 2 characters')
     .max(100, 'Name must be less than 100 characters')
-    .regex(/^[a-zA-Z\s]+$/, 'Name can only contain letters and spaces'),
+    // Allow Unicode letters and common name punctuation (spaces, hyphens, apostrophes)
+    .regex(/^[\p{L}\s'\-.]+$/u, 'Name can only contain letters and common name punctuation'),
   phone: z.string()
     .min(10, 'Phone number must be at least 10 digits')
     .transform(formatPhoneNumber)
-    .refine(
-      (phone) => /^01[0-46-9]\d{7,8}$/.test(phone),
-      'Please enter a valid Malaysian phone number (e.g. 012-345-6789)'
-    ),
+    .refine((phone) => phonePattern.test(phone), 'Please enter a valid Malaysian phone number (e.g. 012-345-6789)'),
   occupation: z.string()
     .min(2, 'Occupation must be at least 2 characters')
     .max(100, 'Occupation must be less than 100 characters'),
@@ -100,7 +90,7 @@ export function SimpleLeadForm() {
       const response = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        body: JSON.stringify({ ...data, leadSource: DEFAULT_LEAD_SOURCE })
       });
 
       if (!response.ok) {

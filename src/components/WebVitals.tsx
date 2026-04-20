@@ -1,17 +1,18 @@
 'use client';
-
-import { useEffect } from 'react';
 import { useReportWebVitals } from 'next/web-vitals';
 
 export function WebVitals() {
   useReportWebVitals((metric) => {
     // Send to Google Analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', metric.name, {
-        value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-        event_label: metric.id,
-        non_interaction: true
-      });
+    if (typeof window !== 'undefined') {
+      const win = window as unknown as { gtag?: (...args: unknown[]) => void };
+      if (win.gtag) {
+        win.gtag('event', metric.name, {
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          event_label: metric.id,
+          non_interaction: true
+        });
+      }
     }
 
     // Log to console in development

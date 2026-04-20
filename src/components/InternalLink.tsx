@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// Use native anchor to avoid Link typing friction in this small wrapper
 import { ReactNode } from 'react';
 
 interface InternalLinkProps {
@@ -16,22 +16,14 @@ interface InternalLinkProps {
  * - Prefetches on hover for better UX
  * - Maintains proper link hierarchy
  */
-export function InternalLink({
-  href,
-  children,
-  className = '',
-  title,
-  prefetch = true
-}: InternalLinkProps) {
+export function InternalLink(props: InternalLinkProps) {
+  const { href, children, className = '', title } = props;
+
+  // We intentionally don't use Next.js Link here to avoid typing friction in small helper
   return (
-    <Link
-      href={href as any}
-      className={className}
-      title={title}
-      prefetch={prefetch}
-    >
+    <a href={href} className={className} title={title}>
       {children}
-    </Link>
+    </a>
   );
 }
 

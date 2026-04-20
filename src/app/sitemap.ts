@@ -1,8 +1,14 @@
 import { MetadataRoute } from 'next';
 import { getAllBlogPosts } from '@/lib/blog';
+import { getSiteUrl } from '@/lib/siteUrl';
+import { isIndexingAllowed } from '@/lib/indexing';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+  if (!isIndexingAllowed()) {
+    return [];
+  }
+
+  const baseUrl = getSiteUrl();
   const lastModified = new Date();
 
   // Define all routes
@@ -68,7 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         if (isNaN(postDate.getTime())) {
           postDate = lastModified;
         }
-      } catch (error) {
+  } catch {
         postDate = lastModified;
       }
 

@@ -1,13 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { WHATSAPP_NUMBER, DEFAULT_WHATSAPP_MESSAGE } from '@/lib/contact';
 
 export function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
 
-  // WhatsApp business number
-  const whatsappNumber = '601124335406'; // Format: country code + number (no + or spaces)
-  const message = encodeURIComponent('Hi, saya ingin bertanya tentang permohonan pinjaman. / Hi, I would like to inquire about a loan application.');
+  // WhatsApp business number and default message
+  const whatsappNumber = WHATSAPP_NUMBER;
+  const message = encodeURIComponent(DEFAULT_WHATSAPP_MESSAGE);
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
   return (

@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import type { Locale } from '@/types/locale';
 import { Breadcrumb, generateBreadcrumbSchema } from '@/components/Breadcrumb';
-import Link from 'next/link';
+// import Link from 'next/link';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}/locations/penang`;
 
@@ -272,7 +273,7 @@ export default async function PenangLocationPage({ params }: PageProps) {
       />
 
       {/* Breadcrumb Navigation */}
-      <Breadcrumb items={breadcrumbItems} locale={locale} />
+  <Breadcrumb items={breadcrumbItems} />
 
       {/* Hero Section */}
       <section className="rounded-3xl border border-slate-200 bg-gradient-to-br from-emerald-50 via-white to-blue-50 p-10 shadow-lg">
@@ -440,17 +441,17 @@ export default async function PenangLocationPage({ params }: PageProps) {
           <div>
             <h3 className="text-2xl font-semibold text-slate-800">Licensed Loan Consultant Serving All Penang</h3>
             <p>
-              MyPinjam Credit is a fully licensed loan services service with deep roots in Penang. Whether you're a coffee shop owner in Georgetown's heritage zone, a factory worker in Bayan Lepas Free Trade Zone, or a business owner in Bukit Mertajam, we understand the unique financial needs of Penang residents.
+              MyPinjam Credit is a fully licensed loan services service with deep roots in Penang. Whether you&apos;re a coffee shop owner in Georgetown&apos;s heritage zone, a factory worker in Bayan Lepas Free Trade Zone, or a business owner in Bukit Mertajam, we understand the unique financial needs of Penang residents.
             </p>
             <p>
-              Our Penang team speaks <strong>Hokkien (福建话)</strong>, <strong>Mandarin (华语)</strong>, <strong>Bahasa Malaysia</strong>, and <strong>Tamil (தமிழ்)</strong> - ensuring you get consultation in your preferred language. We've helped over 142 Penang clients secure financing totaling over RM18 million.
+              Our Penang team speaks <strong>Hokkien (福建话)</strong>, <strong>Mandarin (华语)</strong>, <strong>Bahasa Malaysia</strong>, and <strong>Tamil (தமிழ்)</strong> - ensuring you get consultation in your preferred language. We&apos;ve helped over 142 Penang clients secure financing totaling over RM18 million.
             </p>
           </div>
 
           <div>
             <h3 className="text-2xl font-semibold text-slate-800">Personal Loans in Penang (RM5,000 - RM150,000)</h3>
             <p>
-              Need a personal loan in Penang? We help individuals from all backgrounds - whether you're working in the electronics industry in Bayan Lepas, running a hawker stall in Jelutong, or employed in Butterworth's port. Our personal loan service covers:
+              Need a personal loan in Penang? We help individuals from all backgrounds - whether you&apos;re working in the electronics industry in Bayan Lepas, running a hawker stall in Jelutong, or employed in Butterworth&apos;s port. Our personal loan service covers:
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Emergency Cash Loans:</strong> Fast approval in 1-3 days for urgent needs</li>
@@ -468,25 +469,25 @@ export default async function PenangLocationPage({ params }: PageProps) {
           <div>
             <h3 className="text-2xl font-semibold text-slate-800">Business Loans in Penang (RM50,000 - RM500,000)</h3>
             <p>
-              Penang is Malaysia's manufacturing and tourism hub, and we specialize in financing businesses unique to this state:
+              Penang is Malaysia&apos;s manufacturing and tourism hub, and we specialize in financing businesses unique to this state:
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Heritage Business Financing:</strong> Loans for UNESCO heritage zone businesses in Georgetown - coffee shops, hotels, retail stores, art galleries</li>
               <li><strong>Hawker & Food Stall Loans:</strong> Equipment financing for char kuey teow stalls, laksa shops, nasi kandar restaurants. We understand hawker business models that banks often reject</li>
-              <li><strong>Manufacturing SME Loans:</strong> Working capital and machinery financing for Penang's electronics, semiconductor, and manufacturing SMEs</li>
-              <li><strong>Tourism Business Financing:</strong> Loans for hotels, homestays, tour operators, travel agencies serving Penang's 8+ million annual tourists</li>
+              <li><strong>Manufacturing SME Loans:</strong> Working capital and machinery financing for Penang&apos;s electronics, semiconductor, and manufacturing SMEs</li>
+              <li><strong>Tourism Business Financing:</strong> Loans for hotels, homestays, tour operators, travel agencies serving Penang&apos;s 8+ million annual tourists</li>
               <li><strong>E-commerce & Online Business:</strong> Inventory financing for Shopee, Lazada, or independent online sellers</li>
               <li><strong>Professional Services:</strong> Setup financing for clinics, law firms, accounting practices in Penang</li>
             </ul>
             <p>
-              We've secured funding for businesses ranging from traditional kopitiam to high-tech startups. Our expertise includes navigating special schemes like <strong>Penang Development Corporation (PDC) SME Financing</strong> and <strong>SME Bank Manufacturing Loans</strong>.
+              We&apos;ve secured funding for businesses ranging from traditional kopitiam to high-tech startups. Our expertise includes navigating special schemes like <strong>Penang Development Corporation (PDC) SME Financing</strong> and <strong>SME Bank Manufacturing Loans</strong>.
             </p>
           </div>
 
           <div>
             <h3 className="text-2xl font-semibold text-slate-800">CTOS Score Improvement for Penang Residents</h3>
             <p>
-              Low CTOS score affecting your loan applications? This is especially common among Penang's hawker community, gig workers, and small business owners who may have had late payments or defaults. Our CTOS improvement service has helped over 30 Penang clients raise their scores by 50-120 points in 2-4 months.
+              Low CTOS score affecting your loan applications? This is especially common among Penang&apos;s hawker community, gig workers, and small business owners who may have had late payments or defaults. Our CTOS improvement service has helped over 30 Penang clients raise their scores by 50-120 points in 2-4 months.
             </p>
             <p>
               We provide <strong>free CTOS report review</strong>, identify issues affecting your score, and create a personalized improvement plan. Common fixes include settling old debts through negotiation, correcting errors in your credit report, and rebuilding credit through strategic actions.
@@ -496,7 +497,8 @@ export default async function PenangLocationPage({ params }: PageProps) {
           <div>
             <h3 className="text-2xl font-semibold text-slate-800">Why Penang Businesses Choose Us</h3>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Local Knowledge:</strong> We understand Penang's unique business ecosystem - from Georgetown heritage businesses to Bayan Lepas tech companies</li>
+              <li><strong>Local Knowledge:</strong> We understand Penang&apos;s unique business ecosystem - from Georgetown heritage businesses to Bayan Lepas tech companies</li>
+              <li><strong>Local Knowledge:</strong> We understand Penang&apos;s unique business ecosystem - from Georgetown heritage businesses to Bayan Lepas tech companies</li>
               <li><strong>Language Support:</strong> Hokkien-speaking consultants who understand local business culture and can explain terms clearly</li>
               <li><strong>Bank Relationships:</strong> Strong connections with Penang branches of major banks and local financial institutions</li>
               <li><strong>Industry Expertise:</strong> Experience with manufacturing, F&amp;B, tourism, retail sectors prominent in Penang</li>
@@ -519,7 +521,7 @@ export default async function PenangLocationPage({ params }: PageProps) {
             <h3 className="text-2xl font-semibold text-slate-800">How to Apply for a Loan in Penang</h3>
             <ol className="list-decimal pl-6 space-y-2">
               <li><strong>Free Consultation:</strong> Contact us via phone, WhatsApp, or online form. Tell us about your loan needs in Hokkien, Mandarin, Malay, or Tamil</li>
-              <li><strong>Document Preparation:</strong> We'll guide you on required documents (MyKad, bank statements, payslips for personal loans; SSM, business bank statements for business loans)</li>
+              <li><strong>Document Preparation:</strong> We&apos;ll guide you on required documents (MyKad, bank statements, payslips for personal loans; SSM, business bank statements for business loans)</li>
               <li><strong>Lender Matching:</strong> We submit your application to suitable banks and lenders in Penang based on your profile</li>
               <li><strong>Approval & Disbursement:</strong> Once approved, funds are disbursed to your account within 1-3 business days</li>
               <li><strong>Pay Our Fee:</strong> You only pay our 1-3% fee after successful loan disbursement</li>
@@ -532,13 +534,13 @@ export default async function PenangLocationPage({ params }: PageProps) {
           <div>
             <h3 className="text-2xl font-semibold text-slate-800">Frequently Asked Questions - Penang Loans</h3>
             <p><strong>Q: Do you provide service in Hokkien?</strong></p>
-            <p>A: Yes! We have Hokkien-speaking (福建话) consultants who understand Penang's Chinese community needs. Many of our Georgetown hawker and business clients prefer consultation in Hokkien.</p>
+            <p>A: Yes! We have Hokkien-speaking (福建话) consultants who understand Penang&apos;s Chinese community needs. Many of our Georgetown hawker and business clients prefer consultation in Hokkien.</p>
 
             <p className="mt-4"><strong>Q: Can hawkers and food stall owners get business loans?</strong></p>
-            <p>A: Absolutely! We specialize in hawker financing. Even if you don't have official business registration, we can help with equipment loans for your char kuey teow stall, laksa shop, or nasi kandar business.</p>
+            <p>A: Absolutely! We specialize in hawker financing. Even if you don&apos;t have official business registration, we can help with equipment loans for your char kuey teow stall, laksa shop, or nasi kandar business.</p>
 
             <p className="mt-4"><strong>Q: What if I work in Bayan Lepas FTZ but have low CTOS score?</strong></p>
-            <p>A: Many factory workers have this issue. We can improve your CTOS score first, then apply for personal loans. We've helped numerous Bayan Lepas workers secure financing despite initial low scores.</p>
+            <p>A: Many factory workers have this issue. We can improve your CTOS score first, then apply for personal loans. We&apos;ve helped numerous Bayan Lepas workers secure financing despite initial low scores.</p>
 
             <p className="mt-4"><strong>Q: How long does business loan approval take in Penang?</strong></p>
             <p>A: Depends on lender and loan amount. Fintech lenders: 2-5 days. Local banks: 2-4 weeks. PDC/SME Bank: 3-6 weeks. We expedite by ensuring complete documentation upfront.</p>
@@ -554,19 +556,19 @@ export default async function PenangLocationPage({ params }: PageProps) {
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
-            href={`/${locale}/apply` as any}
+            href={`/${locale}/apply`}
             className="inline-flex items-center rounded-full bg-white px-8 py-4 text-base font-bold uppercase tracking-wide text-emerald-600 shadow-lg transition hover:bg-emerald-50"
           >
             Apply Now
           </a>
           <a
-            href={`/${locale}/contact` as any}
+            href={`/${locale}/contact`}
             className="inline-flex items-center rounded-full border-2 border-white px-8 py-4 text-base font-bold uppercase tracking-wide text-white transition hover:bg-white/10"
           >
             Contact Penang Office
           </a>
           <a
-            href={`/${locale}/calculator` as any}
+            href={`/${locale}/calculator`}
             className="inline-flex items-center rounded-full border-2 border-white px-8 py-4 text-base font-bold uppercase tracking-wide text-white transition hover:bg-white/10"
           >
             Calculate Loan

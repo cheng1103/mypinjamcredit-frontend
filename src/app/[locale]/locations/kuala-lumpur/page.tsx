@@ -4,10 +4,11 @@ import { generateSEO } from '@/lib/seo';
 import { MapPin, Phone, Mail, Clock, Star, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 import { Breadcrumb, generateBreadcrumbSchema } from '@/components/Breadcrumb';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
@@ -162,7 +163,7 @@ export default async function KualaLumpurPage({ params }: PageProps) {
         <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4 max-w-7xl">
             {/* Breadcrumb Navigation */}
-            <Breadcrumb items={breadcrumbItems} locale={locale} />
+            <Breadcrumb items={breadcrumbItems} />
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
@@ -177,7 +178,7 @@ export default async function KualaLumpurPage({ params }: PageProps) {
                   <span className="text-gray-900">Kuala Lumpur</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  KL's trusted loan consultant since 2015. Personal & business loans from RM5,000 to RM500,000.
+                  KL&apos;s trusted loan consultant since 2015. Personal & business loans from RM5,000 to RM500,000.
                   Serving Mont Kiara, KLCC, Bangsar, and all KL areas.
                 </p>
 
@@ -339,7 +340,7 @@ export default async function KualaLumpurPage({ params }: PageProps) {
                   <div className="font-bold text-gray-900 mb-1">{story.name}</div>
                   <div className="text-sm text-gray-600 mb-2">{story.area}, KL • {story.loanType}</div>
                   <div className="text-2xl font-bold text-blue-600 mb-3">{story.amount}</div>
-                  <p className="text-gray-700 italic">"{story.story}"</p>
+                  <p className="text-gray-700 italic">&quot;{story.story}&quot;</p>
                 </div>
               ))}
             </div>
@@ -401,8 +402,8 @@ export default async function KualaLumpurPage({ params }: PageProps) {
 
             <h3>Why Choose MyPinjam Credit for Your KL Loan Needs?</h3>
             <p>
-              As Kuala Lumpur's trusted loan services service since 2015, we've helped over 500 KL residents and
-              businesses secure financing from RM5,000 to RM500,000. Whether you're in Mont Kiara, KLCC, Bangsar,
+              As Kuala Lumpur&apos;s trusted loan services service since 2015, we&apos;ve helped over 500 KL residents and
+              businesses secure financing from RM5,000 to RM500,000. Whether you&apos;re in Mont Kiara, KLCC, Bangsar,
               or any part of KL, we provide expert loan consultation in your language.
             </p>
 

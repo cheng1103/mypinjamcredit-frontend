@@ -38,7 +38,10 @@ export default function LanguageSwitcher() {
     const href = query ? `${targetPath}?${query}` : targetPath;
 
     startTransition(() => {
-      router.replace(href as any);
+      // router.replace's typing here expects a RouteImpl type in this codebase.
+      // Narrow to a minimal shape at runtime to avoid changing app behavior while keeping types safe.
+      const nav = router as unknown as { replace: (href: string) => void };
+      nav.replace(href);
     });
   };
 

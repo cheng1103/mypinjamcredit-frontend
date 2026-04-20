@@ -1,8 +1,26 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 import { z } from 'zod';
 import { rateLimit } from '@/lib/rateLimit';
+import { formatPhoneNumber, phonePattern } from '@/lib/phone';
 
-const API_BASE_URL = process.env.BACKEND_BASE_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL || 'http://localhost:4000/api';
+const resolveApiBaseUrl = () => {
+  const rawBase =
+    process.env.BACKEND_BASE_URL ||
+    process.env.NEXT_PUBLIC_BACKEND_BASE_URL ||
+    'http://localhost:4000';
+
+  const normalized = rawBase.endsWith('/')
+    ? rawBase.slice(0, -1)
+    : rawBase;
+
+  if (normalized.endsWith('/api')) {
+    return normalized;
+  }
+
+  return `${normalized}/api`;
+};
+
+const API_BASE_URL = resolveApiBaseUrl();
 
 // Rate limiter instance: 5 requests per minute
 const limiter = rateLimit({
@@ -10,21 +28,11 @@ const limiter = rateLimit({
   uniqueTokenPerInterval: 500
 });
 
-// Phone number formatter - removes all non-digits and formats properly
-const formatPhoneNumber = (phone: string): string => {
-  // Remove all non-digit characters except leading +
-  const cleaned = phone.replace(/[^\d+]/g, '');
-  // Remove + if present and any leading 6 (country code)
-  const withoutCountryCode = cleaned.replace(/^\+?6?/, '');
-  // Ensure it starts with 0
-  return withoutCountryCode.startsWith('0') ? withoutCountryCode : '0' + withoutCountryCode;
-};
-
 // Validation schema matching MultiStepLeadForm
 const leadSchema = z.object({
   loanAmount: z.number()
     .min(1000, 'Loan amount must be at least RM 1,000')
-    .max(5000000, 'Loan amount must be less than RM 5,000,000'),
+    .max(500000, 'Loan amount must be less than RM 500,000'),
   loanType: z.string().min(1, 'Please select a loan type'),
   fullName: z.string()
     .min(2, 'Name must be at least 2 characters')
@@ -33,24 +41,22 @@ const leadSchema = z.object({
   phone: z.string()
     .min(10, 'Phone number must be at least 10 digits')
     .transform(formatPhoneNumber)
-    .refine(
-      (phone) => /^01[0-46-9]\d{7,8}$/.test(phone),
-      'Please enter a valid Malaysian phone number'
-    ),
+    .refine((phone) => phonePattern.test(phone), 'Please enter a valid Malaysian phone number'),
   occupation: z.string()
     .min(2, 'Occupation must be at least 2 characters')
     .max(100, 'Occupation must be less than 100 characters'),
   monthlyIncome: z.number()
     .min(1000, 'Monthly income must be at least RM 1,000')
     .max(1000000, 'Monthly income must be less than RM 1,000,000'),
-  location: z.string().min(1, 'Please select your location')
+  location: z.string().min(1, 'Please select your location'),
+  leadSource: z.string().max(100).optional()
 });
 
 export async function POST(request: Request) {
   try {
     // Rate limiting
     const ip = request.headers.get('x-forwarded-for')?.split(',')[0].trim() || 'unknown';
-    const rateLimitResult = limiter.check(request as any, 5, ip);
+  const rateLimitResult = limiter.check(request as unknown as NextRequest, 5, ip);
 
     if (!rateLimitResult.success) {
       return NextResponse.json({ errorKey: 'too_many_requests' }, { status: 429 });
@@ -86,10 +92,15 @@ export async function POST(request: Request) {
 
     const data = await response.json();
     return NextResponse.json(data, { status: response.status });
-  } catch (error) {
+  } catch (err: unknown) {
     // Don't expose error details in production
     if (process.env.NODE_ENV === 'development') {
-      console.error('Failed to create lead', error);
+      // Narrow before logging to avoid implicit any
+      if (err instanceof Error) {
+        console.error('Failed to create lead', err.message, err.stack);
+      } else {
+        console.error('Failed to create lead', err);
+      }
     }
     return NextResponse.json({ errorKey: 'generic' }, { status: 500 });
   }

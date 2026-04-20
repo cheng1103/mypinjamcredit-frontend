@@ -10,9 +10,9 @@
  * Usage: node scripts/submit-to-google.js
  */
 
-const { google } = require('googleapis');
-const fs = require('fs');
-const path = require('path');
+import { google } from 'googleapis';
+import fs from 'fs';
+import path from 'path';
 
 // Configuration
 const SITE_URL = 'https://www.mypinjamcredit.com';

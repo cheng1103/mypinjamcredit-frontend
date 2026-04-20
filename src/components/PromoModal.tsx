@@ -9,7 +9,7 @@ interface PromoModalProps {
 
 export function PromoModal({ showAfterMs = 2000 }: PromoModalProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [hasShown, setHasShown] = useState(false);
+
   const t = useTranslations('modal');
 
   useEffect(() => {
@@ -18,9 +18,8 @@ export function PromoModal({ showAfterMs = 2000 }: PromoModalProps) {
 
     if (!modalShown) {
       const timer = setTimeout(() => {
-        setIsOpen(true);
-        setHasShown(true);
-        sessionStorage.setItem('promoModalShown', 'true');
+  setIsOpen(true);
+  sessionStorage.setItem('promoModalShown', 'true');
       }, showAfterMs);
 
       return () => clearTimeout(timer);
