@@ -954,7 +954,7 @@ Ada situasi special? Hubungi kami untuk konsultasi percuma:
 - 📧 **Email**: hello@mypinjamcredit.com
 - 💬 **Live chat**: [Klik sini](/ms/contact)
 
-Our advisors boleh bantu:
+Our licensed loan officers boleh bantu:
 ✓ Assess kelayakan anda
 ✓ Recommend best option
 ✓ Guide through application
@@ -972,7 +972,7 @@ Bila anda apply dengan MyPinjam Credit:
 - ⚡ **Fast Response** - Dalam 2 jam business hours
 - 💯 **Licensed & Regulated** - Comply dengan all BNM & KPKT regulations
 - 🤝 **Transparent** - No hidden fees, semua charges stated clearly
-- 💬 **Support** - Advisor available untuk guide anda
+- 💬 **Support** - Licensed loan officer available untuk guide anda
 - 📊 **Flexible Options** - Multiple tenure & payment options
 
 ### ❌ Kami TIDAK AKAN:
@@ -1058,7 +1058,7 @@ Masa kecemasan, setiap minit penting. Jangan tunggu lagi.
 
 **Disclaimer**: Artikel ini untuk tujuan informasi sahaja. Terms & conditions apply untuk setiap loan. Pastikan anda baca dan faham agreement sepenuhnya sebelum sign. Pinjam dengan bijak mengikut kemampuan anda.
 
-**Last updated**: 12 Jan 2025 | **Read time**: 14 minit | **Author**: MyPinjam Credit Advisory Team
+**Last updated**: 12 Jan 2025 | **Read time**: 14 minit | **Author**: MyPinjam Credit Loan Officer Team
 
 ---
 

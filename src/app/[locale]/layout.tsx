@@ -18,6 +18,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights} from '@vercel/speed-insights/next';
 import type { Locale } from '@/types/locale';
 import { getSeoCopy } from '@/lib/seo-content';
+import { getSiteUrl } from '@/lib/siteUrl';
 import '../globals.css';
 
 const geistSans = Geist({
@@ -34,7 +35,7 @@ const geistMono = Geist_Mono({
   preload: false
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 type LayoutParams = { locale: string };
 
@@ -53,7 +54,21 @@ export async function generateMetadata({
       template: `%s | ${title}`
     },
     description,
-    keywords: ['loan advisor', 'personal loan', 'business loan', 'malaysia loan', 'pinjaman', 'kredit'],
+    keywords: [
+      'pinjaman peribadi',
+      'personal loan Malaysia',
+      'licensed moneylender Malaysia',
+      'pemberi pinjaman berlesen',
+      'pinjaman segera',
+      'pinjaman online Malaysia',
+      'pinjaman perniagaan',
+      'business loan Malaysia',
+      'SME loan Malaysia',
+      'pinjaman KPKT',
+      'pinjaman peribadi KL',
+      'pinjaman peribadi Selangor',
+      'kredit peribadi Malaysia'
+    ],
     authors: [{ name: 'MyPinjam Credit' }],
     creator: 'MyPinjam Credit',
     publisher: 'MyPinjam Credit',
@@ -76,7 +91,7 @@ export async function generateMetadata({
           url: '/opengraph-image.png',
           width: 1200,
           height: 630,
-          alt: 'MyPinjam Credit - Trusted Loan Advisor'
+          alt: 'MyPinjam Credit - Licensed Moneylender Malaysia KPKT WL2684/14/02'
         }
       ]
     },
@@ -183,7 +198,7 @@ export default async function LocaleLayout({
         <header className="sticky top-0 z-10 border-b border-sky-200/60 bg-white/95">
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 md:gap-6 md:px-6 md:py-4">
             <Link
-              href={`/${locale}` as any}
+              href={`/${locale}`}
               className="flex items-center gap-2 md:gap-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg"
               aria-label="MyPinjam Credit Home"
             >
@@ -200,19 +215,19 @@ export default async function LocaleLayout({
             <div className="flex items-center gap-3">
               <nav className="hidden lg:flex items-center gap-6 text-sm text-slate-700" aria-label="Main navigation">
                 {navItems.map((item) => (
-                  <Link
+                  <a
                     key={item.href}
-                    href={item.href as any}
+                    href={item.href}
                     className="transition hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-2 py-1"
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 ))}
               </nav>
               <Suspense fallback={<div className="h-8 w-16" />}>
                 <LanguageSwitcher />
               </Suspense>
-              <MobileMenu locale={locale} navItems={navItems} />
+              <MobileMenu navItems={navItems} />
             </div>
           </div>
         </header>
@@ -242,19 +257,19 @@ export default async function LocaleLayout({
                 <h3 className="mb-2 font-semibold text-slate-800">Quick Links</h3>
                 <div className="flex flex-col gap-2 text-sm">
                   <Link
-                    href={`/${locale}/privacy` as any}
+                    href={`/${locale}/privacy`}
                     className="text-slate-600 transition hover:text-blue-600"
                   >
                     {tCommon('footer.privacy')}
                   </Link>
                   <Link
-                    href={`/${locale}/terms` as any}
+                    href={`/${locale}/terms`}
                     className="text-slate-600 transition hover:text-blue-600"
                   >
                     {tCommon('footer.terms')}
                   </Link>
                   <Link
-                    href={`/${locale}/compliance` as any}
+                    href={`/${locale}/compliance`}
                     className="text-slate-600 transition hover:text-blue-600"
                   >
                     {tCommon('footer.compliance')}

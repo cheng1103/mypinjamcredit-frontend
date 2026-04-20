@@ -3,10 +3,11 @@ import type { Locale } from '@/types/locale';
 import { generateSEO } from '@/lib/seo';
 import { generateReviewSchema } from '@/lib/schemas';
 import { Star } from 'lucide-react';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       'mypinjam credit reviews',
       'loan testimonials malaysia',
       'customer feedback',
-      'trusted loan advisor',
+      'licensed moneylender Malaysia reviews',
       '客户评价',
       'ulasan pelanggan',
       'வாடிக்கையாளர் கருத்துக்கள்',

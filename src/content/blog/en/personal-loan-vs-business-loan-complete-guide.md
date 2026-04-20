@@ -573,12 +573,12 @@ The choice between personal and business loan isn't always clear-cut. Here's the
 
 ## Need Expert Guidance?
 
-Still not sure which loan is right for you? Our licensed advisors can:
+Still not sure which loan is right for you? Our licensed loan officers can:
 
 - ✅ Evaluate your specific situation
 - ✅ Calculate exact costs (including tax)
-- ✅ Submit to multiple lenders
-- ✅ Get you the best rates
+- ✅ Provide a direct approval decision within 24 hours
+- ✅ Offer transparent, KPKT-regulated rates
 
 **Free Consultation Available:**
 - 📱 WhatsApp: +60-11-24335406
@@ -611,7 +611,7 @@ Still not sure which loan is right for you? Our licensed advisors can:
 
 ---
 
-**About the Author:** Written by MyPinjam Credit's advisory team with combined experience of 15+ years in consumer and commercial financing.
+**About the Author:** Written by MyPinjam Credit's loan officer team, a KPKT licensed moneylender (License WL2684/14/02) with combined experience of 15+ years in consumer and commercial lending.
 
 **Disclaimer:** Interest rates and eligibility criteria may vary by lender and individual circumstances. This article is for informational purposes only and does not constitute financial advice. Always consult with a licensed financial advisor for your specific situation.
 

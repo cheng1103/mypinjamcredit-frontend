@@ -590,27 +590,27 @@ Step 4: Now you have RM30,000 total!
 
 ---
 
-**9. Get Help from Loan Consultant**
+**9. Apply Through a KPKT Licensed Moneylender**
 
-**Why Use Loan Consultant?**
-- They know which banks accept estate workers
-- Help prepare documents properly
-- Negotiate better interest rates
-- Tamil-speaking consultants available
+**Why Choose a Licensed Moneylender Like MyPinjam Credit?**
+- We accept estate workers that banks typically reject
+- Faster approval (24 hours) with flexible documentation
+- KPKT-regulated interest rates (transparent, capped)
+- Tamil-speaking loan officers available
 
 **MyPinjam Credit Services for Estate Workers:**
 ```
-✅ Free consultation (no upfront fees)
+✅ Free eligibility assessment (no upfront fees)
 ✅ Tamil, English, Malay support
 ✅ Help with document preparation
-✅ Match you with right lender
+✅ KPKT licensed (WL2684/14/02) — lend directly from our own funds
 ✅ No fee if loan not approved
 ```
 
 **Contact Us:**
 - WhatsApp: +60 16-747 9368
 - Email: hello@mypinjamcredit.com
-- Tamil consultant: Ask for Kumar
+- Tamil-speaking loan officer: Ask for Kumar
 
 ---
 
@@ -967,16 +967,16 @@ REALITY: NEVER give your ATM card to anyone!
 
 ---
 
-**Q10: தமிழில் பேசும் கடன் ஆலோசகர் உள்ளாரா?**
-(Is there Tamil-speaking loan consultant?)
+**Q10: தமிழில் பேசும் கடன் அதிகாரி உள்ளாரா?**
+(Is there a Tamil-speaking loan officer?)
 
 **A:** **Yes!**
 
-**MyPinjam Credit has Tamil consultants:**
+**MyPinjam Credit has Tamil-speaking loan officers:**
 - WhatsApp: +60 16-747 9368
-- Say: "I need Tamil consultant"
+- Say: "I need a Tamil-speaking loan officer"
 - We'll connect you with Kumar or Devi
-- Free consultation
+- Free eligibility assessment
 - தமிழில் முழு விளக்கம் கிடைக்கும்!
 
 ---
@@ -1009,8 +1009,8 @@ Many estate workers think loans are impossible due to low income or poor credit.
    - Estate manager can provide employment letter
 
 5. **Help is available**
-   - Tamil-speaking consultants ready to help
-   - Free consultation from MyPinjam Credit
+   - Tamil-speaking loan officers ready to help
+   - Free eligibility check from MyPinjam Credit
    - Community support groups
 
 ---
@@ -1051,7 +1051,7 @@ Start planning your repayment
 
 **Why Choose Us?**
 
-✅ **Tamil, English, Malay consultants available**
+✅ **Tamil, English, Malay loan officers available**
 ✅ **10+ years helping estate workers get loans**
 ✅ **No upfront fees (only pay if loan approved)**
 ✅ **We know which banks accept estate workers**
@@ -1064,7 +1064,7 @@ Start planning your repayment
 - 🌐 Website: www.mypinjamcredit.com
 - 🕒 Operating Hours: Mon-Fri 9am-6pm, Sat 9am-2pm
 
-**Tamil Consultant Direct Line:**
+**Tamil Loan Officer Direct Line:**
 - Ask for **Kumar** or **Devi**
 - தமிழில் பேசலாம் (Can speak in Tamil)
 
@@ -1093,4 +1093,4 @@ Whether you need RM5,000 for emergency, RM15,000 for family needs, or RM30,000 t
 **Share This Guide:**
 Help other estate workers! Share this article with your friends and family. தமிழ் சமூகத்திற்கு உதவுங்கள்!
 
-[Apply Now with MyPinjam Credit] [WhatsApp Tamil Consultant] [Download PDF Guide]
+[Apply Now with MyPinjam Credit] [WhatsApp Tamil Loan Officer] [Download PDF Guide]

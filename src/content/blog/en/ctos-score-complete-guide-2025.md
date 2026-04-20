@@ -299,7 +299,7 @@ Debt Ratio = Total Debt ÷ Total Credit Limit × 100%
 **How Long Impact Lasts:** 12 months
 
 **Smart Strategy:**
-- ✅ Apply through loan advisor (we submit to multiple banks as ONE inquiry)
+- ✅ Apply through a licensed moneylender (single inquiry, faster decision)
 - ✅ Wait 6 months between applications
 - ❌ Don't apply everywhere yourself
 
@@ -633,8 +633,8 @@ Ahmad successfully got RM 50,000 personal loan at 9% p.a.
 很多华人会同时申请5-6家银行，以为"增加机会"。其实每次申请都会降低分数！
 
 **Better Approach:**
-- Use loan advisor (we check best bank for you)
-- Submit to 2-3 banks max
+- Apply with a KPKT licensed moneylender first (minimises repeated hard inquiries)
+- If applying to banks, submit to 2-3 banks max
 - Wait for results before trying others
 
 ### Mistake 3: Closing Credit Cards
@@ -884,7 +884,7 @@ Solution:
 4. **Build history** - Start now, even with small amounts
 5. **Fix errors** - Check for mistakes and dispute
 6. **Be patient** - Real improvement takes 3-12 months
-7. **Get help** - Professional advisors can guide you
+7. **Get help** - A licensed moneylender or financial advisor can guide you
 
 ---
 
@@ -913,9 +913,9 @@ Solution:
 - [FAQ - Common Loan Questions](/en/faq) - Get answers to 40+ questions
 
 **Location-Specific Loan Services:**
-- [Loan Advisor Kuala Lumpur](/en/locations/kuala-lumpur) - KL, Mont Kiara, KLCC, Bangsar
-- [Loan Advisor Penang](/en/locations/penang) - Georgetown, Bayan Lepas, Bukit Mertajam
-- [Loan Advisor Johor Bahru](/en/locations/johor-bahru) - JB City, Nusajaya, Skudai
+- [Licensed Moneylender Kuala Lumpur](/en/locations/kuala-lumpur) - KL, Mont Kiara, KLCC, Bangsar
+- [Licensed Moneylender Penang](/en/locations/penang) - Georgetown, Bayan Lepas, Bukit Mertajam
+- [Licensed Moneylender Johor Bahru](/en/locations/johor-bahru) - JB City, Nusajaya, Skudai
 
 **More Helpful Guides:**
 - [Personal Loan Complete Guide 2025](/en/blog/personal-loan-vs-business-loan-complete-guide) - Everything about personal loans

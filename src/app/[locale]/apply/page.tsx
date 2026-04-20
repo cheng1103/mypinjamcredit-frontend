@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+// Using native anchors in this page to avoid Link typing friction
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { MultiStepLeadForm } from '@/components/forms/MultiStepLeadForm';
 import { TrustBadges } from '@/components/TrustBadges';
@@ -10,10 +10,11 @@ import { TodayStats } from '@/components/TodayStats';
 import { LiveNotification } from '@/components/LiveNotification';
 import type { Locale } from '@/types/locale';
 import { getSeoCopy } from '@/lib/seo-content';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type ApplyPageProps = { params: Promise<{ locale: string }> };
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const baseUrl = getSiteUrl();
 
 const hrefForLocale = (locale: Locale) => `${baseUrl}/${locale}/apply`;
 
@@ -25,6 +26,16 @@ export async function generateMetadata({ params }: ApplyPageProps): Promise<Meta
   return {
     title,
     description,
+    keywords: [
+      'apply personal loan Malaysia online',
+      'mohon pinjaman peribadi online',
+      'permohonan pinjaman Malaysia',
+      'pinjaman online Malaysia',
+      'apply personal loan 24 hours',
+      'apply SME loan Malaysia',
+      'pinjaman segera tanpa penjamin',
+      'quick loan application Malaysia'
+    ],
     alternates: {
       canonical: hrefForLocale(locale),
       languages: {
@@ -62,8 +73,8 @@ export default async function ApplyPage({ params }: ApplyPageProps) {
       description: 'Tell us more about your financing needs and preferred loan amount.'
     },
     {
-      title: 'Advisor review',
-      description: 'Our licensed team verifies your information within one business day.'
+      title: 'Licensed loan officer review',
+      description: 'Our KPKT licensed loan officers verify your information within one business day.'
     },
     {
       title: 'Approval & disbursement',
@@ -73,7 +84,7 @@ export default async function ApplyPage({ params }: ApplyPageProps) {
 
   const supportHighlights = [
     'Secure encryption keeps your submission private and PDPA compliant.',
-    'No commitment fees until you receive an approval decision from our advisors.',
+    'No commitment fees until you receive an approval decision from our licensed loan officers.',
     'All products adhere to Bank Negara Malaysia regulations and responsible lending policies.'
   ];
 
@@ -146,9 +157,9 @@ export default async function ApplyPage({ params }: ApplyPageProps) {
           <div className="rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-sky-50 p-5 text-sm text-slate-700">
             <p>
               Need help with your paperwork?{' '}
-              <Link href={`/${locale}/contact` as any} className="font-semibold text-blue-600 hover:underline">
+              <a href={`/${locale}/contact`} className="font-semibold text-blue-600 hover:underline">
                 Book a consultation
-              </Link>{' '}
+              </a>{' '}
               and we will guide you step-by-step.
             </p>
           </div>

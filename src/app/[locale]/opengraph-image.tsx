@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'MyPinjam Credit - Trusted Loan Advisor in Malaysia';
+export const alt = 'MyPinjam Credit - Licensed Moneylender Malaysia | Personal Loan RM5,000-RM200,000';
 export const size = {
   width: 1200,
   height: 630
@@ -61,7 +61,7 @@ export default async function Image() {
               lineHeight: 1.4
             }}
           >
-            Your Trusted Partner for Personal and Business Loans in Malaysia
+            Licensed Moneylender Malaysia | Personal & SME Loans (KPKT WL2684/14/02)
           </p>
           <div
             style={{

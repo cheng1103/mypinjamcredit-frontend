@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { GoogleMap } from '@/components/GoogleMap';
 import type { Locale } from '@/types/locale';
 import { getSeoCopy } from '@/lib/seo-content';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}/contact`;
 
@@ -19,6 +19,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description,
+    keywords: [
+      'contact MyPinjam Credit',
+      'licensed moneylender Malaysia contact',
+      'pemberi pinjaman Mont Kiara',
+      'pinjaman peribadi Kuala Lumpur',
+      'personal loan KL contact',
+      'syarikat pinjaman berlesen hubungi',
+      'moneylender Kuala Lumpur'
+    ],
     alternates: {
       canonical: hrefForLocale(locale),
       languages: {
@@ -107,7 +116,7 @@ export default async function ContactPage({ params }: PageProps) {
   const contactMethods = [
     {
       title: 'Call us directly',
-      description: 'Speak with a licensed loan advisor in English or Bahasa Melayu.',
+      description: 'Speak with a licensed loan officer in English or Bahasa Melayu.',
       value: phoneNumber,
       href: `tel:${phoneNumber}`,
       icon: phoneIcon
@@ -148,7 +157,7 @@ export default async function ContactPage({ params }: PageProps) {
               Let’s plan your best-fit loan together
             </h1>
             <p className="text-lg text-slate-700">
-              Our advisory team is ready to help you compare products, prepare documents, and lock in
+              Our licensed loan officer team is ready to help you compare products, prepare documents, and lock in
               the fastest approval window.
             </p>
           </div>
@@ -243,18 +252,18 @@ export default async function ContactPage({ params }: PageProps) {
           Submit your application and we will respond within one business day with next steps.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
-          <Link
-            href={`/${locale}/apply` as any}
+          <a
+            href={`/${locale}/apply`}
             className="inline-flex items-center rounded-full bg-white px-8 py-3 text-sm font-semibold uppercase tracking-wide text-blue-600 shadow-lg transition hover:bg-slate-100"
           >
             Apply for a loan
-          </Link>
-          <Link
-            href={`/${locale}/products` as any}
+          </a>
+          <a
+            href={`/${locale}/products`}
             className="inline-flex items-center rounded-full border border-white/70 px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-white/10"
           >
             Explore products
-          </Link>
+          </a>
         </div>
       </section>
     </div>

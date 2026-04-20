@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import Link from 'next/link';
 import type { Locale } from '@/types/locale';
 import { generateLoanProductSchema } from '@/lib/schemas';
 import { getSeoCopy } from '@/lib/seo-content';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}/products`;
 
@@ -19,6 +19,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description,
+    keywords: [
+      'pinjaman peribadi Malaysia',
+      'personal loan Malaysia',
+      'SME loan Malaysia',
+      'pinjaman perniagaan',
+      'business loan Malaysia',
+      'working capital loan',
+      'pinjaman modal kerja',
+      'equipment financing Malaysia',
+      'pembiayaan peralatan',
+      'pinjaman pantas Malaysia',
+      'licensed moneylender products',
+      'pemberi pinjaman berlesen KPKT'
+    ],
     alternates: {
       canonical: hrefForLocale(locale),
       languages: {
@@ -106,7 +120,7 @@ export default async function ProductsPage({ params }: PageProps) {
   ];
 
   const advisoryPoints = [
-    'Personalised consultation with experienced loan advisors',
+    'Personalised guidance from experienced licensed loan officers',
     'Seamless digital document submission and tracking',
     'Dedicated after-sales support throughout your tenure'
   ];
@@ -246,18 +260,18 @@ export default async function ProductsPage({ params }: PageProps) {
               pricing, responsive support, and flexible repayment structures.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link
-                href={`/${locale}/apply` as any}
+              <a
+                href={`/${locale}/apply`}
                 className="inline-flex items-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg transition hover:bg-blue-500"
               >
                 Start Application
-              </Link>
-              <Link
-                href={`/${locale}/contact` as any}
+              </a>
+              <a
+                href={`/${locale}/contact`}
                 className="inline-flex items-center rounded-full border border-blue-500 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-blue-600 transition hover:bg-blue-50"
               >
-                Talk to an Advisor
-              </Link>
+                Speak to a Loan Officer
+              </a>
             </div>
           </div>
           <dl className="grid gap-4 sm:grid-cols-3">
@@ -327,12 +341,12 @@ export default async function ProductsPage({ params }: PageProps) {
                   </ul>
                 </div>
               </div>
-              <Link
-                href={`/${locale}/apply` as any}
+              <a
+                href={`/${locale}/apply`}
                 className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-md transition hover:bg-blue-500"
               >
                 Apply Now
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -416,12 +430,12 @@ export default async function ProductsPage({ params }: PageProps) {
           </table>
         </div>
         <div className="mt-6 text-center">
-          <Link
-            href={`/${locale}/calculator` as any}
+          <a
+            href={`/${locale}/calculator`}
             className="inline-flex items-center rounded-full bg-blue-600 px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg transition hover:bg-blue-500"
           >
             Use Loan Calculator
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -436,7 +450,7 @@ export default async function ProductsPage({ params }: PageProps) {
             ))}
           </div>
           <p className="text-xs text-slate-500">
-            Every application is reviewed by licensed advisors who ensure alignment with Bank Negara
+            Every application is reviewed by licensed loan officers who ensure alignment with KPKT
             Malaysia guidelines and responsible lending standards.
           </p>
         </div>
@@ -453,12 +467,12 @@ export default async function ProductsPage({ params }: PageProps) {
               <span className="font-semibold text-blue-600">Email:</span> hello@mypinjamcredit.com
             </p>
           </div>
-          <Link
-            href={`/${locale}/contact` as any}
+          <a
+            href={`/${locale}/contact`}
             className="mt-6 inline-flex w-full items-center justify-center rounded-full border border-blue-500 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-blue-600 transition hover:bg-blue-50"
           >
             Book a call
-          </Link>
+          </a>
         </div>
       </section>
     </div>

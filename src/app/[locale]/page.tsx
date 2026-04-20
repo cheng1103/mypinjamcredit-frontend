@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import Image from 'next/image';
+// Using native anchors in this file to avoid Next Link typing friction
+// using native anchors in this file to avoid Next Link typing friction
 import { getTranslations } from 'next-intl/server';
 import { GoogleMap } from '@/components/GoogleMap';
 import { SimpleLeadForm } from '@/components/forms/SimpleLeadForm';
@@ -11,10 +11,11 @@ import { generateSEO, keywordSets } from '@/lib/seo';
 import { getSeoCopy } from '@/lib/seo-content';
 import { generateLocalBusinessSchema, generateWebsiteSchema, generateOrganizationSchema } from '@/lib/schemas';
 import type { Locale } from '@/types/locale';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}`;
 
@@ -141,22 +142,22 @@ export default async function HomePage({ params }: PageProps) {
           <p className="text-sm text-slate-600 md:text-base max-w-3xl leading-relaxed">{tHero('subheadline')}</p>
 
           <div className="flex flex-wrap gap-2 pt-1" role="group" aria-label="Call to action buttons">
-            <Link
-              href={applyHref as any}
+            <a
+              href={applyHref}
               className="group inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-500 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               aria-label="Start loan application"
             >
               {tHero('ctaPrimary')}
               <span className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
-            </Link>
-            <Link
-              href={`/${locale}/products` as any}
+            </a>
+            <a
+              href={`/${locale}/products`}
               className="group inline-flex items-center gap-2 rounded-full border-2 border-blue-500 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-blue-600 transition-all duration-300 hover:scale-105 hover:bg-blue-50 hover:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               aria-label="View loan product options"
             >
               {tHero('ctaSecondary')}
               <span className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
-            </Link>
+            </a>
           </div>
 
           {/* Verification Badge */}
@@ -400,9 +401,9 @@ export default async function HomePage({ params }: PageProps) {
           };
 
           return (
-            <Link
+            <a
               key={card.key}
-              href={card.href as any}
+              href={card.href}
               className="group relative overflow-hidden rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl"
             >
               <div className="mb-4 flex justify-between items-start">
@@ -424,7 +425,7 @@ export default async function HomePage({ params }: PageProps) {
               <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-blue-600 transition-all group-hover:gap-2">
                 {tCommon('actions.learnMore')} <span className="transition-transform group-hover:translate-x-1">{'\u2192'}</span>
               </span>
-            </Link>
+            </a>
           );
         })}
       </section>
@@ -441,7 +442,7 @@ export default async function HomePage({ params }: PageProps) {
           </h2>
           <p className="mx-auto max-w-3xl text-sm text-slate-600">
             Preview monthly instalments for popular loan amounts using the headline rate. Values are
-            rounded to keep the table easy to read — confirm the exact quote with our advisor.
+            rounded to keep the table easy to read — confirm the exact quote with our loan officer.
           </p>
         </header>
         <div className="mt-8 overflow-x-auto">
@@ -477,16 +478,16 @@ export default async function HomePage({ params }: PageProps) {
             </tbody>
           </table>
         </div>
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-sm">
-          <Link
-            href={calculatorHref as any}
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-sm">
+          <a
+            href={calculatorHref}
             className="group inline-flex items-center gap-2 rounded-full border-2 border-blue-200 px-6 py-3 text-blue-600 transition-all duration-300 hover:scale-105 hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700"
           >
             Launch repayment calculator
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-          </Link>
+          </a>
           <span className="rounded-full bg-blue-50 px-4 py-2 text-blue-600">
-            Example purpose only — advisor will confirm your actual schedule
+            Example purpose only — loan officer will confirm your actual schedule
           </span>
         </div>
       </section>
@@ -505,7 +506,7 @@ export default async function HomePage({ params }: PageProps) {
         <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-blue-50 to-sky-50 p-10 shadow-lg">
           <div className="text-center">
             <h2 className="text-3xl font-semibold text-slate-900">📍 Locations We Serve</h2>
-            <p className="mt-2 text-slate-600">Licensed loan services across Malaysia's major cities</p>
+            <p className="mt-2 text-slate-600">Licensed loan services across Malaysia&apos;s major cities</p>
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {[
@@ -531,9 +532,9 @@ export default async function HomePage({ params }: PageProps) {
                 color: 'from-blue-500 to-indigo-500'
               }
             ].map((location) => (
-              <Link
+              <a
                 key={location.slug}
-                href={`/${locale}/locations/${location.slug}` as any}
+                href={`/${locale}/locations/${location.slug}`}
                 className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl"
               >
                 <div className="mb-4 flex items-center justify-between">
@@ -559,15 +560,15 @@ export default async function HomePage({ params }: PageProps) {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
           <div className="mt-8 text-center">
             <p className="text-sm text-slate-600">
-              Can't find your city?{' '}
-              <Link href={`/${locale}/contact` as any} className="font-semibold text-blue-600 hover:text-blue-700 hover:underline">
+              Can&apos;t find your city?{' '}
+              <a href={`/${locale}/contact`} className="font-semibold text-blue-600 hover:text-blue-700 hover:underline">
                 Contact us
-              </Link>{' '}
+              </a>{' '}
               - we serve clients nationwide!
             </p>
           </div>
@@ -582,8 +583,8 @@ export default async function HomePage({ params }: PageProps) {
             <p className="mt-2 text-slate-600">Learn about loans, CTOS scores, and financial planning</p>
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <Link
-              href={`/${locale}/blog/ctos-score-complete-guide-2025` as any}
+            <a
+              href={`/${locale}/blog/ctos-score-complete-guide-2025`}
               className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
             >
               <div className="mb-3 flex items-center gap-3">
@@ -603,10 +604,10 @@ export default async function HomePage({ params }: PageProps) {
               <div className="mt-4 text-sm font-semibold text-blue-600 group-hover:text-blue-700">
                 Read Guide →
               </div>
-            </Link>
+            </a>
 
-            <Link
-              href={`/${locale}/faq` as any}
+            <a
+              href={`/${locale}/faq`}
               className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
             >
               <div className="mb-3 flex items-center gap-3">
@@ -626,10 +627,10 @@ export default async function HomePage({ params }: PageProps) {
               <div className="mt-4 text-sm font-semibold text-blue-600 group-hover:text-blue-700">
                 View All FAQs →
               </div>
-            </Link>
+            </a>
 
-            <Link
-              href={`/${locale}/blog` as any}
+            <a
+              href={`/${locale}/blog`}
               className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
             >
               <div className="mb-3 flex items-center gap-3">
@@ -649,10 +650,10 @@ export default async function HomePage({ params }: PageProps) {
               <div className="mt-4 text-sm font-semibold text-blue-600 group-hover:text-blue-700">
                 Browse Blog →
               </div>
-            </Link>
+            </a>
 
-            <Link
-              href={`/${locale}/reviews` as any}
+            <a
+              href={`/${locale}/reviews`}
               className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
             >
               <div className="mb-3 flex items-center gap-3">
@@ -672,7 +673,7 @@ export default async function HomePage({ params }: PageProps) {
               <div className="mt-4 text-sm font-semibold text-blue-600 group-hover:text-blue-700">
                 Read Reviews →
               </div>
-            </Link>
+            </a>
           </div>
         </section>
       </FadeInSection>
@@ -689,7 +690,7 @@ export default async function HomePage({ params }: PageProps) {
             {
               name: 'Ahmad Hassan',
               role: 'Business Owner',
-              text: 'MyPinjam Credit helped me expand my restaurant with a business loan. The process was smooth and the advisor was very professional. Highly recommended!',
+              text: 'MyPinjam Credit helped me expand my restaurant with a business loan. The process was smooth and the loan officer was very professional. Highly recommended!',
               rating: 5
             },
             {
@@ -716,7 +717,7 @@ export default async function HomePage({ params }: PageProps) {
                   </svg>
                 ))}
               </div>
-              <p className="text-sm leading-relaxed text-slate-700">"{testimonial.text}"</p>
+              <p className="text-sm leading-relaxed text-slate-700">&ldquo;{testimonial.text}&rdquo;</p>
               <div className="mt-4 flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-700 text-white font-semibold">
                   {testimonial.name.charAt(0)}

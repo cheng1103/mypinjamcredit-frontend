@@ -1588,7 +1588,7 @@ Optional (strengthen):
 
 **Disclaimer**: Information dalam artikel ini untuk tujuan pendidikan sahaja. Every lender has different criteria. Terms & conditions vary. Borrow responsibly based on your ability to repay. Verify lender license before applying.
 
-**Last updated**: 12 Jan 2025 | **Read time**: 15 minit | **Author**: MyPinjam Credit Advisory Team
+**Last updated**: 12 Jan 2025 | **Read time**: 15 minit | **Author**: MyPinjam Credit Loan Officer Team
 
 ---
 

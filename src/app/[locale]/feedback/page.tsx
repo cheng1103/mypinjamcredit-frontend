@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import type { Locale } from '@/types/locale';
 import { getSeoCopy } from '@/lib/seo-content';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
@@ -28,7 +29,7 @@ const StarIcon = ({ filled }: { filled: boolean }) => (
   </svg>
 );
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}/feedback`;
 
@@ -75,7 +76,7 @@ export default async function FeedbackPage({ params }: PageProps) {
       name: 'Ahmad bin Hassan',
       rating: 5,
       comment:
-        'Very fast approval process! Applied on Monday and got approval by Wednesday. The interest rate is competitive and customer service was excellent.',
+            'Very fast approval process! Applied on Monday and got approval by Wednesday. The interest rate is competitive and customer service was excellent.&apos;',
       loanType: 'Personal Loan',
       date: '2024-03-15',
       status: 'APPROVED'
@@ -85,7 +86,7 @@ export default async function FeedbackPage({ params }: PageProps) {
       name: 'Sarah Lim',
       rating: 5,
       comment:
-        'Great experience with Aurora Credit. They helped me expand my bakery business with flexible repayment terms. Highly recommend!',
+            'Great experience with Aurora Credit. They helped me expand my bakery business with flexible repayment terms. Highly recommend!&apos;',
       loanType: 'SME Business Loan',
       date: '2024-03-10',
       status: 'APPROVED'
@@ -95,7 +96,7 @@ export default async function FeedbackPage({ params }: PageProps) {
       name: 'Raj Kumar',
       rating: 4,
       comment:
-        'Good service overall. The application process was straightforward and documentation requirements were reasonable. Got my equipment financing approved smoothly.',
+            'Good service overall. The application process was straightforward and documentation requirements were reasonable. Got my equipment financing approved smoothly.&apos;',
       loanType: 'Equipment Financing',
       date: '2024-03-08',
       status: 'APPROVED'
@@ -105,7 +106,7 @@ export default async function FeedbackPage({ params }: PageProps) {
       name: 'Nurul Aina',
       rating: 5,
       comment:
-        'Terima kasih Aurora Credit! Proses permohonan sangat mudah dan pantas. Pekerja sangat membantu dan menerangkan segala dengan jelas.',
+            'Terima kasih Aurora Credit! Proses permohonan sangat mudah dan pantas. Pekerja sangat membantu dan menerangkan segala dengan jelas.&apos;',
       loanType: 'Personal Loan',
       date: '2024-03-05',
       status: 'APPROVED'
@@ -115,7 +116,7 @@ export default async function FeedbackPage({ params }: PageProps) {
       name: 'Chen Wei Ming',
       rating: 4,
       comment:
-        'Professional team and transparent pricing. They explained all the terms clearly before I signed. Would use their services again.',
+            'Professional team and transparent pricing. They explained all the terms clearly before I signed. Would use their services again.&apos;',
       loanType: 'Working Capital Loan',
       date: '2024-03-01',
       status: 'APPROVED'
@@ -125,7 +126,7 @@ export default async function FeedbackPage({ params }: PageProps) {
       name: 'Fatimah Abdullah',
       rating: 5,
       comment:
-        'Excellent customer support in both English and Malay. Very patient in answering all my questions. The loan helped me consolidate my debts effectively.',
+            'Excellent customer support in both English and Malay. Very patient in answering all my questions. The loan helped me consolidate my debts effectively.&apos;',
       loanType: 'Debt Consolidation',
       date: '2024-02-28',
       status: 'APPROVED'
@@ -222,7 +223,7 @@ export default async function FeedbackPage({ params }: PageProps) {
         <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 to-sky-50 p-8">
           <h2 className="text-xl font-semibold text-blue-600">Share your experience</h2>
           <p className="mt-2 text-sm text-slate-600">
-            Have you received a loan from Aurora Credit? We'd love to hear about your experience.
+            Have you received a loan from Aurora Credit? We&apos;d love to hear about your experience.
             Your feedback helps other Malaysians make informed decisions.
           </p>
           <p className="mt-4 text-xs text-slate-500">
@@ -248,7 +249,7 @@ export default async function FeedbackPage({ params }: PageProps) {
               >
                 &bull;
               </span>
-              Share your experience with our advisors, response time, and documentation process.
+              Share your experience with our licensed loan officers, response time, and documentation process.
             </li>
             <li className="flex items-start gap-3">
               <span

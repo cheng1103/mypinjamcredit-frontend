@@ -2197,13 +2197,13 @@ Diversification benefits:
 
 Mencari SME financing yang sesuai boleh overwhelming. Let us help you navigate!
 
-### 💼 Our SME Loan Advisory Services:
+### 💼 Our SME Loan Services (KPKT Licensed Moneylender):
 
-✅ **Free consultation** - Assess your business & financing needs
-✅ **Lender matching** - Connect you dengan right lender untuk your stage
+✅ **Free eligibility assessment** - Assess your business & financing needs
+✅ **Direct SME lending** - RM 50,000 - RM 500,000 from our own funds
 ✅ **Document preparation** - Guide on complete application package
 ✅ **Business plan review** - Feedback untuk strengthen your proposal
-✅ **Application support** - Help throughout process
+✅ **24-hour approval** - Transparent KPKT-regulated rates
 
 ### 📞 Contact Us:
 
@@ -2276,7 +2276,7 @@ Mencari SME financing yang sesuai boleh overwhelming. Let us help you navigate!
 
 **Disclaimer**: Maklumat dalam artikel ini adalah untuk rujukan umum. Specific terms & conditions berbeza untuk setiap lender. Pastikan anda fahami sepenuhnya agreement sebelum commit. Borrow responsibly based on business capability.
 
-**Last updated**: 12 Jan 2025 | **Read time**: 18 minit | **Author**: MyPinjam Credit Business Advisory Team
+**Last updated**: 12 Jan 2025 | **Read time**: 18 minit | **Author**: MyPinjam Credit SME Loan Officer Team
 
 ---
 

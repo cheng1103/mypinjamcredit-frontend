@@ -1,23 +1,35 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import { headers, cookies } from 'next/headers';
+import type { Locale } from '@/types/locale';
+import { getSiteUrl } from '@/lib/siteUrl';
+import { isIndexingAllowed } from '@/lib/indexing';
 import './globals.css';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Pinjaman Peribadi & SME Malaysia 2025 | Lulus Dalam 24 Jam ✓ CTOS Teruk Boleh',
+    default: 'MyPinjam Credit',
     template: '%s | MyPinjam Credit'
   },
   description:
     '💰 LULUS PANTAS! Pinjaman RM1K-RM500K untuk peribadi, SME & modal kerja. CTOS teruk & blacklist boleh mohon. 18% kadar rendah, tiada penjamin. Apply online 24/7, approved dalam 1 hari!',
   keywords: [
-    'MyPinjam Credit',
+    'pinjaman peribadi Malaysia',
     'personal loan Malaysia',
-    'SME financing',
-    'licensed money lender',
-    'loan advisor',
+    'pinjaman segera',
+    'licensed moneylender Malaysia',
+    'pemberi pinjaman berlesen KPKT',
+    'pinjaman online Malaysia',
+    'pinjaman peribadi online',
+    'SME loan Malaysia',
+    'pinjaman perniagaan',
+    'business loan Malaysia',
+    'pinjaman tanpa penjamin',
+    'pinjaman blacklist CTOS',
+    'MyPinjam Credit',
     'MyPinjam'
   ],
   authors: [{ name: 'MyPinjam Credit' }],
@@ -34,9 +46,9 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: 'MyPinjam Credit',
     locale: 'ms_MY',
-    title: 'MyPinjam Credit Malaysia | Personal & SME Loans',
+    title: 'MyPinjam Credit',
     description:
-      'Compare personal and SME loan options, discover flexible repayment plans, and apply in minutes with MyPinjam Credit Malaysia.',
+      'Apply personal loan & SME loan in Malaysia. Licensed moneylender KPKT WL2684/14/02. Approval in 24 hours, RM5,000 - RM200,000, no guarantor required.',
     images: [
       {
         url: '/logo.png',
@@ -49,26 +61,47 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@mypinjamcredit',
-    title: 'MyPinjam Credit Malaysia | Licensed Loan Advisor',
+    title: 'MyPinjam Credit',
     description:
-      'Transparent financing advisory in Malaysia for personal, SME and working capital loans.',
+      'Licensed KPKT moneylender Malaysia. Personal, SME and working capital loans. 24-hour approval, transparent rates.',
     images: ['/logo.png']
   },
-  robots: {
-    index: true,
-    follow: true
+  robots: isIndexingAllowed()
+    ? {
+        index: true,
+        follow: true
+      }
+    : {
+        index: false,
+        follow: false
+      }
+};
+
+
+
+const supportedLocales: Locale[] = ['ms', 'en'];
+
+
+const detectLocale = async (): Promise<Locale> => {
+  const headerList = await headers();
+  const nextIntlLocale = headerList.get('x-intl-locale');
+  if (nextIntlLocale && supportedLocales.includes(nextIntlLocale as Locale)) {
+    return nextIntlLocale as Locale;
   }
+
+  const cookieStore = await cookies();
+  const storedLocale = cookieStore.get('NEXT_LOCALE')?.value;
+  if (storedLocale && supportedLocales.includes(storedLocale as Locale)) {
+    return storedLocale as Locale;
+  }
+
+  return 'ms';
 };
 
-export const viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 5
-};
-
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default async function RootLayout({ children }: { children: ReactNode }) {
+  const locale = await detectLocale();
   return (
-    <html lang="ms" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );

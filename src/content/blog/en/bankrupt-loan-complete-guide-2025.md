@@ -1672,7 +1672,7 @@ Ramai yang pernah bankrupt kini hidup dengan lebih baik, business yang lebih suc
 
 **Disclaimer**: Artikel ini untuk tujuan maklumat dan pendidikan. Sila ensure anda faham fully terms & conditions sebelum apply loan. Borrow responsibly mengikut kemampuan. Untuk nasihat undang-undang berkaitan bankruptcy, sila consult peguam atau DGI.
 
-**Last updated**: 12 Jan 2025 | **Read time**: 16 minit | **Author**: MyPinjam Credit Legal & Advisory Team
+**Last updated**: 12 Jan 2025 | **Read time**: 16 minit | **Author**: MyPinjam Credit Legal & Loan Officer Team
 
 ---
 

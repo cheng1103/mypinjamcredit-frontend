@@ -1841,9 +1841,9 @@ Experience:
 - Won dim sum competition 2018
 - Expert in handmade dim sum
 
-7.3 Advisors
+7.3 Financial Partners
 Accountant: [Name], [Firm] - handles bookkeeping & tax
-Consultant: MyPinjam Credit - business loan services
+Licensed moneylender: MyPinjam Credit (KPKT WL2684/14/02) - business loans
 ```
 
 ---

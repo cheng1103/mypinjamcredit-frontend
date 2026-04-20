@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+// import { getTranslations } from 'next-intl/server';
 import type { Locale } from '@/types/locale';
-import Link from 'next/link';
+// import Link from 'next/link';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}/about`;
 
@@ -14,8 +15,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const locale = localeStr as Locale;
 
   return {
-    title: 'About Us - MyPinjam Credit | Licensed Loan Advisory',
-    description: 'Learn about MyPinjam Credit, your trusted licensed loan services service in Malaysia. We provide transparent, customer-focused financing solutions.',
+    title: 'About MyPinjam Credit | Licensed Moneylender Malaysia (KPKT WL2684/14/02)',
+    description: 'MyPinjam Credit is a KPKT licensed moneylender in Malaysia since 2018. Serving 5,000+ customers with personal loans RM5,000 - RM200,000. Transparent, KPKT-regulated, 24-hour approval.',
+    keywords: [
+      'about MyPinjam Credit',
+      'licensed moneylender Malaysia',
+      'pemberi pinjaman berlesen KPKT',
+      'syarikat pinjaman berlesen Malaysia',
+      'KPKT licensed lender',
+      'moneylender Mont Kiara',
+      'trusted personal loan Malaysia'
+    ],
     alternates: {
       canonical: hrefForLocale(locale),
       languages: {
@@ -25,8 +35,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     },
     openGraph: {
-      title: 'About MyPinjam Credit',
-      description: 'Licensed loan services service committed to transparent financing',
+      title: 'About MyPinjam Credit | Licensed Moneylender Malaysia',
+      description: 'KPKT licensed moneylender committed to transparent financing since 2018',
       url: hrefForLocale(locale),
       siteName: 'MyPinjam Credit',
       locale: locale === 'ms' ? 'ms_MY' : 'en_MY',
@@ -38,7 +48,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function AboutPage({ params }: PageProps) {
   const { locale: localeStr } = await params;
   const locale = localeStr as Locale;
-  const tCommon = await getTranslations({ locale, namespace: 'common' });
 
   const milestones = [
     { year: '2018', event: 'Company founded with vision to democratize access to credit' },
@@ -74,15 +83,15 @@ export default async function AboutPage({ params }: PageProps) {
   const team = [
     {
       name: 'Howard Lee',
-      role: 'Founder & Principal Advisor',
-      credentials: 'Licensed Financial Advisor',
+      role: 'Founder & Principal Loan Officer',
+      credentials: 'KPKT Licensed Moneylender',
       bio: '15+ years experience in consumer finance. Committed to helping Malaysians achieve their financial goals through responsible lending.'
     },
     {
-      name: 'Advisory Team',
+      name: 'Loan Officer Team',
       role: 'Licensed Loan Specialists',
-      credentials: 'Bank Negara Certified',
-      bio: 'Our team of experienced advisors provides personalized guidance throughout your loan journey.'
+      credentials: 'KPKT Certified',
+      bio: 'Our team of experienced licensed loan officers provides personalized guidance throughout your loan journey.'
     }
   ];
 
@@ -127,7 +136,7 @@ export default async function AboutPage({ params }: PageProps) {
           <div className="mb-4 text-4xl">🌟</div>
           <h2 className="text-2xl font-semibold text-blue-600">Our Vision</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            To be Malaysia's most trusted and customer-centric loan services service, recognized for our
+            To be Malaysia&apos;s most trusted and customer-centric loan services service, recognized for our
             integrity, transparency, and commitment to helping people make sound financial decisions.
           </p>
         </div>
@@ -154,7 +163,7 @@ export default async function AboutPage({ params }: PageProps) {
       <section className="rounded-3xl border border-blue-100 bg-white p-10 shadow-sm">
         <h2 className="text-center text-3xl font-semibold text-slate-900">Our Journey</h2>
         <div className="mt-8 space-y-4">
-          {milestones.map((milestone, index) => (
+          {milestones.map((milestone) => (
             <div
               key={milestone.year}
               className="flex gap-6 rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50/50 to-transparent p-6"
@@ -254,18 +263,18 @@ export default async function AboutPage({ params }: PageProps) {
           Join thousands of satisfied customers who trust us for their financing needs.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
-          <Link
-            href={`/${locale}/apply` as any}
+          <a
+            href={`/${locale}/apply`}
             className="inline-flex items-center rounded-full bg-white px-8 py-3 text-sm font-semibold uppercase tracking-wide text-blue-600 shadow-lg transition hover:bg-slate-100"
           >
             Apply Now
-          </Link>
-          <Link
-            href={`/${locale}/contact` as any}
+          </a>
+          <a
+            href={`/${locale}/contact`}
             className="inline-flex items-center rounded-full border border-white/70 px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-white/10"
           >
             Contact Us
-          </Link>
+          </a>
         </div>
       </section>
     </div>

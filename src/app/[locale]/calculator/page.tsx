@@ -1,15 +1,16 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+// Use native anchors for small internal links to avoid Link typing friction in this file
 import { getTranslations } from 'next-intl/server';
 import { LoanCalculator } from '@/components/LoanCalculator';
 import type { Locale } from '@/types/locale';
 import { getSeoCopy } from '@/lib/seo-content';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
 export const dynamic = 'force-static';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}/calculator`;
 
@@ -21,6 +22,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description,
+    keywords: [
+      'loan calculator Malaysia',
+      'kalkulator pinjaman Malaysia',
+      'kalkulator pinjaman peribadi',
+      'monthly instalment calculator',
+      'personal loan calculator Malaysia',
+      'SME loan calculator',
+      'pinjaman bulanan kira',
+      'loan interest calculator Malaysia'
+    ],
     alternates: {
       canonical: hrefForLocale(locale),
       languages: {
@@ -52,7 +63,7 @@ const calculatorHighlights = [
   },
   {
     title: 'Transparent rates',
-    description: 'Preview instalments using our published headline rate before you engage an advisor.'
+    description: 'Preview instalments using our published headline rate before you submit a full application.'
   },
   {
     title: 'Simple submission',
@@ -137,13 +148,13 @@ export default async function CalculatorPage({ params }: PageProps) {
               </li>
             ))}
           </ul>
-          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-sky-50 p-5 text-sm text-slate-600">
+              <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-sky-50 p-5 text-sm text-slate-600">
             <p>
               Unsure which product fits best?{' '}
-              <Link href={productsHref as any} className="font-semibold text-blue-600 hover:underline">
+              <a href={productsHref} className="font-semibold text-blue-600 hover:underline">
                 Explore our loan portfolio
-              </Link>{' '}
-              or contact our advisor for a personalised review.
+              </a>{' '}
+              or contact our licensed loan officer for a personalised review.
             </p>
           </div>
         </div>
@@ -153,22 +164,22 @@ export default async function CalculatorPage({ params }: PageProps) {
       <section className="rounded-3xl border border-blue-100 bg-gradient-to-r from-blue-600 to-sky-600 p-10 text-white shadow-xl shadow-blue-100">
         <h2 className="text-2xl font-semibold">Ready to secure your financing?</h2>
         <p className="mt-3 text-sm text-blue-100">
-          Submit your application with your preferred figures. Our licensed advisor will validate
+          Submit your application with your preferred figures. Our licensed loan officer will validate
           eligibility and documentation within one business day.
         </p>
         <div className="mt-6 flex flex-wrap gap-4">
-          <Link
-            href={applyHref as any}
+          <a
+            href={applyHref}
             className="inline-flex items-center rounded-full bg-white px-8 py-3 text-sm font-semibold uppercase tracking-wide text-blue-600 shadow-lg transition hover:bg-slate-100"
           >
             Proceed to application
-          </Link>
-          <Link
-            href={`/${locale}/contact` as any}
+          </a>
+          <a
+            href={`/${locale}/contact`}
             className="inline-flex items-center rounded-full border border-white/70 px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-white/10"
           >
-            Speak to an advisor
-          </Link>
+            Speak to a loan officer
+          </a>
         </div>
       </section>
     </div>

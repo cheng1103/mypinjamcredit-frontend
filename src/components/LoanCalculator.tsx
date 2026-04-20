@@ -117,8 +117,8 @@ export function LoanCalculator({ applyHref = '/en/apply', className }: LoanCalcu
 
           <div className="rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-sky-50 p-5 text-sm text-slate-600">
             <p>
-              Calculations are based on a flat interest assumption and intended for illustration. An
-              advisor will confirm your personalised indicative rate during consultation.
+              Calculations are based on a flat interest assumption and intended for illustration. Our
+              licensed loan officer will confirm your personalised indicative rate during consultation.
             </p>
           </div>
         </section>

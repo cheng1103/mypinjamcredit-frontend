@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import type { Locale } from '@/types/locale';
 import Link from 'next/link';
-import Image from 'next/image';
+
 import { getAllBlogPosts, getFeaturedPosts, getAllCategories } from '@/lib/blog';
 import { generateSEO } from '@/lib/seo';
 import { Calendar, Clock, Tag, User } from 'lucide-react';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}/blog`;
 
@@ -17,8 +18,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const locale = localeStr as Locale;
 
   return generateSEO({
-    title: 'Expert Loan & Finance Tips - MyPinjam Credit Blog',
-    description: 'Get expert advice on personal loans, business financing, credit scores, and financial planning in Malaysia. Free guides and tips from licensed loan advisors.',
+    title: 'Malaysia Loan & Finance Blog | Personal Loan, CTOS, CCRIS Guides | MyPinjam Credit',
+    description: 'Free expert guides on personal loan Malaysia, pinjaman peribadi, CTOS score, CCRIS, blacklist loans, SME financing and credit repair. Written by licensed moneylenders.',
     keywords: [
       // English
       'loan blog malaysia',
@@ -39,14 +40,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       '马来西亚贷款指南',
       '个人理财建议',
       '贷款批准技巧',
-      '华人贷款顾问',
+      '华人贷款服务',
 
       // Tamil
       'கடன் வழிகாட்டி',
       'நிதி ஆலோசனை',
 
       // Community-specific
-      'chinese loan advisor',
+      'chinese personal loan Malaysia',
       'malay loan tips',
       'indian loan guide',
       'bumiputera financing',
@@ -196,7 +197,7 @@ export default async function BlogPage({ params }: PageProps) {
         <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Need Personalized Loan Advice?</h2>
           <p className="text-lg mb-6 opacity-90">
-            Our licensed advisors are ready to help you find the best loan options for your needs
+            Our licensed loan officers are ready to help you find the best loan options for your needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

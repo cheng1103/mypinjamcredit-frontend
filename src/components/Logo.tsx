@@ -4,7 +4,7 @@ export function Logo({
   size = 48,
   className = '',
   priority = false,
-  variant = 'photo' // 'photo' 显示照片, 'icon' 显示图标样式
+  // variant = 'photo' // 'photo' 显示照片, 'icon' 显示图标样式
 }: {
   size?: number;
   className?: string;
@@ -22,7 +22,7 @@ export function Logo({
     >
       <Image
         src="/logo.png"
-        alt="MyPinjam Credit - Professional Loan Advisory"
+        alt="MyPinjam Credit - Licensed Moneylender Malaysia KPKT"
         width={size}
         height={size}
         className="object-cover rounded-full"

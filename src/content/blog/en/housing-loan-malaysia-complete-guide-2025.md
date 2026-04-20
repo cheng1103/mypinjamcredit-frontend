@@ -981,10 +981,10 @@ Ready to buy your dream home? Here's what to do next:
 
 **Option 3: Get Pre-Approved Now**
 - [Apply for Housing Loan](/) with MyPinjam Credit
-- Licensed loan advisors
-- Free comparison service
+- KPKT licensed moneylender (License WL2684/14/02)
+- Free eligibility assessment
 - Over 5,000 Malaysians helped
-- Partnerships with 15+ banks
+- Direct lending + referral to bank partners
 - 95% approval rate
 
 ---
@@ -995,7 +995,7 @@ Ready to buy your dream home? Here's what to do next:
 ✅ **FREE Service** - No fees for consultation
 ✅ **Fast Approval** - Get pre-approved in 24-48 hours
 ✅ **Best Rates** - Compare 15+ banks instantly
-✅ **Expert Guidance** - Licensed advisors with 10+ years experience
+✅ **Expert Guidance** - KPKT licensed loan officers with 10+ years experience
 ✅ **Bilingual Support** - English, Malay, Chinese, Tamil
 ✅ **Success Rate** - 95% approval rate
 ✅ **5,000+ Customers** - Trusted by Malaysians since 2018

@@ -852,4 +852,4 @@ At **MyPinjam Credit**, we help Malaysians find the best debt consolidation solu
 
 *Last Updated: January 18, 2025*
 
-*Disclaimer: Information provided is for educational purposes only. Debt consolidation suitability depends on individual circumstances. Please consult with licensed financial advisors for personalized advice. MyPinjam Credit is a loan comparison platform and not a licensed lender.*
+*Disclaimer: Information provided is for educational purposes only. Debt consolidation suitability depends on individual circumstances. Please consult with a licensed financial advisor for personalized advice. MyPinjam Credit is a KPKT licensed moneylender (License WL2684/14/02) regulated under the Moneylenders Act 1951.*

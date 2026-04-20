@@ -26,7 +26,7 @@ This guide covers loan options, special schemes, and cultural considerations for
 
 ### Why Chinese Malaysians Choose Us
 
-**✅ Mandarin & Cantonese Speaking Advisors** (中文/粤语服务)
+**✅ Mandarin & Cantonese Speaking Loan Officers** (中文/粤语服务)
 **✅ Understanding of Chinese Business Practices** (了解华人商业文化)
 **✅ Fast Approval - 24 to 48 Hours** (快速批准)
 **✅ New Village & Township Financing** (新村贷款)
@@ -110,7 +110,7 @@ Chinese Malaysians are known for entrepreneurship. Common financing needs:
 
 ### Kami Faham Keperluan Anda
 
-**✅ Penasihat Berbahasa Melayu** (Malay Speaking Advisors)
+**✅ Pegawai Pinjaman Berbahasa Melayu** (Malay Speaking Loan Officers)
 **✅ Pembiayaan Islam Tersedia** (Islamic Financing Available)
 **✅ Skim Khas Bumiputera** (Special Bumiputera Schemes)
 **✅ TEKUN, MARA, Agrobank Expert** (Government Scheme Specialists)
@@ -235,7 +235,7 @@ We work with all major Islamic banks:
 
 ### நாங்கள் உங்களுக்கு உதவ இங்கே இருக்கிறோம்
 
-**✅ Tamil Speaking Advisors Available** (தமிழ் ஆலோசகர்கள்)
+**✅ Tamil Speaking Loan Officers Available** (தமிழ் கடன் அதிகாரிகள்)
 **✅ Understanding of Indian Community Needs** (இந்திய சமூக தேவைகள்)
 **✅ Estate & Plantation Financing** (தோட்ட கடன்)
 **✅ Temple & Community Loans** (கோவில் கடன்)
@@ -352,22 +352,22 @@ We work with all major Islamic banks:
 
 ### Our Multicultural Team:
 
-**Chinese Advisors (华语顾问):**
+**Chinese Loan Officers (华语服务):**
 - Fluent in Mandarin, Cantonese, Hokkien
 - Understand Chinese business culture
 - Experience with Chinese-owned businesses
 
-**Malay Advisors (Penasihat Melayu):**
+**Malay Loan Officers (Pegawai Pinjaman Melayu):**
 - Native Bahasa Melayu speakers
 - Islamic financing experts
 - Government scheme specialists
 
-**Indian Advisors (தமிழ் ஆலோசகர்கள்):**
+**Indian Loan Officers (தமிழ் கடன் அதிகாரிகள்):**
 - Tamil speaking
 - Understanding of Indian community
 - Estate financing experience
 
-**English Advisors:**
+**English Loan Officers:**
 - Professional service
 - All races welcome
 - Clear communication
@@ -589,7 +589,7 @@ A: Yes, we consider overall situation. Low score? We explain and find solutions.
 
 ### Step 2: Free Consultation (免费咨询 | Konsultasi Percuma | இலவச ஆலோசனை)
 
-Our advisors will:
+Our licensed loan officers will:
 - Understand your needs
 - Explain options in your language
 - Calculate loan amounts
@@ -630,7 +630,7 @@ We submit to:
 ### We Are NOT Ah Long! (我们不是大耳窿!)
 
 **MyPinjam Credit is:**
-- ✅ Licensed Credit Advisor (有执照的信贷顾问)
+- ✅ KPKT Licensed Moneylender (KPKT持牌放贷机构)
 - ✅ Registered with SSM (在SSM注册)
 - ✅ Regulated by authorities (受当局监管)
 - ✅ Transparent fees (透明收费)
@@ -718,7 +718,7 @@ MyPinjam Credit Sdn Bhd
 
 ### 2. **Licensed & Trusted (有执照和可信赖)**
 - SSM Registered: 1234567-X
-- Licensed Credit Advisor
+- KPKT Licensed Moneylender
 - 10+ years experience
 - 5,000+ happy customers
 
@@ -763,7 +763,7 @@ We promise fair, transparent, and respectful service to everyone, regardless of 
 **Apply Now in 3 Easy Steps:**
 
 1. **Choose Your Language** (选择语言 / Pilih Bahasa / மொழியைத் தேர்ந்தெடுக்கவும்)
-2. **Contact Our Advisor** (联系我们的顾问 / Hubungi Penasihat / ஆலோசகரை தொடர்பு கொள்ளவும்)
+2. **Contact Our Loan Officer** (联系我们的贷款专员 / Hubungi Pegawai Pinjaman / கடன் அதிகாரியை தொடர்பு கொள்ளவும்)
 3. **Get Approved Fast!** (快速获得批准 / Lulus Cepat! / விரைவாக அங்கீகரிக்கப்படுங்கள்!)
 
 **Click Here to Start:** [Apply Online](/apply)

@@ -11,6 +11,11 @@ dist/
 
 # Testing
 coverage/
+playwright-report/
+test-results/
+
+# TypeScript build info
+tsconfig.tsbuildinfo
 
 # Misc
 .DS_Store

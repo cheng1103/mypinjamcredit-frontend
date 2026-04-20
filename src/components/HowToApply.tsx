@@ -15,8 +15,8 @@ export function HowToApplySchema() {
         text: 'Upload your MyKad, latest 3 months bank statements, payslip or EA form, and EPF statement. Business owners should also submit SSM registration.'
       },
       {
-        name: 'Advisor Review',
-        text: 'Our licensed loan advisor will review your application within 24 hours and contact you for any additional information or clarification needed.'
+        name: 'Loan Officer Review',
+        text: 'Our licensed loan officer will review your application within 24 hours and contact you for any additional information or clarification needed.'
       },
       {
         name: 'Receive Approval Decision',
@@ -72,7 +72,7 @@ export function HowToApply({ locale }: HowToApplyProps) {
     {
       number: 3,
       title: 'Get Approved',
-      description: 'Advisor reviews within 24 hours',
+      description: 'Licensed loan officer reviews within 24 hours',
       icon: (
         <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -130,7 +130,7 @@ export function HowToApply({ locale }: HowToApplyProps) {
 
         <div className="mt-8 text-center">
           <a
-            href={`/${locale}/apply` as any}
+            href={`/${locale}/apply`}
             className="inline-flex items-center rounded-full bg-blue-600 px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg transition duration-200 hover:bg-blue-500"
           >
             Start Your Application

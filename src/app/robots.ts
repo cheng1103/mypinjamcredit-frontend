@@ -1,16 +1,24 @@
 import { MetadataRoute } from 'next';
+import { getSiteUrl } from '@/lib/siteUrl';
+import { isIndexingAllowed } from '@/lib/indexing';
 
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+  const siteUrl = getSiteUrl();
+  const allowIndexing = isIndexingAllowed();
 
-  return {
-    rules: [
-      {
+  const rule = allowIndexing
+    ? {
         userAgent: '*',
         allow: '/',
         disallow: ['/api/']
       }
-    ],
-    sitemap: `${siteUrl}/sitemap.xml`
+    : {
+        userAgent: '*',
+        disallow: ['/']
+      };
+
+  return {
+    rules: [rule],
+    sitemap: allowIndexing ? `${siteUrl}/sitemap.xml` : undefined
   };
 }

@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+// no server translations required for this static FAQ page
 import type { Locale } from '@/types/locale';
+import { getSiteUrl } from '@/lib/siteUrl';
 
 type PageProps = { params: Promise<{ locale: string }> };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 
 const hrefForLocale = (locale: Locale) => `${siteUrl}/${locale}/faq`;
 
@@ -59,15 +60,15 @@ export default async function FAQPage({ params }: PageProps) {
       questions: [
         {
           q: 'What is MyPinjam Credit and what services do you provide?',
-          a: 'MyPinjam Credit is a licensed loan services service that helps Malaysians find the best financing from 20+ banks and lenders. Services: Personal Loans (RM 5,000-RM 150,000), Business Loans (RM 50,000-RM 500,000), Equipment Financing, CTOS improvement, Multilingual support (English/Malay/Chinese/Tamil). Free consultation, only pay 1-3% if approved.'
+          a: 'MyPinjam Credit is a KPKT licensed moneylender (License WL2684/14/02) serving Malaysians since 2018. We provide: Personal Loans (RM 5,000 - RM 200,000), SME & Business Loans (RM 50,000 - RM 500,000), Working Capital, Equipment Financing and Debt Consolidation. Fast 24-hour approval, transparent KPKT-regulated rates, multilingual support in Bahasa Malaysia, English, Chinese and Tamil.'
         },
         {
           q: 'Do you provide service in Chinese, Malay, or Tamil?',
-          a: 'YES! We provide full consultation in 华语 (Mandarin), 粤语 (Cantonese), Bahasa Malaysia, and தமிழ் (Tamil). Our consultants understand Chinese business culture, Islamic financing, and estate worker needs. Contact us and specify your language preference!'
+          a: 'YES! We serve customers in 华语 (Mandarin), 粤语 (Cantonese), Bahasa Malaysia, English, and தமிழ் (Tamil). Our loan officers understand Chinese business culture, Islamic financing needs, and estate worker circumstances. Contact us and specify your language preference!'
         },
         {
-          q: 'Are you different from banks? How do you help?',
-          a: 'We are NOT a bank - we are loan consultants. We help you: 1) Find suitable lenders (you may not know all options), 2) Prepare complete documents (avoid rejection), 3) Negotiate better rates, 4) Submit to multiple lenders, 5) Handle follow-ups. Like a real estate agent but for loans. Success rate: 78%.'
+          q: 'Are you a bank? How are you different?',
+          a: 'We are NOT a bank — we are a KPKT licensed moneylender regulated under the Moneylenders Act 1951 (License WL2684/14/02). Unlike banks: 1) Faster approval (24 hours vs 2-4 weeks), 2) More flexible eligibility (we can approve CTOS/CCRIS cases banks reject), 3) Smaller amounts with no minimum, 4) Transparent KPKT-regulated rates, 5) No lengthy paperwork. We lend directly from our own funds under KPKT supervision.'
         }
       ]
     },
@@ -84,7 +85,7 @@ export default async function FAQPage({ params }: PageProps) {
         },
         {
           q: 'What happens after I submit my application?',
-          a: 'After submission: (1) You receive an instant confirmation email, (2) Our advisor reviews your application within 24 hours, (3) We may request additional documents if needed, (4) Upon approval, we prepare the loan agreement, (5) Funds are disbursed within 1-3 business days after signing.'
+          a: 'After submission: (1) You receive an instant confirmation email, (2) Our licensed loan officer reviews your application within 24 hours, (3) We may request additional documents if needed, (4) Upon approval, we prepare the loan agreement, (5) Funds are disbursed within 1-3 business days after signing.'
         }
       ]
     },
@@ -122,7 +123,7 @@ export default async function FAQPage({ params }: PageProps) {
         },
         {
           q: 'Is there a penalty for early repayment?',
-          a: 'We do not charge penalties for early full settlement. However, please note that interest savings may be subject to our terms and conditions. Contact our advisor for specific calculations based on your loan terms.'
+          a: 'We do not charge penalties for early full settlement. However, please note that interest savings may be subject to our terms and conditions. Contact our loan officer for specific calculations based on your loan terms.'
         }
       ]
     },
@@ -131,7 +132,7 @@ export default async function FAQPage({ params }: PageProps) {
       questions: [
         {
           q: 'What loan amounts do you offer?',
-          a: 'We offer personal loans ranging from RM 5,000 to RM 100,000. The approved amount depends on your income level, credit assessment, and repayment capacity. Our advisor will recommend an appropriate amount based on your financial profile.'
+          a: 'We offer personal loans ranging from RM 5,000 to RM 200,000. The approved amount depends on your income level, credit assessment, and repayment capacity. Our licensed loan officer will recommend an appropriate amount based on your financial profile.'
         },
         {
           q: 'What repayment tenures are available?',
@@ -173,7 +174,7 @@ export default async function FAQPage({ params }: PageProps) {
         },
         {
           q: 'Can I restructure my loan if I face financial difficulties?',
-          a: 'Yes, we understand that circumstances change. If you are facing temporary financial difficulties, contact our advisor as soon as possible. We may be able to offer solutions such as tenure extension, temporary payment reduction, or loan restructuring based on your situation.'
+          a: 'Yes, we understand that circumstances change. If you are facing temporary financial difficulties, contact our loan officer as soon as possible. We may be able to offer solutions such as tenure extension, temporary payment reduction, or loan restructuring based on your situation.'
         }
       ]
     }
@@ -262,17 +263,17 @@ export default async function FAQPage({ params }: PageProps) {
       <section className="rounded-3xl border border-slate-200 bg-gradient-to-r from-slate-700 to-slate-800 p-10 text-center text-white shadow-lg">
         <h2 className="text-2xl font-semibold">Still have questions?</h2>
         <p className="mt-3 text-slate-300">
-          Our licensed advisors are here to help. Contact us for personalized assistance.
+          Our licensed loan officers are here to help. Contact us for personalized assistance.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <a
-            href={`/${locale}/contact` as any}
+            href={`/${locale}/contact`}
             className="inline-flex items-center rounded-full bg-white px-8 py-3 text-sm font-semibold uppercase tracking-wide text-slate-800 shadow-lg transition hover:bg-slate-100"
           >
             Contact Us
           </a>
           <a
-            href={`/${locale}/apply` as any}
+            href={`/${locale}/apply`}
             className="inline-flex items-center rounded-full border-2 border-white px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-white/10"
           >
             Apply Now

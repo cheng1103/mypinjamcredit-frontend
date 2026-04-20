@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import { getSiteUrl } from './siteUrl';
+import { isIndexingAllowed } from './indexing';
 
 interface SEOConfig {
   title: string;
@@ -14,7 +16,7 @@ interface SEOConfig {
   section?: string;
 }
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.mypinjamcredit.com';
+const siteUrl = getSiteUrl();
 const siteName = 'MyPinjam Credit';
 const defaultImage = '/opengraph-image.png';
 
@@ -76,17 +78,26 @@ export function generateSEO(config: SEOConfig): Metadata {
       images: [imageUrl],
       creator: '@mypinjamcredit'
     },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1
-      }
-    }
+    robots: isIndexingAllowed()
+      ? {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1
+          }
+        }
+      : {
+          index: false,
+          follow: false,
+          googleBot: {
+            index: false,
+            follow: false
+          }
+        }
   };
 
   // Add article-specific metadata
@@ -110,10 +121,15 @@ export const keywordSets = {
     // English - General
     'personal loan malaysia',
     'business loan malaysia',
-    'loan advisor malaysia',
+    'licensed moneylender malaysia',
+    'pemberi pinjaman berlesen KPKT',
+    'pinjaman segera malaysia',
     'fast loan approval',
     'low interest loan',
-    'licensed loan company',
+    'licensed loan company malaysia',
+    'KPKT moneylender',
+    'pinjaman peribadi online malaysia',
+    'personal loan 24 hours malaysia',
 
     // Malay - Targeting Malay community
     'pinjaman peribadi malaysia',
@@ -143,7 +159,7 @@ export const keywordSets = {
     // Location-based - Kuala Lumpur & Klang Valley
     'mont kiara loan',
     'kuala lumpur loan',
-    'kl loan advisor',
+    'kl licensed moneylender',
     'klang valley loan',
     'selangor loan',
     'petaling jaya loan',
@@ -244,12 +260,16 @@ export const keywordSets = {
     'bintulu loan',
 
     // Community-specific
-    'chinese loan advisor',
-    'malay loan consultant',
-    'indian loan helper',
+    'chinese personal loan malaysia',
+    'malay personal loan malaysia',
+    'indian personal loan malaysia',
     'bumiputera financing',
     'sme loan malaysia',
-    'online loan malaysia'
+    'online loan malaysia',
+    'pinjaman tanpa penjamin',
+    'pinjaman blacklist CTOS',
+    'pinjaman CCRIS',
+    'pinjaman bad credit malaysia'
   ],
   personalLoan: [
     // English
@@ -364,14 +384,15 @@ export const keywordSets = {
   ],
   // New: Ethnic/Community specific
   chinese: [
-    '华人贷款顾问',
+    '华人贷款服务',
     '马来西亚华人贷款',
     '中文贷款服务',
-    '华语顾问',
+    '华语贷款服务',
     '新村贷款',
-    'chinese speaking loan advisor',
+    'chinese speaking licensed moneylender',
     'mandarin loan service',
-    'cantonese loan consultant'
+    'cantonese loan service',
+    'chinese personal loan malaysia'
   ],
   malay: [
     'pinjaman bumiputera',
@@ -382,12 +403,12 @@ export const keywordSets = {
     'agrobank',
     'bsn pinjaman',
     'pinjaman felda',
-    'malay loan advisor',
+    'malay personal loan malaysia',
     'islamic financing'
   ],
   indian: [
     'indian loan malaysia',
-    'tamil loan advisor',
+    'tamil personal loan malaysia',
     'estate loan',
     'hindu temple loan',
     'deepavali loan',
@@ -398,156 +419,157 @@ export const keywordSets = {
   // New: Comprehensive location-based keywords for local SEO
   locations: {
     kl: [
-      'loan advisor kuala lumpur',
-      'pinjaman kl',
+      'licensed moneylender kuala lumpur',
+      'pinjaman peribadi kl',
       'kl personal loan',
       'kl business loan',
       'licensed moneylender kl',
-      'credit consultant kuala lumpur',
+      'pemberi pinjaman berlesen KL',
+      'pinjaman segera kuala lumpur',
       '吉隆坡贷款',
-      'KL贷款顾问'
+      'KL个人贷款'
     ],
     selangor: [
-      'loan advisor selangor',
-      'pinjaman selangor',
-      'petaling jaya loan',
-      'shah alam loan',
-      'klang loan advisor',
-      'subang jaya financing',
-      'puchong loan consultant',
-      'ampang loan',
-      'cheras loan broker',
-      'kepong loan advisor',
-      'kajang loan',
-      'serdang loan',
-      'bangi loan',
-      'cyberjaya financing',
+      'licensed moneylender selangor',
+      'pinjaman peribadi selangor',
+      'petaling jaya personal loan',
+      'shah alam personal loan',
+      'klang licensed moneylender',
+      'subang jaya personal loan',
+      'puchong licensed moneylender',
+      'ampang personal loan',
+      'cheras personal loan',
+      'kepong licensed moneylender',
+      'kajang personal loan',
+      'serdang personal loan',
+      'bangi personal loan',
+      'cyberjaya personal loan',
       'pinjaman lembah klang',
       '雪兰莪贷款',
       '八打灵再也贷款'
     ],
     penang: [
-      'loan advisor penang',
+      'licensed moneylender penang',
       'pinjaman pulau pinang',
-      'georgetown loan',
-      'butterworth loan',
-      'bukit mertajam loan',
-      'bayan lepas financing',
-      'penang island loan',
+      'georgetown personal loan',
+      'butterworth personal loan',
+      'bukit mertajam personal loan',
+      'bayan lepas personal loan',
+      'penang island personal loan',
       'permatang pauh loan',
       'jelutong loan',
       '槟城贷款',
-      '槟城贷款顾问'
+      '槟城个人贷款'
     ],
     johor: [
-      'loan advisor johor bahru',
-      'pinjaman johor',
-      'jb loan consultant',
-      'skudai loan',
-      'masai financing',
-      'pasir gudang loan',
-      'kulai loan advisor',
-      'kluang loan',
-      'muar loan',
-      'batu pahat loan',
-      'segamat financing',
-      'pontian loan',
+      'licensed moneylender johor bahru',
+      'pinjaman peribadi johor',
+      'jb personal loan',
+      'skudai personal loan',
+      'masai personal loan',
+      'pasir gudang personal loan',
+      'kulai licensed moneylender',
+      'kluang personal loan',
+      'muar personal loan',
+      'batu pahat personal loan',
+      'segamat personal loan',
+      'pontian personal loan',
       '新山贷款',
-      'JB贷款顾问'
+      'JB个人贷款'
     ],
     perak: [
-      'loan advisor ipoh',
-      'pinjaman perak',
-      'ipoh loan consultant',
-      'taiping loan',
-      'teluk intan financing',
-      'kuala kangsar loan',
-      'kampar loan',
-      'batu gajah loan',
-      'parit buntar loan',
+      'licensed moneylender ipoh',
+      'pinjaman peribadi perak',
+      'ipoh personal loan',
+      'taiping personal loan',
+      'teluk intan personal loan',
+      'kuala kangsar personal loan',
+      'kampar personal loan',
+      'batu gajah personal loan',
+      'parit buntar personal loan',
       '怡保贷款',
-      '霹雳贷款顾问'
+      '霹雳个人贷款'
     ],
     melaka: [
-      'loan advisor melaka',
-      'pinjaman melaka',
-      'malacca loan consultant',
-      'bandar melaka loan',
-      'alor gajah financing',
-      'jasin loan',
+      'licensed moneylender melaka',
+      'pinjaman peribadi melaka',
+      'malacca personal loan',
+      'bandar melaka personal loan',
+      'alor gajah personal loan',
+      'jasin personal loan',
       '马六甲贷款'
     ],
     ns: [
-      'loan advisor seremban',
-      'pinjaman negeri sembilan',
-      'seremban loan',
-      'nilai loan',
-      'port dickson loan',
-      'bahau financing',
-      'rembau loan',
+      'licensed moneylender seremban',
+      'pinjaman peribadi negeri sembilan',
+      'seremban personal loan',
+      'nilai personal loan',
+      'port dickson personal loan',
+      'bahau personal loan',
+      'rembau personal loan',
       '芙蓉贷款'
     ],
     kedah: [
-      'loan advisor alor setar',
-      'pinjaman kedah',
-      'sungai petani loan',
-      'kulim loan',
-      'langkawi financing',
-      'jitra loan',
-      'pendang loan',
+      'licensed moneylender alor setar',
+      'pinjaman peribadi kedah',
+      'sungai petani personal loan',
+      'kulim personal loan',
+      'langkawi personal loan',
+      'jitra personal loan',
+      'pendang personal loan',
       '亚罗士打贷款'
     ],
     kelantan: [
-      'loan advisor kota bharu',
-      'pinjaman kelantan',
-      'kota bharu loan',
-      'tanah merah loan',
-      'pasir mas financing',
-      'tumpat loan',
-      'bachok loan'
+      'licensed moneylender kota bharu',
+      'pinjaman peribadi kelantan',
+      'kota bharu personal loan',
+      'tanah merah personal loan',
+      'pasir mas personal loan',
+      'tumpat personal loan',
+      'bachok personal loan'
     ],
     terengganu: [
-      'loan advisor kuala terengganu',
-      'pinjaman terengganu',
-      'kuala terengganu loan',
-      'kemaman loan',
-      'dungun financing',
-      'marang loan'
+      'licensed moneylender kuala terengganu',
+      'pinjaman peribadi terengganu',
+      'kuala terengganu personal loan',
+      'kemaman personal loan',
+      'dungun personal loan',
+      'marang personal loan'
     ],
     pahang: [
-      'loan advisor kuantan',
-      'pinjaman pahang',
-      'kuantan loan',
-      'temerloh loan',
-      'bentong financing',
-      'raub loan',
-      'jerantut loan',
-      'pekan loan',
+      'licensed moneylender kuantan',
+      'pinjaman peribadi pahang',
+      'kuantan personal loan',
+      'temerloh personal loan',
+      'bentong personal loan',
+      'raub personal loan',
+      'jerantut personal loan',
+      'pekan personal loan',
       '关丹贷款'
     ],
     sabah: [
-      'loan advisor kota kinabalu',
-      'pinjaman sabah',
-      'kk loan',
-      'sandakan loan',
-      'tawau financing',
-      'lahad datu loan',
-      'keningau loan',
-      'beaufort loan',
+      'licensed moneylender kota kinabalu',
+      'pinjaman peribadi sabah',
+      'kk personal loan',
+      'sandakan personal loan',
+      'tawau personal loan',
+      'lahad datu personal loan',
+      'keningau personal loan',
+      'beaufort personal loan',
       '亚庇贷款',
-      '沙巴贷款顾问'
+      '沙巴个人贷款'
     ],
     sarawak: [
-      'loan advisor kuching',
-      'pinjaman sarawak',
-      'kuching loan',
-      'miri loan',
-      'sibu financing',
-      'bintulu loan',
-      'limbang loan',
-      'sarikei loan',
+      'licensed moneylender kuching',
+      'pinjaman peribadi sarawak',
+      'kuching personal loan',
+      'miri personal loan',
+      'sibu personal loan',
+      'bintulu personal loan',
+      'limbang personal loan',
+      'sarikei personal loan',
       '古晋贷款',
-      '砂拉越贷款顾问'
+      '砂拉越个人贷款'
     ]
   },
   // New: Industry-specific keywords

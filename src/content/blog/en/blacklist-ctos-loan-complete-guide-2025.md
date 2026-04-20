@@ -966,7 +966,7 @@ Income: RM 4,500
 - After 24 months: Reduce to 12% pa
 
 **3. Free Financial Counseling**
-- One-on-one session with our advisor (Worth RM 300)
+- One-on-one session with our licensed loan officer (Worth RM 300)
 - Personalized debt management plan
 - Budgeting workshop access (online)
 
@@ -1021,7 +1021,7 @@ Don't let bad credit define your future. Kami percaya everyone deserves second c
 ---
 
 **Last Updated:** January 20, 2025
-**Article Author:** MyPinjam Credit Advisory Team
-**Verified By:** KPKT Licensed Financial Advisor
+**Article Author:** MyPinjam Credit Loan Officer Team
+**Verified By:** KPKT Licensed Moneylender Team
 
 © 2025 MyPinjam Credit. All Rights Reserved.
