@@ -13,14 +13,6 @@ export function PromoModal({ showAfterMs = 2000 }: PromoModalProps) {
   const t = useTranslations('modal');
 
   useEffect(() => {
-    // Never auto-show on mobile: a full-viewport popup 2s after page load
-    // hurts conversion, and on iOS Safari the backdrop-blur repaints on
-    // every scroll frame, which reads as a rhythmic flicker.
-    const isMobile =
-      typeof navigator !== 'undefined' &&
-      (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth < 768);
-    if (isMobile) return;
-
     const modalShown = sessionStorage.getItem('promoModalShown');
     if (modalShown) return;
 

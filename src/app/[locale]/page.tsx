@@ -135,9 +135,12 @@ export default async function HomePage({ params }: PageProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-white/15" />
       </div>
 
-      {/* Hero Section — solid white on mobile, translucent+blur on desktop
-          (the blur needs the fixed hero image behind it to look right). */}
-      <section className="relative overflow-hidden rounded-xl border border-blue-100 bg-white md:bg-white/80 md:backdrop-blur-sm p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6">
+      {/* Hero Section — solid white on mobile, translucent+blur on desktop.
+          Shadow reduced on mobile: `shadow-xl shadow-blue-100` is a large
+          colored shadow that iOS Safari re-rasterizes on every scroll frame,
+          producing a white/blue "misty halo" flicker around the card that
+          vanishes once the card scrolls out of viewport. */}
+      <section className="relative overflow-hidden rounded-xl border border-blue-100 bg-white md:bg-white/80 md:backdrop-blur-sm p-4 shadow-sm md:shadow-xl md:shadow-blue-100 md:rounded-2xl md:p-6">
         <div className="relative space-y-3">
           <p className="text-xs uppercase tracking-[0.2em] text-blue-600 font-semibold">{tCommon('brand')}</p>
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl lg:text-4xl leading-tight">
@@ -187,7 +190,7 @@ export default async function HomePage({ params }: PageProps) {
 
       {/* Application Form Section with Benefits */}
       <FadeInSection>
-        <section id="form" className="rounded-xl border border-blue-100 bg-white md:bg-white/80 md:backdrop-blur-sm p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6">
+        <section id="form" className="rounded-xl border border-blue-100 bg-white md:bg-white/80 md:backdrop-blur-sm p-4 shadow-sm md:shadow-xl md:shadow-blue-100 md:rounded-2xl md:p-6">
           <div className="grid gap-6 lg:grid-cols-2">
             {/* Left: Application Form */}
             <div className="space-y-4">
