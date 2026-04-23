@@ -117,11 +117,8 @@ export default async function HomePage({ params }: PageProps) {
       <PromoModal showAfterMs={2000} />
 
       <div className="relative space-y-4 md:space-y-6">
-      {/* Full Background Image — desktop only. On mobile the fixed image
-          + brightness/contrast/saturate filter forces iOS Safari to
-          recomposite every frame, which combined with backdrop-blur on
-          sections above it produces a rhythmic flicker in the hero. */}
-      <div className="pointer-events-none fixed inset-0 -z-10 hidden md:block">
+      {/* Full Background Image */}
+      <div className="fixed inset-0 -z-10">
         <div
           className="absolute inset-0 opacity-75"
           style={{
@@ -135,12 +132,8 @@ export default async function HomePage({ params }: PageProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-white/15" />
       </div>
 
-      {/* Hero Section — solid white on mobile, translucent+blur on desktop.
-          Shadow reduced on mobile: `shadow-xl shadow-blue-100` is a large
-          colored shadow that iOS Safari re-rasterizes on every scroll frame,
-          producing a white/blue "misty halo" flicker around the card that
-          vanishes once the card scrolls out of viewport. */}
-      <section className="relative overflow-hidden rounded-xl border border-blue-100 bg-white md:bg-white/80 md:backdrop-blur-sm p-4 shadow-sm md:shadow-xl md:shadow-blue-100 md:rounded-2xl md:p-6">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden rounded-xl border border-blue-100 bg-white/80 backdrop-blur-sm p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6">
         <div className="relative space-y-3">
           <p className="text-xs uppercase tracking-[0.2em] text-blue-600 font-semibold">{tCommon('brand')}</p>
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl lg:text-4xl leading-tight">
@@ -190,7 +183,7 @@ export default async function HomePage({ params }: PageProps) {
 
       {/* Application Form Section with Benefits */}
       <FadeInSection>
-        <section id="form" className="rounded-xl border border-blue-100 bg-white md:bg-white/80 md:backdrop-blur-sm p-4 shadow-sm md:shadow-xl md:shadow-blue-100 md:rounded-2xl md:p-6">
+        <section id="form" className="rounded-xl border border-blue-100 bg-white/80 backdrop-blur-sm p-4 shadow-xl shadow-blue-100 md:rounded-2xl md:p-6">
           <div className="grid gap-6 lg:grid-cols-2">
             {/* Left: Application Form */}
             <div className="space-y-4">

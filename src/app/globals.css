@@ -13,20 +13,11 @@
 
 body {
   background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 45%, #bfdbfe 100%);
+  background-attachment: fixed;
   color: var(--color-foreground);
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   min-height: 100vh;
-}
-
-/* Fixed attachment only on desktop — on mobile Safari/Chrome it forces
-   a repaint of the body on every scroll frame and, combined with any
-   page-level fixed element (e.g. the homepage hero background), stacks
-   composition layers that make backdrop-blur flicker rhythmically. */
-@media (min-width: 768px) {
-  body {
-    background-attachment: fixed;
-  }
 }
 
 @keyframes shimmer {

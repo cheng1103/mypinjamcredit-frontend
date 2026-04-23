@@ -4,8 +4,10 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { MultiStepLeadForm } from '@/components/forms/MultiStepLeadForm';
 import { TrustBadges } from '@/components/TrustBadges';
 import { QuickCalculator } from '@/components/QuickCalculator';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
 import { ExitIntentPopup } from '@/components/ExitIntentPopup';
 import { TodayStats } from '@/components/TodayStats';
+import { LiveNotification } from '@/components/LiveNotification';
 import type { Locale } from '@/types/locale';
 import { getSeoCopy } from '@/lib/seo-content';
 import { getSiteUrl } from '@/lib/siteUrl';
@@ -88,8 +90,14 @@ export default async function ApplyPage({ params }: ApplyPageProps) {
 
   return (
     <>
-      {/* Exit Intent Popup (desktop only — disabled on mobile inside the component) */}
+      {/* WhatsApp Floating Button */}
+      <WhatsAppButton />
+
+      {/* Exit Intent Popup */}
       <ExitIntentPopup />
+
+      {/* Live Notification */}
+      <LiveNotification />
 
     <div className="space-y-12">
       <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-sky-50 to-blue-100 p-10 shadow-xl shadow-blue-100">
