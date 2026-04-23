@@ -13,18 +13,37 @@ export function PromoModal({ showAfterMs = 2000 }: PromoModalProps) {
   const t = useTranslations('modal');
 
   useEffect(() => {
-    // Check if modal has been shown this session
+    // Never auto-show on mobile: a full-viewport popup 2s after page load
+    // hurts conversion, and on iOS Safari the backdrop-blur repaints on
+    // every scroll frame, which reads as a rhythmic flicker.
+    const isMobile =
+      typeof navigator !== 'undefined' &&
+      (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth < 768);
+    if (isMobile) return;
+
     const modalShown = sessionStorage.getItem('promoModalShown');
+    if (modalShown) return;
 
-    if (!modalShown) {
-      const timer = setTimeout(() => {
-  setIsOpen(true);
-  sessionStorage.setItem('promoModalShown', 'true');
-      }, showAfterMs);
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+      sessionStorage.setItem('promoModalShown', 'true');
+    }, showAfterMs);
 
-      return () => clearTimeout(timer);
-    }
+    return () => clearTimeout(timer);
   }, [showAfterMs]);
+
+  // Lock body scroll while visible so the underlying content doesn't scroll
+  // behind a fixed backdrop — on mobile that scroll was forcing backdrop-blur
+  // to resample every frame. Desktop browsers handle it fine either way, but
+  // this is also standard modal UX.
+  useEffect(() => {
+    if (!isOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isOpen]);
 
   const closeModal = () => {
     setIsOpen(false);
@@ -40,13 +59,13 @@ export function PromoModal({ showAfterMs = 2000 }: PromoModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60"
       onClick={handleBackdropClick}
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"
     >
-      <div className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl animate-slideUp overflow-hidden">
+      <div className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden">
         {/* Close Button */}
         <button
           onClick={closeModal}
@@ -120,36 +139,6 @@ export function PromoModal({ showAfterMs = 2000 }: PromoModalProps) {
           </div>
         </div>
       </div>
-
-      <style jsx global>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-
-        @keyframes slideUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px) scale(0.95);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-        }
-
-        .animate-fadeIn {
-          animation: fadeIn 0.3s ease-out;
-        }
-
-        .animate-slideUp {
-          animation: slideUp 0.4s ease-out;
-        }
-      `}</style>
     </div>
   );
 }
